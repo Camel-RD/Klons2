@@ -93,7 +93,7 @@ namespace KlonsA.Forms
             this.bindingNavigatorDeleteItem,
             this.tbReadText,
             this.tbMakeLists});
-            this.bnavRows.Location = new System.Drawing.Point(0, 513);
+            this.bnavRows.Location = new System.Drawing.Point(0, 508);
             this.bnavRows.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnavRows.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bnavRows.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -101,7 +101,7 @@ namespace KlonsA.Forms
             this.bnavRows.Name = "bnavRows";
             this.bnavRows.PositionItem = this.bindingNavigatorPositionItem;
             this.bnavRows.SaveItem = null;
-            this.bnavRows.Size = new System.Drawing.Size(805, 39);
+            this.bnavRows.Size = new System.Drawing.Size(806, 39);
             this.bnavRows.TabIndex = 0;
             this.bnavRows.Text = "myBindingNavigator1";
             // 
@@ -130,7 +130,7 @@ namespace KlonsA.Forms
             this.dgvRows.RowHeadersWidth = 62;
             this.dgvRows.RowTemplate.Height = 28;
             this.dgvRows.ShowCellToolTips = false;
-            this.dgvRows.Size = new System.Drawing.Size(785, 283);
+            this.dgvRows.Size = new System.Drawing.Size(786, 281);
             this.dgvRows.TabIndex = 0;
             this.dgvRows.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvRows_CellBeginEdit);
             this.dgvRows.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRows_CellDoubleClick);
@@ -303,8 +303,8 @@ namespace KlonsA.Forms
             // 
             this.mySplitContainer1.Panel2.Controls.Add(this.dgvRows);
             this.mySplitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(10, 5, 10, 10);
-            this.mySplitContainer1.Size = new System.Drawing.Size(805, 513);
-            this.mySplitContainer1.SplitterDistance = 211;
+            this.mySplitContainer1.Size = new System.Drawing.Size(806, 508);
+            this.mySplitContainer1.SplitterDistance = 208;
             this.mySplitContainer1.TabIndex = 1;
             // 
             // tbText
@@ -315,7 +315,7 @@ namespace KlonsA.Forms
             this.tbText.Multiline = true;
             this.tbText.Name = "tbText";
             this.tbText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbText.Size = new System.Drawing.Size(785, 196);
+            this.tbText.Size = new System.Drawing.Size(786, 193);
             this.tbText.TabIndex = 0;
             this.tbText.WordWrap = false;
             // 
@@ -324,14 +324,14 @@ namespace KlonsA.Forms
             this.bsAmatiF.DataMember = "POSITIONS";
             this.bsAmatiF.MyDataSource = "KlonsAData";
             // 
-            // Form_PayListImport
+            // FormA_PayListImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 552);
+            this.ClientSize = new System.Drawing.Size(806, 547);
             this.Controls.Add(this.mySplitContainer1);
             this.Controls.Add(this.bnavRows);
-            this.Name = "Form_PayListImport";
+            this.Name = "FormA_PayListImport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Maksājumu sarakstu imports";
             this.Load += new System.EventHandler(this.Form_PayListImport_Load);

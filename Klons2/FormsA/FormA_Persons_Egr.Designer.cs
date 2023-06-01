@@ -184,7 +184,7 @@ namespace KlonsA.Forms
             // 
             // cmLoadFromFile
             // 
-            this.cmLoadFromFile.Location = new System.Drawing.Point(334, 2);
+            this.cmLoadFromFile.Location = new System.Drawing.Point(335, 2);
             this.cmLoadFromFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmLoadFromFile.Name = "cmLoadFromFile";
             this.cmLoadFromFile.Size = new System.Drawing.Size(145, 32);
@@ -383,7 +383,7 @@ namespace KlonsA.Forms
             this.dgcEDSPensijas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgcEDSPensijas.Width = 150;
             // 
-            // Form_PersonsR_Egr
+            // FormA_Persons_Egr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,7 +391,7 @@ namespace KlonsA.Forms
             this.Controls.Add(this.dgvRows);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bNav);
-            this.Name = "Form_PersonsR_Egr";
+            this.Name = "FormA_Persons_Egr";
             this.Text = "E-grāmatiņu izmaiņas";
             this.Load += new System.EventHandler(this.Form_PersonsR_Egr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bNav)).EndInit();

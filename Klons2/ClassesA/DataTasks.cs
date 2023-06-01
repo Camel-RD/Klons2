@@ -1771,7 +1771,7 @@ namespace KlonsA.Classes
             Add_SetNewIDsItem("SALARY_SHEETS_R", x => x.SALARY_SHEETS_R, x => x.SP_A_GEN_SALARY_SHEETS_R_ID);
             Add_SetNewIDsItem("SALARY_PLUSMINUS", x => x.SALARY_PLUSMINUS, x => x.SP_A_GEN_SALARY_PLUSMINUS_ID);
             Add_SetNewIDsItem("SALARY_SHEET_TEMPL", x => x.SALARY_SHEET_TEMPL, x => x.SP_A_GEN_SALARY_SHEET_TEMPL_ID);
-            Add_SetNewIDsItem("SALARY_SHEET_TEMPL_R", x => x.SALARY_SHEET_TEMPL_R, x => x.SP_A_GEN_SALARY_SHEET_TEMPL_R_ID);
+            Add_SetNewIDsItem("SALARY_SHEET_TEMPL_R", x => x.SALARY_SHEET_TEMPL_R, x => x.SP_A_GEN_SAL_SHEET_TEMPL_R_ID);
             Add_SetNewIDsItem("PASTDATA", x => x.PASTDATA, x => x.SP_A_GEN_PASTDATA_ID);
             Add_SetNewIDsItem("PIECEWORK", x => x.PIECEWORK, x => x.SP_A_GEN_PIECEWORK_ID);
             Add_SetNewIDsItem("PIECEWORK_CATALOG", x => x.PIECEWORK_CATALOG, x => x.SP_A_GEN_PIECEWORK_CATALOG_ID);

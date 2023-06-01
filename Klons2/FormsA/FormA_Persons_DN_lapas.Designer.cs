@@ -194,7 +194,7 @@ namespace KlonsA.Forms
             // 
             // cmSaveChanges
             // 
-            this.cmSaveChanges.Location = new System.Drawing.Point(688, 2);
+            this.cmSaveChanges.Location = new System.Drawing.Point(687, 2);
             this.cmSaveChanges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmSaveChanges.Name = "cmSaveChanges";
             this.cmSaveChanges.Size = new System.Drawing.Size(124, 32);
@@ -758,7 +758,7 @@ namespace KlonsA.Forms
             this.dgcFullStatus.ReadOnly = true;
             this.dgcFullStatus.Width = 80;
             // 
-            // Form_Persons_DN_lapas
+            // FormA_Persons_DN_lapas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -766,7 +766,7 @@ namespace KlonsA.Forms
             this.Controls.Add(this.tcPages);
             this.Controls.Add(this.bNav);
             this.Controls.Add(this.panel1);
-            this.Name = "Form_Persons_DN_lapas";
+            this.Name = "FormA_Persons_DN_lapas";
             this.Text = "Darba nespējas lapas";
             this.Load += new System.EventHandler(this.Form_Persons_DN_lapas_Load);
             this.panel1.ResumeLayout(false);

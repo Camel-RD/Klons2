@@ -156,6 +156,15 @@ namespace KlonsF.Forms
             SrcDatasetHelper = DatasetImporter.MakeDatasetHelperA(con_str);
             DstDatasetHelper = MyData.GetDataSetHelper(MyData.DataSetKlonsA);
             var err = DatasetImporter.ReadDataSetA(SrcDatasetHelper, DstDatasetHelper);
+
+            /*
+            var adm = SrcDatasetHelper.TableAdapterManager as Klons1.DataSets.KlonsADataSetTableAdapters.TableAdapterManager;
+            var ad1 = adm.EVENT_TYPESTableAdapter;
+            var conn = DataSetHelper.GetFbConnection(ad1);
+            if (conn != null)
+                conn.Close();
+            */
+
             return err;
         }
 

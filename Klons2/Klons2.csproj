@@ -14,6 +14,8 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -1307,6 +1307,15 @@
       <DependentUpon>FormA_TeritorialCodes.cs</DependentUpon>
     </Compile>
     <Content Include="TODO-M.txt" />
+    <EmbeddedResource Include="FormsA\FormA_PayListImport.resx">
+      <DependentUpon>FormA_PayListImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsA\FormA_Persons_DN_lapas.resx">
+      <DependentUpon>FormA_Persons_DN_lapas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsA\FormA_Persons_Egr.resx">
+      <DependentUpon>FormA_Persons_Egr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsM\FormM_DocPricesAndDiscounts.resx">
       <DependentUpon>FormM_DocPricesAndDiscounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -1527,6 +1536,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsA\FormA_SalarySheetRowHistory.resx">
       <DependentUpon>FormA_SalarySheetRowHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsA\FormA_TimeSheet_Person.resx">
+      <DependentUpon>FormA_TimeSheet_Person.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsA\FormA_PayFx.resx">
       <DependentUpon>FormA_PayFx.cs</DependentUpon>
@@ -2010,6 +2022,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SQL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

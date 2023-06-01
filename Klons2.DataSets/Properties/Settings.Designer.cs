@@ -27,7 +27,8 @@ namespace KlonsF.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("character set=UTF8;data source=localhost;initial catalog=D:\\A1-docs\\c_net\\Klons2\\" +
-            "Klons2\\DB\\KLONSF2_00.FDB;user id=AIVARS;Password=parole")]
+            "Klons2\\DB\\klons_p.fdb;user id=ADMINS;password=parole;port number=3051;role=RDB$A" +
+            "DMIN")]
         public string ConnectionString1 {
             get {
                 return ((string)(this["ConnectionString1"]));
