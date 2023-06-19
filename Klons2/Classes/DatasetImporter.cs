@@ -301,6 +301,7 @@ namespace KlonsF.Classes
             var err = ReadDataSet(src_dataset_helper, dst_dataset_helper, TableNamesF, "F_");
             if (err.HasErrors) return err;
             ResetIdGenF(dst_dataset_helper);
+            UpdateZdtF(src_dataset_helper, dst_dataset_helper);
             KlonsData.St.SetUpTableManagerForUsersTable();
             KlonsData.St.FillParamsForUser(KlonsData.St.Settings.LastUserName);
             return err;
@@ -395,6 +396,59 @@ namespace KlonsF.Classes
                 cm.ExecuteNonQuery();
             }
         }
+
+        public void UpdateZdtF(
+            DataSetHelper src_dataset_helper,
+            DataSetHelper dst_dataset_helper)
+        {
+            FbConnection con_src = null;
+            FbCommand cm1 = null;
+            var con_str_src = src_dataset_helper.ConnectionString;
+            var qads = dst_dataset_helper.QueriesTableAdapter as KlonsF.DataSets.klonsDataSetTableAdapters.QueriesTableAdapter;
+
+            try
+            {
+                con_src = new FbConnection(con_str_src);
+                con_src.Open();
+                cm1 = new FbCommand("select id, zdt from opsd;", con_src);
+                var ad = new FbDataAdapter(cm1);
+                var table = new DataTable();
+                ad.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    foreach (var row in table.Rows)
+                    {
+                        var drow = row as DataRow;
+                        int id = (int)drow[0];
+                        DateTime zdt = (DateTime)drow[1];
+                        qads.SP_F_ZDT_OPSD_SET(id, zdt);
+                    }
+                }
+                cm1.Dispose();
+                cm1 = new FbCommand("select id, zdt from ops;", con_src);
+                ad = new FbDataAdapter(cm1);
+                table = new DataTable();
+                ad.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    foreach (var row in table.Rows)
+                    {
+                        var drow = row as DataRow;
+                        int id = (int)drow[0];
+                        DateTime zdt = (DateTime)drow[1];
+                        qads.SP_F_ZDT_OPS_SET(id, zdt);
+                    }
+                }
+            }
+            finally
+            {
+                cm1?.Dispose();
+                con_src?.Close();
+                con_src?.Dispose();
+            }
+
+        }
+
 
         public DataSetHelper MakeDatasetHelperF(string connstr)
         {

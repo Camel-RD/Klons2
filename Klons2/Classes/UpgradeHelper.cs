@@ -22,7 +22,7 @@ namespace KlonsF.Classes
         }
 
         private static string[] dbversions =
-            new string[] { };
+            new string[] { "003" };
 
         public static bool HasUpgrade(string db_ver, string app_ver)
         {
@@ -75,7 +75,7 @@ namespace KlonsF.Classes
             Assembly _assembly;
             StreamReader _textStreamReader;
             
-            string resname = "Klons2.SQL." + sqlfilename + ".txt";
+            string resname = "KlonsF.SQL." + sqlfilename + ".txt";
             
             _assembly = Assembly.GetExecutingAssembly();
             _textStreamReader = new StreamReader(

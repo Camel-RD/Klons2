@@ -265,5 +265,31 @@ namespace KlonsF.Forms
             DoClear();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!CheckGoodDBSelected()) return;
+
+            try
+            {
+                if (SelectedDBType == DatasetImporter.ESelectedDBType.F)
+                {
+                    var con_str = DatasetImporter.MakeConnectionString(DBFileName);
+                    SrcDatasetHelper = DatasetImporter.MakeDatasetHelperF(con_str);
+                    DstDatasetHelper = MyData.GetDataSetHelper(MyData.DataSetKlonsF);
+                    DatasetImporter.UpdateZdtF(SrcDatasetHelper, DstDatasetHelper);
+                }
+                else 
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Form_Error.ShowException(ex, "Neizdevās izdzēst datus.");
+                return;
+            }
+
+            MyMainForm.ShowInfo("Datumu labošana pabeigta.", "", this);
+        }
     }
 }

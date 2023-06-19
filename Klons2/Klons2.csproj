@@ -1306,6 +1306,7 @@
     <Compile Include="FormsA\FormA_TeritorialCodes.Designer.cs">
       <DependentUpon>FormA_TeritorialCodes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SQL\SQLV003.txt" />
     <Content Include="TODO-M.txt" />
     <EmbeddedResource Include="FormsA\FormA_PayListImport.resx">
       <DependentUpon>FormA_PayListImport.cs</DependentUpon>
@@ -2020,9 +2021,7 @@
       <Name>NotyfyProp</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SQL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

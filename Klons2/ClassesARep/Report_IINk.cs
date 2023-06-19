@@ -27,10 +27,24 @@ namespace KlonsA.Classes
             var rows2 = MakeReport2(reporttype, dt1, dt2);
             rows1 = new List<IINReportRow>(rows1.OrderBy(r => r.Name));
             rows2 = new List<IINReportRow>(rows2.OrderBy(r => r.Name));
-            rows1 = rows1.Where(x => x.HasData()).ToList();
+            //rows1 = rows1.Where(x => x.HasData()).ToList();
+            rows1 = RemoveEmptyRows(rows1);
             Rows.AddRange(rows1);
             Rows.AddRange(rows2);
         }
+
+        public List<IINReportRow> RemoveEmptyRows(List<IINReportRow> rows)
+        {
+            var ret = new List<IINReportRow>(rows);
+            var row2 = rows.GroupBy(x => (x.idp, x.Date1, x.Date2))
+                .Where(x => x.Count() > 1)
+                .Where(x => x.Where(y => y.HasData()).Any())
+                .SelectMany(x => x.Where(y => !y.HasData()))
+                .ToList();
+            row2.ForEach(x => ret.Remove(x));
+            return ret;
+        }
+           
 
         public List<IINReportRow> MakeReport1(EReportType reporttype, DateTime dt1, DateTime dt2, DateTime dtx, bool simple)
         {

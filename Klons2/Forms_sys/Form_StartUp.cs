@@ -127,7 +127,8 @@ namespace KlonsF.Forms
 
             if (!UpgradeHelper.UpgradeThis(v, MyData.Version))
             {
-                DialogResult = DialogResult.Cancel;
+                return false;
+                //DialogResult = DialogResult.Abort;
             }
             
             return true;

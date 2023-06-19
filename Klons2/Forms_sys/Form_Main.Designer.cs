@@ -222,8 +222,8 @@ namespace KlonsF
             this.miCloseMDIForm = new System.Windows.Forms.ToolStripMenuItem();
             this.myToolStrip = new System.Windows.Forms.ToolStrip();
             this.aDownloader1 = new KlonsLIB.Components.ADownloader();
-            this.myStyleDefs = new KlonsP.Classes.MyStyleDefs();
             this.tsWindowList = new System.Windows.Forms.ToolStrip();
+            this.myStyleDefs = new KlonsP.Classes.MyStyleDefs();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -815,7 +815,7 @@ namespace KlonsF
             this.miAAlgas.MergeIndex = 1;
             this.miAAlgas.Name = "miAAlgas";
             this.miAAlgas.Size = new System.Drawing.Size(81, 34);
-            this.miAAlgas.Text = "Algas";
+            this.miAAlgas.Text = "A&lgas";
             // 
             // miAAtlasītDatus
             // 
@@ -1668,19 +1668,19 @@ namespace KlonsF
             // miFApraksts
             // 
             this.miFApraksts.Name = "miFApraksts";
-            this.miFApraksts.Size = new System.Drawing.Size(270, 38);
+            this.miFApraksts.Size = new System.Drawing.Size(268, 38);
             this.miFApraksts.Text = "Apraksts";
             this.miFApraksts.Click += new System.EventHandler(this.miFApraksts_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(265, 6);
             // 
             // miParProgrammu
             // 
             this.miParProgrammu.Name = "miParProgrammu";
-            this.miParProgrammu.Size = new System.Drawing.Size(270, 38);
+            this.miParProgrammu.Size = new System.Drawing.Size(268, 38);
             this.miParProgrammu.Text = "Par programmu";
             this.miParProgrammu.Click += new System.EventHandler(this.miParProgrammu_Click);
             // 
@@ -1689,7 +1689,7 @@ namespace KlonsF
             this.miCloseMDIForm.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.miCloseMDIForm.Name = "miCloseMDIForm";
             this.miCloseMDIForm.Size = new System.Drawing.Size(111, 34);
-            this.miCloseMDIForm.Text = "AIZVĒRT";
+            this.miCloseMDIForm.Text = "AI&ZVĒRT";
             this.miCloseMDIForm.Visible = false;
             this.miCloseMDIForm.Click += new System.EventHandler(this.miCloseMDIForm_Click);
             // 
@@ -1710,11 +1710,6 @@ namespace KlonsF
             this.aDownloader1.DataReceived += new System.EventHandler(this.aDownloader1_DataReceived);
             this.aDownloader1.DownloadFailed += new System.EventHandler(this.aDownloader1_DownloadFailed);
             // 
-            // myStyleDefs
-            // 
-            this.myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(104)))), ((int)(((byte)(89)))));
-            this.myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
-            // 
             // tsWindowList
             // 
             this.tsWindowList.CanOverflow = false;
@@ -1727,6 +1722,11 @@ namespace KlonsF
             this.tsWindowList.Size = new System.Drawing.Size(1087, 0);
             this.tsWindowList.TabIndex = 5;
             this.tsWindowList.Text = "toolStrip1";
+            // 
+            // myStyleDefs
+            // 
+            this.myStyleDefs.MarkedCellBack = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(104)))), ((int)(((byte)(89)))));
+            this.myStyleDefs.MarkedCellFore = System.Drawing.Color.White;
             // 
             // Form_Main
             // 

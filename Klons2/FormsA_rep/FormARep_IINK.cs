@@ -239,8 +239,9 @@ namespace KlonsA.Forms
         private MyXmlDoc MakeXML2()
         {
             var xdoc = new MyXmlDoc();
-
-            XmlElement DokPFPISKv3 = xdoc.CreateElement("DokPFPISKv3");
+            var xdt = new DateTime(2023, 4, 1);
+            var docid = Date2 < xdt ? "DokPFPISKv3" : "DokPFPISKv4";
+            XmlElement DokPFPISKv3 = xdoc.CreateElement(docid);
             DokPFPISKv3.SetAttribute("xmlns:xsd", "http://www.w3.org/2001/XMLSchema"); ;
             DokPFPISKv3.SetAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
             xdoc.AppendChild(DokPFPISKv3);

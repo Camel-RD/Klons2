@@ -45328,7 +45328,7 @@ WHERE  (CLID = @Original_CLID) AND (@IsNull_NAME = 1 AND NAME IS NULL OR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[13];
+            this._commandCollection = new global::System.Data.IDbCommand[15];
             this._commandCollection[0] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[0])).CommandText = "\"SP_F_SET_KIEONR\"";
@@ -45476,6 +45476,42 @@ WHERE  (CLID = @Original_CLID) AND (@IsNull_NAME = 1 AND NAME IS NULL OR
             param.IsNullable = true;
             param.SourceColumn = null;
             ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[12])).Parameters.Add(param);
+            this._commandCollection[13] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).CommandText = "\"SP_F_ZDT_OPS_SET\"";
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "ID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "ZDT";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[13])).Parameters.Add(param);
+            this._commandCollection[14] = new global::FirebirdSql.Data.FirebirdClient.FbCommand();
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).Connection = new global::FirebirdSql.Data.FirebirdClient.FbConnection(global::KlonsF.Properties.Settings.Default.ConnectionString1);
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).CommandText = "\"SP_F_ZDT_OPSD_SET\"";
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "ID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).Parameters.Add(param);
+            param = new global::FirebirdSql.Data.FirebirdClient.FbParameter();
+            param.ParameterName = "ZDT";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.Size = 8;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this._commandCollection[14])).Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -45881,6 +45917,86 @@ WHERE  (CLID = @Original_CLID) AND (@IsNull_NAME = 1 AND NAME IS NULL OR
             }
             if ((PK.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(PK.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object SP_F_ZDT_OPS_SET(global::System.Nullable<int> ID, global::System.Nullable<global::System.DateTime> ZDT) {
+            global::FirebirdSql.Data.FirebirdClient.FbCommand command = ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[13]));
+            if ((ID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(ID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((ZDT.HasValue == true)) {
+                command.Parameters[1].Value = ((System.DateTime)(ZDT.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object SP_F_ZDT_OPSD_SET(global::System.Nullable<int> ID, global::System.Nullable<global::System.DateTime> ZDT) {
+            global::FirebirdSql.Data.FirebirdClient.FbCommand command = ((global::FirebirdSql.Data.FirebirdClient.FbCommand)(this.CommandCollection[14]));
+            if ((ID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(ID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((ZDT.HasValue == true)) {
+                command.Parameters[1].Value = ((System.DateTime)(ZDT.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
