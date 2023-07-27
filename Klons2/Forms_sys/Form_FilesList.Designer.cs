@@ -32,12 +32,12 @@ namespace KlonsF.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dgvFiles = new KlonsLIB.Components.MyDataGridView();
+            this.bsFiles = new System.Windows.Forms.BindingSource(this.components);
             this.dgcFilesDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcFilesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcFilesConnStr = new KlonsLIB.Components.MyDgvMcCBColumn();
             this.dgcFilesFileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcFilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsFiles = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFiles)).BeginInit();
             this.SuspendLayout();
@@ -58,26 +58,35 @@ namespace KlonsF.Forms
             this.dgvFiles.Location = new System.Drawing.Point(0, 0);
             this.dgvFiles.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFiles.Name = "dgvFiles";
-            this.dgvFiles.Size = new System.Drawing.Size(819, 293);
+            this.dgvFiles.RowHeadersWidth = 30;
+            this.dgvFiles.RowTemplate.Height = 27;
+            this.dgvFiles.ShowCellToolTips = false;
+            this.dgvFiles.Size = new System.Drawing.Size(927, 366);
             this.dgvFiles.TabIndex = 0;
             this.dgvFiles.MyCheckForChanges += new System.EventHandler(this.dgvFiles_MyCheckForChanges);
             this.dgvFiles.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvFiles_RowValidating);
+            // 
+            // bsFiles
+            // 
+            this.bsFiles.Sort = "name";
             // 
             // dgcFilesDescr
             // 
             this.dgcFilesDescr.DataPropertyName = "name";
             this.dgcFilesDescr.HeaderText = "kods";
+            this.dgcFilesDescr.MinimumWidth = 9;
             this.dgcFilesDescr.Name = "dgcFilesDescr";
             this.dgcFilesDescr.ToolTipText = "datubāzes  kods";
-            this.dgcFilesDescr.Width = 120;
+            this.dgcFilesDescr.Width = 135;
             // 
             // dgcFilesName
             // 
             this.dgcFilesName.DataPropertyName = "descr";
             this.dgcFilesName.HeaderText = "apraksts";
+            this.dgcFilesName.MinimumWidth = 9;
             this.dgcFilesName.Name = "dgcFilesName";
             this.dgcFilesName.ToolTipText = "datubāzes apraksts";
-            this.dgcFilesName.Width = 240;
+            this.dgcFilesName.Width = 270;
             // 
             // dgcFilesConnStr
             // 
@@ -91,34 +100,34 @@ namespace KlonsF.Forms
         "FBEmbeded",
         "FBServer"};
             this.dgcFilesConnStr.MaxDropDownItems = 15;
+            this.dgcFilesConnStr.MinimumWidth = 9;
             this.dgcFilesConnStr.Name = "dgcFilesConnStr";
             this.dgcFilesConnStr.ValueMember = "col1";
-            this.dgcFilesConnStr.Width = 96;
+            this.dgcFilesConnStr.Width = 140;
             // 
             // dgcFilesFileName
             // 
             this.dgcFilesFileName.DataPropertyName = "FileName";
             this.dgcFilesFileName.HeaderText = "fails";
+            this.dgcFilesFileName.MinimumWidth = 9;
             this.dgcFilesFileName.Name = "dgcFilesFileName";
-            this.dgcFilesFileName.Width = 120;
+            this.dgcFilesFileName.Width = 135;
             // 
             // dgcFilePath
             // 
             this.dgcFilePath.DataPropertyName = "Path";
             this.dgcFilePath.HeaderText = "mape";
+            this.dgcFilePath.MinimumWidth = 9;
             this.dgcFilePath.Name = "dgcFilePath";
-            this.dgcFilePath.Width = 160;
-            // 
-            // bsFiles
-            // 
-            this.bsFiles.Sort = "name";
+            this.dgcFilePath.Width = 180;
             // 
             // Form_FilesList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 293);
+            this.ClientSize = new System.Drawing.Size(927, 366);
             this.Controls.Add(this.dgvFiles);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_FilesList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Saraksts ar datu bāzēm";

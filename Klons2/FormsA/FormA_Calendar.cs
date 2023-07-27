@@ -38,6 +38,10 @@ namespace KlonsA.Forms
             cbYR.ValueMember = "Key";
             cbYR.SelectedIndex = 6;
 
+            btYR1.Text = $"{yr - 1}";
+            btYR2.Text = $"{yr}";
+            btYR3.Text = $"{yr + 1}";
+
             MakeYear(yr);
             Initalized = true;
         }
@@ -260,6 +264,20 @@ namespace KlonsA.Forms
             return DateTime.MinValue;
         }
 
+        private void btYR1_Click(object sender, EventArgs e)
+        {
+            cbYR.Text = btYR1.Text;
+        }
+
+        private void btYR2_Click(object sender, EventArgs e)
+        {
+            cbYR.Text = btYR2.Text;
+        }
+
+        private void btYR3_Click(object sender, EventArgs e)
+        {
+            cbYR.Text = btYR3.Text;
+        }
     }
 
     enum ECalendarDayType { Day, Out, Hollyday };

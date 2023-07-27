@@ -230,7 +230,11 @@ namespace KlonsF.FormsReportParams
                     "PCLID", null
                 });
 
-            rd.FileName = "Report_AvNor_1";
+            if (lbCm.SelectedIndex == 0)
+                rd.FileName = "Report_AvNor_1";
+            else
+                rd.FileName = "Report_AvNor_2";
+
             MyMainForm.ShowReport(rd);
         }
 

@@ -195,14 +195,14 @@ namespace KlonsF.FormsReportParams
 
             int repid = lbCm.SelectedIndex;
             if (cbClid.Text == "*") cbClid.Text = "";
-            if (cbClid.Text != "") repid += 6;
+            if (cbClid.Text != "") repid += 7;
 
             ROps1aTableAdapter ad1a = MyData.GetKlonsFRepAdapter("ROps1a") as ROps1aTableAdapter;
             ROps2aTableAdapter ad2a = MyData.GetKlonsFRepAdapter("ROps2a") as ROps2aTableAdapter;
             ROps3aTableAdapter ad3a = MyData.GetKlonsFRepAdapter("ROps3a") as ROps3aTableAdapter;
 
             ReportViewerData rd = new ReportViewerData();
-            if(repid != 5)
+            if(repid != 6)
                 rd.Sources["DataSet1"] = MyData.DataSetKlonsFRep.ROps1a;
             rd.Sources["DataSet_2a"] = MyData.DataSetKlonsFRep.ROps2a;
             rd.Sources["DataSet_3a"] = MyData.DataSetKlonsFRep.ROps3a;
@@ -215,33 +215,34 @@ namespace KlonsF.FormsReportParams
                 case 0:
                 case 1:
                 case 2:
+                case 3:
                     ad1a.FillBy_koresp_11(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac);
                     ad2a.FillBy_apgr_01(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac);
                     ad3a.FillBy_koresp_01(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac);
                     break;
-                case 3:
+                case 4:
                     ad1a.FillBy_koresp_11(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac);
                     ad2a.FillBy_apgr_02(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac);
                     ad3a.FillBy_koresp_02(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac);
                     break;
-                case 5:
+                case 6:
                     ad2a.FillBy_apgr_01(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac);
                     ad3a.FillBy_koresp_01(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac);
                     break;
-                case 6:
                 case 7:
                 case 8:
+                case 9:
                     ad1a.FillBy_koresp_11_clid(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac, clid);
                     ad2a.FillBy_apgr_01_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
                     ad3a.FillBy_koresp_01_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, clid);
                     break;
-                case 9:
+                case 10:
                     ad1a.FillBy_koresp_11_clid(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac, clid);
                     ad2a.FillBy_apgr_02_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
                     ad3a.FillBy_koresp_02_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, clid);
                     break;
-                case 4:
-                case 10:
+                case 5:
+                case 11:
                     ad1a.FillBy_koresp_11(MyData.DataSetKlonsFRep.ROps1a, startDate, endDate, ac);
                     ad2a.FillBy_apgr_02_clid(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, null);
                     ad3a.FillBy_koresp_02_clid(MyData.DataSetKlonsFRep.ROps3a, startDate, endDate, ac, null);
@@ -275,15 +276,18 @@ namespace KlonsF.FormsReportParams
                     rd.FileName = "Report_Koresp_1";
                     break;
                 case 1:
-                    rd.FileName = "Report_Koresp_2";
+                    rd.FileName = "Report_Koresp_1_a";
                     break;
                 case 2:
-                    rd.FileName = "Report_Koresp_1_full";
-                    break;
-                case 5:
-                    rd.FileName = "Report_Koresp_3";
+                    rd.FileName = "Report_Koresp_2";
                     break;
                 case 3:
+                    rd.FileName = "Report_Koresp_1_full";
+                    break;
+                case 6:
+                    rd.FileName = "Report_Koresp_3";
+                    break;
+                case 4:
                     rdsub = rd;
                     rdsub.FileName = "Report_Koresp_1";
                     rdsub.AddSubreportLink("DataSet1", "PAC", "Ac1");
@@ -307,7 +311,7 @@ namespace KlonsF.FormsReportParams
                             "RCURRENCY", ""
                         });
                     break;
-                case 4:
+                case 5:
                     rdsub = rd;
                     rdsub.FileName = "Report_Koresp_1";
                     rdsub.AddSubreportLink("DataSet1", "PAC", "Ac1", "PCLID", "Clid");

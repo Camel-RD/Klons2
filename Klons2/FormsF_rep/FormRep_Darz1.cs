@@ -171,7 +171,7 @@ namespace KlonsF.FormsReportParams
                 case 0:
                     ad1.FillBy_darz_1(MyData.DataSetKlonsFRep.TRepDarz1, startDate, endDate, filterAc1, filterAc3);
                     ad2.FillBy_darz_2(MyData.DataSetKlonsFRep.TRepDarz2, startDateOfYear, startDate.AddDays(-1), filterAc1, filterAc3);
-                    rd.FileName = "Report_Darz_1";
+                    rd.FileName = "Report_Darz_4";
                     break;
                 case 1:
                     ad1.FillBy_darz_1(MyData.DataSetKlonsFRep.TRepDarz1, startDate, endDate, filterAc1, filterAc3);
@@ -179,6 +179,11 @@ namespace KlonsF.FormsReportParams
                     rd.FileName = "Report_Darz_3";
                     break;
                 case 2:
+                    ad1.FillBy_darz_1(MyData.DataSetKlonsFRep.TRepDarz1, startDate, endDate, filterAc1, filterAc3);
+                    ad2.FillBy_darz_2(MyData.DataSetKlonsFRep.TRepDarz2, startDateOfYear, startDate.AddDays(-1), filterAc1, filterAc3);
+                    rd.FileName = "Report_Darz_1";
+                    break;
+                case 3:
                     ad1.FillBy_darz_3(MyData.DataSetKlonsFRep.TRepDarz1, startDate, endDate);
                     ad2.FillBy_darz_4(MyData.DataSetKlonsFRep.TRepDarz2, startDateOfYear, startDate.AddDays(-1));
                     rd.FileName = "Report_Darz_2";
@@ -202,7 +207,7 @@ namespace KlonsF.FormsReportParams
                         "RPERIOD", speriod,
                         "CompanyName", MyData.Params.CompNameX
                 });
-            if (rd.FileName == "Report_Darz_1")
+            if (rd.FileName == "Report_Darz_1" || rd.FileName == "Report_Darz_4")
             {
                 rd.AddReportParameters(
                     new string[]

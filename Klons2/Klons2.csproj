@@ -1306,6 +1306,9 @@
     <Compile Include="FormsA\FormA_TeritorialCodes.Designer.cs">
       <DependentUpon>FormA_TeritorialCodes.cs</DependentUpon>
     </Compile>
+    <Content Include="Reports\Report_AvNor_2.rdlc" />
+    <Content Include="Reports\Report_Koresp_1_a.rdlc" />
+    <Content Include="Reports\Report_Darz_4.rdlc" />
     <EmbeddedResource Include="SQL\SQLV003.txt" />
     <Content Include="TODO-M.txt" />
     <EmbeddedResource Include="FormsA\FormA_PayListImport.resx">

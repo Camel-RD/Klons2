@@ -32,22 +32,22 @@ namespace KlonsF.FormsReportParams
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem1 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem2 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem3 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem4 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem5 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem6 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem7 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem8 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem9 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem10 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem11 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem12 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem13 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem14 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem15 = new KlonsLIB.Components.MyMcComboBox.MyItem();
-            KlonsLIB.Components.MyMcComboBox.MyItem myItem16 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem17 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem18 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem19 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem20 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem21 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem22 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem23 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem24 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem25 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem26 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem27 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem28 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem29 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem30 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem31 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem32 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             this.bsAC = new KlonsLIB.Data.MyBindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.cmDoIt = new System.Windows.Forms.Button();
@@ -78,10 +78,10 @@ namespace KlonsF.FormsReportParams
             // 
             // cmDoIt
             // 
-            this.cmDoIt.Location = new System.Drawing.Point(312, 156);
+            this.cmDoIt.Location = new System.Drawing.Point(306, 138);
             this.cmDoIt.Margin = new System.Windows.Forms.Padding(2);
             this.cmDoIt.Name = "cmDoIt";
-            this.cmDoIt.Size = new System.Drawing.Size(150, 79);
+            this.cmDoIt.Size = new System.Drawing.Size(150, 63);
             this.cmDoIt.TabIndex = 3;
             this.cmDoIt.Text = "Taisīt atskaiti";
             this.cmDoIt.UseVisualStyleBackColor = true;
@@ -104,11 +104,11 @@ namespace KlonsF.FormsReportParams
             this.cbYear.GridLineHorizontal = false;
             this.cbYear.GridLineVertical = false;
             this.cbYear.IntegralHeight = false;
-            myItem1.Col1 = "2014";
-            myItem2.Col1 = "2015";
+            myItem17.Col1 = "2014";
+            myItem18.Col1 = "2015";
             this.cbYear.Items.AddRange(new object[] {
-            myItem1,
-            myItem2});
+            myItem17,
+            myItem18});
             this.cbYear.ItemStrings = new string[] {
         "2014",
         "2015"};
@@ -141,40 +141,40 @@ namespace KlonsF.FormsReportParams
             this.cbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbMonth.DropDownHeight = 315;
             this.cbMonth.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            this.cbMonth.DropDownWidth = 58;
+            this.cbMonth.DropDownWidth = 86;
             this.cbMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMonth.FormattingEnabled = true;
             this.cbMonth.GridLineColor = System.Drawing.Color.LightGray;
             this.cbMonth.GridLineHorizontal = false;
             this.cbMonth.GridLineVertical = false;
             this.cbMonth.IntegralHeight = false;
-            myItem3.Col1 = "01";
-            myItem4.Col1 = "02";
-            myItem5.Col1 = "03";
-            myItem6.Col1 = "04";
-            myItem7.Col1 = "05";
-            myItem8.Col1 = "06";
-            myItem9.Col1 = "07";
-            myItem10.Col1 = "08";
-            myItem11.Col1 = "09";
-            myItem12.Col1 = "10";
-            myItem13.Col1 = "11";
-            myItem14.Col1 = "12";
-            myItem15.Col1 = "Gads";
+            myItem19.Col1 = "01";
+            myItem20.Col1 = "02";
+            myItem21.Col1 = "03";
+            myItem22.Col1 = "04";
+            myItem23.Col1 = "05";
+            myItem24.Col1 = "06";
+            myItem25.Col1 = "07";
+            myItem26.Col1 = "08";
+            myItem27.Col1 = "09";
+            myItem28.Col1 = "10";
+            myItem29.Col1 = "11";
+            myItem30.Col1 = "12";
+            myItem31.Col1 = "Gads";
             this.cbMonth.Items.AddRange(new object[] {
-            myItem3,
-            myItem4,
-            myItem5,
-            myItem6,
-            myItem7,
-            myItem8,
-            myItem9,
-            myItem10,
-            myItem11,
-            myItem12,
-            myItem13,
-            myItem14,
-            myItem15});
+            myItem19,
+            myItem20,
+            myItem21,
+            myItem22,
+            myItem23,
+            myItem24,
+            myItem25,
+            myItem26,
+            myItem27,
+            myItem28,
+            myItem29,
+            myItem30,
+            myItem31});
             this.cbMonth.ItemStrings = new string[] {
         "01",
         "02",
@@ -204,8 +204,9 @@ namespace KlonsF.FormsReportParams
             this.lbCM.FormattingEnabled = true;
             this.lbCM.ItemHeight = 20;
             this.lbCM.Items.AddRange(new object[] {
-            "IIN maksātājam",
+            "IIN maksātājam, no 01.06.2022",
             "IIN maksātājam, no 01.07.2018",
+            "IIN maksātājam",
             "MUN maksātājam"});
             this.lbCM.Location = new System.Drawing.Point(20, 138);
             this.lbCM.Margin = new System.Windows.Forms.Padding(2);
@@ -241,9 +242,9 @@ namespace KlonsF.FormsReportParams
             this.cbFilter.GridLineHorizontal = false;
             this.cbFilter.GridLineVertical = false;
             this.cbFilter.IntegralHeight = false;
-            myItem16.Col1 = "*";
+            myItem32.Col1 = "*";
             this.cbFilter.Items.AddRange(new object[] {
-            myItem16});
+            myItem32});
             this.cbFilter.ItemStrings = new string[] {
         "*"};
             this.cbFilter.Location = new System.Drawing.Point(79, 86);

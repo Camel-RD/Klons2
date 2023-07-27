@@ -218,7 +218,8 @@ namespace KlonsF.FormsReportParams
             this.lbCm.FormattingEnabled = true;
             this.lbCm.ItemHeight = 20;
             this.lbCm.Items.AddRange(new object[] {
-            "Avansa norēķina atskaite 1"});
+            "Avansa norēķina atskaite 1",
+            "Avansa norēķina atskaite 2"});
             this.lbCm.Location = new System.Drawing.Point(25, 218);
             this.lbCm.Margin = new System.Windows.Forms.Padding(2);
             this.lbCm.Name = "lbCm";

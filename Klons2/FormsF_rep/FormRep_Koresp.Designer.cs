@@ -216,6 +216,7 @@ namespace KlonsF.FormsReportParams
             this.lbCm.ItemHeight = 20;
             this.lbCm.Items.AddRange(new object[] {
             "Pilnais konta korespondences pārskats",
+            "Pilnais konta korespondences pārskats - 2",
             "Konta korespondences dokumentu pārskats",
             "Konta korespondences pārskats ar visu kontējumu",
             "Kontu grupas korespondences pārskats",
@@ -239,7 +240,7 @@ namespace KlonsF.FormsReportParams
             this.tsbNextMonth});
             this.toolStrip1.Location = new System.Drawing.Point(363, 47);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(118, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(72, 33);
             this.toolStrip1.TabIndex = 11;
             this.toolStrip1.Text = "toolStrip1";
             // 
