@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsF.Forms;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Forms;
@@ -357,5 +356,6 @@ namespace KlonsF.FormsReportParams
             tbSD.Text = Utils.DateToString(dt1);
             tbED.Text = Utils.DateToString(dt2);
         }
+
     }
 }

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 

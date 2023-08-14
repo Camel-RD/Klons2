@@ -158,8 +158,8 @@ namespace KlonsF.Forms
             this.splitContainer1.Panel2.Controls.Add(this.dgvOps);
             this.splitContainer1.Panel2MinSize = 125;
             this.splitContainer1.Size = new System.Drawing.Size(1306, 403);
-            this.splitContainer1.SplitterDistance = 187;
-            this.splitContainer1.SplitterWidth = 6;
+            this.splitContainer1.SplitterDistance = 219;
+            this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 3;
             // 
             // dgvDocs
@@ -191,7 +191,8 @@ namespace KlonsF.Forms
             this.dgvDocs.Name = "dgvDocs";
             this.dgvDocs.RowHeadersWidth = 62;
             this.dgvDocs.RowTemplate.Height = 28;
-            this.dgvDocs.Size = new System.Drawing.Size(1306, 187);
+            this.dgvDocs.ShowCellToolTips = false;
+            this.dgvDocs.Size = new System.Drawing.Size(1306, 219);
             this.dgvDocs.TabIndex = 2;
             this.dgvDocs.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDocs_MyKeyDown);
             this.dgvDocs.MyCheckForChanges += new System.EventHandler(this.dgvDocs_MyCheckForChanges);
@@ -457,7 +458,8 @@ namespace KlonsF.Forms
             this.dgvOps.Name = "dgvOps";
             this.dgvOps.RowHeadersWidth = 62;
             this.dgvOps.RowTemplate.Height = 28;
-            this.dgvOps.Size = new System.Drawing.Size(1306, 210);
+            this.dgvOps.ShowCellToolTips = false;
+            this.dgvOps.Size = new System.Drawing.Size(1306, 176);
             this.dgvOps.TabIndex = 3;
             this.dgvOps.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvOps_MyKeyDown);
             this.dgvOps.MyCheckForChanges += new System.EventHandler(this.dgvOps_MyCheckForChanges);
@@ -1022,6 +1024,7 @@ namespace KlonsF.Forms
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDocs_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDocs_FormClosed);
             this.Load += new System.EventHandler(this.FormDocs_Load);
+            this.Shown += new System.EventHandler(this.Form_Docs_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

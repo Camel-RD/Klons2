@@ -131,6 +131,15 @@ namespace KlonsA.Forms
 
         public void GetRows()
         {
+            if (!MyData.Params.IINSimple)
+            {
+                var rt = MessageBox.Show(this, 
+                    "Programmas parametros ir jānorāda, ka aprēķinātais IIN ir ieturētais.\n" +
+                    "Vai vēlaties turpināt?", "Brīdinājums", 
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Warning);
+                if (rt != DialogResult.Yes) return;
+            }
             ReportData = new Report_VSAOI1();
             ReportData.MakeReport(Date1, Date2);
             FilterRows();

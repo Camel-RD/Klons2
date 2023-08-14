@@ -34,9 +34,28 @@ namespace KlonsF.Classes
 
         private string inWine = "NO";
 
+        private int opsTableHeight = 0;
+
         private int[] columnWidths_Docs = new int[0];
         private int[] columnWidths_Ops = new int[0];
         private int[] columnWidths_Dops = new int[0];
+
+        private string columnWidths_Docs2 = "";
+        private string columnWidths_Ops2 = "";
+        private string columnWidths_Dops2 = "";
+
+        private string columnWidths_SalarySheet = "";
+        private string columnWidths_SalaryBonus = "";
+        private string columnWidths_AEvents = "";
+
+        private string columnWidths_PItems = "";
+        private string columnWidths_PEvents = "";
+
+        private string columnWidths_MDocs = "";
+        private string columnWidths_MDocsFilter = "";
+        private string columnWidths_MDoc = "";
+        private string columnWidths_MStores = "";
+        private string columnWidths_MItems = "";
 
         private bool showPersonList = false;
         private bool showPayDataPanel = false;
@@ -280,6 +299,17 @@ namespace KlonsF.Classes
             }
         }
 
+        public int OpsTableHeight
+        {
+            get { return opsTableHeight; }
+            set
+            {
+                if (opsTableHeight == value) return;
+                opsTableHeight = value;
+                HasChanged = true;
+            }
+        }
+
         public int[] ColumnWidths_Docs
         {
             get { return columnWidths_Docs; }
@@ -312,6 +342,149 @@ namespace KlonsF.Classes
                 if (columnWidths_Dops.IsTheSameArray(value)) return;
                 columnWidths_Dops = new int[value.Length];
                 value.CopyTo(columnWidths_Dops,0);
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_Docs2
+        {
+            get { return columnWidths_Docs2; }
+            set
+            {
+                if (columnWidths_Docs2 == value) return;
+                columnWidths_Docs2 = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_Ops2
+        {
+            get { return columnWidths_Ops2; }
+            set
+            {
+                if (columnWidths_Ops2 == value) return;
+                columnWidths_Ops2 = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_Dops2
+        {
+            get { return columnWidths_Dops2; }
+            set
+            {
+                if (columnWidths_Dops2 == value) return;
+                columnWidths_Dops2 = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_SalarySheet
+        {
+            get { return columnWidths_SalarySheet; }
+            set
+            {
+                if (columnWidths_SalarySheet == value) return;
+                columnWidths_SalarySheet = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_SalaryBonus
+        {
+            get { return columnWidths_SalaryBonus; }
+            set
+            {
+                if (columnWidths_SalaryBonus == value) return;
+                columnWidths_SalaryBonus = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_AEvents
+        {
+            get { return columnWidths_AEvents; }
+            set
+            {
+                if (columnWidths_AEvents == value) return;
+                columnWidths_AEvents = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_PItems
+        {
+            get { return columnWidths_PItems; }
+            set
+            {
+                if (columnWidths_PItems == value) return;
+                columnWidths_PItems = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_PEvents
+        {
+            get { return columnWidths_PEvents; }
+            set
+            {
+                if (columnWidths_PEvents == value) return;
+                columnWidths_PEvents = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_MDocs
+        {
+            get { return columnWidths_MDocs; }
+            set
+            {
+                if (columnWidths_MDocs == value) return;
+                columnWidths_MDocs = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_MDocsFilter
+        {
+            get { return columnWidths_MDocsFilter; }
+            set
+            {
+                if (columnWidths_MDocsFilter == value) return;
+                columnWidths_MDocsFilter = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_MDoc
+        {
+            get { return columnWidths_MDoc; }
+            set
+            {
+                if (columnWidths_MDoc == value) return;
+                columnWidths_MDoc = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_MStores
+        {
+            get { return columnWidths_MStores; }
+            set
+            {
+                if (columnWidths_MStores == value) return;
+                columnWidths_MStores = value;
+                HasChanged = true;
+            }
+        }
+
+        public string ColumnWidths_MItems
+        {
+            get { return columnWidths_MItems; }
+            set
+            {
+                if (columnWidths_MItems == value) return;
+                columnWidths_MItems = value;
                 HasChanged = true;
             }
         }

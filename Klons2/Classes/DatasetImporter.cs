@@ -17,7 +17,6 @@ using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using FirebirdSql.Data.FirebirdClient;
 using System.Collections.Generic;
-using FirebirdSql.Data.FirebirdClient;
 
 namespace KlonsF.Classes
 {

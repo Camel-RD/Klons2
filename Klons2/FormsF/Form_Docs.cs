@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using KlonsF.Classes;
 using KlonsF.FormsReportParams;
-using KlonsF.Classes;
 using KlonsF.DataSets;
 using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
@@ -38,11 +37,17 @@ namespace KlonsF.Forms
         private void LoadColumnWidthsFromSettings()
         {
             int[] cw = MyData.Settings.ColumnWidths_Docs;
+            string scw2 = MyData.Settings.ColumnWidths_Docs2;
+            (int ver, int[] cw2) = dgvDocs.ParseColumnWidths(scw2);
+            if (ver == 1 && cw2 != null && cw2.Length > 0) cw = cw2;
             if (cw.Length > 0)
             {
                 dgvDocs.SetColumnWidths(cw);
             }
             cw = MyData.Settings.ColumnWidths_Ops;
+            scw2 = MyData.Settings.ColumnWidths_Ops2;
+            (ver, cw2) = dgvOps.ParseColumnWidths(scw2);
+            if (ver == 1 && cw2 != null && cw2.Length > 0) cw = cw2;
             if (cw.Length > 0)
             {
                 dgvOps.SetColumnWidths(cw);
@@ -51,8 +56,14 @@ namespace KlonsF.Forms
 
         private void SaveColumnWidthsToSettings()
         {
-            MyData.Settings.ColumnWidths_Docs = dgvDocs.GetColumnWidths(10.0f);
-            MyData.Settings.ColumnWidths_Ops = dgvOps.GetColumnWidths(10.0f);
+            MyData.Settings.ColumnWidths_Docs = new int[0];
+            MyData.Settings.ColumnWidths_Ops = new int[0];
+            MyData.Settings.ColumnWidths_Docs2 = dgvDocs.GetColumnWidths2(9.0f, 1);
+            MyData.Settings.ColumnWidths_Ops2 = dgvOps.GetColumnWidths2(9.0f, 1);
+
+            int oh = splitContainer1.Height - splitContainer1.SplitterDistance;
+            oh = (int)Math.Round(oh / ScaleFactor.Height, 0);
+            MyData.Settings.OpsTableHeight = oh;
         }
 
         private static string LastConnectionString = null;
@@ -66,6 +77,22 @@ namespace KlonsF.Forms
         {
             WindowState = FormWindowState.Maximized;
             CheckSave();
+        }
+
+        private void Form_Docs_Shown(object sender, EventArgs e)
+        {
+            CheckSplitDistance();
+        }
+
+        private void CheckSplitDistance()
+        {
+            int oh = MyData.Settings.OpsTableHeight;
+            if (oh > 0)
+            {
+                int sd = splitContainer1.Height - (int)Math.Round(oh * ScaleFactor.Height, 0);
+                if (sd >= splitContainer1.Panel1MinSize)
+                    splitContainer1.SplitterDistance = sd;
+            }
         }
 
         private void FormDocs_FormClosed(object sender, FormClosedEventArgs e)
@@ -978,7 +1005,6 @@ namespace KlonsF.Forms
             , decimal sum, DateTime date)
         {
             if (docrow == null) return;
-            klonsDataSet.OPSRow dr;
 
             var opsrows = docrow.GetOPSRows();
             if (opsrows == null || opsrows.Length != 2) return;

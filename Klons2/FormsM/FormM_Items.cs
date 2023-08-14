@@ -22,6 +22,7 @@ namespace KlonsM.FormsM
         {
             InitializeComponent();
             CheckMyFontAndColors();
+            LoadColumnWidthsFromSettings();
         }
 
         private void FormM_Items_Load(object sender, EventArgs e)
@@ -36,6 +37,24 @@ namespace KlonsM.FormsM
         private void FormM_Items_FormClosed(object sender, FormClosedEventArgs e)
         {
             MyData.DataSetKlonsM.M_ITEMS.ColumnChanged -= M_ITEMS_ColumnChanged;
+        }
+
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_MItems;
+            (int ver, int[] cw) = dgvRows.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvRows.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_MItems = dgvRows.GetColumnWidths2(8.0f, 1);
+        }
+
+        public override void SaveParams()
+        {
+            SaveColumnWidthsToSettings();
         }
 
         private void M_ITEMS_ColumnChanged(object sender, DataColumnChangeEventArgs e)

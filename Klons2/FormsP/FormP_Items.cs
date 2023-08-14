@@ -42,6 +42,7 @@ namespace KlonsP.Forms
             dgcFilterSate.ValueMember = "Key";
             dgcFilterSate.DisplayMember = "Val";
 
+            LoadColumnWidthsFromSettings();
         }
 
         public DateTime CurrentDate { get; private set; } = DateTime.MinValue;
@@ -70,9 +71,30 @@ namespace KlonsP.Forms
             sgrEvents.LinkGrid();
         }
 
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_PItems;
+            (int ver, int[] cw) = dgvItems.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvItems.SetColumnWidths(cw);
+
+            scw = MyData.Settings.ColumnWidths_PEvents;
+            (ver, cw) = dgvEvents.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvEvents.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_PItems = dgvItems.GetColumnWidths2(8.0f, 1);
+            MyData.Settings.ColumnWidths_PEvents = dgvEvents.GetColumnWidths2(8.0f, 1);
+        }
+
+
         public override void SaveParams()
         {
             MyData.Params.ActiveDate = CurrentDate;
+            SaveColumnWidthsToSettings();
         }
 
         public void DeleteCurrent()

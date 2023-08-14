@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormP_Events));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,7 +49,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormP_Events));
             this.filterData1 = new DataObjectsP.FilterData();
             this.dgvFilter = new KlonsLIB.Components.MyDataGridView();
             this.dgcFilterDate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +69,18 @@
             this.bsFilter = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
             this.bsRows = new KlonsLIB.Data.MyBindingSource(this.components);
             this.dgvEvents = new KlonsLIB.Components.MyDataGridView();
+            this.bnavNav = new KlonsLIB.Components.MyBindingNavigator();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbOpenItem = new System.Windows.Forms.ToolStripButton();
+            this.bsRows2 = new System.Windows.Forms.BindingSource(this.components);
             this.dgcEventsXRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsXName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,18 +111,6 @@
             this.dgcEventsZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsIDIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bnavNav = new KlonsLIB.Components.MyBindingNavigator();
-            this.bsRows2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbOpenItem = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsfEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsfCat1)).BeginInit();
@@ -125,6 +125,18 @@
             this.bnavNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsRows2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // filterData1
+            // 
+            this.filterData1.fCAT1 = null;
+            this.filterData1.fCATD = null;
+            this.filterData1.fCATT = null;
+            this.filterData1.fDATE1 = null;
+            this.filterData1.fDATE2 = null;
+            this.filterData1.fDEPARTMENT = null;
+            this.filterData1.fEVENT = null;
+            this.filterData1.fPLACE = null;
+            this.filterData1.fSTATE = null;
             // 
             // dgvFilter
             // 
@@ -156,10 +168,13 @@
             this.dgvFilter.DataSource = this.bsFilter;
             this.dgvFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvFilter.Location = new System.Drawing.Point(0, 0);
+            this.dgvFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvFilter.Name = "dgvFilter";
             this.dgvFilter.RowHeadersVisible = false;
-            this.dgvFilter.RowTemplate.Height = 24;
-            this.dgvFilter.Size = new System.Drawing.Size(1050, 48);
+            this.dgvFilter.RowHeadersWidth = 62;
+            this.dgvFilter.RowTemplate.Height = 29;
+            this.dgvFilter.ShowCellToolTips = false;
+            this.dgvFilter.Size = new System.Drawing.Size(1181, 60);
             this.dgvFilter.TabIndex = 9;
             this.dgvFilter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilter_CellContentClick);
             this.dgvFilter.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilter_CellEndEdit);
@@ -171,10 +186,11 @@
             dataGridViewCellStyle2.Format = "dd.MM.yyyy";
             this.dgcFilterDate1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgcFilterDate1.HeaderText = "Dat.no";
+            this.dgcFilterDate1.MinimumWidth = 9;
             this.dgcFilterDate1.Name = "dgcFilterDate1";
             this.dgcFilterDate1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgcFilterDate1.ToolTipText = "Datums no";
-            this.dgcFilterDate1.Width = 80;
+            this.dgcFilterDate1.Width = 90;
             // 
             // dgcFilterDate2
             // 
@@ -182,9 +198,10 @@
             dataGridViewCellStyle3.Format = "dd.MM.yyyy";
             this.dgcFilterDate2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgcFilterDate2.HeaderText = "Dat.līdz";
+            this.dgcFilterDate2.MinimumWidth = 9;
             this.dgcFilterDate2.Name = "dgcFilterDate2";
             this.dgcFilterDate2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcFilterDate2.Width = 80;
+            this.dgcFilterDate2.Width = 90;
             // 
             // dgcFilterEvent
             // 
@@ -198,8 +215,10 @@
             this.dgcFilterEvent.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterEvent.HeaderText = "Notikums";
             this.dgcFilterEvent.MaxDropDownItems = 15;
+            this.dgcFilterEvent.MinimumWidth = 9;
             this.dgcFilterEvent.Name = "dgcFilterEvent";
             this.dgcFilterEvent.ValueMember = "ID";
+            this.dgcFilterEvent.Width = 168;
             // 
             // bsfEvents
             // 
@@ -219,9 +238,11 @@
             this.dgcFilterCat1.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterCat1.HeaderText = "Kat.";
             this.dgcFilterCat1.MaxDropDownItems = 15;
+            this.dgcFilterCat1.MinimumWidth = 9;
             this.dgcFilterCat1.Name = "dgcFilterCat1";
             this.dgcFilterCat1.ToolTipText = "Uzskaites kategorija";
             this.dgcFilterCat1.ValueMember = "ID";
+            this.dgcFilterCat1.Width = 168;
             // 
             // bsfCat1
             // 
@@ -241,9 +262,11 @@
             this.dgcFilterCatD.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterCatD.HeaderText = "Nol. kat.";
             this.dgcFilterCatD.MaxDropDownItems = 15;
+            this.dgcFilterCatD.MinimumWidth = 9;
             this.dgcFilterCatD.Name = "dgcFilterCatD";
             this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
             this.dgcFilterCatD.ValueMember = "ID";
+            this.dgcFilterCatD.Width = 168;
             // 
             // bsfCatD
             // 
@@ -263,9 +286,11 @@
             this.dgcFilterCatT.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterCatT.HeaderText = "Nod. nol. kat.";
             this.dgcFilterCatT.MaxDropDownItems = 15;
+            this.dgcFilterCatT.MinimumWidth = 9;
             this.dgcFilterCatT.Name = "dgcFilterCatT";
             this.dgcFilterCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
             this.dgcFilterCatT.ValueMember = "ID";
+            this.dgcFilterCatT.Width = 168;
             // 
             // bsfCatT
             // 
@@ -285,9 +310,11 @@
             this.dgcFilterDepartment.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterDepartment.HeaderText = "Struktūrv.";
             this.dgcFilterDepartment.MaxDropDownItems = 15;
+            this.dgcFilterDepartment.MinimumWidth = 9;
             this.dgcFilterDepartment.Name = "dgcFilterDepartment";
             this.dgcFilterDepartment.ToolTipText = "Struktūrvienība";
             this.dgcFilterDepartment.ValueMember = "ID";
+            this.dgcFilterDepartment.Width = 168;
             // 
             // bsfDepartments
             // 
@@ -307,8 +334,10 @@
             this.dgcFilterPlace.DisplayStyleForCurrentCellOnly = true;
             this.dgcFilterPlace.HeaderText = "Atrodas";
             this.dgcFilterPlace.MaxDropDownItems = 15;
+            this.dgcFilterPlace.MinimumWidth = 9;
             this.dgcFilterPlace.Name = "dgcFilterPlace";
             this.dgcFilterPlace.ValueMember = "ID";
+            this.dgcFilterPlace.Width = 168;
             // 
             // bsfPlaces
             // 
@@ -319,10 +348,11 @@
             // dgcEventsCM
             // 
             this.dgcEventsCM.HeaderText = "Atlasīt";
+            this.dgcEventsCM.MinimumWidth = 9;
             this.dgcEventsCM.Name = "dgcEventsCM";
             this.dgcEventsCM.Text = ">>";
             this.dgcEventsCM.UseColumnTextForButtonValue = true;
-            this.dgcEventsCM.Width = 60;
+            this.dgcEventsCM.Width = 67;
             // 
             // bsFilter
             // 
@@ -384,322 +414,16 @@
             this.dgcEventsIDIT});
             this.dgvEvents.DataSource = this.bsRows;
             this.dgvEvents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEvents.Location = new System.Drawing.Point(0, 48);
+            this.dgvEvents.Location = new System.Drawing.Point(0, 60);
+            this.dgvEvents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEvents.Name = "dgvEvents";
             this.dgvEvents.ReadOnly = true;
-            this.dgvEvents.RowTemplate.Height = 24;
-            this.dgvEvents.Size = new System.Drawing.Size(1050, 274);
+            this.dgvEvents.RowHeadersWidth = 62;
+            this.dgvEvents.RowTemplate.Height = 29;
+            this.dgvEvents.ShowCellToolTips = false;
+            this.dgvEvents.Size = new System.Drawing.Size(1181, 343);
             this.dgvEvents.TabIndex = 10;
             this.dgvEvents.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEvents_CellFormatting);
-            // 
-            // dgcEventsXRegNr
-            // 
-            this.dgcEventsXRegNr.DataPropertyName = "XREGNR";
-            this.dgcEventsXRegNr.Frozen = true;
-            this.dgcEventsXRegNr.HeaderText = "Reģ.nr.";
-            this.dgcEventsXRegNr.Name = "dgcEventsXRegNr";
-            this.dgcEventsXRegNr.ReadOnly = true;
-            this.dgcEventsXRegNr.ToolTipText = "Pamatlīdzekļa reģistrācijas numurs";
-            this.dgcEventsXRegNr.Width = 60;
-            // 
-            // dgcEventsXName
-            // 
-            this.dgcEventsXName.DataPropertyName = "XNAME";
-            this.dgcEventsXName.Frozen = true;
-            this.dgcEventsXName.HeaderText = "Nosaukums";
-            this.dgcEventsXName.Name = "dgcEventsXName";
-            this.dgcEventsXName.ReadOnly = true;
-            this.dgcEventsXName.Width = 200;
-            // 
-            // dgcEventsEvent
-            // 
-            this.dgcEventsEvent.DataPropertyName = "EVENT";
-            this.dgcEventsEvent.Frozen = true;
-            this.dgcEventsEvent.HeaderText = "Not. kods";
-            this.dgcEventsEvent.Name = "dgcEventsEvent";
-            this.dgcEventsEvent.ReadOnly = true;
-            this.dgcEventsEvent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsEvent.ToolTipText = "Notikuma kods";
-            this.dgcEventsEvent.Width = 80;
-            // 
-            // dgcEventsDT
-            // 
-            this.dgcEventsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
-            this.dgcEventsDT.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgcEventsDT.Frozen = true;
-            this.dgcEventsDT.HeaderText = "Datums";
-            this.dgcEventsDT.Name = "dgcEventsDT";
-            this.dgcEventsDT.ReadOnly = true;
-            this.dgcEventsDT.ToolTipText = "Notikuma datums";
-            this.dgcEventsDT.Width = 80;
-            // 
-            // dgcEventsDtReg
-            // 
-            this.dgcEventsDtReg.DataPropertyName = "DTREG";
-            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
-            this.dgcEventsDtReg.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgcEventsDtReg.HeaderText = "Reģ.dat.";
-            this.dgcEventsDtReg.Name = "dgcEventsDtReg";
-            this.dgcEventsDtReg.ReadOnly = true;
-            this.dgcEventsDtReg.ToolTipText = "Reģistrācijas datums";
-            this.dgcEventsDtReg.Width = 80;
-            // 
-            // dgcEventsDescr
-            // 
-            this.dgcEventsDescr.DataPropertyName = "DESCR";
-            this.dgcEventsDescr.HeaderText = "Apraksts";
-            this.dgcEventsDescr.Name = "dgcEventsDescr";
-            this.dgcEventsDescr.ReadOnly = true;
-            this.dgcEventsDescr.Width = 150;
-            // 
-            // dgcEventsDocNr
-            // 
-            this.dgcEventsDocNr.DataPropertyName = "DOCNR";
-            this.dgcEventsDocNr.HeaderText = "Dok.nr.";
-            this.dgcEventsDocNr.Name = "dgcEventsDocNr";
-            this.dgcEventsDocNr.ReadOnly = true;
-            this.dgcEventsDocNr.ToolTipText = "Dokumenta numurs";
-            // 
-            // dgcEventsCat1
-            // 
-            this.dgcEventsCat1.DataPropertyName = "CAT1";
-            this.dgcEventsCat1.HeaderText = "Kat.";
-            this.dgcEventsCat1.Name = "dgcEventsCat1";
-            this.dgcEventsCat1.ReadOnly = true;
-            this.dgcEventsCat1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsCat1.ToolTipText = "Pamatlīdzekļu kategorija";
-            // 
-            // dgcEventsCatD
-            // 
-            this.dgcEventsCatD.DataPropertyName = "CATD";
-            this.dgcEventsCatD.HeaderText = "Nol. kat.";
-            this.dgcEventsCatD.Name = "dgcEventsCatD";
-            this.dgcEventsCatD.ReadOnly = true;
-            this.dgcEventsCatD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsCatD.ToolTipText = "Nolietojuma kategorija";
-            // 
-            // dgcEventsCatT
-            // 
-            this.dgcEventsCatT.DataPropertyName = "CATT";
-            this.dgcEventsCatT.HeaderText = "Nod. kat.";
-            this.dgcEventsCatT.Name = "dgcEventsCatT";
-            this.dgcEventsCatT.ReadOnly = true;
-            this.dgcEventsCatT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
-            // 
-            // dgcEventsDepartment
-            // 
-            this.dgcEventsDepartment.DataPropertyName = "DEPARTMENT";
-            this.dgcEventsDepartment.HeaderText = "Str.v.";
-            this.dgcEventsDepartment.Name = "dgcEventsDepartment";
-            this.dgcEventsDepartment.ReadOnly = true;
-            this.dgcEventsDepartment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsDepartment.ToolTipText = "Struktūrvienība";
-            // 
-            // dgcEventsPlace
-            // 
-            this.dgcEventsPlace.DataPropertyName = "PLACE";
-            this.dgcEventsPlace.HeaderText = "Atrodas";
-            this.dgcEventsPlace.Name = "dgcEventsPlace";
-            this.dgcEventsPlace.ReadOnly = true;
-            this.dgcEventsPlace.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsPlace.ToolTipText = "Atrašanās vieta";
-            // 
-            // dgcEventsValue0
-            // 
-            this.dgcEventsValue0.DataPropertyName = "VALUE_0";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            this.dgcEventsValue0.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgcEventsValue0.HeaderText = "Ieg.v.";
-            this.dgcEventsValue0.Name = "dgcEventsValue0";
-            this.dgcEventsValue0.ReadOnly = true;
-            this.dgcEventsValue0.ToolTipText = "Iegādes vērtība uz datumu";
-            this.dgcEventsValue0.Width = 80;
-            // 
-            // dgcEventsDeprec0
-            // 
-            this.dgcEventsDeprec0.DataPropertyName = "DEPREC_0";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            this.dgcEventsDeprec0.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgcEventsDeprec0.HeaderText = "Uzrkr. noliet.";
-            this.dgcEventsDeprec0.Name = "dgcEventsDeprec0";
-            this.dgcEventsDeprec0.ReadOnly = true;
-            this.dgcEventsDeprec0.ToolTipText = "Uzkrātais nolietojums";
-            this.dgcEventsDeprec0.Width = 80;
-            // 
-            // dgcEventsValueC
-            // 
-            this.dgcEventsValueC.DataPropertyName = "VALUE_C";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "# ##0.00;-# ##0.00;\"\"";
-            this.dgcEventsValueC.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgcEventsValueC.HeaderText = "ieg.v. +/-";
-            this.dgcEventsValueC.Name = "dgcEventsValueC";
-            this.dgcEventsValueC.ReadOnly = true;
-            this.dgcEventsValueC.Width = 80;
-            // 
-            // dgcEventsDeprecC
-            // 
-            this.dgcEventsDeprecC.DataPropertyName = "DEPREC_C";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "# ##0.00;-# ##0.00;\"\"";
-            this.dgcEventsDeprecC.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgcEventsDeprecC.HeaderText = "Uzkr.nol. +/-";
-            this.dgcEventsDeprecC.Name = "dgcEventsDeprecC";
-            this.dgcEventsDeprecC.ReadOnly = true;
-            this.dgcEventsDeprecC.Width = 80;
-            // 
-            // dgcEventsSellValue
-            // 
-            this.dgcEventsSellValue.DataPropertyName = "SELL_VALUE";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            this.dgcEventsSellValue.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgcEventsSellValue.HeaderText = "Pārd.v.";
-            this.dgcEventsSellValue.Name = "dgcEventsSellValue";
-            this.dgcEventsSellValue.ReadOnly = true;
-            this.dgcEventsSellValue.ToolTipText = "Pārdošanas vērtība";
-            this.dgcEventsSellValue.Width = 80;
-            // 
-            // dgcEventsMtTotal
-            // 
-            this.dgcEventsMtTotal.DataPropertyName = "MT_TOTAL";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcEventsMtTotal.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgcEventsMtTotal.HeaderText = "Mēn.";
-            this.dgcEventsMtTotal.Name = "dgcEventsMtTotal";
-            this.dgcEventsMtTotal.ReadOnly = true;
-            this.dgcEventsMtTotal.ToolTipText = "Nolietojuma periods mēnešos";
-            this.dgcEventsMtTotal.Width = 40;
-            // 
-            // dgcEventsMtUsed
-            // 
-            this.dgcEventsMtUsed.DataPropertyName = "MT_USED";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcEventsMtUsed.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgcEventsMtUsed.HeaderText = "Mēn. izm.";
-            this.dgcEventsMtUsed.Name = "dgcEventsMtUsed";
-            this.dgcEventsMtUsed.ReadOnly = true;
-            this.dgcEventsMtUsed.ToolTipText = "Izmantotais nolietojuma periods mēnešos";
-            this.dgcEventsMtUsed.Width = 40;
-            // 
-            // dgcEventsRateD
-            // 
-            this.dgcEventsRateD.DataPropertyName = "RATE_D";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcEventsRateD.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgcEventsRateD.HeaderText = "Nol. likme";
-            this.dgcEventsRateD.Name = "dgcEventsRateD";
-            this.dgcEventsRateD.ReadOnly = true;
-            this.dgcEventsRateD.ToolTipText = "Nolietojuma likme";
-            this.dgcEventsRateD.Width = 40;
-            // 
-            // dgcEventsRateDMt
-            // 
-            this.dgcEventsRateDMt.DataPropertyName = "RATE_D_MT";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N2";
-            this.dgcEventsRateDMt.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dgcEventsRateDMt.HeaderText = "Nol.likme mēnesī";
-            this.dgcEventsRateDMt.Name = "dgcEventsRateDMt";
-            this.dgcEventsRateDMt.ReadOnly = true;
-            this.dgcEventsRateDMt.ToolTipText = "Nolietojama likme mēnesī";
-            this.dgcEventsRateDMt.Width = 80;
-            // 
-            // dgcEventsTaxVal
-            // 
-            this.dgcEventsTaxVal.DataPropertyName = "TAX_VAL";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            this.dgcEventsTaxVal.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dgcEventsTaxVal.HeaderText = "Nod.nol.";
-            this.dgcEventsTaxVal.Name = "dgcEventsTaxVal";
-            this.dgcEventsTaxVal.ReadOnly = true;
-            this.dgcEventsTaxVal.ToolTipText = "Nolietojuma vērtība nodokļa vajadzībām";
-            this.dgcEventsTaxVal.Width = 80;
-            // 
-            // dgcEventsTaxValLeft
-            // 
-            this.dgcEventsTaxValLeft.DataPropertyName = "TAX_VAL_LEFT";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.Format = "N2";
-            this.dgcEventsTaxValLeft.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dgcEventsTaxValLeft.HeaderText = "Nod.nol. atl.v.";
-            this.dgcEventsTaxValLeft.Name = "dgcEventsTaxValLeft";
-            this.dgcEventsTaxValLeft.ReadOnly = true;
-            this.dgcEventsTaxValLeft.ToolTipText = "Atlikusī nolietojuma vērtība nodokļa vajadzībām";
-            this.dgcEventsTaxValLeft.Width = 80;
-            // 
-            // dgcEventsTaxValC
-            // 
-            this.dgcEventsTaxValC.DataPropertyName = "TAX_VAL_C";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.Format = "# ##0.00;-# ##0.00;\"\"";
-            this.dgcEventsTaxValC.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dgcEventsTaxValC.HeaderText = "Nod.nol. +/-";
-            this.dgcEventsTaxValC.Name = "dgcEventsTaxValC";
-            this.dgcEventsTaxValC.ReadOnly = true;
-            this.dgcEventsTaxValC.ToolTipText = "Nolietojuma vērtības izmaiņas nodokļa vajadzībām";
-            this.dgcEventsTaxValC.Width = 80;
-            // 
-            // dgcEventsTaxRate
-            // 
-            this.dgcEventsTaxRate.DataPropertyName = "TAX_RATE";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcEventsTaxRate.DefaultCellStyle = dataGridViewCellStyle19;
-            this.dgcEventsTaxRate.HeaderText = "Nod.nol. likme";
-            this.dgcEventsTaxRate.Name = "dgcEventsTaxRate";
-            this.dgcEventsTaxRate.ReadOnly = true;
-            this.dgcEventsTaxRate.ToolTipText = "Nolietojuma likme nodokļu vajadzībām";
-            this.dgcEventsTaxRate.Width = 60;
-            // 
-            // dgcEventsTaxEach
-            // 
-            this.dgcEventsTaxEach.DataPropertyName = "TAX_EACH";
-            this.dgcEventsTaxEach.FalseValue = "0";
-            this.dgcEventsTaxEach.HeaderText = "Nod.nol. katru";
-            this.dgcEventsTaxEach.Name = "dgcEventsTaxEach";
-            this.dgcEventsTaxEach.ReadOnly = true;
-            this.dgcEventsTaxEach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcEventsTaxEach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcEventsTaxEach.ToolTipText = "Nolietojumu nodokļu vajadzībām rēķina katram pamatlīdzeklim atsevišķi";
-            this.dgcEventsTaxEach.TrueValue = "1";
-            this.dgcEventsTaxEach.Width = 60;
-            // 
-            // dgcEventsZDT
-            // 
-            this.dgcEventsZDT.DataPropertyName = "ZDT";
-            this.dgcEventsZDT.HeaderText = "ZDT";
-            this.dgcEventsZDT.Name = "dgcEventsZDT";
-            this.dgcEventsZDT.ReadOnly = true;
-            this.dgcEventsZDT.Visible = false;
-            // 
-            // dgcEventsZU
-            // 
-            this.dgcEventsZU.DataPropertyName = "ZU";
-            this.dgcEventsZU.HeaderText = "ZU";
-            this.dgcEventsZU.Name = "dgcEventsZU";
-            this.dgcEventsZU.ReadOnly = true;
-            this.dgcEventsZU.Visible = false;
-            // 
-            // dgcEventsID
-            // 
-            this.dgcEventsID.DataPropertyName = "ID";
-            this.dgcEventsID.HeaderText = "ID";
-            this.dgcEventsID.Name = "dgcEventsID";
-            this.dgcEventsID.ReadOnly = true;
-            this.dgcEventsID.Visible = false;
-            // 
-            // dgcEventsIDIT
-            // 
-            this.dgcEventsIDIT.DataPropertyName = "IDIT";
-            this.dgcEventsIDIT.HeaderText = "IDIT";
-            this.dgcEventsIDIT.Name = "dgcEventsIDIT";
-            this.dgcEventsIDIT.ReadOnly = true;
-            this.dgcEventsIDIT.Visible = false;
             // 
             // bnavNav
             // 
@@ -709,7 +433,7 @@
             this.bnavNav.CountItemFormat = " no {0}";
             this.bnavNav.DeleteItem = null;
             this.bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavNav.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
             this.bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -721,7 +445,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.tsbOpenItem});
-            this.bnavNav.Location = new System.Drawing.Point(0, 322);
+            this.bnavNav.Location = new System.Drawing.Point(0, 403);
             this.bnavNav.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnavNav.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bnavNav.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -729,18 +453,14 @@
             this.bnavNav.Name = "bnavNav";
             this.bnavNav.PositionItem = this.bindingNavigatorPositionItem;
             this.bnavNav.SaveItem = null;
-            this.bnavNav.Size = new System.Drawing.Size(1050, 32);
+            this.bnavNav.Size = new System.Drawing.Size(1181, 39);
             this.bnavNav.TabIndex = 11;
             this.bnavNav.Text = "myBindingNavigator1";
-            // 
-            // bsRows2
-            // 
-            this.bsRows2.Sort = "DT";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(69, 29);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
             this.bindingNavigatorCountItem.Text = " no {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
@@ -750,7 +470,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(25, 29);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -759,26 +479,26 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(25, 29);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 32);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 30);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 32);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -786,7 +506,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(25, 29);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -795,32 +515,386 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(25, 29);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 32);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // tsbOpenItem
             // 
             this.tsbOpenItem.Image = global::KlonsF.Properties.Resources.open;
             this.tsbOpenItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbOpenItem.Name = "tsbOpenItem";
-            this.tsbOpenItem.Size = new System.Drawing.Size(264, 29);
+            this.tsbOpenItem.Size = new System.Drawing.Size(289, 34);
             this.tsbOpenItem.Text = "Uz pamatlīdzekļu sarakstu";
             this.tsbOpenItem.Click += new System.EventHandler(this.tsbOpenItem_Click);
             // 
-            // Form_Events
+            // bsRows2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.bsRows2.Sort = "DT";
+            // 
+            // dgcEventsXRegNr
+            // 
+            this.dgcEventsXRegNr.DataPropertyName = "XREGNR";
+            this.dgcEventsXRegNr.Frozen = true;
+            this.dgcEventsXRegNr.HeaderText = "Reģ.nr.";
+            this.dgcEventsXRegNr.MinimumWidth = 9;
+            this.dgcEventsXRegNr.Name = "dgcEventsXRegNr";
+            this.dgcEventsXRegNr.ReadOnly = true;
+            this.dgcEventsXRegNr.ToolTipText = "Pamatlīdzekļa reģistrācijas numurs";
+            this.dgcEventsXRegNr.Width = 67;
+            // 
+            // dgcEventsXName
+            // 
+            this.dgcEventsXName.DataPropertyName = "XNAME";
+            this.dgcEventsXName.Frozen = true;
+            this.dgcEventsXName.HeaderText = "Nosaukums";
+            this.dgcEventsXName.MinimumWidth = 9;
+            this.dgcEventsXName.Name = "dgcEventsXName";
+            this.dgcEventsXName.ReadOnly = true;
+            this.dgcEventsXName.Width = 225;
+            // 
+            // dgcEventsEvent
+            // 
+            this.dgcEventsEvent.DataPropertyName = "EVENT";
+            this.dgcEventsEvent.Frozen = true;
+            this.dgcEventsEvent.HeaderText = "Not. kods";
+            this.dgcEventsEvent.MinimumWidth = 9;
+            this.dgcEventsEvent.Name = "dgcEventsEvent";
+            this.dgcEventsEvent.ReadOnly = true;
+            this.dgcEventsEvent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsEvent.ToolTipText = "Notikuma kods";
+            this.dgcEventsEvent.Width = 90;
+            // 
+            // dgcEventsDT
+            // 
+            this.dgcEventsDT.DataPropertyName = "DT";
+            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
+            this.dgcEventsDT.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgcEventsDT.Frozen = true;
+            this.dgcEventsDT.HeaderText = "Datums";
+            this.dgcEventsDT.MinimumWidth = 9;
+            this.dgcEventsDT.Name = "dgcEventsDT";
+            this.dgcEventsDT.ReadOnly = true;
+            this.dgcEventsDT.ToolTipText = "Notikuma datums";
+            this.dgcEventsDT.Width = 95;
+            // 
+            // dgcEventsDtReg
+            // 
+            this.dgcEventsDtReg.DataPropertyName = "DTREG";
+            dataGridViewCellStyle6.Format = "dd.MM.yyyy";
+            this.dgcEventsDtReg.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgcEventsDtReg.HeaderText = "Reģ.dat.";
+            this.dgcEventsDtReg.MinimumWidth = 9;
+            this.dgcEventsDtReg.Name = "dgcEventsDtReg";
+            this.dgcEventsDtReg.ReadOnly = true;
+            this.dgcEventsDtReg.ToolTipText = "Reģistrācijas datums";
+            this.dgcEventsDtReg.Width = 95;
+            // 
+            // dgcEventsDescr
+            // 
+            this.dgcEventsDescr.DataPropertyName = "DESCR";
+            this.dgcEventsDescr.HeaderText = "Apraksts";
+            this.dgcEventsDescr.MinimumWidth = 9;
+            this.dgcEventsDescr.Name = "dgcEventsDescr";
+            this.dgcEventsDescr.ReadOnly = true;
+            this.dgcEventsDescr.Width = 168;
+            // 
+            // dgcEventsDocNr
+            // 
+            this.dgcEventsDocNr.DataPropertyName = "DOCNR";
+            this.dgcEventsDocNr.HeaderText = "Dok.nr.";
+            this.dgcEventsDocNr.MinimumWidth = 9;
+            this.dgcEventsDocNr.Name = "dgcEventsDocNr";
+            this.dgcEventsDocNr.ReadOnly = true;
+            this.dgcEventsDocNr.ToolTipText = "Dokumenta numurs";
+            this.dgcEventsDocNr.Width = 168;
+            // 
+            // dgcEventsCat1
+            // 
+            this.dgcEventsCat1.DataPropertyName = "CAT1";
+            this.dgcEventsCat1.HeaderText = "Kat.";
+            this.dgcEventsCat1.MinimumWidth = 9;
+            this.dgcEventsCat1.Name = "dgcEventsCat1";
+            this.dgcEventsCat1.ReadOnly = true;
+            this.dgcEventsCat1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsCat1.ToolTipText = "Pamatlīdzekļu kategorija";
+            this.dgcEventsCat1.Width = 168;
+            // 
+            // dgcEventsCatD
+            // 
+            this.dgcEventsCatD.DataPropertyName = "CATD";
+            this.dgcEventsCatD.HeaderText = "Nol. kat.";
+            this.dgcEventsCatD.MinimumWidth = 9;
+            this.dgcEventsCatD.Name = "dgcEventsCatD";
+            this.dgcEventsCatD.ReadOnly = true;
+            this.dgcEventsCatD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsCatD.ToolTipText = "Nolietojuma kategorija";
+            this.dgcEventsCatD.Width = 168;
+            // 
+            // dgcEventsCatT
+            // 
+            this.dgcEventsCatT.DataPropertyName = "CATT";
+            this.dgcEventsCatT.HeaderText = "Nod. kat.";
+            this.dgcEventsCatT.MinimumWidth = 9;
+            this.dgcEventsCatT.Name = "dgcEventsCatT";
+            this.dgcEventsCatT.ReadOnly = true;
+            this.dgcEventsCatT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
+            this.dgcEventsCatT.Width = 168;
+            // 
+            // dgcEventsDepartment
+            // 
+            this.dgcEventsDepartment.DataPropertyName = "DEPARTMENT";
+            this.dgcEventsDepartment.HeaderText = "Str.v.";
+            this.dgcEventsDepartment.MinimumWidth = 9;
+            this.dgcEventsDepartment.Name = "dgcEventsDepartment";
+            this.dgcEventsDepartment.ReadOnly = true;
+            this.dgcEventsDepartment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsDepartment.ToolTipText = "Struktūrvienība";
+            this.dgcEventsDepartment.Width = 168;
+            // 
+            // dgcEventsPlace
+            // 
+            this.dgcEventsPlace.DataPropertyName = "PLACE";
+            this.dgcEventsPlace.HeaderText = "Atrodas";
+            this.dgcEventsPlace.MinimumWidth = 9;
+            this.dgcEventsPlace.Name = "dgcEventsPlace";
+            this.dgcEventsPlace.ReadOnly = true;
+            this.dgcEventsPlace.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsPlace.ToolTipText = "Atrašanās vieta";
+            this.dgcEventsPlace.Width = 168;
+            // 
+            // dgcEventsValue0
+            // 
+            this.dgcEventsValue0.DataPropertyName = "VALUE_0";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.dgcEventsValue0.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgcEventsValue0.HeaderText = "Ieg.v.";
+            this.dgcEventsValue0.MinimumWidth = 9;
+            this.dgcEventsValue0.Name = "dgcEventsValue0";
+            this.dgcEventsValue0.ReadOnly = true;
+            this.dgcEventsValue0.ToolTipText = "Iegādes vērtība uz datumu";
+            this.dgcEventsValue0.Width = 90;
+            // 
+            // dgcEventsDeprec0
+            // 
+            this.dgcEventsDeprec0.DataPropertyName = "DEPREC_0";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            this.dgcEventsDeprec0.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgcEventsDeprec0.HeaderText = "Uzrkr. noliet.";
+            this.dgcEventsDeprec0.MinimumWidth = 9;
+            this.dgcEventsDeprec0.Name = "dgcEventsDeprec0";
+            this.dgcEventsDeprec0.ReadOnly = true;
+            this.dgcEventsDeprec0.ToolTipText = "Uzkrātais nolietojums";
+            this.dgcEventsDeprec0.Width = 90;
+            // 
+            // dgcEventsValueC
+            // 
+            this.dgcEventsValueC.DataPropertyName = "VALUE_C";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "# ##0.00;-# ##0.00;\"\"";
+            this.dgcEventsValueC.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgcEventsValueC.HeaderText = "ieg.v. +/-";
+            this.dgcEventsValueC.MinimumWidth = 9;
+            this.dgcEventsValueC.Name = "dgcEventsValueC";
+            this.dgcEventsValueC.ReadOnly = true;
+            this.dgcEventsValueC.Width = 90;
+            // 
+            // dgcEventsDeprecC
+            // 
+            this.dgcEventsDeprecC.DataPropertyName = "DEPREC_C";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "# ##0.00;-# ##0.00;\"\"";
+            this.dgcEventsDeprecC.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgcEventsDeprecC.HeaderText = "Uzkr.nol. +/-";
+            this.dgcEventsDeprecC.MinimumWidth = 9;
+            this.dgcEventsDeprecC.Name = "dgcEventsDeprecC";
+            this.dgcEventsDeprecC.ReadOnly = true;
+            this.dgcEventsDeprecC.Width = 90;
+            // 
+            // dgcEventsSellValue
+            // 
+            this.dgcEventsSellValue.DataPropertyName = "SELL_VALUE";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.dgcEventsSellValue.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgcEventsSellValue.HeaderText = "Pārd.v.";
+            this.dgcEventsSellValue.MinimumWidth = 9;
+            this.dgcEventsSellValue.Name = "dgcEventsSellValue";
+            this.dgcEventsSellValue.ReadOnly = true;
+            this.dgcEventsSellValue.ToolTipText = "Pārdošanas vērtība";
+            this.dgcEventsSellValue.Width = 90;
+            // 
+            // dgcEventsMtTotal
+            // 
+            this.dgcEventsMtTotal.DataPropertyName = "MT_TOTAL";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcEventsMtTotal.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgcEventsMtTotal.HeaderText = "Mēn.";
+            this.dgcEventsMtTotal.MinimumWidth = 9;
+            this.dgcEventsMtTotal.Name = "dgcEventsMtTotal";
+            this.dgcEventsMtTotal.ReadOnly = true;
+            this.dgcEventsMtTotal.ToolTipText = "Nolietojuma periods mēnešos";
+            this.dgcEventsMtTotal.Width = 45;
+            // 
+            // dgcEventsMtUsed
+            // 
+            this.dgcEventsMtUsed.DataPropertyName = "MT_USED";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcEventsMtUsed.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgcEventsMtUsed.HeaderText = "Mēn. izm.";
+            this.dgcEventsMtUsed.MinimumWidth = 9;
+            this.dgcEventsMtUsed.Name = "dgcEventsMtUsed";
+            this.dgcEventsMtUsed.ReadOnly = true;
+            this.dgcEventsMtUsed.ToolTipText = "Izmantotais nolietojuma periods mēnešos";
+            this.dgcEventsMtUsed.Width = 45;
+            // 
+            // dgcEventsRateD
+            // 
+            this.dgcEventsRateD.DataPropertyName = "RATE_D";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcEventsRateD.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgcEventsRateD.HeaderText = "Nol. likme";
+            this.dgcEventsRateD.MinimumWidth = 9;
+            this.dgcEventsRateD.Name = "dgcEventsRateD";
+            this.dgcEventsRateD.ReadOnly = true;
+            this.dgcEventsRateD.ToolTipText = "Nolietojuma likme";
+            this.dgcEventsRateD.Width = 45;
+            // 
+            // dgcEventsRateDMt
+            // 
+            this.dgcEventsRateDMt.DataPropertyName = "RATE_D_MT";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            this.dgcEventsRateDMt.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgcEventsRateDMt.HeaderText = "Nol.likme mēnesī";
+            this.dgcEventsRateDMt.MinimumWidth = 9;
+            this.dgcEventsRateDMt.Name = "dgcEventsRateDMt";
+            this.dgcEventsRateDMt.ReadOnly = true;
+            this.dgcEventsRateDMt.ToolTipText = "Nolietojama likme mēnesī";
+            this.dgcEventsRateDMt.Width = 90;
+            // 
+            // dgcEventsTaxVal
+            // 
+            this.dgcEventsTaxVal.DataPropertyName = "TAX_VAL";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            this.dgcEventsTaxVal.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgcEventsTaxVal.HeaderText = "Nod.nol.";
+            this.dgcEventsTaxVal.MinimumWidth = 9;
+            this.dgcEventsTaxVal.Name = "dgcEventsTaxVal";
+            this.dgcEventsTaxVal.ReadOnly = true;
+            this.dgcEventsTaxVal.ToolTipText = "Nolietojuma vērtība nodokļa vajadzībām";
+            this.dgcEventsTaxVal.Width = 90;
+            // 
+            // dgcEventsTaxValLeft
+            // 
+            this.dgcEventsTaxValLeft.DataPropertyName = "TAX_VAL_LEFT";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            this.dgcEventsTaxValLeft.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgcEventsTaxValLeft.HeaderText = "Nod.nol. atl.v.";
+            this.dgcEventsTaxValLeft.MinimumWidth = 9;
+            this.dgcEventsTaxValLeft.Name = "dgcEventsTaxValLeft";
+            this.dgcEventsTaxValLeft.ReadOnly = true;
+            this.dgcEventsTaxValLeft.ToolTipText = "Atlikusī nolietojuma vērtība nodokļa vajadzībām";
+            this.dgcEventsTaxValLeft.Width = 90;
+            // 
+            // dgcEventsTaxValC
+            // 
+            this.dgcEventsTaxValC.DataPropertyName = "TAX_VAL_C";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "# ##0.00;-# ##0.00;\"\"";
+            this.dgcEventsTaxValC.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dgcEventsTaxValC.HeaderText = "Nod.nol. +/-";
+            this.dgcEventsTaxValC.MinimumWidth = 9;
+            this.dgcEventsTaxValC.Name = "dgcEventsTaxValC";
+            this.dgcEventsTaxValC.ReadOnly = true;
+            this.dgcEventsTaxValC.ToolTipText = "Nolietojuma vērtības izmaiņas nodokļa vajadzībām";
+            this.dgcEventsTaxValC.Width = 90;
+            // 
+            // dgcEventsTaxRate
+            // 
+            this.dgcEventsTaxRate.DataPropertyName = "TAX_RATE";
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcEventsTaxRate.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dgcEventsTaxRate.HeaderText = "Nod.nol. likme";
+            this.dgcEventsTaxRate.MinimumWidth = 9;
+            this.dgcEventsTaxRate.Name = "dgcEventsTaxRate";
+            this.dgcEventsTaxRate.ReadOnly = true;
+            this.dgcEventsTaxRate.ToolTipText = "Nolietojuma likme nodokļu vajadzībām";
+            this.dgcEventsTaxRate.Width = 67;
+            // 
+            // dgcEventsTaxEach
+            // 
+            this.dgcEventsTaxEach.DataPropertyName = "TAX_EACH";
+            this.dgcEventsTaxEach.FalseValue = "0";
+            this.dgcEventsTaxEach.HeaderText = "Nod.nol. katru";
+            this.dgcEventsTaxEach.MinimumWidth = 9;
+            this.dgcEventsTaxEach.Name = "dgcEventsTaxEach";
+            this.dgcEventsTaxEach.ReadOnly = true;
+            this.dgcEventsTaxEach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcEventsTaxEach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcEventsTaxEach.ToolTipText = "Nolietojumu nodokļu vajadzībām rēķina katram pamatlīdzeklim atsevišķi";
+            this.dgcEventsTaxEach.TrueValue = "1";
+            this.dgcEventsTaxEach.Width = 67;
+            // 
+            // dgcEventsZDT
+            // 
+            this.dgcEventsZDT.DataPropertyName = "ZDT";
+            this.dgcEventsZDT.HeaderText = "ZDT";
+            this.dgcEventsZDT.MinimumWidth = 9;
+            this.dgcEventsZDT.Name = "dgcEventsZDT";
+            this.dgcEventsZDT.ReadOnly = true;
+            this.dgcEventsZDT.Visible = false;
+            this.dgcEventsZDT.Width = 168;
+            // 
+            // dgcEventsZU
+            // 
+            this.dgcEventsZU.DataPropertyName = "ZU";
+            this.dgcEventsZU.HeaderText = "ZU";
+            this.dgcEventsZU.MinimumWidth = 9;
+            this.dgcEventsZU.Name = "dgcEventsZU";
+            this.dgcEventsZU.ReadOnly = true;
+            this.dgcEventsZU.Visible = false;
+            this.dgcEventsZU.Width = 168;
+            // 
+            // dgcEventsID
+            // 
+            this.dgcEventsID.DataPropertyName = "ID";
+            this.dgcEventsID.HeaderText = "ID";
+            this.dgcEventsID.MinimumWidth = 9;
+            this.dgcEventsID.Name = "dgcEventsID";
+            this.dgcEventsID.ReadOnly = true;
+            this.dgcEventsID.Visible = false;
+            this.dgcEventsID.Width = 168;
+            // 
+            // dgcEventsIDIT
+            // 
+            this.dgcEventsIDIT.DataPropertyName = "IDIT";
+            this.dgcEventsIDIT.HeaderText = "IDIT";
+            this.dgcEventsIDIT.MinimumWidth = 9;
+            this.dgcEventsIDIT.Name = "dgcEventsIDIT";
+            this.dgcEventsIDIT.ReadOnly = true;
+            this.dgcEventsIDIT.Visible = false;
+            this.dgcEventsIDIT.Width = 168;
+            // 
+            // FormP_Events
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 354);
+            this.ClientSize = new System.Drawing.Size(1181, 442);
             this.Controls.Add(this.dgvEvents);
             this.Controls.Add(this.dgvFilter);
             this.Controls.Add(this.bnavNav);
-            this.Name = "Form_Events";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormP_Events";
             this.Text = "Notikumu žurnāls";
             this.Load += new System.EventHandler(this.Form_Events_Load);
             this.Shown += new System.EventHandler(this.Form_Events_Shown);
@@ -857,6 +931,27 @@
         private KlonsLIB.Data.MyBindingSource bsfDepartments;
         private KlonsLIB.Data.MyBindingSource bsfPlaces;
         private KlonsLIB.Data.MyBindingSource bsfEvents;
+        private System.Windows.Forms.BindingSource bsRows2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate2;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterEvent;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
+        private System.Windows.Forms.DataGridViewButtonColumn dgcEventsCM;
+        private KlonsLIB.Components.MyBindingNavigator bnavNav;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton tsbOpenItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsXRegNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsXName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsEvent;
@@ -887,26 +982,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsZU;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsIDIT;
-        private System.Windows.Forms.BindingSource bsRows2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate2;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterEvent;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
-        private System.Windows.Forms.DataGridViewButtonColumn dgcEventsCM;
-        private KlonsLIB.Components.MyBindingNavigator bnavNav;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tsbOpenItem;
     }
 }

@@ -47,6 +47,7 @@ namespace KlonsF.Forms
             this.tsbSearchPrev = new System.Windows.Forms.ToolStripButton();
             this.tsbSearch = new System.Windows.Forms.ToolStripTextBox();
             this.tsbSearchNext = new System.Windows.Forms.ToolStripButton();
+            this.tsbDocLog = new System.Windows.Forms.ToolStripButton();
             this.dgvLOPSd = new KlonsLIB.Components.MyDataGridView();
             this.dgcLOPSDidl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcLOPSDid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +68,6 @@ namespace KlonsF.Forms
             this.dgcLOPSDPVN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcLOPSDNrX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcLOPSDClid2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsbDocLog = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bsLOPSd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnavLOPSd)).BeginInit();
             this.bnavLOPSd.SuspendLayout();
@@ -209,6 +209,16 @@ namespace KlonsF.Forms
             this.tsbSearchNext.Text = "+";
             this.tsbSearchNext.Click += new System.EventHandler(this.tsbSearchNext_Click);
             // 
+            // tsbDocLog
+            // 
+            this.tsbDocLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbDocLog.Image = ((System.Drawing.Image)(resources.GetObject("tsbDocLog.Image")));
+            this.tsbDocLog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDocLog.Name = "tsbDocLog";
+            this.tsbDocLog.Size = new System.Drawing.Size(206, 34);
+            this.tsbDocLog.Text = "Dokumenta vēsture";
+            this.tsbDocLog.Click += new System.EventHandler(this.tsbDocLog_Click);
+            // 
             // dgvLOPSd
             // 
             this.dgvLOPSd.AutoGenerateColumns = false;
@@ -305,7 +315,7 @@ namespace KlonsF.Forms
             this.dgcLOPSDusl.Name = "dgcLOPSDusl";
             this.dgcLOPSDusl.ReadOnly = true;
             this.dgcLOPSDusl.Visible = false;
-            this.dgcLOPSDusl.Width = 90;
+            this.dgcLOPSDusl.Width = 99;
             // 
             // dgcLOPSDZU
             // 
@@ -425,16 +435,6 @@ namespace KlonsF.Forms
             this.dgcLOPSDClid2.ReadOnly = true;
             this.dgcLOPSDClid2.Width = 108;
             // 
-            // tsbDocLog
-            // 
-            this.tsbDocLog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbDocLog.Image = ((System.Drawing.Image)(resources.GetObject("tsbDocLog.Image")));
-            this.tsbDocLog.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDocLog.Name = "tsbDocLog";
-            this.tsbDocLog.Size = new System.Drawing.Size(206, 34);
-            this.tsbDocLog.Text = "Dokumenta vēsture";
-            this.tsbDocLog.Click += new System.EventHandler(this.tsbDocLog_Click);
-            // 
             // Form_LOPSd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -474,6 +474,7 @@ namespace KlonsF.Forms
         private System.Windows.Forms.ToolStripButton tsbSearchPrev;
         private System.Windows.Forms.ToolStripTextBox tsbSearch;
         private System.Windows.Forms.ToolStripButton tsbSearchNext;
+        private System.Windows.Forms.ToolStripButton tsbDocLog;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDidl;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDZDt;
@@ -493,6 +494,5 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDPVN;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDNrX;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcLOPSDClid2;
-        private System.Windows.Forms.ToolStripButton tsbDocLog;
     }
 }

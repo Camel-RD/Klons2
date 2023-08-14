@@ -46,8 +46,14 @@ namespace KlonsF.Forms
             KlonsLIB.Components.MyMcComboBox.MyItem myItem15 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             KlonsLIB.Components.MyMcComboBox.MyItem myItem16 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             KlonsLIB.Components.MyMcComboBox.MyItem myItem17 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem18 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem19 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem20 = new KlonsLIB.Components.MyMcComboBox.MyItem();
+            KlonsLIB.Components.MyMcComboBox.MyItem myItem21 = new KlonsLIB.Components.MyMcComboBox.MyItem();
             this.tabList1 = new Cyotek.Windows.Forms.TabList();
             this.tlpAppAppearance = new Cyotek.Windows.Forms.TabListPage();
+            this.chInWine = new KlonsLIB.Components.MyCheckBox();
+            this.chDontShowBetaWarning = new KlonsLIB.Components.MyCheckBox();
             this.cmUseSysFont = new System.Windows.Forms.Button();
             this.cmFont = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +63,6 @@ namespace KlonsF.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.tlpKlonsF = new Cyotek.Windows.Forms.TabListPage();
             this.chCheckVersion = new KlonsLIB.Components.MyCheckBox();
-            this.chInWine = new KlonsLIB.Components.MyCheckBox();
             this.chUseCurrency = new KlonsLIB.Components.MyCheckBox();
             this.chC4 = new KlonsLIB.Components.MyCheckBox();
             this.chC3 = new KlonsLIB.Components.MyCheckBox();
@@ -77,7 +82,6 @@ namespace KlonsF.Forms
             this.cbBackUpPlan = new KlonsLIB.Components.MyMcFlatComboBox();
             this.cmCancel = new System.Windows.Forms.Button();
             this.cmOK = new System.Windows.Forms.Button();
-            this.chDontShowBetaWarning = new KlonsLIB.Components.MyCheckBox();
             this.tabList1.SuspendLayout();
             this.tlpAppAppearance.SuspendLayout();
             this.tlpKlonsF.SuspendLayout();
@@ -100,6 +104,7 @@ namespace KlonsF.Forms
             // 
             // tlpAppAppearance
             // 
+            this.tlpAppAppearance.Controls.Add(this.chInWine);
             this.tlpAppAppearance.Controls.Add(this.chDontShowBetaWarning);
             this.tlpAppAppearance.Controls.Add(this.cmUseSysFont);
             this.tlpAppAppearance.Controls.Add(this.cmFont);
@@ -111,6 +116,27 @@ namespace KlonsF.Forms
             this.tlpAppAppearance.Name = "tlpAppAppearance";
             this.tlpAppAppearance.Size = new System.Drawing.Size(488, 287);
             this.tlpAppAppearance.Text = "Programmas izskats";
+            // 
+            // chInWine
+            // 
+            this.chInWine.AutoSize = true;
+            this.chInWine.Location = new System.Drawing.Point(31, 251);
+            this.chInWine.Margin = new System.Windows.Forms.Padding(2);
+            this.chInWine.Name = "chInWine";
+            this.chInWine.Size = new System.Drawing.Size(143, 21);
+            this.chInWine.TabIndex = 29;
+            this.chInWine.Text = "Linux Wine vide";
+            this.chInWine.UseVisualStyleBackColor = true;
+            // 
+            // chDontShowBetaWarning
+            // 
+            this.chDontShowBetaWarning.AutoSize = true;
+            this.chDontShowBetaWarning.Location = new System.Drawing.Point(31, 154);
+            this.chDontShowBetaWarning.Name = "chDontShowBetaWarning";
+            this.chDontShowBetaWarning.Size = new System.Drawing.Size(270, 21);
+            this.chDontShowBetaWarning.TabIndex = 28;
+            this.chDontShowBetaWarning.Text = "Nerādīt testa versijas brīdinājumu";
+            this.chDontShowBetaWarning.UseVisualStyleBackColor = false;
             // 
             // cmUseSysFont
             // 
@@ -194,12 +220,12 @@ namespace KlonsF.Forms
             this.cbFontSize.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cbFontSize.ColumnNames = new string[] {
         "col1"};
-            this.cbFontSize.ColumnWidths = "66";
+            this.cbFontSize.ColumnWidths = "54";
             this.cbFontSize.DisplayMember = "col1";
             this.cbFontSize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbFontSize.DropDownHeight = 294;
+            this.cbFontSize.DropDownHeight = 420;
             this.cbFontSize.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            this.cbFontSize.DropDownWidth = 94;
+            this.cbFontSize.DropDownWidth = 82;
             this.cbFontSize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbFontSize.FormattingEnabled = true;
             this.cbFontSize.GridLineColor = System.Drawing.Color.LightGray;
@@ -215,6 +241,10 @@ namespace KlonsF.Forms
             myItem11.Col1 = "14";
             myItem12.Col1 = "15";
             myItem13.Col1 = "16";
+            myItem14.Col1 = "18";
+            myItem15.Col1 = "20";
+            myItem16.Col1 = "22";
+            myItem17.Col1 = "24";
             this.cbFontSize.Items.AddRange(new object[] {
             myItem5,
             myItem6,
@@ -224,7 +254,11 @@ namespace KlonsF.Forms
             myItem10,
             myItem11,
             myItem12,
-            myItem13});
+            myItem13,
+            myItem14,
+            myItem15,
+            myItem16,
+            myItem17});
             this.cbFontSize.ItemStrings = new string[] {
         "08",
         "09",
@@ -234,10 +268,14 @@ namespace KlonsF.Forms
         "13",
         "14",
         "15",
-        "16"};
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"};
             this.cbFontSize.Location = new System.Drawing.Point(141, 18);
             this.cbFontSize.Margin = new System.Windows.Forms.Padding(2);
-            this.cbFontSize.MaxDropDownItems = 14;
+            this.cbFontSize.MaxDropDownItems = 20;
             this.cbFontSize.Name = "cbFontSize";
             this.cbFontSize.Size = new System.Drawing.Size(82, 27);
             this.cbFontSize.TabIndex = 20;
@@ -267,7 +305,6 @@ namespace KlonsF.Forms
             // tlpKlonsF
             // 
             this.tlpKlonsF.Controls.Add(this.chCheckVersion);
-            this.tlpKlonsF.Controls.Add(this.chInWine);
             this.tlpKlonsF.Controls.Add(this.chUseCurrency);
             this.tlpKlonsF.Controls.Add(this.chC4);
             this.tlpKlonsF.Controls.Add(this.chC3);
@@ -288,18 +325,6 @@ namespace KlonsF.Forms
             this.chCheckVersion.TabIndex = 26;
             this.chCheckVersion.Text = "Pārbaudīt, vai ir pieejama jaunāka programmas versija";
             this.chCheckVersion.UseVisualStyleBackColor = true;
-            // 
-            // chInWine
-            // 
-            this.chInWine.AutoSize = true;
-            this.chInWine.Location = new System.Drawing.Point(25, 241);
-            this.chInWine.Margin = new System.Windows.Forms.Padding(2);
-            this.chInWine.Name = "chInWine";
-            this.chInWine.Size = new System.Drawing.Size(143, 21);
-            this.chInWine.TabIndex = 27;
-            this.chInWine.Text = "Linux Wine vide";
-            this.chInWine.UseVisualStyleBackColor = true;
-            this.chInWine.Visible = false;
             // 
             // chUseCurrency
             // 
@@ -482,15 +507,15 @@ namespace KlonsF.Forms
             this.cbBackUpPlan.GridLineHorizontal = false;
             this.cbBackUpPlan.GridLineVertical = false;
             this.cbBackUpPlan.IntegralHeight = false;
-            myItem14.Col1 = "Nekad";
-            myItem15.Col1 = "Pirms aktualizēšanas";
-            myItem16.Col1 = "Vienreiz dienā";
-            myItem17.Col1 = "Pirms katras atvēršanas";
+            myItem18.Col1 = "Nekad";
+            myItem19.Col1 = "Pirms aktualizēšanas";
+            myItem20.Col1 = "Vienreiz dienā";
+            myItem21.Col1 = "Pirms katras atvēršanas";
             this.cbBackUpPlan.Items.AddRange(new object[] {
-            myItem14,
-            myItem15,
-            myItem16,
-            myItem17});
+            myItem18,
+            myItem19,
+            myItem20,
+            myItem21});
             this.cbBackUpPlan.ItemStrings = new string[] {
         "Nekad",
         "Pirms aktualizēšanas",
@@ -524,16 +549,6 @@ namespace KlonsF.Forms
             this.cmOK.Text = "OK";
             this.cmOK.UseVisualStyleBackColor = true;
             this.cmOK.Click += new System.EventHandler(this.cmOK_Click);
-            // 
-            // chDontShowBetaWarning
-            // 
-            this.chDontShowBetaWarning.AutoSize = true;
-            this.chDontShowBetaWarning.Location = new System.Drawing.Point(31, 154);
-            this.chDontShowBetaWarning.Name = "chDontShowBetaWarning";
-            this.chDontShowBetaWarning.Size = new System.Drawing.Size(270, 21);
-            this.chDontShowBetaWarning.TabIndex = 28;
-            this.chDontShowBetaWarning.Text = "Nerādīt testa versijas brīdinājumu";
-            this.chDontShowBetaWarning.UseVisualStyleBackColor = false;
             // 
             // Form_Settings
             // 
@@ -583,7 +598,6 @@ namespace KlonsF.Forms
         private System.Windows.Forms.Label label6;
         private KlonsLIB.Components.MyMcFlatComboBox cbBackUpPlan;
         private KlonsLIB.Components.MyCheckBox chCheckVersion;
-        private KlonsLIB.Components.MyCheckBox chInWine;
         private KlonsLIB.Components.MyCheckBox chUseCurrency;
         private KlonsLIB.Components.MyCheckBox chC4;
         private KlonsLIB.Components.MyCheckBox chC3;
@@ -597,5 +611,6 @@ namespace KlonsF.Forms
         private System.Windows.Forms.Label label2;
         private KlonsLIB.Components.MyTextBox tbMt;
         private KlonsLIB.Components.MyCheckBox chDontShowBetaWarning;
+        private KlonsLIB.Components.MyCheckBox chInWine;
     }
 }

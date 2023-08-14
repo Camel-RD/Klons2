@@ -12,7 +12,6 @@ using KlonsF.DataSets;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
 using KlonsLIB.Misc;
-using KlonsF.Classes;
 
 namespace KlonsF.Forms
 {

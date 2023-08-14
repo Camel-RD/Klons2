@@ -213,7 +213,7 @@ namespace KlonsM.FormsM
             this.dgcADT.MinimumWidth = 8;
             this.dgcADT.Name = "dgcADT";
             this.dgcADT.ReadOnly = true;
-            this.dgcADT.Width = 90;
+            this.dgcADT.Width = 95;
             // 
             // dgcASr
             // 
@@ -291,7 +291,7 @@ namespace KlonsM.FormsM
             this.dgcBDt.MinimumWidth = 8;
             this.dgcBDt.Name = "dgcBDt";
             this.dgcBDt.ReadOnly = true;
-            this.dgcBDt.Width = 90;
+            this.dgcBDt.Width = 95;
             // 
             // dgcBSr
             // 

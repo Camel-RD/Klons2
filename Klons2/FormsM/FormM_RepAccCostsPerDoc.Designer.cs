@@ -134,7 +134,7 @@ namespace KlonsM.FormsM
             this.dgcDt.MinimumWidth = 8;
             this.dgcDt.Name = "dgcDt";
             this.dgcDt.ReadOnly = true;
-            this.dgcDt.Width = 90;
+            this.dgcDt.Width = 95;
             // 
             // dgcSr
             // 

@@ -199,21 +199,21 @@
             this.nolietojumsNodokļaVajadzībāmToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnFilter = new System.Windows.Forms.Panel();
             this.dgvFilter = new KlonsLIB.Components.MyDataGridView();
-            this.dgcFilterDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterSate = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCat1 = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatD = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatT = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfDepartments = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfPlaces = new KlonsLIB.Data.MyBindingSource(this.components);
             this.bsFilter = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
             this.filterData1 = new DataObjectsP.FilterData();
             this.tbDate = new KlonsLIB.Components.MyTextBox();
+            this.dgcFilterDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterSate = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEvents)).BeginInit();
@@ -1016,7 +1016,7 @@
             this.dgvEvents.RowHeadersWidth = 62;
             this.dgvEvents.RowTemplate.Height = 29;
             this.dgvEvents.ShowCellToolTips = false;
-            this.dgvEvents.Size = new System.Drawing.Size(918, 183);
+            this.dgvEvents.Size = new System.Drawing.Size(918, 185);
             this.dgvEvents.TabIndex = 0;
             this.dgvEvents.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvEvents_MyKeyDown);
             this.dgvEvents.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvEvents_CellBeginEdit);
@@ -1455,7 +1455,7 @@
             this.dgvItems.RowHeadersWidth = 62;
             this.dgvItems.RowTemplate.Height = 29;
             this.dgvItems.ShowCellToolTips = false;
-            this.dgvItems.Size = new System.Drawing.Size(918, 297);
+            this.dgvItems.Size = new System.Drawing.Size(918, 295);
             this.dgvItems.TabIndex = 0;
             this.dgvItems.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvItems_MyKeyDown);
             this.dgvItems.MyCheckForChanges += new System.EventHandler(this.dgvItems_MyCheckForChanges);
@@ -1492,7 +1492,7 @@
             this.dgcItemsDate1.Name = "dgcItemsDate1";
             this.dgcItemsDate1.ReadOnly = true;
             this.dgcItemsDate1.ToolTipText = "Uzņemts uzskaitē";
-            this.dgcItemsDate1.Width = 95;
+            this.dgcItemsDate1.Width = 99;
             // 
             // dgcItemsDate2
             // 
@@ -1698,7 +1698,7 @@
             this.mySplitContainer1.Panel2.Controls.Add(this.dgvEvents);
             this.mySplitContainer1.Panel2MinSize = 31;
             this.mySplitContainer1.Size = new System.Drawing.Size(918, 485);
-            this.mySplitContainer1.SplitterDistance = 297;
+            this.mySplitContainer1.SplitterDistance = 295;
             this.mySplitContainer1.SplitterWidth = 5;
             this.mySplitContainer1.TabIndex = 2;
             // 
@@ -1975,70 +1975,11 @@
             this.dgvFilter.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.myDataGridView1_CellParsing);
             this.dgvFilter.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvFilter_CellValidating);
             // 
-            // dgcFilterDate
-            // 
-            this.dgcFilterDate.DataPropertyName = "fDATE1";
-            dataGridViewCellStyle25.Format = "dd.MM.yyyy";
-            this.dgcFilterDate.DefaultCellStyle = dataGridViewCellStyle25;
-            this.dgcFilterDate.HeaderText = "Datums";
-            this.dgcFilterDate.MinimumWidth = 9;
-            this.dgcFilterDate.Name = "dgcFilterDate";
-            this.dgcFilterDate.ToolTipText = "Aprēķina datums";
-            this.dgcFilterDate.Width = 90;
-            // 
-            // dgcFilterSate
-            // 
-            this.dgcFilterSate.ColumnNames = new string[] {
-        "Val"};
-            this.dgcFilterSate.DataPropertyName = "fSTATE";
-            this.dgcFilterSate.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterSate.HeaderText = "Status";
-            this.dgcFilterSate.MinimumWidth = 9;
-            this.dgcFilterSate.Name = "dgcFilterSate";
-            this.dgcFilterSate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcFilterSate.Width = 90;
-            // 
-            // dgcFilterCat1
-            // 
-            this.dgcFilterCat1.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCat1.ColumnWidths = "100;300";
-            this.dgcFilterCat1.DataPropertyName = "fCAT1";
-            this.dgcFilterCat1.DataSource = this.bsfCat1;
-            this.dgcFilterCat1.DisplayMember = "CODE";
-            this.dgcFilterCat1.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCat1.HeaderText = "Kat.";
-            this.dgcFilterCat1.MaxDropDownItems = 15;
-            this.dgcFilterCat1.MinimumWidth = 9;
-            this.dgcFilterCat1.Name = "dgcFilterCat1";
-            this.dgcFilterCat1.ToolTipText = "Uzskaites kategorija";
-            this.dgcFilterCat1.ValueMember = "ID";
-            this.dgcFilterCat1.Width = 168;
-            // 
             // bsfCat1
             // 
             this.bsfCat1.DataMember = "CAT1";
             this.bsfCat1.MyDataSource = "KlonsPData";
             this.bsfCat1.Sort = "CODE";
-            // 
-            // dgcFilterCatD
-            // 
-            this.dgcFilterCatD.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCatD.ColumnWidths = "100;300";
-            this.dgcFilterCatD.DataPropertyName = "fCATD";
-            this.dgcFilterCatD.DataSource = this.bsfCatD;
-            this.dgcFilterCatD.DisplayMember = "CODE";
-            this.dgcFilterCatD.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCatD.HeaderText = "Nol. kat.";
-            this.dgcFilterCatD.MaxDropDownItems = 15;
-            this.dgcFilterCatD.MinimumWidth = 9;
-            this.dgcFilterCatD.Name = "dgcFilterCatD";
-            this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
-            this.dgcFilterCatD.ValueMember = "ID";
-            this.dgcFilterCatD.Width = 168;
             // 
             // bsfCatD
             // 
@@ -2046,70 +1987,17 @@
             this.bsfCatD.MyDataSource = "KlonsPData";
             this.bsfCatD.Sort = "CODE";
             // 
-            // dgcFilterCatT
-            // 
-            this.dgcFilterCatT.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCatT.ColumnWidths = "100;300";
-            this.dgcFilterCatT.DataPropertyName = "fCATT";
-            this.dgcFilterCatT.DataSource = this.bsfCatT;
-            this.dgcFilterCatT.DisplayMember = "CODE";
-            this.dgcFilterCatT.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCatT.HeaderText = "Nod. nol. kat.";
-            this.dgcFilterCatT.MaxDropDownItems = 15;
-            this.dgcFilterCatT.MinimumWidth = 9;
-            this.dgcFilterCatT.Name = "dgcFilterCatT";
-            this.dgcFilterCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
-            this.dgcFilterCatT.ValueMember = "ID";
-            this.dgcFilterCatT.Width = 168;
-            // 
             // bsfCatT
             // 
             this.bsfCatT.DataMember = "CATT";
             this.bsfCatT.MyDataSource = "KlonsPData";
             this.bsfCatT.Sort = "CODE";
             // 
-            // dgcFilterDepartment
-            // 
-            this.dgcFilterDepartment.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterDepartment.ColumnWidths = "100;300";
-            this.dgcFilterDepartment.DataPropertyName = "fDEPARTMENT";
-            this.dgcFilterDepartment.DataSource = this.bsfDepartments;
-            this.dgcFilterDepartment.DisplayMember = "CODE";
-            this.dgcFilterDepartment.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterDepartment.HeaderText = "Struktūrv.";
-            this.dgcFilterDepartment.MaxDropDownItems = 15;
-            this.dgcFilterDepartment.MinimumWidth = 9;
-            this.dgcFilterDepartment.Name = "dgcFilterDepartment";
-            this.dgcFilterDepartment.ToolTipText = "Struktūrvienība";
-            this.dgcFilterDepartment.ValueMember = "ID";
-            this.dgcFilterDepartment.Width = 168;
-            // 
             // bsfDepartments
             // 
             this.bsfDepartments.DataMember = "DEPARTMENTS";
             this.bsfDepartments.MyDataSource = "KlonsPData";
             this.bsfDepartments.Sort = "CODE";
-            // 
-            // dgcFilterPlace
-            // 
-            this.dgcFilterPlace.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterPlace.ColumnWidths = "100;300";
-            this.dgcFilterPlace.DataPropertyName = "fPLACE";
-            this.dgcFilterPlace.DataSource = this.bsfPlaces;
-            this.dgcFilterPlace.DisplayMember = "CODE";
-            this.dgcFilterPlace.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterPlace.HeaderText = "Atrodas";
-            this.dgcFilterPlace.MaxDropDownItems = 15;
-            this.dgcFilterPlace.MinimumWidth = 9;
-            this.dgcFilterPlace.Name = "dgcFilterPlace";
-            this.dgcFilterPlace.ValueMember = "ID";
-            this.dgcFilterPlace.Width = 168;
             // 
             // bsfPlaces
             // 
@@ -2145,7 +2033,119 @@
             this.tbDate.TabIndex = 7;
             this.tbDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDate_KeyDown);
             // 
-            // Form_Items
+            // dgcFilterDate
+            // 
+            this.dgcFilterDate.DataPropertyName = "fDATE1";
+            dataGridViewCellStyle25.Format = "dd.MM.yyyy";
+            this.dgcFilterDate.DefaultCellStyle = dataGridViewCellStyle25;
+            this.dgcFilterDate.HeaderText = "Datums";
+            this.dgcFilterDate.MinimumWidth = 9;
+            this.dgcFilterDate.Name = "dgcFilterDate";
+            this.dgcFilterDate.ToolTipText = "Aprēķina datums";
+            this.dgcFilterDate.Width = 95;
+            // 
+            // dgcFilterSate
+            // 
+            this.dgcFilterSate.ColumnNames = new string[] {
+        "Val"};
+            this.dgcFilterSate.DataPropertyName = "fSTATE";
+            this.dgcFilterSate.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterSate.HeaderText = "Status";
+            this.dgcFilterSate.MinimumWidth = 9;
+            this.dgcFilterSate.Name = "dgcFilterSate";
+            this.dgcFilterSate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcFilterSate.Width = 110;
+            // 
+            // dgcFilterCat1
+            // 
+            this.dgcFilterCat1.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCat1.ColumnWidths = "100;300";
+            this.dgcFilterCat1.DataPropertyName = "fCAT1";
+            this.dgcFilterCat1.DataSource = this.bsfCat1;
+            this.dgcFilterCat1.DisplayMember = "CODE";
+            this.dgcFilterCat1.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCat1.HeaderText = "Kat.";
+            this.dgcFilterCat1.MaxDropDownItems = 15;
+            this.dgcFilterCat1.MinimumWidth = 9;
+            this.dgcFilterCat1.Name = "dgcFilterCat1";
+            this.dgcFilterCat1.ToolTipText = "Uzskaites kategorija";
+            this.dgcFilterCat1.ValueMember = "ID";
+            this.dgcFilterCat1.Width = 168;
+            // 
+            // dgcFilterCatD
+            // 
+            this.dgcFilterCatD.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCatD.ColumnWidths = "100;300";
+            this.dgcFilterCatD.DataPropertyName = "fCATD";
+            this.dgcFilterCatD.DataSource = this.bsfCatD;
+            this.dgcFilterCatD.DisplayMember = "CODE";
+            this.dgcFilterCatD.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCatD.HeaderText = "Nol. kat.";
+            this.dgcFilterCatD.MaxDropDownItems = 15;
+            this.dgcFilterCatD.MinimumWidth = 9;
+            this.dgcFilterCatD.Name = "dgcFilterCatD";
+            this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
+            this.dgcFilterCatD.ValueMember = "ID";
+            this.dgcFilterCatD.Width = 168;
+            // 
+            // dgcFilterCatT
+            // 
+            this.dgcFilterCatT.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCatT.ColumnWidths = "100;300";
+            this.dgcFilterCatT.DataPropertyName = "fCATT";
+            this.dgcFilterCatT.DataSource = this.bsfCatT;
+            this.dgcFilterCatT.DisplayMember = "CODE";
+            this.dgcFilterCatT.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCatT.HeaderText = "Nod. nol. kat.";
+            this.dgcFilterCatT.MaxDropDownItems = 15;
+            this.dgcFilterCatT.MinimumWidth = 9;
+            this.dgcFilterCatT.Name = "dgcFilterCatT";
+            this.dgcFilterCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
+            this.dgcFilterCatT.ValueMember = "ID";
+            this.dgcFilterCatT.Width = 168;
+            // 
+            // dgcFilterDepartment
+            // 
+            this.dgcFilterDepartment.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterDepartment.ColumnWidths = "100;300";
+            this.dgcFilterDepartment.DataPropertyName = "fDEPARTMENT";
+            this.dgcFilterDepartment.DataSource = this.bsfDepartments;
+            this.dgcFilterDepartment.DisplayMember = "CODE";
+            this.dgcFilterDepartment.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterDepartment.HeaderText = "Struktūrv.";
+            this.dgcFilterDepartment.MaxDropDownItems = 15;
+            this.dgcFilterDepartment.MinimumWidth = 9;
+            this.dgcFilterDepartment.Name = "dgcFilterDepartment";
+            this.dgcFilterDepartment.ToolTipText = "Struktūrvienība";
+            this.dgcFilterDepartment.ValueMember = "ID";
+            this.dgcFilterDepartment.Width = 168;
+            // 
+            // dgcFilterPlace
+            // 
+            this.dgcFilterPlace.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterPlace.ColumnWidths = "100;300";
+            this.dgcFilterPlace.DataPropertyName = "fPLACE";
+            this.dgcFilterPlace.DataSource = this.bsfPlaces;
+            this.dgcFilterPlace.DisplayMember = "CODE";
+            this.dgcFilterPlace.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterPlace.HeaderText = "Atrodas";
+            this.dgcFilterPlace.MaxDropDownItems = 15;
+            this.dgcFilterPlace.MinimumWidth = 9;
+            this.dgcFilterPlace.Name = "dgcFilterPlace";
+            this.dgcFilterPlace.ValueMember = "ID";
+            this.dgcFilterPlace.Width = 168;
+            // 
+            // FormP_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2158,7 +2158,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form_Items";
+            this.Name = "FormP_Items";
             this.Text = "Pamatlīdzekļu sraksts";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Items_FormClosed);
             this.Load += new System.EventHandler(this.Form_Items_Load);
@@ -2286,13 +2286,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton tsbInfo;
         private DataObjectsP.FilterData filterData1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterSate;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
         private System.Windows.Forms.ToolStripMenuItem aprēķinaIzklātsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paMēnešiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paGadiemToolStripMenuItem;
@@ -2309,24 +2302,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem nolietojumsNodokļaVajadzībāmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nolietojumsNodokļaVajadzībāmToolStripMenuItem1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsRegNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDate1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDate2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsState;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsValue0;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDepre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsValueLeft;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCat1;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCatD;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCatT;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsDepartment;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsPlace;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsError;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsOPT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZU;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsSNR;
         private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcEventsEvent;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsDT;
@@ -2356,5 +2331,30 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsZU;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsIDIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsRegNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDate1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDate2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsValue0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDepre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsValueLeft;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCat1;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCatD;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsCatT;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsDepartment;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcItemsPlace;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsError;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsOPT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterSate;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
     }
 }

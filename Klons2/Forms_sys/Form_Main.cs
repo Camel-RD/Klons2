@@ -16,7 +16,6 @@ using KlonsF.Forms;
 using KlonsF.FormsReportParams;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
-using KlonsF.Classes;
 using System.Diagnostics;
 
 namespace KlonsF
@@ -31,6 +30,7 @@ namespace KlonsF
             SetupMenuRenderer();
             CheckMyFontAndColors();
             Application.ThreadException += Application_ThreadException;
+            KlonsLIB.MyData.InWine = MyData.Settings.InWine == "YES";
         }
 
         private void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)

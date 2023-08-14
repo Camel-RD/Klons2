@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using KlonsF.Classes;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
-using KlonsF.Classes;
 
 namespace KlonsF.Forms
 {

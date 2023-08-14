@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsLIB.Forms;
 using KlonsLIB.Data;
 

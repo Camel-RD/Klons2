@@ -77,6 +77,7 @@ namespace KlonsF.Forms
             MyData.Params.CHCOL = CHCOL;
             MyData.Params.CHCOLCURR = chUseCurrency.Checked;
             MyData.Settings.InWine = chInWine.Checked ? "YES" : "NO";
+            KlonsLIB.MyData.InWine = MyData.Settings.InWine == "YES";
 
             MyData.Settings.DontShowBetaWarning = chDontShowBetaWarning.Checked;
 

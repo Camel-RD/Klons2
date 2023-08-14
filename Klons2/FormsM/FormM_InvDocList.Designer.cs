@@ -30,22 +30,16 @@ namespace KlonsM.FormsM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_InvDocList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bsDocs = new KlonsLIB.Data.MyBindingSource(this.components);
             this.myAdapterManager1 = new KlonsLIB.Data.MyAdapterManager();
             this.bNav = new KlonsLIB.Components.MyBindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.dgvDocs = new KlonsLIB.Components.MyDataGridView();
-            this.dgcDocsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcDocsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcDocsIdStore = new KlonsLIB.Components.MyDgvTextboxColumn2();
             this.bsStore = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcDocsState = new KlonsLIB.Components.DataGridViewColorMarkColumn();
-            this.dgcDocsPersons = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcDocsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -63,15 +57,33 @@ namespace KlonsM.FormsM
             this.tsbFindNext = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvFilter = new KlonsLIB.Components.MyDataGridView();
+            this.dgcFilterDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterState = new KlonsLIB.Components.MyDgvMcCBColumn();
+            this.dgcFilterIdStore = new KlonsLIB.Components.MyDgvTextboxColumn2();
             this.bsDocFilter = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
             this.docFilterData1 = new DataObjectsFM.DocFilterData();
             this.btFilter = new System.Windows.Forms.Button();
             this.myConfigA1 = new KlonsM.FormsM.MyConfigA();
             this.bsItems = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterState = new KlonsLIB.Components.MyDgvMcCBColumn();
-            this.dgcFilterIdStore = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            this.dt1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dt2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStoreOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStoreInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStoreOutOrInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataBindingsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modifiersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generateMemberDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.applicationSettingsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcDocsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcDocsNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcDocsIdStore = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            this.dgcDocsState = new KlonsLIB.Components.DataGridViewColorMarkColumn();
+            this.dgcDocsPersons = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcDocsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myAdapterManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bNav)).BeginInit();
@@ -174,74 +186,11 @@ namespace KlonsM.FormsM
             this.dgvDocs.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDocs_CellFormatting);
             this.dgvDocs.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDocs_UserDeletingRow);
             // 
-            // dgcDocsDT
-            // 
-            this.dgcDocsDT.DataPropertyName = "DT";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
-            this.dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgcDocsDT.HeaderText = "datums";
-            this.dgcDocsDT.MinimumWidth = 8;
-            this.dgcDocsDT.Name = "dgcDocsDT";
-            this.dgcDocsDT.ReadOnly = true;
-            this.dgcDocsDT.Width = 90;
-            // 
-            // dgcDocsNr
-            // 
-            this.dgcDocsNr.DataPropertyName = "NR";
-            this.dgcDocsNr.HeaderText = "mumurs";
-            this.dgcDocsNr.MinimumWidth = 8;
-            this.dgcDocsNr.Name = "dgcDocsNr";
-            this.dgcDocsNr.ReadOnly = true;
-            this.dgcDocsNr.Width = 90;
-            // 
-            // dgcDocsIdStore
-            // 
-            this.dgcDocsIdStore.DataPropertyName = "IDSTORE";
-            this.dgcDocsIdStore.DataSource = this.bsStore;
-            this.dgcDocsIdStore.DisplayMember = "CODE";
-            this.dgcDocsIdStore.HeaderText = "noliktava";
-            this.dgcDocsIdStore.MinimumWidth = 8;
-            this.dgcDocsIdStore.Name = "dgcDocsIdStore";
-            this.dgcDocsIdStore.ReadOnly = true;
-            this.dgcDocsIdStore.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcDocsIdStore.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcDocsIdStore.ValueMember = "ID";
-            this.dgcDocsIdStore.Width = 180;
-            // 
             // bsStore
             // 
             this.bsStore.DataMember = "M_STORES";
             this.bsStore.MyDataSource = "KlonsMData";
             this.bsStore.Sort = "CODE";
-            // 
-            // dgcDocsState
-            // 
-            this.dgcDocsState.DataPropertyName = "STATE";
-            this.dgcDocsState.HeaderText = "statuss";
-            this.dgcDocsState.MinimumWidth = 8;
-            this.dgcDocsState.Name = "dgcDocsState";
-            this.dgcDocsState.ReadOnly = true;
-            this.dgcDocsState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcDocsState.Width = 160;
-            // 
-            // dgcDocsPersons
-            // 
-            this.dgcDocsPersons.DataPropertyName = "PERSONS";
-            this.dgcDocsPersons.HeaderText = "darbinieki";
-            this.dgcDocsPersons.MinimumWidth = 8;
-            this.dgcDocsPersons.Name = "dgcDocsPersons";
-            this.dgcDocsPersons.ReadOnly = true;
-            this.dgcDocsPersons.Width = 300;
-            // 
-            // dgcDocsID
-            // 
-            this.dgcDocsID.DataPropertyName = "ID";
-            this.dgcDocsID.HeaderText = "ID";
-            this.dgcDocsID.MinimumWidth = 8;
-            this.dgcDocsID.Name = "dgcDocsID";
-            this.dgcDocsID.ReadOnly = true;
-            this.dgcDocsID.Visible = false;
-            this.dgcDocsID.Width = 150;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -386,7 +335,19 @@ namespace KlonsM.FormsM
             this.dgcFilterDt1,
             this.dgcFilterDt2,
             this.dgcFilterState,
-            this.dgcFilterIdStore});
+            this.dgcFilterIdStore,
+            this.dt1DataGridViewTextBoxColumn,
+            this.dt2DataGridViewTextBoxColumn,
+            this.docTypeDataGridViewTextBoxColumn,
+            this.docStateDataGridViewTextBoxColumn,
+            this.idStoreOutDataGridViewTextBoxColumn,
+            this.idStoreInDataGridViewTextBoxColumn,
+            this.idStoreOutOrInDataGridViewTextBoxColumn,
+            this.dataBindingsDataGridViewTextBoxColumn,
+            this.modifiersDataGridViewTextBoxColumn,
+            this.generateMemberDataGridViewCheckBoxColumn,
+            this.applicationSettingsDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn});
             this.dgvFilter.DataSource = this.bsDocFilter;
             this.dgvFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFilter.Location = new System.Drawing.Point(0, 0);
@@ -400,44 +361,6 @@ namespace KlonsM.FormsM
             this.dgvFilter.TabIndex = 0;
             this.dgvFilter.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFilter_CellFormatting);
             this.dgvFilter.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvFilter_CellParsing);
-            // 
-            // bsDocFilter
-            // 
-            this.bsDocFilter.MyDataSource = this.docFilterData1;
-            this.bsDocFilter.Position = 0;
-            // 
-            // docFilterData1
-            // 
-            this.docFilterData1.DocState = null;
-            this.docFilterData1.DocType = null;
-            this.docFilterData1.Dt1 = null;
-            this.docFilterData1.Dt2 = null;
-            this.docFilterData1.IdStoreIn = null;
-            this.docFilterData1.IdStoreOut = null;
-            this.docFilterData1.IdStoreOutOrIn = null;
-            // 
-            // btFilter
-            // 
-            this.btFilter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btFilter.Location = new System.Drawing.Point(906, 0);
-            this.btFilter.Name = "btFilter";
-            this.btFilter.Size = new System.Drawing.Size(114, 61);
-            this.btFilter.TabIndex = 1;
-            this.btFilter.Text = "Atlasīt dokumentus";
-            this.btFilter.UseVisualStyleBackColor = true;
-            this.btFilter.Click += new System.EventHandler(this.btFilter_Click);
-            // 
-            // myConfigA1
-            // 
-            this.myConfigA1.DocStatusColor1 = System.Drawing.Color.LightYellow;
-            this.myConfigA1.DocStatusColor2 = System.Drawing.Color.LightBlue;
-            this.myConfigA1.DocStatusColor3 = System.Drawing.Color.LightGreen;
-            // 
-            // bsItems
-            // 
-            this.bsItems.DataMember = "M_ITEMS";
-            this.bsItems.MyDataSource = "KlonsMData";
-            this.bsItems.Sort = "BARCODE";
             // 
             // dgcFilterDt1
             // 
@@ -484,6 +407,205 @@ namespace KlonsM.FormsM
             this.dgcFilterIdStore.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgcFilterIdStore.ValueMember = "ID";
             this.dgcFilterIdStore.Width = 180;
+            // 
+            // bsDocFilter
+            // 
+            this.bsDocFilter.MyDataSource = this.docFilterData1;
+            this.bsDocFilter.Position = 0;
+            // 
+            // docFilterData1
+            // 
+            this.docFilterData1.DocState = null;
+            this.docFilterData1.DocType = null;
+            this.docFilterData1.Dt1 = null;
+            this.docFilterData1.Dt2 = null;
+            this.docFilterData1.IdStoreIn = null;
+            this.docFilterData1.IdStoreOut = null;
+            this.docFilterData1.IdStoreOutOrIn = null;
+            // 
+            // btFilter
+            // 
+            this.btFilter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btFilter.Location = new System.Drawing.Point(906, 0);
+            this.btFilter.Name = "btFilter";
+            this.btFilter.Size = new System.Drawing.Size(114, 61);
+            this.btFilter.TabIndex = 1;
+            this.btFilter.Text = "Atlasīt dokumentus";
+            this.btFilter.UseVisualStyleBackColor = true;
+            this.btFilter.Click += new System.EventHandler(this.btFilter_Click);
+            // 
+            // myConfigA1
+            // 
+            this.myConfigA1.DocStatusColor1 = System.Drawing.Color.LightYellow;
+            this.myConfigA1.DocStatusColor2 = System.Drawing.Color.LightBlue;
+            this.myConfigA1.DocStatusColor3 = System.Drawing.Color.LightGreen;
+            // 
+            // bsItems
+            // 
+            this.bsItems.DataMember = "M_ITEMS";
+            this.bsItems.MyDataSource = "KlonsMData";
+            this.bsItems.Sort = "BARCODE";
+            // 
+            // dt1DataGridViewTextBoxColumn
+            // 
+            this.dt1DataGridViewTextBoxColumn.DataPropertyName = "Dt1";
+            this.dt1DataGridViewTextBoxColumn.HeaderText = "Dt1";
+            this.dt1DataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dt1DataGridViewTextBoxColumn.Name = "dt1DataGridViewTextBoxColumn";
+            this.dt1DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dt2DataGridViewTextBoxColumn
+            // 
+            this.dt2DataGridViewTextBoxColumn.DataPropertyName = "Dt2";
+            this.dt2DataGridViewTextBoxColumn.HeaderText = "Dt2";
+            this.dt2DataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dt2DataGridViewTextBoxColumn.Name = "dt2DataGridViewTextBoxColumn";
+            this.dt2DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // docTypeDataGridViewTextBoxColumn
+            // 
+            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
+            this.docTypeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // docStateDataGridViewTextBoxColumn
+            // 
+            this.docStateDataGridViewTextBoxColumn.DataPropertyName = "DocState";
+            this.docStateDataGridViewTextBoxColumn.HeaderText = "DocState";
+            this.docStateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.docStateDataGridViewTextBoxColumn.Name = "docStateDataGridViewTextBoxColumn";
+            this.docStateDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // idStoreOutDataGridViewTextBoxColumn
+            // 
+            this.idStoreOutDataGridViewTextBoxColumn.DataPropertyName = "IdStoreOut";
+            this.idStoreOutDataGridViewTextBoxColumn.HeaderText = "IdStoreOut";
+            this.idStoreOutDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idStoreOutDataGridViewTextBoxColumn.Name = "idStoreOutDataGridViewTextBoxColumn";
+            this.idStoreOutDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // idStoreInDataGridViewTextBoxColumn
+            // 
+            this.idStoreInDataGridViewTextBoxColumn.DataPropertyName = "IdStoreIn";
+            this.idStoreInDataGridViewTextBoxColumn.HeaderText = "IdStoreIn";
+            this.idStoreInDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idStoreInDataGridViewTextBoxColumn.Name = "idStoreInDataGridViewTextBoxColumn";
+            this.idStoreInDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // idStoreOutOrInDataGridViewTextBoxColumn
+            // 
+            this.idStoreOutOrInDataGridViewTextBoxColumn.DataPropertyName = "IdStoreOutOrIn";
+            this.idStoreOutOrInDataGridViewTextBoxColumn.HeaderText = "IdStoreOutOrIn";
+            this.idStoreOutOrInDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idStoreOutOrInDataGridViewTextBoxColumn.Name = "idStoreOutOrInDataGridViewTextBoxColumn";
+            this.idStoreOutOrInDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataBindingsDataGridViewTextBoxColumn
+            // 
+            this.dataBindingsDataGridViewTextBoxColumn.DataPropertyName = "DataBindings";
+            this.dataBindingsDataGridViewTextBoxColumn.HeaderText = "DataBindings";
+            this.dataBindingsDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dataBindingsDataGridViewTextBoxColumn.Name = "dataBindingsDataGridViewTextBoxColumn";
+            this.dataBindingsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataBindingsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // modifiersDataGridViewTextBoxColumn
+            // 
+            this.modifiersDataGridViewTextBoxColumn.DataPropertyName = "Modifiers";
+            this.modifiersDataGridViewTextBoxColumn.HeaderText = "Modifiers";
+            this.modifiersDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.modifiersDataGridViewTextBoxColumn.Name = "modifiersDataGridViewTextBoxColumn";
+            this.modifiersDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // generateMemberDataGridViewCheckBoxColumn
+            // 
+            this.generateMemberDataGridViewCheckBoxColumn.DataPropertyName = "GenerateMember";
+            this.generateMemberDataGridViewCheckBoxColumn.HeaderText = "GenerateMember";
+            this.generateMemberDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.generateMemberDataGridViewCheckBoxColumn.Name = "generateMemberDataGridViewCheckBoxColumn";
+            this.generateMemberDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // applicationSettingsDataGridViewTextBoxColumn
+            // 
+            this.applicationSettingsDataGridViewTextBoxColumn.DataPropertyName = "ApplicationSettings";
+            this.applicationSettingsDataGridViewTextBoxColumn.HeaderText = "ApplicationSettings";
+            this.applicationSettingsDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.applicationSettingsDataGridViewTextBoxColumn.Name = "applicationSettingsDataGridViewTextBoxColumn";
+            this.applicationSettingsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.applicationSettingsDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dgcDocsDT
+            // 
+            this.dgcDocsDT.DataPropertyName = "DT";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
+            this.dgcDocsDT.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgcDocsDT.HeaderText = "datums";
+            this.dgcDocsDT.MinimumWidth = 8;
+            this.dgcDocsDT.Name = "dgcDocsDT";
+            this.dgcDocsDT.ReadOnly = true;
+            this.dgcDocsDT.Width = 95;
+            // 
+            // dgcDocsNr
+            // 
+            this.dgcDocsNr.DataPropertyName = "NR";
+            this.dgcDocsNr.HeaderText = "mumurs";
+            this.dgcDocsNr.MinimumWidth = 8;
+            this.dgcDocsNr.Name = "dgcDocsNr";
+            this.dgcDocsNr.ReadOnly = true;
+            this.dgcDocsNr.Width = 90;
+            // 
+            // dgcDocsIdStore
+            // 
+            this.dgcDocsIdStore.DataPropertyName = "IDSTORE";
+            this.dgcDocsIdStore.DataSource = this.bsStore;
+            this.dgcDocsIdStore.DisplayMember = "CODE";
+            this.dgcDocsIdStore.HeaderText = "noliktava";
+            this.dgcDocsIdStore.MinimumWidth = 8;
+            this.dgcDocsIdStore.Name = "dgcDocsIdStore";
+            this.dgcDocsIdStore.ReadOnly = true;
+            this.dgcDocsIdStore.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcDocsIdStore.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcDocsIdStore.ValueMember = "ID";
+            this.dgcDocsIdStore.Width = 180;
+            // 
+            // dgcDocsState
+            // 
+            this.dgcDocsState.DataPropertyName = "STATE";
+            this.dgcDocsState.HeaderText = "statuss";
+            this.dgcDocsState.MinimumWidth = 8;
+            this.dgcDocsState.Name = "dgcDocsState";
+            this.dgcDocsState.ReadOnly = true;
+            this.dgcDocsState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcDocsState.Width = 160;
+            // 
+            // dgcDocsPersons
+            // 
+            this.dgcDocsPersons.DataPropertyName = "PERSONS";
+            this.dgcDocsPersons.HeaderText = "darbinieki";
+            this.dgcDocsPersons.MinimumWidth = 8;
+            this.dgcDocsPersons.Name = "dgcDocsPersons";
+            this.dgcDocsPersons.ReadOnly = true;
+            this.dgcDocsPersons.Width = 300;
+            // 
+            // dgcDocsID
+            // 
+            this.dgcDocsID.DataPropertyName = "ID";
+            this.dgcDocsID.HeaderText = "ID";
+            this.dgcDocsID.MinimumWidth = 8;
+            this.dgcDocsID.Name = "dgcDocsID";
+            this.dgcDocsID.ReadOnly = true;
+            this.dgcDocsID.Visible = false;
+            this.dgcDocsID.Width = 150;
             // 
             // FormM_InvDocList
             // 
@@ -540,17 +662,29 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.ToolStripButton tsbFindNext;
         private KlonsLIB.Data.MyBindingSource bsStore;
         private KlonsLIB.Data.MyBindingSource bsItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsNr;
-        private KlonsLIB.Components.MyDgvTextboxColumn2 dgcDocsIdStore;
-        private KlonsLIB.Components.DataGridViewColorMarkColumn dgcDocsState;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsPersons;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsID;
         private System.Windows.Forms.ToolStripButton tsbOpenDoc;
         private KlonsLIB.Data.MyBindingSourceToObj bsDocFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDt2;
         private KlonsLIB.Components.MyDgvMcCBColumn dgcFilterState;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcFilterIdStore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsNr;
+        private KlonsLIB.Components.MyDgvTextboxColumn2 dgcDocsIdStore;
+        private KlonsLIB.Components.DataGridViewColorMarkColumn dgcDocsState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsPersons;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dt1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dt2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docStateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStoreOutOrInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataBindingsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modifiersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn generateMemberDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn applicationSettingsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

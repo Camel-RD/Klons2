@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KlonsF.Classes;
 using KlonsF.DataSets;
-using KlonsF.Classes;
 using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;

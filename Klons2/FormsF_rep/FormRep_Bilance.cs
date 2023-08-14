@@ -12,7 +12,6 @@ using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
-using KlonsF.Classes;
 
 namespace KlonsF.Forms
 {

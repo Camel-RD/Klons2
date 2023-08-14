@@ -1019,6 +1019,17 @@ namespace KlonsLIB.Components
             if (Focused) SelectAll();
         }
 
+        // WINE fix
+        protected override void OnDropDown(EventArgs e)
+        {
+            if (MyData.InWine)
+            {
+                int w = wcols.Sum();
+                w += SystemInformation.VerticalScrollBarWidth + 3;
+                DropDownWidth = w;
+            }
+            base.OnDropDown(e);
+        }
 
         #region dropdown reposition 
         [DllImport("user32.dll")]

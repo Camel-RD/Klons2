@@ -713,10 +713,8 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyPickRowTextBox2 tbItemsCatFilter;
         private KlonsLIB.Data.MyAdapterManager myAdapterManager1;
         private KlonsLIB.Data.MyBindingSource bsUnits;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLastInID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcLastInLeft;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem miArtikuliTools;
         private System.Windows.Forms.ToolStripMenuItem miAktuālieArtikulaAtlikumi;

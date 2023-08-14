@@ -58,7 +58,8 @@ namespace KlonsA.Forms
 
             ShowBonusList(!MyData.Params.HideBonusList);
             ShowPositionTitleColumn(MyData.Params.SalarySheetShowPositionTitle);
-            
+
+            LoadColumnWidthsFromSettings();
 
             //sw.Stop();
             //MessageBox.Show("" + sw.ElapsedMilliseconds);
@@ -81,6 +82,29 @@ namespace KlonsA.Forms
             dgvLapa.Select();
         }
 
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_SalarySheet;
+            (int ver, int[] cw) = dgvLapa.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvLapa.SetColumnWidths(cw);
+
+            scw = MyData.Settings.ColumnWidths_SalaryBonus;
+            (ver, cw) = dgvPapildsummas.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvPapildsummas.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_SalarySheet = dgvLapa.GetColumnWidths2(8.0f, 1);
+            MyData.Settings.ColumnWidths_SalaryBonus = dgvPapildsummas.GetColumnWidths2(8.0f, 1);
+        }
+
+        public override void SaveParams()
+        {
+            SaveColumnWidthsToSettings();
+        }
 
         private void Form_SalarySheet_FormClosed(object sender, FormClosedEventArgs e)
         {

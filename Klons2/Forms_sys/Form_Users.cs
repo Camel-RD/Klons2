@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
 

@@ -131,6 +131,8 @@ namespace KlonsLIB.Forms
 
         public static MyToolStripRenderer MyToolStripRenderer { get; private set; } = null;
 
+        public static bool InWine { get; set; } = false;
+
         static ColorThemeHelper()
         {
             MyToolStripRenderer = new MyToolStripRenderer();
@@ -401,6 +403,8 @@ namespace KlonsLIB.Forms
                 dgv.DefaultCellStyle.ForeColor =
                     mycolortheme.GetColor(dgv.DefaultCellStyle.ForeColor, mycolortheme.WindowTextColor);
 
+                dgv.EnableHeadersVisualStyles = false;
+
                 dgv.ColumnHeadersDefaultCellStyle.BackColor = 
                     mycolortheme.GetColor(dgv.ColumnHeadersDefaultCellStyle.BackColor, mycolortheme.ControlColor);
 
@@ -434,6 +438,11 @@ namespace KlonsLIB.Forms
                 ctbl.ForeColor = mycolortheme.GetColor(ctbl.ForeColor, mycolortheme.ControlTextColor);
                 ctbl.BackColor = mycolortheme.GetColor(ctbl.BackColor, mycolortheme.ControlColor);
                 ctbl.HotBackColor = mycolortheme.GetColor(ctbl.HotBackColor, mycolortheme.ControlColorDark);
+            }
+            else if (c is Button && MyData.InWine)
+            {
+                c.ForeColor = mycolortheme.GetColor(c.ForeColor, mycolortheme.ControlTextColor);
+                c.BackColor = mycolortheme.GetColor(c.BackColor, mycolortheme.ControlColor);
             }
 
             /*

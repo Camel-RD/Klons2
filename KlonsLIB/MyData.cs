@@ -21,6 +21,8 @@ namespace KlonsLIB
             }
         }
 
+        public static bool InWine = false;
+
         public static string GetBasePath()
         {
             return Utils.GetMyFolderX();

@@ -199,12 +199,33 @@ namespace KlonsLIB.Components
             */
         }
 
+        public string FormatColumnWidths(int ver, int[] w)
+        {
+            if (w == null) return ver.ToString();
+            var sw = w.Select(x => x.ToString());
+            return ver + ";" + string.Join(";", sw);
+        }
+
+        public (int ver, int[] w) ParseColumnWidths(string sw)
+        {
+            if(sw.IsNOE())
+                return (0, null);
+            var ssw = sw.Split(";".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            if(ssw.Where(x => !int.TryParse(x, out _)).Any())
+                return (0, null);
+            int ver = int.Parse(ssw[0]);
+            if (ssw.Length == 1)
+                return (ver, null);
+            int[] w = ssw.Skip(1).Select(x => int.Parse(x)).ToArray();
+            return (ver, w);
+        }
+
         public int[] GetColumnWidths(float basefontaize)
         {
-            float f1 = 1.0f;
-            if (MyFormBase.DPIFactor != -1.0f)
-                f1 = MyFormBase.DPIFactor;
-            float w, fs = DefaultCellStyle.Font.SizeInPoints;
+            //float f1 = 1.0f;
+            //if (MyFormBase.DPIFactor != -1.0f)
+            //    f1 = MyFormBase.DPIFactor;
+            float w;
             int[] cw = new int[Columns.Count];
             for (int i = 0; i < Columns.Count; i++)
             {
@@ -213,7 +234,13 @@ namespace KlonsLIB.Components
             }
             return cw;
         }
-        
+
+        public string GetColumnWidths2(float basefontaize, int ver)
+        {
+            var w = GetColumnWidths(basefontaize);
+            return FormatColumnWidths(ver, w);
+        }
+
         public void SetColumnWidths(int[] widths)
         {
             if (widths.Length != Columns.Count) return;

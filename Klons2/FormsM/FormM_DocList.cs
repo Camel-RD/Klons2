@@ -32,12 +32,33 @@ namespace KlonsM.FormsM
             dgcFilterDocState.DisplayMember = "Val";
             dgcFilterDocState.ColumnNames = new[] { "Key", "Val" };
             dgcFilterDocState.ColumnWidths = "0;150";
+
+            LoadColumnWidthsFromSettings();
         }
 
         private void FormM_DocList_Load(object sender, EventArgs e)
         {
             LoadParams();
             LoadDataOnOpen();
+        }
+
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_MDocs;
+            (int ver, int[] cw) = dgvDocs.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvDocs.SetColumnWidths(cw);
+
+            scw = MyData.Settings.ColumnWidths_MDocsFilter;
+            (ver, cw) = dgvFilter.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvFilter.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_MDocs = dgvDocs.GetColumnWidths2(8.0f, 1);
+            MyData.Settings.ColumnWidths_MDocsFilter = dgvFilter.GetColumnWidths2(8.0f, 1);
         }
 
         private void LoadParams()
@@ -60,8 +81,9 @@ namespace KlonsM.FormsM
             MyData.Params.MFILTERDOCSOUT = docFilterData1.IdStoreOut;
             MyData.Params.MFILTERDOCSIN = docFilterData1.IdStoreIn;
             MyData.Params.MFILTERDOCSINOROUT = docFilterData1.IdStoreOutOrIn;
-        }
 
+            SaveColumnWidthsToSettings();
+        }
 
         public void LoadData()
         {

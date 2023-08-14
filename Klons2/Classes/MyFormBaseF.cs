@@ -39,13 +39,65 @@ namespace KlonsF.Classes
             //if (this.DesignMode) KlonsData.ResetInstance();
         }
 
+        void ShowCBS()
+        {
+            string ss = "";
+            foreach (var c in Controls)
+            {
+                if (c is MyMcComboBox ccb)
+                {
+                    ss += $"{ccb.Name}: {ccb.DropDownWidth}; ";
+                }
+            }
+            if (ss == "") return;
+            MessageBox.Show(ss);
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             if (IsMdiChild)
                 WindowState = FormWindowState.Maximized;
             IsLoading = false;
+
+            /* WINE fix
+            if (MyData.Settings.InWine == "YES")
+            {
+                CheckDropDownWidth(this);
+            }*/
         }
+
+        public void CheckDropDownWidth(Control c)
+        {
+            if (c == null) return;
+            if (c is MyMcComboBox cb)
+            {
+                string[] ws = cb.ColumnWidths.Split(";".ToArray());
+                int w = ws.Select(x => int.Parse(x)).Sum();
+                cb.DropDownWidth = w + SystemInformation.VerticalScrollBarWidth + 1;
+                //cb.DropDownWidth = cb.DropDownWidth + 1;
+            }
+            if (c is Form || c is ContainerControl || c is Panel || c is SplitContainer)
+            {
+                foreach (var c1 in c.Controls)
+                {
+                    CheckDropDownWidth(c1 as Control);
+                }
+            }
+            if (c is TabControl tabc)
+            {
+                foreach (var page in tabc.TabPages)
+                {
+                    var cpage = page as Control;
+                    foreach (var c1 in cpage.Controls)
+                    {
+                        CheckDropDownWidth(c1 as Control);
+                    }
+                }
+                return;
+            }
+        }
+
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

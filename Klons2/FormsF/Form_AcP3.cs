@@ -11,7 +11,6 @@ using KlonsF.Classes;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
 using KlonsLIB.Misc;
-using KlonsF.Classes;
 
 namespace KlonsF.Forms
 {

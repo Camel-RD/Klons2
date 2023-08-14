@@ -11,7 +11,6 @@ using System.Xml;
 using System.Xml.Schema;
 using KlonsF.DataSets;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsF.Forms;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Forms;
@@ -103,7 +102,7 @@ namespace KlonsF.FormsReportParams
             }
             
             if (!decimal.TryParse(tbXSumma.Text, out xsumma))
-                return "Nekorekts summas lauka vērtība.";
+                return "Nekorekta summas lauka vērtība.";
 
             imenesis = -1;
             iceturksnis = -1;
@@ -1495,6 +1494,9 @@ namespace KlonsF.FormsReportParams
                 MyMainForm.ShowWarning(rt);
                 return;
             }
+
+            if (xsumma != 150.0M)
+                MyMainForm.ShowWarning("Vai summas lauka vērtībai nevajadzētu būt 150.00 eiro?");
 
             SaveParams();
 

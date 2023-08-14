@@ -22,12 +22,31 @@ namespace KlonsA.Forms
             InitializeComponent();
             SetupToolStrips();
             CheckMyFontAndColors();
+            LoadColumnWidthsFromSettings();
         }
 
         private void Form_Events_Load(object sender, EventArgs e)
         {
             cbFilterEvent2.SelectedValue = null;
             cbFilterMode.SelectedValue = "0";
+        }
+
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_AEvents;
+            (int ver, int[] cw) = dgvEvents.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvEvents.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_AEvents = dgvEvents.GetColumnWidths2(9.0f, 1);
+        }
+
+        public override void SaveParams()
+        {
+            SaveColumnWidthsToSettings();
         }
 
         private void SetupToolStrips()

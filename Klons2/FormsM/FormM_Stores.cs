@@ -23,6 +23,7 @@ namespace KlonsM.FormsM
         {
             InitializeComponent();
             CheckMyFontAndColors();
+            LoadColumnWidthsFromSettings();
         }
 
         private void FormM_Stores_Load(object sender, EventArgs e)
@@ -39,6 +40,24 @@ namespace KlonsM.FormsM
             }
             if (SelectedCode != null)
                 tbCode.Text = SelectedCode;
+        }
+
+        private void LoadColumnWidthsFromSettings()
+        {
+            string scw = MyData.Settings.ColumnWidths_MStores;
+            (int ver, int[] cw) = dgvRows.ParseColumnWidths(scw);
+            if (ver == 1 && cw != null && cw.Length > 0)
+                dgvRows.SetColumnWidths(cw);
+        }
+
+        private void SaveColumnWidthsToSettings()
+        {
+            MyData.Settings.ColumnWidths_MStores = dgvRows.GetColumnWidths2(8.0f, 1);
+        }
+
+        public override void SaveParams()
+        {
+            SaveColumnWidthsToSettings();
         }
 
         public string SelectedCode = null;

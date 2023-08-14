@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using KlonsF.Classes;
-using KlonsF.Classes;
 using KlonsF.Forms;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
 using KlonsLIB.Forms;
