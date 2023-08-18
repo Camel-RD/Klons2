@@ -128,7 +128,6 @@ namespace KlonsF.FormsReportParams
             MyData.ReportHelperF.CheckForErrors(() =>
             {
                 DoIt();
-
             });
         }
 
@@ -179,7 +178,14 @@ namespace KlonsF.FormsReportParams
             MyData.ReportHelperF.CheckForErrors(() =>
             {
                 DoIt();
+            });
+        }
 
+        private void cmShowTable_Click(object sender, EventArgs e)
+        {
+            MyData.ReportHelperF.CheckForErrors(() =>
+            {
+                PrepareTableReport();
             });
         }
 
@@ -284,5 +290,202 @@ namespace KlonsF.FormsReportParams
             MyMainForm.ShowReport(rd);
         }
 
+        public void PrepareTableReport()
+        {
+            string rt = Check();
+            if (rt != "OK")
+            {
+                MyMainForm.ShowWarning(rt);
+                return;
+            }
+            SaveParams();
+
+            ROps2aTableAdapter ad2a = MyData.GetKlonsFRepAdapter("ROps2a") as ROps2aTableAdapter;
+            TRepA1TableAdapter ada1 = MyData.GetKlonsFRepAdapter("TRepA1") as TRepA1TableAdapter;
+
+            int selectedreport = lbCm.SelectedIndex;
+
+            string s = $"Periods: {startDate:dd.MM.yyyy} - {endDate:dd.MM.yyyy}\n Konts: [{cbAC.Text}]";
+            if (!string.IsNullOrEmpty(lbACName.Text))
+                s = $"{s} {lbACName.Text}";
+            if (!string.IsNullOrEmpty(cbClid.Text))
+                s = $"{s}\n Persona: [{cbClid.Text}]";
+            if (!string.IsNullOrEmpty(lbClName.Text))
+                s = $"{s} {lbClName.Text}";
+
+            string rtitle = "";
+
+            List<RepRowPersonsApgr> reprows = null;
+            List<RepRowPersonsDocs> reprowsdocs = null;
+
+            switch (selectedreport)
+            {
+                case 0:
+                    ad2a.FillBy_pers_12(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
+                    MyData.ReportHelperF.PrepareRops2a();
+                    reprows = PrepareRepApgr1(MyData.DataSetKlonsFRep.ROps2a);
+                    break;
+                case 1:
+                    ad2a.FillBy_pers_11(MyData.DataSetKlonsFRep.ROps2a, startDate, endDate, ac, clid);
+                    MyData.ReportHelperF.PrepareRops2a();
+                    reprows = PrepareRepApgr2(MyData.DataSetKlonsFRep.ROps2a);
+                    break;
+                case 2:
+                    ada1.FillBy_pers_14(MyData.DataSetKlonsFRep.TRepA1, startDate, endDate, ac, clid);
+                    rtitle = "Rēķinu saraksts";
+                    reprowsdocs = PrepareRepDocs1(MyData.DataSetKlonsFRep.TRepA1);
+                    break;
+                case 3:
+                    ada1.FillBy_pers_15(MyData.DataSetKlonsFRep.TRepA1, startDate, endDate, ac, clid);
+                    rtitle = "Rēķinu saraksts";
+                    reprowsdocs = PrepareRepDocs1(MyData.DataSetKlonsFRep.TRepA1);
+                    break;
+                case 4:
+                    ada1.FillBy_pers_13(MyData.DataSetKlonsFRep.TRepA1, startDate, endDate, ac, clid);
+                    rtitle = "Neapmaksātie rēķini";
+                    reprowsdocs = PrepareRepDocs1(MyData.DataSetKlonsFRep.TRepA1);
+                    break;
+                case 5:
+                    ada1.FillBy_pers_16(MyData.DataSetKlonsFRep.TRepA1, startDate, endDate, ac, clid);
+                    rtitle = "Neapmaksātie rēķini";
+                    reprowsdocs = PrepareRepDocs1(MyData.DataSetKlonsFRep.TRepA1);
+                    break;
+            }
+
+            switch (selectedreport)
+            {
+                case 0:
+                case 1:
+                    var frm = MyMainForm.ShowForm(typeof(FormRep_PersonsApgr)) as FormRep_PersonsApgr;
+                    frm.Title = s;
+                    frm.SetRowSource(reprows);
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    var frm2 = MyMainForm.ShowForm(typeof(FormRep_PersonsDocs)) as FormRep_PersonsDocs;
+                    frm2.Text = rtitle;
+                    frm2.Title = s;
+                    frm2.SetRowSource(reprowsdocs);
+                    break;
+            }
+
+        }
+            
+        public List<RepRowPersonsApgr> PrepareRepApgr1(DataSets.klonsRepDataSet.ROps2aDataTable table)
+        {
+            var reprows = table.Select(x => RepRowPersonsApgr.MakeFrom(x, 0)).ToList();
+            var reptotalrow = new RepRowPersonsApgr()
+            {
+                Kind = 2,
+                Code = "KOPĀ"
+            };
+            foreach(var row in reprows)
+            {
+                reptotalrow.Deb0 += row.Deb0;
+                reptotalrow.Cred0 += row.Cred0;
+                reptotalrow.DebCh += row.DebCh;
+                reptotalrow.CredCh += row.CredCh;
+                reptotalrow.Deb1 += row.Deb1;
+                reptotalrow.Cred1 += row.Cred1;
+            }
+            reprows.Add(reptotalrow);
+            return reprows;
+        }
+
+        public List<RepRowPersonsApgr> PrepareRepApgr2(DataSets.klonsRepDataSet.ROps2aDataTable table)
+        {
+            var reprows = table.Select(x => RepRowPersonsApgr.MakeFrom(x, 0)).ToList();
+            var grrows = reprows.GroupBy(x => x.Ac);
+            var reprows2 = new List<RepRowPersonsApgr>();
+            var repttotalrow = new RepRowPersonsApgr()
+            {
+                Kind = 2,
+                Code = "KOPĀ"
+            };
+            foreach (var gr in grrows)
+            {
+                var row1 = gr.First();
+                var reptitlerow = new RepRowPersonsApgr()
+                {
+                    Kind = 1,
+                    Code = row1.Ac,
+                    Name = row1.AcName
+                };
+                reprows2.Add(reptitlerow);
+                foreach (var row in gr)
+                {
+                    reprows2.Add(row);
+                    reptitlerow.Deb0 += row.Deb0;
+                    reptitlerow.Cred0 += row.Cred0;
+                    reptitlerow.DebCh += row.DebCh;
+                    reptitlerow.CredCh += row.CredCh;
+                    reptitlerow.Deb1 += row.Deb1;
+                    reptitlerow.Cred1 += row.Cred1;
+
+                    repttotalrow.Deb0 += row.Deb0;
+                    repttotalrow.Cred0 += row.Cred0;
+                    repttotalrow.DebCh += row.DebCh;
+                    repttotalrow.CredCh += row.CredCh;
+                    repttotalrow.Deb1 += row.Deb1;
+                    repttotalrow.Cred1 += row.Cred1;
+                }
+            }
+            reprows2.Add(repttotalrow);
+            return reprows2;
+        }
+
+        public List<RepRowPersonsDocs> PrepareRepDocs1(DataSets.klonsRepDataSet.TRepA1DataTable table)
+        {
+            var reprows = table.Select(x => RepRowPersonsDocs.MakeFrom(x, 0)).ToList();
+            var grrows = reprows.GroupBy(x => x.Code);
+            var reprows2 = new List<RepRowPersonsDocs>();
+            var repemptylrow = new RepRowPersonsDocs()
+            {
+                Kind = 3
+            };
+            var reptotalrow = new RepRowPersonsDocs()
+            {
+                Kind = 2,
+                Code = "KOPĀ"
+            };
+            bool firstrow = true;
+            foreach (var gr in grrows)
+            {
+                var row1 = gr.First();
+                var repcodetotalrow = new RepRowPersonsDocs()
+                {
+                    Kind = 2,
+                    Name = "Kopā"
+                };
+                if (firstrow)
+                {
+                    firstrow = false;
+                }
+                else
+                {
+                    reprows2.Add(repemptylrow);
+                }
+                bool firstingroup = true;
+                foreach (var row in gr)
+                {
+                    if (firstingroup)
+                    {
+                        row.IsFirstInGroup = true;
+                        firstingroup = false;
+                    }
+                    reprows2.Add(row);
+                    repcodetotalrow.Deb += row.Deb;
+                    repcodetotalrow.Cred += row.Cred;
+
+                    reptotalrow.Deb += row.Deb;
+                    reptotalrow.Cred += row.Cred;
+                }
+                reprows2.Add(repcodetotalrow);
+            }
+            reprows2.Add(reptotalrow);
+            return reprows2;
+        }
     }
 }

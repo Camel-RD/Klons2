@@ -1024,6 +1024,47 @@ namespace KlonsF.Forms
             dr2.SummC = dsum2;
         }
 
+        private void SetCalcDocPVN(klonsDataSet.OPSdRow docrow)
+        {
+            if (docrow == null) return;
+            klonsDataSet.OPSRow dr;
+
+            var opsrows = docrow.GetOPSRows();
+            if (opsrows == null || opsrows.Length < 2) return;
+
+            int kpvn = -1;
+
+            for (int i = 0; i < opsrows.Length; i++)
+            {
+                dr = opsrows[i];
+                if (IsPVNx(dr.AC15, dr.AC25))
+                {
+                    if (kpvn > -1) return;
+                    kpvn = i;
+                }
+            }
+            if (kpvn == -1) return;
+
+            decimal dpvn, dsum = 0.0M;
+            for (int i = 0; i < opsrows.Length; i++)
+            {
+                if (i == kpvn) continue;
+                dr = opsrows[i];
+                if (dr.AC15 == "0" && dr.AC25.IsNOE() ||
+                    dr.AC15.IsNOE() && dr.AC25 == "0")
+                {
+                    continue;
+                }
+                dsum += dr.SummC;
+            }
+            if (dsum == 0M) return;
+
+            dr = opsrows[kpvn];
+            decimal t = GetPVNRateAX(dr.AC15, dr.AC25, docrow.Dete);
+            if (t == 0) return;
+            dpvn = Math.Round(dsum * t / 100M, 2);
+            dr.SummC = dpvn;
+        }
 
         private void dgvDocs_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
@@ -2285,6 +2326,15 @@ namespace KlonsF.Forms
             if (e.KeyData == (Keys.F | Keys.Control))
             {
                 tsbSearch.Focus();
+            }
+            if (e.KeyData == Keys.F12 && !dgvDocs.IsCurrentCellInEditMode &&
+                dgvDocs.CurrentCell.ColumnIndex == dgcDocsPVN.Index)
+            {
+                var dr = bsOPSd.CurrentDataRow as klonsDataSet.OPSdRow;
+                if (dr != null)
+                {
+                    SetCalcDocPVN(dr);
+                }
             }
         }
 

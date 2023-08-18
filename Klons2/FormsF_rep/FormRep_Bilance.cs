@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using KlonsF.Classes;
 using KlonsF.DataSets.klonsDataSetTableAdapters;
 using KlonsF.DataSets.klonsRepDataSetTableAdapters;
+using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 
@@ -108,6 +109,32 @@ namespace KlonsF.Forms
             }
         }
 
+        private void DoItT()
+        {
+            string rt = Check();
+            if (rt != "OK")
+            {
+                MyMainForm.ShowWarning(rt);
+                return;
+            }
+
+            int selectedreport = lbCM.SelectedIndex;
+            if (selectedreport == -1) return;
+
+            SaveParams();
+
+            if (selectedreport == 0 || selectedreport == 1)
+            {
+                DoIt1T(selectedreport);
+                return;
+            }
+            if (selectedreport == 2 || selectedreport == 3)
+            {
+                DoIt2T(selectedreport);
+                return;
+            }
+        }
+
         private void DoIt1(int selectedreport)
         {
             var ad = MyData.GetKlonsFAdapter("BalA21") as BalA21TableAdapter;
@@ -160,6 +187,68 @@ namespace KlonsF.Forms
             MyMainForm.ShowReport(rd);
         }
 
+        private void DoIt1T(int selectedreport)
+        {
+            var ad = MyData.GetKlonsFAdapter("BalA21") as BalA21TableAdapter;
+            var ad2 = MyData.GetKlonsFAdapter("BalA22") as BalA22TableAdapter;
+            if (ad == null) return;
+
+            try
+            {
+                MyData.DataSetKlonsF.BalA21.Clear();
+                MyData.DataSetKlonsF.BalA22.Clear();
+                ad2.Fill(MyData.DataSetKlonsF.BalA22);
+                ad.FillBy_bal_12(MyData.DataSetKlonsF.BalA21, startDate, endDate, balid);
+            }
+            catch (Exception)
+            {
+                MyMainForm.ShowWarning("Neizdevās sagatavot atskaiti.");
+                return;
+            }
+            MyData.ReportHelperF.FillBalA2FromBalA21(balid);
+
+
+            var reprows = MyData.DataSetKlonsF.BalA22
+                .WhereX(x => x.balid == balid)
+                .OrderBy(x => x.dc)
+                .ThenBy(x => x.nr)
+                .Select(x => RepRowBilance1.MakeFrom(x, 0))
+                .ToList();
+            var reprows2 = new List<RepRowBilance1>();
+            bool bak = false, bpa = false;
+            foreach (var row in reprows)
+            {
+                if (row.Dc == "AK" && !bak)
+                {
+                    var reprowak = new RepRowBilance1()
+                    {
+                        Kind = 1,
+                        Descr = raktivs
+                    };
+                    reprows2.Add(reprowak);
+                    bak = true;
+                }
+                if (row.Dc == "PA" && !bpa)
+                {
+                    var reprowpa = new RepRowBilance1()
+                    {
+                        Kind = 1,
+                        Descr = rpasivs
+                    };
+                    reprows2.Add(reprowpa);
+                    bpa = true;
+                }
+                if (!(selectedreport == 0 && row.S1 == 0M && row.S1 == 0M && row.S3 == 0M))
+                {
+                    reprows2.Add(row);
+                }
+            }
+
+            var frm = MyMainForm.ShowForm(typeof(FormRep_Bilance1)) as FormRep_Bilance1;
+            frm.Text = rtitle;
+            frm.SetRowSource(reprows2, MyData.Params.RSD, MyData.Params.RED);
+        }
+
         private void DoIt2(int selectedreport)
         {
             var ad = MyData.GetKlonsFAdapter("BalA2") as BalA2TableAdapter;
@@ -168,6 +257,7 @@ namespace KlonsF.Forms
 
             try
             {
+                MyData.DataSetKlonsF.BalA3.Clear();
                 MyData.DataSetKlonsF.BalA2.Clear();
                 MyData.DataSetKlonsF.BalA22.Clear();
                 MyData.DataSetKlonsFRep.SP_REP_BAL_22.Clear();
@@ -195,6 +285,7 @@ namespace KlonsF.Forms
                     rd.FileName = "Report_Bilance_41";
                     break;
             }
+            reprows = reprows.Where(x => !x.AllZeros).ToList();
 
             rd.Sources["DataSet1"] = reprows;
             rd.AddReportParameters(
@@ -208,6 +299,66 @@ namespace KlonsF.Forms
                     "RPASIVS", rpasivs
                 });
             MyMainForm.ShowReport(rd);
+        }
+
+        private void DoIt2T(int selectedreport)
+        {
+            var ad = MyData.GetKlonsFAdapter("BalA2") as BalA2TableAdapter;
+            var ad2 = MyData.GetKlonsFRepAdapter("SP_REP_BAL_22") as SP_REP_BAL_22TableAdapter;
+            if (ad == null) return;
+
+            try
+            {
+                MyData.DataSetKlonsF.BalA3.Clear();
+                MyData.DataSetKlonsF.BalA2.Clear();
+                MyData.DataSetKlonsF.BalA22.Clear();
+                MyData.DataSetKlonsFRep.SP_REP_BAL_22.Clear();
+                ad.Fill(MyData.DataSetKlonsF.BalA2);
+                ad2.Fill(MyData.DataSetKlonsFRep.SP_REP_BAL_22, startDate, endDate, balid);
+            }
+            catch (Exception ex)
+            {
+                MyMainForm.ShowWarning("Neizdevās sagatavot atskaiti.");
+                return;
+            }
+
+            List<RepRow_BalMT> reprows = null;
+
+            switch (selectedreport)
+            {
+                case 2:
+                    reprows = PrepareReportMt_apgr(balid, MyData.DataSetKlonsFRep.SP_REP_BAL_22);
+                    break;
+                case 3:
+                    reprows = PrepareReportMt_atl(balid, MyData.DataSetKlonsFRep.SP_REP_BAL_22);
+                    break;
+            }
+            reprows = reprows.Where(x => !x.AllZeros).ToList();
+
+            int k = reprows.FindIndex(x => x.Dc == "AK");
+            if (k > -1)
+            {
+                var reprowak = new RepRow_BalMT()
+                {
+                    Tp = "X",
+                    Descr = raktivs
+                };
+                reprows.Insert(k, reprowak);
+            }
+            k = reprows.FindIndex(x => x.Dc == "PA");
+            if (k > -1)
+            {
+                var reprowak = new RepRow_BalMT()
+                {
+                    Tp = "X",
+                    Descr = rpasivs
+                };
+                reprows.Insert(k, reprowak);
+            }
+
+            var frm = MyMainForm.ShowForm(typeof(FormRep_Bilance2)) as FormRep_Bilance2;
+            frm.Text = rtitle;
+            frm.SetRowSource(reprows);
         }
 
         private bool WCompare(string s, string pattern)
@@ -306,7 +457,7 @@ namespace KlonsF.Forms
                     bid = dr.BID,
                     Dc = drb.dc,
                     Tp = drb.tp,
-                    Nr = drb.Descr,
+                    Nr = drb.nr,
                     Descr = drb.Descr,
                     M0 = dr.M0,
                     M1 = dr.M1,
@@ -358,7 +509,7 @@ namespace KlonsF.Forms
                     bid = dr.BID,
                     Dc = drb.dc,
                     Tp = drb.tp,
-                    Nr = drb.Descr,
+                    Nr = drb.nr,
                     Descr = drb.Descr,
                     M0 = dr.M0,
                     M1 = dr.M1,
@@ -415,7 +566,14 @@ namespace KlonsF.Forms
             MyData.ReportHelperF.CheckForErrors(() =>
             {
                 DoIt();
+            });
+        }
 
+        private void cmTable_Click(object sender, EventArgs e)
+        {
+            MyData.ReportHelperF.CheckForErrors(() =>
+            {
+                DoItT();
             });
         }
 
@@ -462,6 +620,10 @@ namespace KlonsF.Forms
         public decimal M11 { get; set; } = 0.0M;
         public decimal M12 { get; set; } = 0.0M;
         public decimal M13 { get; set; } = 0.0M;
+
+        public bool AllZeros => M1 == 0M && M2 == 0M && M3 == 0M && M4 == 0M && 
+            M5 == 0M && M6 == 0M && M7 == 0M && M8 == 0M && M9 == 0M && M10 == 0M && 
+            M11 == 0M && M12 == 0M && M13 == 0M;
     }
 
 }

@@ -47,6 +47,7 @@ namespace KlonsF.FormsReportParams
             this.lbClName = new System.Windows.Forms.Label();
             this.lbCm = new System.Windows.Forms.ListBox();
             this.myLabel1 = new KlonsLIB.Components.MyLabel();
+            this.cmShowTable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsAC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsClid)).BeginInit();
             this.SuspendLayout();
@@ -61,19 +62,19 @@ namespace KlonsF.FormsReportParams
             this.cbAC.DataSource = this.bsAC;
             this.cbAC.DisplayMember = "AC";
             this.cbAC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbAC.DropDownHeight = 255;
-            this.cbAC.DropDownWidth = 404;
+            this.cbAC.DropDownHeight = 315;
+            this.cbAC.DropDownWidth = 408;
             this.cbAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbAC.FormattingEnabled = true;
             this.cbAC.GridLineColor = System.Drawing.Color.LightGray;
             this.cbAC.GridLineHorizontal = false;
             this.cbAC.GridLineVertical = false;
             this.cbAC.IntegralHeight = false;
-            this.cbAC.Location = new System.Drawing.Point(143, 41);
+            this.cbAC.Location = new System.Drawing.Point(161, 51);
             this.cbAC.Margin = new System.Windows.Forms.Padding(2);
             this.cbAC.MaxDropDownItems = 15;
             this.cbAC.Name = "cbAC";
-            this.cbAC.Size = new System.Drawing.Size(104, 23);
+            this.cbAC.Size = new System.Drawing.Size(116, 27);
             this.cbAC.TabIndex = 2;
             this.cbAC.ValueMember = "AC";
             this.cbAC.SelectedIndexChanged += new System.EventHandler(this.cbAC_SelectedIndexChanged);
@@ -91,20 +92,20 @@ namespace KlonsF.FormsReportParams
             // 
             this.tbSD.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tbSD.IsDate = true;
-            this.tbSD.Location = new System.Drawing.Point(143, 7);
+            this.tbSD.Location = new System.Drawing.Point(161, 9);
             this.tbSD.Margin = new System.Windows.Forms.Padding(2);
             this.tbSD.Name = "tbSD";
-            this.tbSD.Size = new System.Drawing.Size(80, 22);
+            this.tbSD.Size = new System.Drawing.Size(90, 26);
             this.tbSD.TabIndex = 0;
             this.tbSD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 7);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Datums (no - līdz):";
             // 
@@ -112,39 +113,39 @@ namespace KlonsF.FormsReportParams
             // 
             this.tbED.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tbED.IsDate = true;
-            this.tbED.Location = new System.Drawing.Point(228, 7);
+            this.tbED.Location = new System.Drawing.Point(256, 9);
             this.tbED.Margin = new System.Windows.Forms.Padding(2);
             this.tbED.Name = "tbED";
-            this.tbED.Size = new System.Drawing.Size(80, 22);
+            this.tbED.Size = new System.Drawing.Size(90, 26);
             this.tbED.TabIndex = 1;
             this.tbED.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 43);
+            this.label2.Location = new System.Drawing.Point(11, 54);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Konts:";
             // 
             // lbACName
             // 
-            this.lbACName.Location = new System.Drawing.Point(251, 43);
+            this.lbACName.Location = new System.Drawing.Point(282, 54);
             this.lbACName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbACName.Name = "lbACName";
-            this.lbACName.Size = new System.Drawing.Size(334, 18);
-            this.lbACName.TabIndex = 9;
+            this.lbACName.Size = new System.Drawing.Size(376, 22);
+            this.lbACName.TabIndex = 11;
             this.lbACName.Text = "Konts:";
             // 
             // cmDoIt
             // 
-            this.cmDoIt.Location = new System.Drawing.Point(374, 118);
+            this.cmDoIt.Location = new System.Drawing.Point(421, 148);
             this.cmDoIt.Margin = new System.Windows.Forms.Padding(2);
             this.cmDoIt.Name = "cmDoIt";
-            this.cmDoIt.Size = new System.Drawing.Size(133, 63);
-            this.cmDoIt.TabIndex = 5;
+            this.cmDoIt.Size = new System.Drawing.Size(150, 57);
+            this.cmDoIt.TabIndex = 4;
             this.cmDoIt.Text = "Taisīt atskaiti";
             this.cmDoIt.UseVisualStyleBackColor = true;
             this.cmDoIt.Click += new System.EventHandler(this.cmDoIt_Click);
@@ -160,19 +161,19 @@ namespace KlonsF.FormsReportParams
             this.cbClid.DataSource = this.bsClid;
             this.cbClid.DisplayMember = "clid";
             this.cbClid.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbClid.DropDownHeight = 255;
-            this.cbClid.DropDownWidth = 444;
+            this.cbClid.DropDownHeight = 315;
+            this.cbClid.DropDownWidth = 448;
             this.cbClid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbClid.FormattingEnabled = true;
             this.cbClid.GridLineColor = System.Drawing.Color.LightGray;
             this.cbClid.GridLineHorizontal = false;
             this.cbClid.GridLineVertical = false;
             this.cbClid.IntegralHeight = false;
-            this.cbClid.Location = new System.Drawing.Point(143, 75);
+            this.cbClid.Location = new System.Drawing.Point(161, 94);
             this.cbClid.Margin = new System.Windows.Forms.Padding(2);
             this.cbClid.MaxDropDownItems = 15;
             this.cbClid.Name = "cbClid";
-            this.cbClid.Size = new System.Drawing.Size(104, 23);
+            this.cbClid.Size = new System.Drawing.Size(116, 27);
             this.cbClid.TabIndex = 3;
             this.cbClid.ValueMember = "clid";
             this.cbClid.SelectedIndexChanged += new System.EventHandler(this.cbClid_SelectedIndexChanged);
@@ -189,20 +190,20 @@ namespace KlonsF.FormsReportParams
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 79);
+            this.label3.Location = new System.Drawing.Point(11, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 10;
+            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.TabIndex = 9;
             this.label3.Text = "Persona:";
             // 
             // lbClName
             // 
-            this.lbClName.Location = new System.Drawing.Point(251, 78);
+            this.lbClName.Location = new System.Drawing.Point(282, 98);
             this.lbClName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbClName.Name = "lbClName";
-            this.lbClName.Size = new System.Drawing.Size(334, 18);
-            this.lbClName.TabIndex = 11;
+            this.lbClName.Size = new System.Drawing.Size(376, 22);
+            this.lbClName.TabIndex = 12;
             this.lbClName.Text = "Konts:";
             // 
             // lbCm
@@ -210,7 +211,7 @@ namespace KlonsF.FormsReportParams
             this.lbCm.BackColor = System.Drawing.SystemColors.Control;
             this.lbCm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbCm.FormattingEnabled = true;
-            this.lbCm.ItemHeight = 16;
+            this.lbCm.ItemHeight = 20;
             this.lbCm.Items.AddRange(new object[] {
             "Debitoru, kreditoru apgrozijumu pārskats",
             "Debitoru, kreditoru apgrozijumu pārskats pa kontiem",
@@ -218,10 +219,10 @@ namespace KlonsF.FormsReportParams
             "Rēķinu un maksājumu saraksts",
             "Neapmaksātie rēķini",
             "Neapmaksātie rēķini - līdz norādītajam datumam"});
-            this.lbCm.Location = new System.Drawing.Point(13, 118);
+            this.lbCm.Location = new System.Drawing.Point(15, 148);
             this.lbCm.Margin = new System.Windows.Forms.Padding(2);
             this.lbCm.Name = "lbCm";
-            this.lbCm.Size = new System.Drawing.Size(338, 98);
+            this.lbCm.Size = new System.Drawing.Size(380, 122);
             this.lbCm.TabIndex = 6;
             this.lbCm.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbCm_MouseDoubleClick);
             // 
@@ -229,22 +230,35 @@ namespace KlonsF.FormsReportParams
             // 
             this.myLabel1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.myLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.myLabel1.Location = new System.Drawing.Point(10, 237);
+            this.myLabel1.Location = new System.Drawing.Point(11, 296);
             this.myLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myLabel1.Name = "myLabel1";
             this.myLabel1.Padding = new System.Windows.Forms.Padding(2);
-            this.myLabel1.Size = new System.Drawing.Size(480, 78);
-            this.myLabel1.TabIndex = 12;
+            this.myLabel1.Size = new System.Drawing.Size(540, 98);
+            this.myLabel1.TabIndex = 10;
             this.myLabel1.Text = resources.GetString("myLabel1.Text");
+            // 
+            // cmShowTable
+            // 
+            this.cmShowTable.Location = new System.Drawing.Point(421, 213);
+            this.cmShowTable.Margin = new System.Windows.Forms.Padding(2);
+            this.cmShowTable.Name = "cmShowTable";
+            this.cmShowTable.Size = new System.Drawing.Size(150, 57);
+            this.cmShowTable.TabIndex = 5;
+            this.cmShowTable.Text = "Tabula";
+            this.cmShowTable.UseVisualStyleBackColor = true;
+            this.cmShowTable.Click += new System.EventHandler(this.cmShowTable_Click);
+            this.cmShowTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Control_KeyDown);
             // 
             // FormRep_Persons
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 324);
+            this.ClientSize = new System.Drawing.Size(585, 405);
             this.CloseOnEscape = true;
             this.Controls.Add(this.myLabel1);
             this.Controls.Add(this.lbCm);
+            this.Controls.Add(this.cmShowTable);
             this.Controls.Add(this.cmDoIt);
             this.Controls.Add(this.lbClName);
             this.Controls.Add(this.lbACName);
@@ -255,6 +269,7 @@ namespace KlonsF.FormsReportParams
             this.Controls.Add(this.tbSD);
             this.Controls.Add(this.cbClid);
             this.Controls.Add(this.cbAC);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRep_Persons";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Personu pārskati";
@@ -282,5 +297,6 @@ namespace KlonsF.FormsReportParams
         private MyBindingSource bsClid;
         private System.Windows.Forms.ListBox lbCm;
         private MyLabel myLabel1;
+        private System.Windows.Forms.Button cmShowTable;
     }
 }

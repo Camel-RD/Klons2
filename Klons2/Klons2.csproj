@@ -227,6 +227,30 @@
     <Compile Include="FormsF\Form_PVN_Dekl.Designer.cs">
       <DependentUpon>Form_PVN_Dekl.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsF_rep\FormRep_Bilance2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_Bilance2.Designer.cs">
+      <DependentUpon>FormRep_Bilance2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_Bilance1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_Bilance1.Designer.cs">
+      <DependentUpon>FormRep_Bilance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_PersonsApgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_PersonsApgr.Designer.cs">
+      <DependentUpon>FormRep_PersonsApgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_PersonsDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_PersonsDocs.Designer.cs">
+      <DependentUpon>FormRep_PersonsDocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsF_rep\FormRep_PVNZ1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1309,6 +1333,18 @@
     <Content Include="Reports\Report_AvNor_2.rdlc" />
     <Content Include="Reports\Report_Koresp_1_a.rdlc" />
     <Content Include="Reports\Report_Darz_4.rdlc" />
+    <EmbeddedResource Include="FormsF_rep\FormRep_Bilance2.resx">
+      <DependentUpon>FormRep_Bilance2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsF_rep\FormRep_Bilance1.resx">
+      <DependentUpon>FormRep_Bilance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsF_rep\FormRep_PersonsApgr.resx">
+      <DependentUpon>FormRep_PersonsApgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsF_rep\FormRep_PersonsDocs.resx">
+      <DependentUpon>FormRep_PersonsDocs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SQL\SQLV003.txt" />
     <Content Include="TODO-M.txt" />
     <EmbeddedResource Include="FormsA\FormA_PayListImport.resx">

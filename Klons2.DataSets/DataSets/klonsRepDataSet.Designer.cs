@@ -12867,11 +12867,11 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nm {
                 get {
-                    try {
-                        return ((string)(this[this.tableTRepA1.nmColumn]));
+                    if (this.IsnmNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nm\' in table \'TRepA1\' is DBNull.", e);
+                    else {
+                        return ((string)(this[this.tableTRepA1.nmColumn]));
                     }
                 }
                 set {
@@ -12899,11 +12899,11 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string st {
                 get {
-                    try {
-                        return ((string)(this[this.tableTRepA1.stColumn]));
+                    if (this.IsstNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'st\' in table \'TRepA1\' is DBNull.", e);
+                    else {
+                        return ((string)(this[this.tableTRepA1.stColumn]));
                     }
                 }
                 set {
@@ -12915,11 +12915,11 @@ namespace KlonsF.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nr {
                 get {
-                    try {
-                        return ((string)(this[this.tableTRepA1.nrColumn]));
+                    if (this.IsnrNull()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nr\' in table \'TRepA1\' is DBNull.", e);
+                    else {
+                        return ((string)(this[this.tableTRepA1.nrColumn]));
                     }
                 }
                 set {
