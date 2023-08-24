@@ -505,7 +505,18 @@ namespace KlonsF
         {
             ShowFormAcp4();
         }
-
+        private void miFBankuSaraksts_Click(object sender, EventArgs e)
+        {
+            ShowForm(typeof(Form_Bankas));
+        }
+        private void miFDokumentuVeidi_Click(object sender, EventArgs e)
+        {
+            ShowFormDocTyp();
+        }
+        private void miFValūtuKursi_Click(object sender, EventArgs e)
+        {
+            ShowForm(typeof(Form_Currency));
+        }
         private void miZiņasParUzņemumu_Click(object sender, EventArgs e)
         {
             ShowForm(typeof(Form_CompanyData));
@@ -586,18 +597,11 @@ namespace KlonsF
         {
             ShowForm(typeof(FormRep_PVNCheck));
         }
-        private void miFBankuSaraksts_Click(object sender, EventArgs e)
+        private void miFEdsTp_Click(object sender, EventArgs e)
         {
-            ShowForm(typeof(Form_Bankas));
+            ShowForm(typeof(FormRep_EdsTp));
         }
-        private void miFDokumentuVeidi_Click(object sender, EventArgs e)
-        {
-            ShowFormDocTyp();
-        }
-        private void miFValūtuKursi_Click(object sender, EventArgs e)
-        {
-            ShowForm(typeof(Form_Currency));
-        }
+
         private void miKāStrādāsim_Click(object sender, EventArgs e)
         {
             if (!CloseAllForms()) return;

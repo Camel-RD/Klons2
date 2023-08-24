@@ -33,6 +33,7 @@ namespace KlonsF.FormsReportParams
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbTitle = new System.Windows.Forms.Label();
             this.dgvRows = new KlonsLIB.Components.MyDataGridView();
             this.dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +43,7 @@ namespace KlonsF.FormsReportParams
             this.dgcDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcDeb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcCred = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcDiff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRows)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +70,8 @@ namespace KlonsF.FormsReportParams
             this.dgcDocSr,
             this.dgcDocNr,
             this.dgcDeb,
-            this.dgcCred});
+            this.dgcCred,
+            this.dgcDiff});
             this.dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRows.Location = new System.Drawing.Point(0, 20);
             this.dgvRows.Name = "dgvRows";
@@ -76,7 +79,7 @@ namespace KlonsF.FormsReportParams
             this.dgvRows.RowHeadersWidth = 20;
             this.dgvRows.RowTemplate.Height = 28;
             this.dgvRows.ShowCellToolTips = false;
-            this.dgvRows.Size = new System.Drawing.Size(941, 384);
+            this.dgvRows.Size = new System.Drawing.Size(1049, 384);
             this.dgvRows.TabIndex = 1;
             this.dgvRows.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRows_CellFormatting);
             // 
@@ -151,11 +154,23 @@ namespace KlonsF.FormsReportParams
             this.dgcCred.ReadOnly = true;
             this.dgcCred.Width = 95;
             // 
+            // dgcDiff
+            // 
+            this.dgcDiff.DataPropertyName = "Diff";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.dgcDiff.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgcDiff.HeaderText = "atlikums";
+            this.dgcDiff.MinimumWidth = 8;
+            this.dgcDiff.Name = "dgcDiff";
+            this.dgcDiff.ReadOnly = true;
+            this.dgcDiff.Width = 95;
+            // 
             // FormRep_PersonsDocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 404);
+            this.ClientSize = new System.Drawing.Size(1049, 404);
             this.Controls.Add(this.dgvRows);
             this.Controls.Add(this.lbTitle);
             this.Name = "FormRep_PersonsDocs";
@@ -178,5 +193,6 @@ namespace KlonsF.FormsReportParams
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDeb;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcCred;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcDiff;
     }
 }

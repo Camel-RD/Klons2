@@ -177,6 +177,7 @@
     <Compile Include="ClassesA\WorkPayCalcTInfo.cs" />
     <Compile Include="ClassesF\DataLoader.cs" />
     <Compile Include="ClassesF\DataTasks.cs" />
+    <Compile Include="ClassesF\EDS_TP.cs" />
     <Compile Include="ClassesM\DataMLoader.cs" />
     <Compile Include="ClassesM\DataTasks.cs" />
     <Compile Include="ClassesM\InvoiceData.cs" />
@@ -238,6 +239,12 @@
     </Compile>
     <Compile Include="FormsF_rep\FormRep_Bilance1.Designer.cs">
       <DependentUpon>FormRep_Bilance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_EdsTp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsF_rep\FormRep_EdsTp.Designer.cs">
+      <DependentUpon>FormRep_EdsTp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsF_rep\FormRep_PersonsApgr.cs">
       <SubType>Form</SubType>
@@ -1338,6 +1345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsF_rep\FormRep_Bilance1.resx">
       <DependentUpon>FormRep_Bilance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsF_rep\FormRep_EdsTp.resx">
+      <DependentUpon>FormRep_EdsTp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsF_rep\FormRep_PersonsApgr.resx">
       <DependentUpon>FormRep_PersonsApgr.cs</DependentUpon>

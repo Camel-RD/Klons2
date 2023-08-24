@@ -30,8 +30,9 @@ namespace KlonsF.FormsReportParams
             set => lbTitle.Text = value;
         }
 
-        public void SetRowSource(List<RepRowPersonsDocs> reprows)
+        public void SetRowSource(List<RepRowPersonsDocs> reprows, bool showdiff)
         {
+            dgcDiff.Visible = showdiff;
             dgvRows.DataSource = reprows;
             dgvRows.AutoResizeRows();
         }
@@ -70,6 +71,7 @@ namespace KlonsF.FormsReportParams
         public string DocNr { get; set; }
         public decimal Deb { get; set; } = 0.0M;
         public decimal Cred { get; set; } = 0.0M;
+        public decimal Diff => Deb - Cred;
 
         public static RepRowPersonsDocs MakeFrom(DataSets.klonsRepDataSet.TRepA1Row dr, int kind)
         {

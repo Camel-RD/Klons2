@@ -104,6 +104,7 @@ namespace KlonsF
             this.miFBilaneAtskaite = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.miFBilanceFormulas = new System.Windows.Forms.ToolStripMenuItem();
+            this.miFEdsTp = new System.Windows.Forms.ToolStripMenuItem();
             this.miAAlgas = new System.Windows.Forms.ToolStripMenuItem();
             this.miAAtlasītDatus = new System.Windows.Forms.ToolStripMenuItem();
             this.miRepStats = new System.Windows.Forms.ToolStripMenuItem();
@@ -622,7 +623,8 @@ namespace KlonsF
             this.miFKasesGrāmata,
             this.miFPersonuPārskats,
             this.miFSkaidrasNaudasDarijumi,
-            this.miFBilance1});
+            this.miFBilance1,
+            this.miFEdsTp});
             this.miFAtskaites.Name = "miFAtskaites";
             this.miFAtskaites.Size = new System.Drawing.Size(114, 34);
             this.miFAtskaites.Text = "A&tskaites";
@@ -635,7 +637,7 @@ namespace KlonsF
             this.miFŽurnāls,
             this.miFPVNSummuKontrole});
             this.miFPVN.Name = "miFPVN";
-            this.miFPVN.Size = new System.Drawing.Size(354, 38);
+            this.miFPVN.Size = new System.Drawing.Size(443, 38);
             this.miFPVN.Text = "PVN";
             // 
             // miFPVNKopsavilkums
@@ -669,7 +671,7 @@ namespace KlonsF
             // miFAvansaNorēķins
             // 
             this.miFAvansaNorēķins.Name = "miFAvansaNorēķins";
-            this.miFAvansaNorēķins.Size = new System.Drawing.Size(354, 38);
+            this.miFAvansaNorēķins.Size = new System.Drawing.Size(443, 38);
             this.miFAvansaNorēķins.Text = "Avansa norēķins";
             this.miFAvansaNorēķins.Click += new System.EventHandler(this.miFAvansaNorēķins_Click);
             // 
@@ -682,7 +684,7 @@ namespace KlonsF
             this.miFDarijumuŽurnāls,
             this.miFPilnais});
             this.miFApgrozijumaPārskati.Name = "miFApgrozijumaPārskati";
-            this.miFApgrozijumaPārskati.Size = new System.Drawing.Size(354, 38);
+            this.miFApgrozijumaPārskati.Size = new System.Drawing.Size(443, 38);
             this.miFApgrozijumaPārskati.Text = "Apgrozijuma pārskati";
             // 
             // miFBilance
@@ -723,49 +725,49 @@ namespace KlonsF
             // miFKontuKorespondence
             // 
             this.miFKontuKorespondence.Name = "miFKontuKorespondence";
-            this.miFKontuKorespondence.Size = new System.Drawing.Size(354, 38);
+            this.miFKontuKorespondence.Size = new System.Drawing.Size(443, 38);
             this.miFKontuKorespondence.Text = "Kontu korespondence";
             this.miFKontuKorespondence.Click += new System.EventHandler(this.miFKontuKorespondence_Click);
             // 
             // miFValūtasKontuAtskaites
             // 
             this.miFValūtasKontuAtskaites.Name = "miFValūtasKontuAtskaites";
-            this.miFValūtasKontuAtskaites.Size = new System.Drawing.Size(354, 38);
+            this.miFValūtasKontuAtskaites.Size = new System.Drawing.Size(443, 38);
             this.miFValūtasKontuAtskaites.Text = "Valūtas kontu atskaites";
             this.miFValūtasKontuAtskaites.Click += new System.EventHandler(this.miFValūtasKontuAtskaites_Click);
             // 
             // miFDarijumuŽurnāls1
             // 
             this.miFDarijumuŽurnāls1.Name = "miFDarijumuŽurnāls1";
-            this.miFDarijumuŽurnāls1.Size = new System.Drawing.Size(354, 38);
+            this.miFDarijumuŽurnāls1.Size = new System.Drawing.Size(443, 38);
             this.miFDarijumuŽurnāls1.Text = "Darijumu žurnāls";
             this.miFDarijumuŽurnāls1.Click += new System.EventHandler(this.miFDarijumuŽurnāls1_Click);
             // 
             // miFNaudasPlūsma1
             // 
             this.miFNaudasPlūsma1.Name = "miFNaudasPlūsma1";
-            this.miFNaudasPlūsma1.Size = new System.Drawing.Size(354, 38);
+            this.miFNaudasPlūsma1.Size = new System.Drawing.Size(443, 38);
             this.miFNaudasPlūsma1.Text = "Naudas plūsma";
             this.miFNaudasPlūsma1.Click += new System.EventHandler(this.miFNaudasPlūsma1_Click);
             // 
             // miFKasesGrāmata
             // 
             this.miFKasesGrāmata.Name = "miFKasesGrāmata";
-            this.miFKasesGrāmata.Size = new System.Drawing.Size(354, 38);
+            this.miFKasesGrāmata.Size = new System.Drawing.Size(443, 38);
             this.miFKasesGrāmata.Text = "Kases grāmata";
             this.miFKasesGrāmata.Click += new System.EventHandler(this.miFKasesGrāmata_Click);
             // 
             // miFPersonuPārskats
             // 
             this.miFPersonuPārskats.Name = "miFPersonuPārskats";
-            this.miFPersonuPārskats.Size = new System.Drawing.Size(354, 38);
+            this.miFPersonuPārskats.Size = new System.Drawing.Size(443, 38);
             this.miFPersonuPārskats.Text = "Personu pārskats";
             this.miFPersonuPārskats.Click += new System.EventHandler(this.miFPersonuPārskats_Click);
             // 
             // miFSkaidrasNaudasDarijumi
             // 
             this.miFSkaidrasNaudasDarijumi.Name = "miFSkaidrasNaudasDarijumi";
-            this.miFSkaidrasNaudasDarijumi.Size = new System.Drawing.Size(354, 38);
+            this.miFSkaidrasNaudasDarijumi.Size = new System.Drawing.Size(443, 38);
             this.miFSkaidrasNaudasDarijumi.Text = "Skaidras naudas darijumi";
             this.miFSkaidrasNaudasDarijumi.Click += new System.EventHandler(this.miFSkaidrasNaudasDarijumi_Click);
             // 
@@ -776,7 +778,7 @@ namespace KlonsF
             this.toolStripSeparator6,
             this.miFBilanceFormulas});
             this.miFBilance1.Name = "miFBilance1";
-            this.miFBilance1.Size = new System.Drawing.Size(354, 38);
+            this.miFBilance1.Size = new System.Drawing.Size(443, 38);
             this.miFBilance1.Text = "Bilance";
             // 
             // miFBilaneAtskaite
@@ -797,6 +799,13 @@ namespace KlonsF
             this.miFBilanceFormulas.Size = new System.Drawing.Size(204, 38);
             this.miFBilanceFormulas.Text = "Formulas";
             this.miFBilanceFormulas.Click += new System.EventHandler(this.miFBilanceFormulas_Click);
+            // 
+            // miFEdsTp
+            // 
+            this.miFEdsTp.Name = "miFEdsTp";
+            this.miFEdsTp.Size = new System.Drawing.Size(443, 38);
+            this.miFEdsTp.Text = "Transakciju pārskats (no EDS XML)";
+            this.miFEdsTp.Click += new System.EventHandler(this.miFEdsTp_Click);
             // 
             // miAAlgas
             // 
@@ -1955,5 +1964,6 @@ namespace KlonsF
         private System.Windows.Forms.ToolStripMenuItem miReloadDataF;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator26;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
+        private System.Windows.Forms.ToolStripMenuItem miFEdsTp;
     }
 }

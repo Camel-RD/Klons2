@@ -367,7 +367,7 @@ namespace KlonsF.FormsReportParams
                     var frm2 = MyMainForm.ShowForm(typeof(FormRep_PersonsDocs)) as FormRep_PersonsDocs;
                     frm2.Text = rtitle;
                     frm2.Title = s;
-                    frm2.SetRowSource(reprowsdocs);
+                    frm2.SetRowSource(reprowsdocs, selectedreport >= 4);
                     break;
             }
 
@@ -468,6 +468,7 @@ namespace KlonsF.FormsReportParams
                     reprows2.Add(repemptylrow);
                 }
                 bool firstingroup = true;
+                int ct = 0;
                 foreach (var row in gr)
                 {
                     if (firstingroup)
@@ -481,8 +482,10 @@ namespace KlonsF.FormsReportParams
 
                     reptotalrow.Deb += row.Deb;
                     reptotalrow.Cred += row.Cred;
+                    ct++;
                 }
-                reprows2.Add(repcodetotalrow);
+                if (ct > 0)
+                    reprows2.Add(repcodetotalrow);
             }
             reprows2.Add(reptotalrow);
             return reprows2;
