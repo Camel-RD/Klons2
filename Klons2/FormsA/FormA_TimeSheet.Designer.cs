@@ -201,7 +201,8 @@ namespace KlonsA.Forms
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLapa.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLapa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLapa.Location = new System.Drawing.Point(0, 29);
+            this.dgvLapa.Location = new System.Drawing.Point(0, 35);
+            this.dgvLapa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvLapa.Name = "dgvLapa";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
@@ -212,8 +213,9 @@ namespace KlonsA.Forms
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLapa.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLapa.RowHeadersWidth = 53;
-            this.dgvLapa.RowTemplate.Height = 24;
-            this.dgvLapa.Size = new System.Drawing.Size(681, 293);
+            this.dgvLapa.RowTemplate.Height = 29;
+            this.dgvLapa.ShowCellToolTips = false;
+            this.dgvLapa.Size = new System.Drawing.Size(766, 370);
             this.dgvLapa.TabIndex = 0;
             this.dgvLapa.UseMyContextmenu = false;
             this.dgvLapa.MyCheckForChanges += new System.EventHandler(this.dgvLapa_MyCheckForChanges);
@@ -235,7 +237,7 @@ namespace KlonsA.Forms
             this.dgcIDX.Name = "dgcIDX";
             this.dgcIDX.ReadOnly = true;
             this.dgcIDX.Visible = false;
-            this.dgcIDX.Width = 50;
+            this.dgcIDX.Width = 56;
             // 
             // dgcID
             // 
@@ -245,7 +247,7 @@ namespace KlonsA.Forms
             this.dgcID.MinimumWidth = 7;
             this.dgcID.Name = "dgcID";
             this.dgcID.Visible = false;
-            this.dgcID.Width = 40;
+            this.dgcID.Width = 45;
             // 
             // dgcSNRX
             // 
@@ -256,7 +258,7 @@ namespace KlonsA.Forms
             this.dgcSNRX.Name = "dgcSNRX";
             this.dgcSNRX.ReadOnly = true;
             this.dgcSNRX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcSNRX.Width = 32;
+            this.dgcSNRX.Width = 36;
             // 
             // dgcTitle
             // 
@@ -270,7 +272,7 @@ namespace KlonsA.Forms
             this.dgcTitle.ReadOnly = true;
             this.dgcTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgcTitle.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcTitle.Width = 180;
+            this.dgcTitle.Width = 202;
             // 
             // dgcPosition
             // 
@@ -282,7 +284,7 @@ namespace KlonsA.Forms
             this.dgcPosition.ReadOnly = true;
             this.dgcPosition.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgcPosition.Visible = false;
-            this.dgcPosition.Width = 130;
+            this.dgcPosition.Width = 146;
             // 
             // dgcKind1
             // 
@@ -294,7 +296,7 @@ namespace KlonsA.Forms
             this.dgcKind1.ReadOnly = true;
             this.dgcKind1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgcKind1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcKind1.Width = 60;
+            this.dgcKind1.Width = 67;
             // 
             // dgcK1
             // 
@@ -304,7 +306,7 @@ namespace KlonsA.Forms
             this.dgcK1.MinimumWidth = 7;
             this.dgcK1.Name = "dgcK1";
             this.dgcK1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcK1.Width = 32;
+            this.dgcK1.Width = 36;
             // 
             // dgcV1
             // 
@@ -315,7 +317,7 @@ namespace KlonsA.Forms
             this.dgcV1.MinimumWidth = 7;
             this.dgcV1.Name = "dgcV1";
             this.dgcV1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV1.Width = 28;
+            this.dgcV1.Width = 31;
             // 
             // dgcV2
             // 
@@ -324,7 +326,7 @@ namespace KlonsA.Forms
             this.dgcV2.MinimumWidth = 7;
             this.dgcV2.Name = "dgcV2";
             this.dgcV2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV2.Width = 28;
+            this.dgcV2.Width = 31;
             // 
             // dgcV3
             // 
@@ -333,7 +335,7 @@ namespace KlonsA.Forms
             this.dgcV3.MinimumWidth = 7;
             this.dgcV3.Name = "dgcV3";
             this.dgcV3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV3.Width = 28;
+            this.dgcV3.Width = 31;
             // 
             // dgcV4
             // 
@@ -342,7 +344,7 @@ namespace KlonsA.Forms
             this.dgcV4.MinimumWidth = 7;
             this.dgcV4.Name = "dgcV4";
             this.dgcV4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV4.Width = 28;
+            this.dgcV4.Width = 31;
             // 
             // dgcV5
             // 
@@ -351,7 +353,7 @@ namespace KlonsA.Forms
             this.dgcV5.MinimumWidth = 7;
             this.dgcV5.Name = "dgcV5";
             this.dgcV5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV5.Width = 28;
+            this.dgcV5.Width = 31;
             // 
             // dgcV6
             // 
@@ -360,7 +362,7 @@ namespace KlonsA.Forms
             this.dgcV6.MinimumWidth = 7;
             this.dgcV6.Name = "dgcV6";
             this.dgcV6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV6.Width = 28;
+            this.dgcV6.Width = 31;
             // 
             // dgcV7
             // 
@@ -369,7 +371,7 @@ namespace KlonsA.Forms
             this.dgcV7.MinimumWidth = 7;
             this.dgcV7.Name = "dgcV7";
             this.dgcV7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV7.Width = 28;
+            this.dgcV7.Width = 31;
             // 
             // dgcV8
             // 
@@ -378,7 +380,7 @@ namespace KlonsA.Forms
             this.dgcV8.MinimumWidth = 7;
             this.dgcV8.Name = "dgcV8";
             this.dgcV8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV8.Width = 28;
+            this.dgcV8.Width = 31;
             // 
             // dgcV9
             // 
@@ -387,7 +389,7 @@ namespace KlonsA.Forms
             this.dgcV9.MinimumWidth = 7;
             this.dgcV9.Name = "dgcV9";
             this.dgcV9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV9.Width = 28;
+            this.dgcV9.Width = 31;
             // 
             // dgcV10
             // 
@@ -396,7 +398,7 @@ namespace KlonsA.Forms
             this.dgcV10.MinimumWidth = 7;
             this.dgcV10.Name = "dgcV10";
             this.dgcV10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV10.Width = 28;
+            this.dgcV10.Width = 31;
             // 
             // dgcV11
             // 
@@ -405,7 +407,7 @@ namespace KlonsA.Forms
             this.dgcV11.MinimumWidth = 7;
             this.dgcV11.Name = "dgcV11";
             this.dgcV11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV11.Width = 28;
+            this.dgcV11.Width = 31;
             // 
             // dgcV12
             // 
@@ -414,7 +416,7 @@ namespace KlonsA.Forms
             this.dgcV12.MinimumWidth = 7;
             this.dgcV12.Name = "dgcV12";
             this.dgcV12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV12.Width = 28;
+            this.dgcV12.Width = 31;
             // 
             // dgcV13
             // 
@@ -423,7 +425,7 @@ namespace KlonsA.Forms
             this.dgcV13.MinimumWidth = 7;
             this.dgcV13.Name = "dgcV13";
             this.dgcV13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV13.Width = 28;
+            this.dgcV13.Width = 31;
             // 
             // dgcV14
             // 
@@ -432,7 +434,7 @@ namespace KlonsA.Forms
             this.dgcV14.MinimumWidth = 7;
             this.dgcV14.Name = "dgcV14";
             this.dgcV14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV14.Width = 28;
+            this.dgcV14.Width = 31;
             // 
             // dgcV15
             // 
@@ -441,7 +443,7 @@ namespace KlonsA.Forms
             this.dgcV15.MinimumWidth = 7;
             this.dgcV15.Name = "dgcV15";
             this.dgcV15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV15.Width = 28;
+            this.dgcV15.Width = 31;
             // 
             // dgcV16
             // 
@@ -450,7 +452,7 @@ namespace KlonsA.Forms
             this.dgcV16.MinimumWidth = 7;
             this.dgcV16.Name = "dgcV16";
             this.dgcV16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV16.Width = 28;
+            this.dgcV16.Width = 31;
             // 
             // dgcV17
             // 
@@ -459,7 +461,7 @@ namespace KlonsA.Forms
             this.dgcV17.MinimumWidth = 7;
             this.dgcV17.Name = "dgcV17";
             this.dgcV17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV17.Width = 28;
+            this.dgcV17.Width = 31;
             // 
             // dgcV18
             // 
@@ -468,7 +470,7 @@ namespace KlonsA.Forms
             this.dgcV18.MinimumWidth = 7;
             this.dgcV18.Name = "dgcV18";
             this.dgcV18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV18.Width = 28;
+            this.dgcV18.Width = 31;
             // 
             // dgcV19
             // 
@@ -477,7 +479,7 @@ namespace KlonsA.Forms
             this.dgcV19.MinimumWidth = 7;
             this.dgcV19.Name = "dgcV19";
             this.dgcV19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV19.Width = 28;
+            this.dgcV19.Width = 31;
             // 
             // dgcV20
             // 
@@ -486,7 +488,7 @@ namespace KlonsA.Forms
             this.dgcV20.MinimumWidth = 7;
             this.dgcV20.Name = "dgcV20";
             this.dgcV20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV20.Width = 28;
+            this.dgcV20.Width = 31;
             // 
             // dgcV21
             // 
@@ -495,7 +497,7 @@ namespace KlonsA.Forms
             this.dgcV21.MinimumWidth = 7;
             this.dgcV21.Name = "dgcV21";
             this.dgcV21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV21.Width = 28;
+            this.dgcV21.Width = 31;
             // 
             // dgcV22
             // 
@@ -504,7 +506,7 @@ namespace KlonsA.Forms
             this.dgcV22.MinimumWidth = 7;
             this.dgcV22.Name = "dgcV22";
             this.dgcV22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV22.Width = 28;
+            this.dgcV22.Width = 31;
             // 
             // dgcV23
             // 
@@ -513,7 +515,7 @@ namespace KlonsA.Forms
             this.dgcV23.MinimumWidth = 7;
             this.dgcV23.Name = "dgcV23";
             this.dgcV23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV23.Width = 28;
+            this.dgcV23.Width = 31;
             // 
             // dgcV24
             // 
@@ -522,7 +524,7 @@ namespace KlonsA.Forms
             this.dgcV24.MinimumWidth = 7;
             this.dgcV24.Name = "dgcV24";
             this.dgcV24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV24.Width = 28;
+            this.dgcV24.Width = 31;
             // 
             // dgcV25
             // 
@@ -531,7 +533,7 @@ namespace KlonsA.Forms
             this.dgcV25.MinimumWidth = 7;
             this.dgcV25.Name = "dgcV25";
             this.dgcV25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV25.Width = 28;
+            this.dgcV25.Width = 31;
             // 
             // dgcV26
             // 
@@ -540,7 +542,7 @@ namespace KlonsA.Forms
             this.dgcV26.MinimumWidth = 7;
             this.dgcV26.Name = "dgcV26";
             this.dgcV26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV26.Width = 28;
+            this.dgcV26.Width = 31;
             // 
             // dgcV27
             // 
@@ -549,7 +551,7 @@ namespace KlonsA.Forms
             this.dgcV27.MinimumWidth = 7;
             this.dgcV27.Name = "dgcV27";
             this.dgcV27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV27.Width = 28;
+            this.dgcV27.Width = 31;
             // 
             // dgcV28
             // 
@@ -558,7 +560,7 @@ namespace KlonsA.Forms
             this.dgcV28.MinimumWidth = 7;
             this.dgcV28.Name = "dgcV28";
             this.dgcV28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV28.Width = 28;
+            this.dgcV28.Width = 31;
             // 
             // dgcV29
             // 
@@ -567,7 +569,7 @@ namespace KlonsA.Forms
             this.dgcV29.MinimumWidth = 7;
             this.dgcV29.Name = "dgcV29";
             this.dgcV29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV29.Width = 28;
+            this.dgcV29.Width = 31;
             // 
             // dgcV30
             // 
@@ -576,7 +578,7 @@ namespace KlonsA.Forms
             this.dgcV30.MinimumWidth = 7;
             this.dgcV30.Name = "dgcV30";
             this.dgcV30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV30.Width = 28;
+            this.dgcV30.Width = 31;
             // 
             // dgcV31
             // 
@@ -585,7 +587,7 @@ namespace KlonsA.Forms
             this.dgcV31.MinimumWidth = 7;
             this.dgcV31.Name = "dgcV31";
             this.dgcV31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcV31.Width = 28;
+            this.dgcV31.Width = 31;
             // 
             // dgcIDL
             // 
@@ -594,7 +596,7 @@ namespace KlonsA.Forms
             this.dgcIDL.MinimumWidth = 7;
             this.dgcIDL.Name = "dgcIDL";
             this.dgcIDL.Visible = false;
-            this.dgcIDL.Width = 40;
+            this.dgcIDL.Width = 45;
             // 
             // dgcKind2
             // 
@@ -604,7 +606,7 @@ namespace KlonsA.Forms
             this.dgcKind2.Name = "dgcKind2";
             this.dgcKind2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgcKind2.Visible = false;
-            this.dgcKind2.Width = 40;
+            this.dgcKind2.Width = 45;
             // 
             // bsLapa2
             // 
@@ -630,19 +632,19 @@ namespace KlonsA.Forms
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslPeriod});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(681, 29);
+            this.toolStrip1.Size = new System.Drawing.Size(766, 35);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tslPeriod
             // 
             this.tslPeriod.Name = "tslPeriod";
-            this.tslPeriod.Size = new System.Drawing.Size(84, 25);
+            this.tslPeriod.Size = new System.Drawing.Size(89, 30);
             this.tslPeriod.Text = "Periods:";
             // 
             // bsLapuSar
@@ -663,19 +665,20 @@ namespace KlonsA.Forms
             this.cbLapuSar.DataSource = this.bsLapuSar;
             this.cbLapuSar.DisplayMember = "ID";
             this.cbLapuSar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLapuSar.DropDownHeight = 255;
+            this.cbLapuSar.DropDownHeight = 315;
             this.cbLapuSar.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            this.cbLapuSar.DropDownWidth = 304;
+            this.cbLapuSar.DropDownWidth = 308;
             this.cbLapuSar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLapuSar.FormattingEnabled = true;
             this.cbLapuSar.GridLineColor = System.Drawing.Color.LightGray;
             this.cbLapuSar.GridLineHorizontal = false;
             this.cbLapuSar.GridLineVertical = false;
             this.cbLapuSar.IntegralHeight = false;
-            this.cbLapuSar.Location = new System.Drawing.Point(226, 0);
+            this.cbLapuSar.Location = new System.Drawing.Point(254, 3);
+            this.cbLapuSar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbLapuSar.MaxDropDownItems = 15;
             this.cbLapuSar.Name = "cbLapuSar";
-            this.cbLapuSar.Size = new System.Drawing.Size(280, 23);
+            this.cbLapuSar.Size = new System.Drawing.Size(314, 27);
             this.cbLapuSar.TabIndex = 7;
             this.cbLapuSar.ValueMember = "ID";
             this.cbLapuSar.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbLapuSar_Format);
@@ -683,15 +686,15 @@ namespace KlonsA.Forms
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(23, 26);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNew,
             this.tsbEdit,
             this.tsbDelete,
             this.tsbSave});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 322);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 405);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(681, 33);
+            this.toolStrip2.Size = new System.Drawing.Size(766, 39);
             this.toolStrip2.TabIndex = 8;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -700,7 +703,7 @@ namespace KlonsA.Forms
             this.tsbNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbNew.Image")));
             this.tsbNew.Name = "tsbNew";
             this.tsbNew.RightToLeftAutoMirrorImage = true;
-            this.tsbNew.Size = new System.Drawing.Size(91, 29);
+            this.tsbNew.Size = new System.Drawing.Size(92, 34);
             this.tsbNew.Text = "Jauns";
             this.tsbNew.Click += new System.EventHandler(this.tsbNew_Click);
             // 
@@ -709,7 +712,7 @@ namespace KlonsA.Forms
             this.tsbEdit.Image = ((System.Drawing.Image)(resources.GetObject("tsbEdit.Image")));
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(89, 29);
+            this.tsbEdit.Size = new System.Drawing.Size(100, 34);
             this.tsbEdit.Text = "Mainīt";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -718,7 +721,7 @@ namespace KlonsA.Forms
             this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.RightToLeftAutoMirrorImage = true;
-            this.tsbDelete.Size = new System.Drawing.Size(87, 29);
+            this.tsbDelete.Size = new System.Drawing.Size(93, 34);
             this.tsbDelete.Text = "Dzēst";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -728,7 +731,7 @@ namespace KlonsA.Forms
             this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(30, 29);
+            this.tsbSave.Size = new System.Drawing.Size(34, 34);
             this.tsbSave.Text = "toolStripButton1";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
@@ -769,55 +772,55 @@ namespace KlonsA.Forms
             this.miFactDS,
             this.miFactKS});
             this.cmsMenuMarkDayFact.Name = "cmsMenuMarkDay";
-            this.cmsMenuMarkDayFact.Size = new System.Drawing.Size(482, 244);
+            this.cmsMenuMarkDayFact.Size = new System.Drawing.Size(520, 292);
             this.cmsMenuMarkDayFact.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsMenuMarkDayFact_ItemClicked);
             // 
             // miFactD
             // 
             this.miFactD.Name = "miFactD";
-            this.miFactD.Size = new System.Drawing.Size(481, 30);
+            this.miFactD.Size = new System.Drawing.Size(519, 36);
             this.miFactD.Text = "Darba diena";
             // 
             // miFactB
             // 
             this.miFactB.Name = "miFactB";
-            this.miFactB.Size = new System.Drawing.Size(481, 30);
+            this.miFactB.Size = new System.Drawing.Size(519, 36);
             this.miFactB.Text = "B - Brīvdiena";
             // 
             // miFactK
             // 
             this.miFactK.Name = "miFactK";
-            this.miFactK.Size = new System.Drawing.Size(481, 30);
+            this.miFactK.Size = new System.Drawing.Size(519, 36);
             this.miFactK.Text = "K - Komandējums";
             // 
             // miFactSVVI
             // 
             this.miFactSVVI.Name = "miFactSVVI";
-            this.miFactSVVI.Size = new System.Drawing.Size(481, 30);
+            this.miFactSVVI.Size = new System.Drawing.Size(519, 36);
             this.miFactSVVI.Text = "S - Svētku diena ar vidējo izpeļņu";
             // 
             // miFactVI
             // 
             this.miFactVI.Name = "miFactVI";
-            this.miFactVI.Size = new System.Drawing.Size(481, 30);
+            this.miFactVI.Size = new System.Drawing.Size(519, 36);
             this.miFactVI.Text = "V - Vidējās izpeļņas diena";
             // 
             // miFactN
             // 
             this.miFactN.Name = "miFactN";
-            this.miFactN.Size = new System.Drawing.Size(481, 30);
+            this.miFactN.Size = new System.Drawing.Size(519, 36);
             this.miFactN.Text = "N - Neattaisnots kavējums";
             // 
             // miFactDS
             // 
             this.miFactDS.Name = "miFactDS";
-            this.miFactDS.Size = new System.Drawing.Size(481, 30);
+            this.miFactDS.Size = new System.Drawing.Size(519, 36);
             this.miFactDS.Text = "DS - Darba diena svētku dienā ar piemaksu";
             // 
             // miFactKS
             // 
             this.miFactKS.Name = "miFactKS";
-            this.miFactKS.Size = new System.Drawing.Size(481, 30);
+            this.miFactKS.Size = new System.Drawing.Size(519, 36);
             this.miFactKS.Text = "KS - Komandējums svētku dienā ar piemaksu";
             // 
             // cmsMenuMarkDayPlan
@@ -830,37 +833,37 @@ namespace KlonsA.Forms
             this.miPlanSDDD,
             this.miPlanDDSD});
             this.cmsMenuMarkDayPlan.Name = "cmsMenuMarkDayPlan";
-            this.cmsMenuMarkDayPlan.Size = new System.Drawing.Size(352, 154);
+            this.cmsMenuMarkDayPlan.Size = new System.Drawing.Size(379, 184);
             this.cmsMenuMarkDayPlan.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsMenuMarkDayPlan_ItemClicked);
             // 
             // miPlanDD
             // 
             this.miPlanDD.Name = "miPlanDD";
-            this.miPlanDD.Size = new System.Drawing.Size(351, 30);
+            this.miPlanDD.Size = new System.Drawing.Size(378, 36);
             this.miPlanDD.Text = "Darba diena";
             // 
             // miPlanBD
             // 
             this.miPlanBD.Name = "miPlanBD";
-            this.miPlanBD.Size = new System.Drawing.Size(351, 30);
+            this.miPlanBD.Size = new System.Drawing.Size(378, 36);
             this.miPlanBD.Text = "B - Brīvdiena";
             // 
             // miPlanSD
             // 
             this.miPlanSD.Name = "miPlanSD";
-            this.miPlanSD.Size = new System.Drawing.Size(351, 30);
+            this.miPlanSD.Size = new System.Drawing.Size(378, 36);
             this.miPlanSD.Text = "S - Svētku diena";
             // 
             // miPlanSDDD
             // 
             this.miPlanSDDD.Name = "miPlanSDDD";
-            this.miPlanSDDD.Size = new System.Drawing.Size(351, 30);
+            this.miPlanSDDD.Size = new System.Drawing.Size(378, 36);
             this.miPlanSDDD.Text = "SD - Svētku diena darba dienā";
             // 
             // miPlanDDSD
             // 
             this.miPlanDDSD.Name = "miPlanDDSD";
-            this.miPlanDDSD.Size = new System.Drawing.Size(351, 30);
+            this.miPlanDDSD.Size = new System.Drawing.Size(378, 36);
             this.miPlanDDSD.Text = "DS - Darba diena svētku dienā";
             // 
             // menuStrip1
@@ -870,7 +873,8 @@ namespace KlonsA.Forms
             this.darbaLaikaUzskaitesLapaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(681, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(766, 38);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -884,13 +888,13 @@ namespace KlonsA.Forms
             this.izdrukaiToolStripMenuItem});
             this.darbaLaikaUzskaitesLapaToolStripMenuItem.MergeIndex = 2;
             this.darbaLaikaUzskaitesLapaToolStripMenuItem.Name = "darbaLaikaUzskaitesLapaToolStripMenuItem";
-            this.darbaLaikaUzskaitesLapaToolStripMenuItem.Size = new System.Drawing.Size(253, 29);
+            this.darbaLaikaUzskaitesLapaToolStripMenuItem.Size = new System.Drawing.Size(274, 34);
             this.darbaLaikaUzskaitesLapaToolStripMenuItem.Text = "Darba laika uzskaites lapa";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(190, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(214, 6);
             // 
             // sarakstsToolStripMenuItem
             // 
@@ -898,20 +902,20 @@ namespace KlonsA.Forms
             this.tsmiSheetCheckEvents,
             this.tsmiSheetFillFact});
             this.sarakstsToolStripMenuItem.Name = "sarakstsToolStripMenuItem";
-            this.sarakstsToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
+            this.sarakstsToolStripMenuItem.Size = new System.Drawing.Size(217, 38);
             this.sarakstsToolStripMenuItem.Text = "Saraksts";
             // 
             // tsmiSheetCheckEvents
             // 
             this.tsmiSheetCheckEvents.Name = "tsmiSheetCheckEvents";
-            this.tsmiSheetCheckEvents.Size = new System.Drawing.Size(429, 30);
+            this.tsmiSheetCheckEvents.Size = new System.Drawing.Size(478, 38);
             this.tsmiSheetCheckEvents.Text = "Pārbaudīt notikumus";
             this.tsmiSheetCheckEvents.Click += new System.EventHandler(this.tsmiSheetCheckEvents_Click);
             // 
             // tsmiSheetFillFact
             // 
             this.tsmiSheetFillFact.Name = "tsmiSheetFillFact";
-            this.tsmiSheetFillFact.Size = new System.Drawing.Size(429, 30);
+            this.tsmiSheetFillFact.Size = new System.Drawing.Size(478, 38);
             this.tsmiSheetFillFact.Text = "Aizpildīt nostrādātās stundas no plāna";
             this.tsmiSheetFillFact.Click += new System.EventHandler(this.tsmiSheetFillFact_Click);
             // 
@@ -921,20 +925,20 @@ namespace KlonsA.Forms
             this.tsmiPersonCheckEvents,
             this.tsmiPersonFillFact});
             this.darbinieksToolStripMenuItem.Name = "darbinieksToolStripMenuItem";
-            this.darbinieksToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
+            this.darbinieksToolStripMenuItem.Size = new System.Drawing.Size(217, 38);
             this.darbinieksToolStripMenuItem.Text = "Darbinieks";
             // 
             // tsmiPersonCheckEvents
             // 
             this.tsmiPersonCheckEvents.Name = "tsmiPersonCheckEvents";
-            this.tsmiPersonCheckEvents.Size = new System.Drawing.Size(349, 30);
+            this.tsmiPersonCheckEvents.Size = new System.Drawing.Size(389, 38);
             this.tsmiPersonCheckEvents.Text = "Pārbaudīt notikumus";
             this.tsmiPersonCheckEvents.Click += new System.EventHandler(this.tsmiPersonCheckEvents_Click);
             // 
             // tsmiPersonFillFact
             // 
             this.tsmiPersonFillFact.Name = "tsmiPersonFillFact";
-            this.tsmiPersonFillFact.Size = new System.Drawing.Size(349, 30);
+            this.tsmiPersonFillFact.Size = new System.Drawing.Size(389, 38);
             this.tsmiPersonFillFact.Text = "Aizpildīt nostrādātās stundas";
             this.tsmiPersonFillFact.Click += new System.EventHandler(this.tsmiPersonFillFact_Click);
             // 
@@ -945,27 +949,27 @@ namespace KlonsA.Forms
             this.darbaLaikaLapaArKrāsāmToolStripMenuItem,
             this.darbaLaikaKopsummasToolStripMenuItem});
             this.izdrukaiToolStripMenuItem.Name = "izdrukaiToolStripMenuItem";
-            this.izdrukaiToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
+            this.izdrukaiToolStripMenuItem.Size = new System.Drawing.Size(217, 38);
             this.izdrukaiToolStripMenuItem.Text = "Izdrukai";
             // 
             // darbaLaikaLapaToolStripMenuItem
             // 
             this.darbaLaikaLapaToolStripMenuItem.Name = "darbaLaikaLapaToolStripMenuItem";
-            this.darbaLaikaLapaToolStripMenuItem.Size = new System.Drawing.Size(344, 30);
+            this.darbaLaikaLapaToolStripMenuItem.Size = new System.Drawing.Size(384, 38);
             this.darbaLaikaLapaToolStripMenuItem.Text = "Darba laika lapa";
             this.darbaLaikaLapaToolStripMenuItem.Click += new System.EventHandler(this.darbaLaikaLapaToolStripMenuItem_Click);
             // 
             // darbaLaikaLapaArKrāsāmToolStripMenuItem
             // 
             this.darbaLaikaLapaArKrāsāmToolStripMenuItem.Name = "darbaLaikaLapaArKrāsāmToolStripMenuItem";
-            this.darbaLaikaLapaArKrāsāmToolStripMenuItem.Size = new System.Drawing.Size(344, 30);
+            this.darbaLaikaLapaArKrāsāmToolStripMenuItem.Size = new System.Drawing.Size(384, 38);
             this.darbaLaikaLapaArKrāsāmToolStripMenuItem.Text = "Darba laika lapa - ar krāsām";
             this.darbaLaikaLapaArKrāsāmToolStripMenuItem.Click += new System.EventHandler(this.DarbaLaikaLapaArKrāsāmToolStripMenuItem_Click);
             // 
             // darbaLaikaKopsummasToolStripMenuItem
             // 
             this.darbaLaikaKopsummasToolStripMenuItem.Name = "darbaLaikaKopsummasToolStripMenuItem";
-            this.darbaLaikaKopsummasToolStripMenuItem.Size = new System.Drawing.Size(344, 30);
+            this.darbaLaikaKopsummasToolStripMenuItem.Size = new System.Drawing.Size(384, 38);
             this.darbaLaikaKopsummasToolStripMenuItem.Text = "Darba laika kopsummas";
             this.darbaLaikaKopsummasToolStripMenuItem.Click += new System.EventHandler(this.darbaLaikaKopsummasToolStripMenuItem_Click);
             // 
@@ -984,19 +988,20 @@ namespace KlonsA.Forms
             this.myStyleDefsForReport.VacationBack = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(248)))), ((int)(((byte)(220)))));
             this.myStyleDefsForReport.VacationFore = System.Drawing.Color.White;
             // 
-            // Form_TimeSheet
+            // FormA_TimeSheet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 355);
+            this.ClientSize = new System.Drawing.Size(766, 444);
             this.Controls.Add(this.cbLapuSar);
             this.Controls.Add(this.dgvLapa);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MyToolStrip = this.toolStrip1;
-            this.Name = "Form_TimeSheet";
+            this.Name = "FormA_TimeSheet";
             this.Text = "Darba laika uzskaites lapa";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_TimeSheet_FormClosed);
             this.Load += new System.EventHandler(this.Form_TimeSheet_Load);

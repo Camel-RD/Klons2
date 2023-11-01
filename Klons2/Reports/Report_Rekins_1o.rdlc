@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="klonsRepDataSet">
@@ -1443,7 +1443,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Summa (EUR)</Value>
+                                  <Value>Summa</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1637,7 +1637,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kopā bez PVN</Value>
+                                  <Value>Kopā (EUR)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1748,7 +1748,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>PVN 21%</Value>
+                                  <Value>Pievienotās vērtības nodoklis 21%</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1859,7 +1859,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kopā summa apmaksai</Value>
+                                  <Value>Summa apmaksai (EUR)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2034,16 +2034,8 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
               <TablixMembers>
                 <TablixMember />
                 <TablixMember />
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=Sum(Fields!PVN.Value)=0</Hidden>
-                  </Visibility>
-                </TablixMember>
-                <TablixMember>
-                  <Visibility>
-                    <Hidden>=Sum(Fields!PVN.Value)=0</Hidden>
-                  </Visibility>
-                </TablixMember>
+                <TablixMember />
+                <TablixMember />
                 <TablixMember />
                 <TablixMember />
               </TablixMembers>
@@ -2433,59 +2425,6 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>5</NumberOfRows>
-      <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>RCOMPNAME</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>RREGNR</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>RPVNREGNR</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>RADRESE</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>RBANKA</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>RBANKASKODS</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>RKONTS</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>RDESCR</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>4</RowIndex>
-          <ParameterName>RSIGNER</ParameterName>
-        </CellDefinition>
-      </CellDefinitions>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <CodeModules>
     <CodeModule>MyReportLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</CodeModule>
   </CodeModules>

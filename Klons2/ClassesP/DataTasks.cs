@@ -13,6 +13,40 @@ namespace KlonsP.Classes
     {
         public static KlonsData MyData => KlonsData.St;
 
+        public static string GetCat1Name(int id)
+        {
+            var dr = MyData.DataSetKlonsP.CAT1.FindByID(id);
+            if (dr == null) return null;
+            return dr.DESCR;
+        }
+
+        public static string GetCatDName(int id)
+        {
+            var dr = MyData.DataSetKlonsP.CATD.FindByID(id);
+            if (dr == null) return null;
+            return dr.DESCR;
+        }
+
+        public static string GetCatTName(int id)
+        {
+            var dr = MyData.DataSetKlonsP.CATT.FindByID(id);
+            if (dr == null) return null;
+            return dr.DESCR;
+        }
+
+        public static string GetDepName(int id)
+        {
+            var dr = MyData.DataSetKlonsP.DEPARTMENTS.FindByID(id);
+            if (dr == null) return null;
+            return dr.DESCR;
+        }
+
+        public static string GetPlaceName(int id)
+        {
+            var dr = MyData.DataSetKlonsP.PLACES.FindByID(id);
+            if (dr == null) return null;
+            return dr.DESCR;
+        }
         public static decimal Round(decimal d, int k)
         {
             return Math.Round(d, k, MidpointRounding.AwayFromZero);

@@ -1037,6 +1037,80 @@ namespace KlonsP.Forms
             }
         }
 
+        private void dgvItems_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            if (e.RowIndex == -1 || e.RowIndex == dgvItems.NewRowIndex || e.ColumnIndex == -1) return;
+            var o = dgvItems[e.ColumnIndex, e.RowIndex].Value;
+            if (o == null || o == DBNull.Value) return;
+            if (e.ColumnIndex == dgcItemsCat1.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCat1Name(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcItemsCatD.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCatDName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcItemsCatT.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCatTName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcItemsDepartment.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetDepName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcItemsPlace.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetPlaceName(id);
+                return;
+            }
+        }
+
+        private void dgvEvents_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            if (e.RowIndex == -1 || e.RowIndex == dgvEvents.NewRowIndex || e.ColumnIndex == -1) return;
+            var o = dgvEvents[e.ColumnIndex, e.RowIndex].Value;
+            if (o == null || o == DBNull.Value) return;
+            if (e.ColumnIndex == dgcEventsCat1.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCat1Name(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcEventsCatD.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCatDName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcEventsCatT.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetCatTName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcEventsDepartment.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetDepName(id);
+                return;
+            }
+            if (e.ColumnIndex == dgcEventsPlace.Index)
+            {
+                int id = (int)o;
+                e.ToolTipText = DataTasks.GetPlaceName(id);
+                return;
+            }
+        }
+
         public void DoFilter()
         {
             if (!filterData1.fDATE1.HasValue) return;

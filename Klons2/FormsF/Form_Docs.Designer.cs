@@ -158,7 +158,7 @@ namespace KlonsF.Forms
             this.splitContainer1.Panel2.Controls.Add(this.dgvOps);
             this.splitContainer1.Panel2MinSize = 125;
             this.splitContainer1.Size = new System.Drawing.Size(1306, 403);
-            this.splitContainer1.SplitterDistance = 219;
+            this.splitContainer1.SplitterDistance = 211;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -191,14 +191,14 @@ namespace KlonsF.Forms
             this.dgvDocs.Name = "dgvDocs";
             this.dgvDocs.RowHeadersWidth = 62;
             this.dgvDocs.RowTemplate.Height = 28;
-            this.dgvDocs.ShowCellToolTips = false;
-            this.dgvDocs.Size = new System.Drawing.Size(1306, 219);
+            this.dgvDocs.Size = new System.Drawing.Size(1306, 211);
             this.dgvDocs.TabIndex = 2;
             this.dgvDocs.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDocs_MyKeyDown);
             this.dgvDocs.MyCheckForChanges += new System.EventHandler(this.dgvDocs_MyCheckForChanges);
             this.dgvDocs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocs_CellDoubleClick);
             this.dgvDocs.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocs_CellEndEdit);
             this.dgvDocs.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvDocs_CellParsing);
+            this.dgvDocs.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvDocs_CellToolTipTextNeeded);
             this.dgvDocs.CurrentCellChanged += new System.EventHandler(this.dgvDocs_CurrentCellChanged);
             this.dgvDocs.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvDocs_DataError);
             this.dgvDocs.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvDocs_DefaultValuesNeeded);
@@ -458,8 +458,7 @@ namespace KlonsF.Forms
             this.dgvOps.Name = "dgvOps";
             this.dgvOps.RowHeadersWidth = 62;
             this.dgvOps.RowTemplate.Height = 28;
-            this.dgvOps.ShowCellToolTips = false;
-            this.dgvOps.Size = new System.Drawing.Size(1306, 176);
+            this.dgvOps.Size = new System.Drawing.Size(1306, 184);
             this.dgvOps.TabIndex = 3;
             this.dgvOps.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvOps_MyKeyDown);
             this.dgvOps.MyCheckForChanges += new System.EventHandler(this.dgvOps_MyCheckForChanges);

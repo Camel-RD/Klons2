@@ -10,8 +10,12 @@ namespace KlonsLIB.Components
         public MyDgvMcComboBoxColumn()
         {
             this.CellTemplate = new MyDgvMcComboBoxCell();
+            FlatStyle = FlatStyle.Flat;
             ComboBoxCellTemplateA.TemplateDGVComboColumn = this;
         }
+
+        [DefaultValue(FlatStyle.Flat)]
+        public new FlatStyle FlatStyle { get => base.FlatStyle; set => base.FlatStyle = value; }
 
         private MyDgvMcComboBoxCell ComboBoxCellTemplateA
         {

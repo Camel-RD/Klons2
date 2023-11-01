@@ -199,21 +199,21 @@
             this.nolietojumsNodokļaVajadzībāmToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnFilter = new System.Windows.Forms.Panel();
             this.dgvFilter = new KlonsLIB.Components.MyDataGridView();
+            this.dgcFilterDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterSate = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCat1 = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatD = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatT = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfDepartments = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfPlaces = new KlonsLIB.Data.MyBindingSource(this.components);
             this.bsFilter = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
             this.filterData1 = new DataObjectsP.FilterData();
             this.tbDate = new KlonsLIB.Components.MyTextBox();
-            this.dgcFilterDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterSate = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
-            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEvents)).BeginInit();
@@ -793,7 +793,6 @@
             // 
             // grtStringReadOnly
             // 
-            this.grtStringReadOnly.DataMember = null;
             this.grtStringReadOnly.Name = "grtStringReadOnly";
             this.grtStringReadOnly.ReadOnly = true;
             this.grtStringReadOnly.RowTitle = null;
@@ -801,7 +800,6 @@
             // 
             // grtString
             // 
-            this.grtString.DataMember = null;
             this.grtString.Name = "grtString";
             this.grtString.RowTitle = null;
             this.grtString.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
@@ -1015,14 +1013,14 @@
             this.dgvEvents.Name = "dgvEvents";
             this.dgvEvents.RowHeadersWidth = 62;
             this.dgvEvents.RowTemplate.Height = 29;
-            this.dgvEvents.ShowCellToolTips = false;
-            this.dgvEvents.Size = new System.Drawing.Size(918, 185);
+            this.dgvEvents.Size = new System.Drawing.Size(918, 190);
             this.dgvEvents.TabIndex = 0;
             this.dgvEvents.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvEvents_MyKeyDown);
             this.dgvEvents.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvEvents_CellBeginEdit);
             this.dgvEvents.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvents_CellDoubleClick);
             this.dgvEvents.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEvents_CellFormatting);
             this.dgvEvents.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvEvents_CellParsing);
+            this.dgvEvents.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvEvents_CellToolTipTextNeeded);
             this.dgvEvents.CurrentCellChanged += new System.EventHandler(this.dgvEvents_CurrentCellChanged);
             this.dgvEvents.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvEvents_DefaultValuesNeeded);
             this.dgvEvents.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvEvents_UserDeletingRow);
@@ -1454,13 +1452,13 @@
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.RowHeadersWidth = 62;
             this.dgvItems.RowTemplate.Height = 29;
-            this.dgvItems.ShowCellToolTips = false;
-            this.dgvItems.Size = new System.Drawing.Size(918, 295);
+            this.dgvItems.Size = new System.Drawing.Size(918, 290);
             this.dgvItems.TabIndex = 0;
             this.dgvItems.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvItems_MyKeyDown);
             this.dgvItems.MyCheckForChanges += new System.EventHandler(this.dgvItems_MyCheckForChanges);
             this.dgvItems.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItems_CellFormatting);
             this.dgvItems.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvItems_CellParsing);
+            this.dgvItems.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvItems_CellToolTipTextNeeded);
             this.dgvItems.CurrentCellChanged += new System.EventHandler(this.dgvItems_CurrentCellChanged);
             this.dgvItems.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvItems_UserDeletingRow);
             this.dgvItems.Enter += new System.EventHandler(this.dgvItems_Enter);
@@ -1698,7 +1696,7 @@
             this.mySplitContainer1.Panel2.Controls.Add(this.dgvEvents);
             this.mySplitContainer1.Panel2MinSize = 31;
             this.mySplitContainer1.Size = new System.Drawing.Size(918, 485);
-            this.mySplitContainer1.SplitterDistance = 295;
+            this.mySplitContainer1.SplitterDistance = 290;
             this.mySplitContainer1.SplitterWidth = 5;
             this.mySplitContainer1.TabIndex = 2;
             // 
@@ -1975,64 +1973,6 @@
             this.dgvFilter.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.myDataGridView1_CellParsing);
             this.dgvFilter.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvFilter_CellValidating);
             // 
-            // bsfCat1
-            // 
-            this.bsfCat1.DataMember = "CAT1";
-            this.bsfCat1.MyDataSource = "KlonsPData";
-            this.bsfCat1.Sort = "CODE";
-            // 
-            // bsfCatD
-            // 
-            this.bsfCatD.DataMember = "CATD";
-            this.bsfCatD.MyDataSource = "KlonsPData";
-            this.bsfCatD.Sort = "CODE";
-            // 
-            // bsfCatT
-            // 
-            this.bsfCatT.DataMember = "CATT";
-            this.bsfCatT.MyDataSource = "KlonsPData";
-            this.bsfCatT.Sort = "CODE";
-            // 
-            // bsfDepartments
-            // 
-            this.bsfDepartments.DataMember = "DEPARTMENTS";
-            this.bsfDepartments.MyDataSource = "KlonsPData";
-            this.bsfDepartments.Sort = "CODE";
-            // 
-            // bsfPlaces
-            // 
-            this.bsfPlaces.DataMember = "PLACES";
-            this.bsfPlaces.MyDataSource = "KlonsPData";
-            this.bsfPlaces.Sort = "CODE";
-            // 
-            // bsFilter
-            // 
-            this.bsFilter.MyDataSource = this.filterData1;
-            this.bsFilter.Position = 0;
-            // 
-            // filterData1
-            // 
-            this.filterData1.fCAT1 = null;
-            this.filterData1.fCATD = null;
-            this.filterData1.fCATT = null;
-            this.filterData1.fDATE1 = null;
-            this.filterData1.fDATE2 = null;
-            this.filterData1.fDEPARTMENT = null;
-            this.filterData1.fEVENT = null;
-            this.filterData1.fPLACE = null;
-            this.filterData1.fSTATE = null;
-            // 
-            // tbDate
-            // 
-            this.tbDate.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbDate.IsDate = true;
-            this.tbDate.Location = new System.Drawing.Point(1022, 556);
-            this.tbDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(90, 26);
-            this.tbDate.TabIndex = 7;
-            this.tbDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDate_KeyDown);
-            // 
             // dgcFilterDate
             // 
             this.dgcFilterDate.DataPropertyName = "fDATE1";
@@ -2074,6 +2014,12 @@
             this.dgcFilterCat1.ValueMember = "ID";
             this.dgcFilterCat1.Width = 168;
             // 
+            // bsfCat1
+            // 
+            this.bsfCat1.DataMember = "CAT1";
+            this.bsfCat1.MyDataSource = "KlonsPData";
+            this.bsfCat1.Sort = "CODE";
+            // 
             // dgcFilterCatD
             // 
             this.dgcFilterCatD.ColumnNames = new string[] {
@@ -2091,6 +2037,12 @@
             this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
             this.dgcFilterCatD.ValueMember = "ID";
             this.dgcFilterCatD.Width = 168;
+            // 
+            // bsfCatD
+            // 
+            this.bsfCatD.DataMember = "CATD";
+            this.bsfCatD.MyDataSource = "KlonsPData";
+            this.bsfCatD.Sort = "CODE";
             // 
             // dgcFilterCatT
             // 
@@ -2110,6 +2062,12 @@
             this.dgcFilterCatT.ValueMember = "ID";
             this.dgcFilterCatT.Width = 168;
             // 
+            // bsfCatT
+            // 
+            this.bsfCatT.DataMember = "CATT";
+            this.bsfCatT.MyDataSource = "KlonsPData";
+            this.bsfCatT.Sort = "CODE";
+            // 
             // dgcFilterDepartment
             // 
             this.dgcFilterDepartment.ColumnNames = new string[] {
@@ -2128,6 +2086,12 @@
             this.dgcFilterDepartment.ValueMember = "ID";
             this.dgcFilterDepartment.Width = 168;
             // 
+            // bsfDepartments
+            // 
+            this.bsfDepartments.DataMember = "DEPARTMENTS";
+            this.bsfDepartments.MyDataSource = "KlonsPData";
+            this.bsfDepartments.Sort = "CODE";
+            // 
             // dgcFilterPlace
             // 
             this.dgcFilterPlace.ColumnNames = new string[] {
@@ -2144,6 +2108,40 @@
             this.dgcFilterPlace.Name = "dgcFilterPlace";
             this.dgcFilterPlace.ValueMember = "ID";
             this.dgcFilterPlace.Width = 168;
+            // 
+            // bsfPlaces
+            // 
+            this.bsfPlaces.DataMember = "PLACES";
+            this.bsfPlaces.MyDataSource = "KlonsPData";
+            this.bsfPlaces.Sort = "CODE";
+            // 
+            // bsFilter
+            // 
+            this.bsFilter.MyDataSource = this.filterData1;
+            this.bsFilter.Position = 0;
+            // 
+            // filterData1
+            // 
+            this.filterData1.fCAT1 = null;
+            this.filterData1.fCATD = null;
+            this.filterData1.fCATT = null;
+            this.filterData1.fDATE1 = null;
+            this.filterData1.fDATE2 = null;
+            this.filterData1.fDEPARTMENT = null;
+            this.filterData1.fEVENT = null;
+            this.filterData1.fPLACE = null;
+            this.filterData1.fSTATE = null;
+            // 
+            // tbDate
+            // 
+            this.tbDate.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tbDate.IsDate = true;
+            this.tbDate.Location = new System.Drawing.Point(1022, 556);
+            this.tbDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbDate.Name = "tbDate";
+            this.tbDate.Size = new System.Drawing.Size(90, 26);
+            this.tbDate.TabIndex = 7;
+            this.tbDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDate_KeyDown);
             // 
             // FormP_Items
             // 
@@ -2331,6 +2329,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsZU;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsIDIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterSate;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsRegNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsDate1;
@@ -2349,12 +2354,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcItemsZU;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterSate;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
     }
 }

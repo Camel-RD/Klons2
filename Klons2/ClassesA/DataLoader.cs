@@ -23,7 +23,15 @@ namespace KlonsA.Classes
         public static int paminyr, paminmt, pamaxyr, pamaxmt;
         public static int pdlminyr, pdlminmt, pdlmaxyr, pdlmaxmt;
 
-        public static bool DataLoaded = false;
+        public static bool DataLoaded { get; set; } = false;
+
+        public static void ResetState()
+        {
+            DataLoaded = false;
+            LoadedDT0 = default(DateTime);
+            LoadedDT1 = default(DateTime);
+            LoadedDT2 = default(DateTime);
+        }
 
         public static void RefreshMinMax()
         {
@@ -59,7 +67,7 @@ namespace KlonsA.Classes
 
         public static bool IsMonthLoaded(int yr, int mt)
         {
-            if(!DataLoaded) return false;
+            if(!HasDataA() || !DataLoaded) return false;
             int ct1 = (LoadedDT2.Year - LoadedDT1.Year) * 12 + LoadedDT2.Month - LoadedDT1.Month + 1;
             int ct2 = (yr - LoadedDT1.Year) * 12 + mt - LoadedDT1.Month + 1;
             return ct2 >= 0 && ct2 <= ct1;
@@ -67,7 +75,7 @@ namespace KlonsA.Classes
 
         public static bool IsPeriodLoaded(DateTime dt1, DateTime dt2)
         {
-            if (!DataLoaded) return false;
+            if (!HasDataA() || !DataLoaded) return false;
             return LoadedDT1 <= dt1 && LoadedDT2 >= dt2;
         }
 
@@ -147,6 +155,8 @@ namespace KlonsA.Classes
 
             ds.EnforceConstraints = true;
             dsr.EnforceConstraints = true;
+
+            DataLoaded = false;
         }
 
         public static void ClearB()
@@ -221,6 +231,8 @@ namespace KlonsA.Classes
 
             ds.EnforceConstraints = true;
             dsr.EnforceConstraints = true;
+
+            DataLoaded = false;
 
             return true;
         }

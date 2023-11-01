@@ -173,11 +173,11 @@ namespace KlonsF
 
         public bool CheckDataA()
         {
-            if (KlonsA.Classes.DataLoader.DataLoaded) return true;
+            if (KlonsA.Classes.DataLoader.HasDataA() && KlonsA.Classes.DataLoader.DataLoaded) return true;
             KlonsA.Classes.DataLoader.LoadSomeData();
-            if (KlonsA.Classes.DataLoader.DataLoaded) return true;
+            if (KlonsA.Classes.DataLoader.HasDataA() && KlonsA.Classes.DataLoader.DataLoaded) return true;
             LoadDataA();
-            return KlonsA.Classes.DataLoader.DataLoaded;
+            return KlonsA.Classes.DataLoader.HasDataA() && KlonsA.Classes.DataLoader.DataLoaded;
         }
 
         public bool CheckDataP()

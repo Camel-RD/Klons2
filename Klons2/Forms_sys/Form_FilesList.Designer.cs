@@ -92,6 +92,7 @@ namespace KlonsF.Forms
             // 
             this.dgcFilesConnStr.ColumnNames = new string[] {
         "col1"};
+            this.dgcFilesConnStr.ColumnWidths = "140";
             this.dgcFilesConnStr.DataPropertyName = "ConnStr";
             this.dgcFilesConnStr.DisplayMember = "col1";
             this.dgcFilesConnStr.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;

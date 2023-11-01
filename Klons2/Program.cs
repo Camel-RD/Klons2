@@ -15,7 +15,7 @@ namespace KlonsF
         static void Main()
         {
             if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Main());

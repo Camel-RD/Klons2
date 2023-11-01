@@ -34,7 +34,7 @@ namespace KlonsA.Forms
             }
 
 
-            if (DataLoader.DataLoaded)
+            if (DataLoader.HasDataA() && DataLoader.DataLoaded)
             {
                 cbYr1.Text = DataLoader.LoadedDT1.Year.ToString();
                 cbMt1.Text = DataLoader.LoadedDT1.Month.ToString("00");
@@ -86,7 +86,7 @@ namespace KlonsA.Forms
         }
         public void SetParams()
         {
-            if (!DataLoader.DataLoaded) return;
+            if (!(DataLoader.HasDataA() && DataLoader.DataLoaded)) return;
             MyData.Params.LoadYR1 = DataLoader.LoadedDT1.Year;
             MyData.Params.LoadMT1 = DataLoader.LoadedDT1.Month;
             MyData.Params.LoadYR2 = DataLoader.LoadedDT2.Year;

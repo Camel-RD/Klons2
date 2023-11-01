@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using KlonsLIB.Misc;
 
 namespace KlonsLIB.Components
 {
@@ -582,7 +583,7 @@ namespace KlonsLIB.Components
             object o;
             if (Items[row] is DataRowView)
             {
-                if (m_ColumnIndexInDataTable != null)
+                if (m_ColumnIndexInDataTable != null && !DisplayMember.IsNOE())
                 {
                     o = (Items[row] as DataRowView).Row[DisplayMember];
 
@@ -599,7 +600,7 @@ namespace KlonsLIB.Components
                 return "";
             }
 
-            if (m_ColumnNames != null && DisplayMember != null)
+            if (m_ColumnNames != null && !DisplayMember.IsNOE())
             {
                 o = FilterItemOnProperty(Items[row], DisplayMember);
                 if (o == null) return "";

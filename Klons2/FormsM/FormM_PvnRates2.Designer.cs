@@ -30,11 +30,16 @@ namespace KlonsM.FormsM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormM_PvnRates2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bsRates = new KlonsLIB.Data.MyBindingSource(this.components);
             this.dgvRates = new KlonsLIB.Components.MyDataGridView();
+            this.dgcRatesCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRatesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dcRatesRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRateIsReverse = new KlonsLIB.Components.MyDgvCheckBoxColumn();
+            this.dgcRateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsAcc = new System.Windows.Forms.BindingSource(this.components);
             this.bNav = new KlonsLIB.Components.MyBindingNavigator();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -83,6 +88,7 @@ namespace KlonsM.FormsM
             this.grAccPVNText = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             this.mySplitContainer1 = new KlonsLIB.Components.MySplitContainer();
             this.dgvAcc = new KlonsLIB.Components.MyDataGridView();
+            this.myAdapterManager1 = new KlonsLIB.Data.MyAdapterManager();
             this.dgcAccIdTp = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dgcAccTrTp = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dgcAccInCurMt = new KlonsLIB.Components.MyDgvCheckBoxColumn();
@@ -100,12 +106,6 @@ namespace KlonsM.FormsM
             this.dgcAccPvnText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcAccId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcAccIdRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myAdapterManager1 = new KlonsLIB.Data.MyAdapterManager();
-            this.dgcRatesCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRatesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dcRatesRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRateIsReverse = new KlonsLIB.Components.MyDgvCheckBoxColumn();
-            this.dgcRateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsRates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAcc)).BeginInit();
@@ -157,6 +157,53 @@ namespace KlonsM.FormsM
             this.dgvRates.CurrentCellChanged += new System.EventHandler(this.dgvRates_CurrentCellChanged);
             this.dgvRates.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvRates_UserDeletingRow);
             this.dgvRates.Enter += new System.EventHandler(this.dgvRates_Enter);
+            // 
+            // dgcRatesCode
+            // 
+            this.dgcRatesCode.DataPropertyName = "CODE";
+            this.dgcRatesCode.HeaderText = "kods";
+            this.dgcRatesCode.MinimumWidth = 8;
+            this.dgcRatesCode.Name = "dgcRatesCode";
+            this.dgcRatesCode.Width = 90;
+            // 
+            // dgcRatesName
+            // 
+            this.dgcRatesName.DataPropertyName = "NAME";
+            this.dgcRatesName.HeaderText = "nosaukums";
+            this.dgcRatesName.MinimumWidth = 8;
+            this.dgcRatesName.Name = "dgcRatesName";
+            this.dgcRatesName.Width = 400;
+            // 
+            // dcRatesRate
+            // 
+            this.dcRatesRate.DataPropertyName = "RATE";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dcRatesRate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dcRatesRate.HeaderText = "likme";
+            this.dcRatesRate.MinimumWidth = 8;
+            this.dcRatesRate.Name = "dcRatesRate";
+            this.dcRatesRate.Width = 60;
+            // 
+            // dgcRateIsReverse
+            // 
+            this.dgcRateIsReverse.DataPropertyName = "ISREVERSE";
+            this.dgcRateIsReverse.FalseValue = "0";
+            this.dgcRateIsReverse.HeaderText = "reversais";
+            this.dgcRateIsReverse.MinimumWidth = 8;
+            this.dgcRateIsReverse.Name = "dgcRateIsReverse";
+            this.dgcRateIsReverse.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRateIsReverse.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcRateIsReverse.TrueValue = "1";
+            this.dgcRateIsReverse.Width = 80;
+            // 
+            // dgcRateId
+            // 
+            this.dgcRateId.DataPropertyName = "ID";
+            this.dgcRateId.HeaderText = "ID";
+            this.dgcRateId.MinimumWidth = 8;
+            this.dgcRateId.Name = "dgcRateId";
+            this.dgcRateId.Visible = false;
+            this.dgcRateId.Width = 60;
             // 
             // bsAcc
             // 
@@ -642,7 +689,6 @@ namespace KlonsM.FormsM
             // 
             this.grAccBaseText.AllowNull = true;
             this.grAccBaseText.CustomConversions = true;
-            this.grAccBaseText.DataMember = null;
             this.grAccBaseText.GridPropertyName = "_ID_PVNTEXT";
             this.grAccBaseText.Name = "grAccBaseText";
             this.grAccBaseText.ReadOnly = true;
@@ -654,7 +700,6 @@ namespace KlonsM.FormsM
             // 
             this.grAccPVNText.AllowNull = true;
             this.grAccPVNText.CustomConversions = true;
-            this.grAccPVNText.DataMember = null;
             this.grAccPVNText.GridPropertyName = "_ID_PVNTEXT";
             this.grAccPVNText.Name = "grAccPVNText";
             this.grAccPVNText.ReadOnly = true;
@@ -727,12 +772,21 @@ namespace KlonsM.FormsM
             this.dgvAcc.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvAcc_UserDeletingRow);
             this.dgvAcc.Enter += new System.EventHandler(this.dgvAcc_Enter);
             // 
+            // myAdapterManager1
+            // 
+            this.myAdapterManager1.MyDataSource = "KlonsMData";
+            this.myAdapterManager1.TableNames = new string[] {
+        "M_PVNRATES",
+        "M_PVNRATES2",
+        null};
+            // 
             // dgcAccIdTp
             // 
             this.dgcAccIdTp.DataPropertyName = "IDTP";
             this.dgcAccIdTp.DataSource = this.bsPVNType;
             this.dgcAccIdTp.DisplayMember = "NAME";
             this.dgcAccIdTp.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccIdTp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccIdTp.Frozen = true;
             this.dgcAccIdTp.HeaderText = "režīms";
             this.dgcAccIdTp.MaxDropDownItems = 15;
@@ -749,6 +803,7 @@ namespace KlonsM.FormsM
             this.dgcAccTrTp.DataSource = this.bsDocType;
             this.dgcAccTrTp.DisplayMember = "NAME";
             this.dgcAccTrTp.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccTrTp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccTrTp.Frozen = true;
             this.dgcAccTrTp.HeaderText = "darijuma veids";
             this.dgcAccTrTp.MinimumWidth = 8;
@@ -772,6 +827,7 @@ namespace KlonsM.FormsM
             // 
             this.dgcAccBaseDebFin.DataPropertyName = "BASE_DEB_FIN";
             this.dgcAccBaseDebFin.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccBaseDebFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccBaseDebFin.HeaderText = "bāze deb.fin.";
             this.dgcAccBaseDebFin.MinimumWidth = 8;
             this.dgcAccBaseDebFin.Name = "dgcAccBaseDebFin";
@@ -791,6 +847,7 @@ namespace KlonsM.FormsM
             // 
             this.dgcAccBaseCredFin.DataPropertyName = "BASE_CRED_FIN";
             this.dgcAccBaseCredFin.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccBaseCredFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccBaseCredFin.HeaderText = "bāze kred.fin.";
             this.dgcAccBaseCredFin.MinimumWidth = 8;
             this.dgcAccBaseCredFin.Name = "dgcAccBaseCredFin";
@@ -810,6 +867,7 @@ namespace KlonsM.FormsM
             // 
             this.dgcAccPvnDebFin.DataPropertyName = "PVN_DEB_FIN";
             this.dgcAccPvnDebFin.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccPvnDebFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccPvnDebFin.HeaderText = "PVN deb.fin.";
             this.dgcAccPvnDebFin.MinimumWidth = 8;
             this.dgcAccPvnDebFin.Name = "dgcAccPvnDebFin";
@@ -829,6 +887,7 @@ namespace KlonsM.FormsM
             // 
             this.dgcAccPvnCredFin.DataPropertyName = "PVN_CRED_FIN";
             this.dgcAccPvnCredFin.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAccPvnCredFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAccPvnCredFin.HeaderText = "PVN kred.fin.";
             this.dgcAccPvnCredFin.MinimumWidth = 8;
             this.dgcAccPvnCredFin.Name = "dgcAccPvnCredFin";
@@ -902,61 +961,6 @@ namespace KlonsM.FormsM
             this.dgcAccIdRate.Name = "dgcAccIdRate";
             this.dgcAccIdRate.Visible = false;
             this.dgcAccIdRate.Width = 60;
-            // 
-            // myAdapterManager1
-            // 
-            this.myAdapterManager1.MyDataSource = "KlonsMData";
-            this.myAdapterManager1.TableNames = new string[] {
-        "M_PVNRATES",
-        "M_PVNRATES2",
-        null};
-            // 
-            // dgcRatesCode
-            // 
-            this.dgcRatesCode.DataPropertyName = "CODE";
-            this.dgcRatesCode.HeaderText = "kods";
-            this.dgcRatesCode.MinimumWidth = 8;
-            this.dgcRatesCode.Name = "dgcRatesCode";
-            this.dgcRatesCode.Width = 90;
-            // 
-            // dgcRatesName
-            // 
-            this.dgcRatesName.DataPropertyName = "NAME";
-            this.dgcRatesName.HeaderText = "nosaukums";
-            this.dgcRatesName.MinimumWidth = 8;
-            this.dgcRatesName.Name = "dgcRatesName";
-            this.dgcRatesName.Width = 400;
-            // 
-            // dcRatesRate
-            // 
-            this.dcRatesRate.DataPropertyName = "RATE";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dcRatesRate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dcRatesRate.HeaderText = "likme";
-            this.dcRatesRate.MinimumWidth = 8;
-            this.dcRatesRate.Name = "dcRatesRate";
-            this.dcRatesRate.Width = 60;
-            // 
-            // dgcRateIsReverse
-            // 
-            this.dgcRateIsReverse.DataPropertyName = "ISREVERSE";
-            this.dgcRateIsReverse.FalseValue = "0";
-            this.dgcRateIsReverse.HeaderText = "reversais";
-            this.dgcRateIsReverse.MinimumWidth = 8;
-            this.dgcRateIsReverse.Name = "dgcRateIsReverse";
-            this.dgcRateIsReverse.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcRateIsReverse.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcRateIsReverse.TrueValue = "1";
-            this.dgcRateIsReverse.Width = 80;
-            // 
-            // dgcRateId
-            // 
-            this.dgcRateId.DataPropertyName = "ID";
-            this.dgcRateId.HeaderText = "ID";
-            this.dgcRateId.MinimumWidth = 8;
-            this.dgcRateId.Name = "dgcRateId";
-            this.dgcRateId.Visible = false;
-            this.dgcRateId.Width = 60;
             // 
             // FormM_PvnRates2
             // 
@@ -1042,6 +1046,13 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.ToolStripMenuItem rādītPaslēptDatuPaneliToolStripMenuItem;
         private KlonsLIB.Data.MyBindingSource bsPvnTexts;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowPickRowTextBox grAccIdPVNText;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowCheckBox grAccInCurMt;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowCheckBox grAccChangeSign;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRatesCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRatesName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dcRatesRate;
+        private KlonsLIB.Components.MyDgvCheckBoxColumn dgcRateIsReverse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRateId;
         private System.Windows.Forms.DataGridViewComboBoxColumn dgcAccIdTp;
         private System.Windows.Forms.DataGridViewComboBoxColumn dgcAccTrTp;
         private KlonsLIB.Components.MyDgvCheckBoxColumn dgcAccInCurMt;
@@ -1059,12 +1070,5 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcAccPvnText;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcAccId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcAccIdRate;
-        private KlonsLIB.MySourceGrid.GridRows.MyGridRowCheckBox grAccInCurMt;
-        private KlonsLIB.MySourceGrid.GridRows.MyGridRowCheckBox grAccChangeSign;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRatesCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRatesName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dcRatesRate;
-        private KlonsLIB.Components.MyDgvCheckBoxColumn dgcRateIsReverse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcRateId;
     }
 }

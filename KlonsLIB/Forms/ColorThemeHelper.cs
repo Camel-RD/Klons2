@@ -439,7 +439,7 @@ namespace KlonsLIB.Forms
                 ctbl.BackColor = mycolortheme.GetColor(ctbl.BackColor, mycolortheme.ControlColor);
                 ctbl.HotBackColor = mycolortheme.GetColor(ctbl.HotBackColor, mycolortheme.ControlColorDark);
             }
-            else if (c is Button && MyData.InWine)
+            else if (c is Button)
             {
                 c.ForeColor = mycolortheme.GetColor(c.ForeColor, mycolortheme.ControlTextColor);
                 c.BackColor = mycolortheme.GetColor(c.BackColor, mycolortheme.ControlColor);

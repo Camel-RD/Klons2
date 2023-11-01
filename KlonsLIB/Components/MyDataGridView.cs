@@ -83,7 +83,7 @@ namespace KlonsLIB.Components
 
             SetMyToolTip();
 
-            ShowCellToolTips = false;
+            //ShowCellToolTips = false;
         }
 
         protected void SetMyToolTip()

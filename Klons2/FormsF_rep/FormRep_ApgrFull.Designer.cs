@@ -48,12 +48,12 @@ namespace KlonsF.FormsReportParams
             this.cbClid = new KlonsLIB.Components.MyMcFlatComboBox();
             this.bsClid = new KlonsLIB.Data.MyBindingSource();
             this.myLabel1 = new KlonsLIB.Components.MyLabel();
-            this.chAC1 = new System.Windows.Forms.CheckBox();
-            this.chAC2 = new System.Windows.Forms.CheckBox();
-            this.chAC3 = new System.Windows.Forms.CheckBox();
-            this.chAC4 = new System.Windows.Forms.CheckBox();
-            this.chAC5 = new System.Windows.Forms.CheckBox();
-            this.chCl = new System.Windows.Forms.CheckBox();
+            this.chAC1 = new MyCheckBox();
+            this.chAC2 = new MyCheckBox();
+            this.chAC3 = new MyCheckBox();
+            this.chAC4 = new MyCheckBox();
+            this.chAC5 = new MyCheckBox();
+            this.chCl = new MyCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bsAC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAC3)).BeginInit();
@@ -450,11 +450,11 @@ namespace KlonsF.FormsReportParams
         private MyBindingSource bsAC5;
         private MyBindingSource bsClid;
         private MyLabel myLabel1;
-        private System.Windows.Forms.CheckBox chAC1;
-        private System.Windows.Forms.CheckBox chAC2;
-        private System.Windows.Forms.CheckBox chAC3;
-        private System.Windows.Forms.CheckBox chAC4;
-        private System.Windows.Forms.CheckBox chAC5;
-        private System.Windows.Forms.CheckBox chCl;
+        private MyCheckBox chAC1;
+        private MyCheckBox chAC2;
+        private MyCheckBox chAC3;
+        private MyCheckBox chAC4;
+        private MyCheckBox chAC5;
+        private MyCheckBox chCl;
     }
 }

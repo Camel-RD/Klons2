@@ -31,8 +31,8 @@ namespace KlonsF.Classes
         private DataSetHelper _klonsADataSetHelper = null;
         private DataSetHelper _klonsARepDataSetHelper = null;
 
-        public string Version = "007";
-        public string VersionStr = "2023.08.#3";
+        public string Version = "009";
+        public string VersionStr = "2023.11.#1";
 
         public string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
         public string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
@@ -216,6 +216,9 @@ namespace KlonsF.Classes
             KlonsFTableAdapterManager.TUsersTableAdapter.Connection.Open();
 
             CurrentDBTag = new MasterEntry(me);
+
+            KlonsA.Classes.DataLoader.ResetState();
+
             return true;
         }
 

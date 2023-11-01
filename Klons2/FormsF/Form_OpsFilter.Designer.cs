@@ -34,8 +34,8 @@ namespace KlonsF.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_OpsFilter));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.myToolStrip = new System.Windows.Forms.ToolStrip();
             this.tsbFilter = new System.Windows.Forms.ToolStripButton();
@@ -47,29 +47,6 @@ namespace KlonsF.Forms
             this.tsbDocs = new System.Windows.Forms.ToolStripButton();
             this.cmAndOr = new System.Windows.Forms.Button();
             this.dgvOPS = new KlonsLIB.Components.MyDataGridView();
-            this.bs_vwOPS = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.cbAC25 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC24 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC23 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC22 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC21 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC15 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC14 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC13 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC12 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.cbAC11 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.tbText = new KlonsLIB.Components.MyTextBox();
-            this.cbClid = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.tbDate2 = new KlonsLIB.Components.MyTextBox();
-            this.tbDate1 = new KlonsLIB.Components.MyTextBox();
-            this.tbSum = new KlonsLIB.Components.MyTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbDocGr = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ierakstuŽurnālsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rādītPilnuPersonasNosaukumuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rādītPersonasReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgcZNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcDocTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +69,30 @@ namespace KlonsF.Forms
             this.dgcAC25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcQV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcDescr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs_vwOPS = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.cbAC25 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC24 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC23 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC22 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC21 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC15 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC14 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC13 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC12 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.cbAC11 = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.tbText = new KlonsLIB.Components.MyTextBox();
+            this.cbClid = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.tbDate2 = new KlonsLIB.Components.MyTextBox();
+            this.tbDate1 = new KlonsLIB.Components.MyTextBox();
+            this.tbSum = new KlonsLIB.Components.MyTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbDocGr = new KlonsLIB.Components.MyMcFlatComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ierakstuŽurnālsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rādītPilnuPersonasNosaukumuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rādītPersonasReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.myToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOPS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_vwOPS)).BeginInit();
@@ -241,11 +241,215 @@ namespace KlonsF.Forms
             this.dgvOPS.ReadOnly = true;
             this.dgvOPS.RowHeadersWidth = 62;
             this.dgvOPS.RowTemplate.Height = 28;
-            this.dgvOPS.ShowCellToolTips = false;
             this.dgvOPS.Size = new System.Drawing.Size(943, 377);
             this.dgvOPS.TabIndex = 18;
             this.dgvOPS.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOPS_CellFormatting);
             this.dgvOPS.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dgvOPS_CellToolTipTextNeeded);
+            // 
+            // dgcZNR
+            // 
+            this.dgcZNR.DataPropertyName = "ZNR";
+            this.dgcZNR.HeaderText = "N.p.k.";
+            this.dgcZNR.MinimumWidth = 9;
+            this.dgcZNR.Name = "dgcZNR";
+            this.dgcZNR.ReadOnly = true;
+            this.dgcZNR.Width = 63;
+            // 
+            // dgcDate
+            // 
+            this.dgcDate.DataPropertyName = "Dete";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy";
+            this.dgcDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgcDate.HeaderText = "Datums";
+            this.dgcDate.MinimumWidth = 9;
+            this.dgcDate.Name = "dgcDate";
+            this.dgcDate.ReadOnly = true;
+            this.dgcDate.Width = 99;
+            // 
+            // dgcDocTyp
+            // 
+            this.dgcDocTyp.DataPropertyName = "DocTyp";
+            this.dgcDocTyp.HeaderText = "Dok.veids";
+            this.dgcDocTyp.MinimumWidth = 9;
+            this.dgcDocTyp.Name = "dgcDocTyp";
+            this.dgcDocTyp.ReadOnly = true;
+            this.dgcDocTyp.Width = 72;
+            // 
+            // dgcDocSt
+            // 
+            this.dgcDocSt.DataPropertyName = "DocSt";
+            this.dgcDocSt.HeaderText = "Sērija";
+            this.dgcDocSt.MinimumWidth = 9;
+            this.dgcDocSt.Name = "dgcDocSt";
+            this.dgcDocSt.ReadOnly = true;
+            this.dgcDocSt.Width = 45;
+            // 
+            // dgcDocNr
+            // 
+            this.dgcDocNr.DataPropertyName = "DocNr";
+            this.dgcDocNr.HeaderText = "Dok.nr.";
+            this.dgcDocNr.MinimumWidth = 9;
+            this.dgcDocNr.Name = "dgcDocNr";
+            this.dgcDocNr.ReadOnly = true;
+            this.dgcDocNr.Width = 90;
+            // 
+            // dgcClid
+            // 
+            this.dgcClid.DataPropertyName = "ClId";
+            this.dgcClid.HeaderText = "Persona";
+            this.dgcClid.MinimumWidth = 9;
+            this.dgcClid.Name = "dgcClid";
+            this.dgcClid.ReadOnly = true;
+            this.dgcClid.Width = 108;
+            // 
+            // dgcRegNr
+            // 
+            this.dgcRegNr.DataPropertyName = "RegNr";
+            this.dgcRegNr.HeaderText = "Reģ.nr.";
+            this.dgcRegNr.MinimumWidth = 8;
+            this.dgcRegNr.Name = "dgcRegNr";
+            this.dgcRegNr.ReadOnly = true;
+            this.dgcRegNr.ToolTipText = "Personas reģistrācijas numurs";
+            this.dgcRegNr.Width = 120;
+            // 
+            // dgcPVNRegNr
+            // 
+            this.dgcPVNRegNr.DataPropertyName = "PVNRegNr";
+            this.dgcPVNRegNr.HeaderText = "PVN Reģ.nr.";
+            this.dgcPVNRegNr.MinimumWidth = 8;
+            this.dgcPVNRegNr.Name = "dgcPVNRegNr";
+            this.dgcPVNRegNr.ReadOnly = true;
+            this.dgcPVNRegNr.Width = 130;
+            // 
+            // dgcDescr
+            // 
+            this.dgcDescr.DataPropertyName = "Descr";
+            this.dgcDescr.HeaderText = "Apraksts";
+            this.dgcDescr.MinimumWidth = 9;
+            this.dgcDescr.Name = "dgcDescr";
+            this.dgcDescr.ReadOnly = true;
+            this.dgcDescr.Width = 144;
+            // 
+            // dgcAC11
+            // 
+            this.dgcAC11.DataPropertyName = "AC11";
+            this.dgcAC11.HeaderText = "Debets";
+            this.dgcAC11.MinimumWidth = 9;
+            this.dgcAC11.Name = "dgcAC11";
+            this.dgcAC11.ReadOnly = true;
+            this.dgcAC11.Width = 72;
+            // 
+            // dgcAC21
+            // 
+            this.dgcAC21.DataPropertyName = "AC21";
+            this.dgcAC21.HeaderText = "Kredīts";
+            this.dgcAC21.MinimumWidth = 9;
+            this.dgcAC21.Name = "dgcAC21";
+            this.dgcAC21.ReadOnly = true;
+            this.dgcAC21.Width = 72;
+            // 
+            // sgcSumm
+            // 
+            this.sgcSumm.DataPropertyName = "Summ";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.sgcSumm.DefaultCellStyle = dataGridViewCellStyle2;
+            this.sgcSumm.HeaderText = "Summa";
+            this.sgcSumm.MinimumWidth = 9;
+            this.sgcSumm.Name = "sgcSumm";
+            this.sgcSumm.ReadOnly = true;
+            this.sgcSumm.Width = 90;
+            // 
+            // dgcAC12
+            // 
+            this.dgcAC12.DataPropertyName = "AC12";
+            this.dgcAC12.HeaderText = "D2";
+            this.dgcAC12.MinimumWidth = 9;
+            this.dgcAC12.Name = "dgcAC12";
+            this.dgcAC12.ReadOnly = true;
+            this.dgcAC12.Width = 72;
+            // 
+            // dgcAC13
+            // 
+            this.dgcAC13.DataPropertyName = "AC13";
+            this.dgcAC13.HeaderText = "D3";
+            this.dgcAC13.MinimumWidth = 9;
+            this.dgcAC13.Name = "dgcAC13";
+            this.dgcAC13.ReadOnly = true;
+            this.dgcAC13.Width = 45;
+            // 
+            // dgcAC14
+            // 
+            this.dgcAC14.DataPropertyName = "AC14";
+            this.dgcAC14.HeaderText = "D4";
+            this.dgcAC14.MinimumWidth = 9;
+            this.dgcAC14.Name = "dgcAC14";
+            this.dgcAC14.ReadOnly = true;
+            this.dgcAC14.Width = 72;
+            // 
+            // dgcAC15
+            // 
+            this.dgcAC15.DataPropertyName = "AC15";
+            this.dgcAC15.HeaderText = "D5";
+            this.dgcAC15.MinimumWidth = 9;
+            this.dgcAC15.Name = "dgcAC15";
+            this.dgcAC15.ReadOnly = true;
+            this.dgcAC15.Width = 54;
+            // 
+            // dgcAC22
+            // 
+            this.dgcAC22.DataPropertyName = "AC22";
+            this.dgcAC22.HeaderText = "K2";
+            this.dgcAC22.MinimumWidth = 9;
+            this.dgcAC22.Name = "dgcAC22";
+            this.dgcAC22.ReadOnly = true;
+            this.dgcAC22.Width = 72;
+            // 
+            // dgcAC23
+            // 
+            this.dgcAC23.DataPropertyName = "AC23";
+            this.dgcAC23.HeaderText = "K3";
+            this.dgcAC23.MinimumWidth = 9;
+            this.dgcAC23.Name = "dgcAC23";
+            this.dgcAC23.ReadOnly = true;
+            this.dgcAC23.Width = 45;
+            // 
+            // dgcAC24
+            // 
+            this.dgcAC24.DataPropertyName = "AC24";
+            this.dgcAC24.HeaderText = "K4";
+            this.dgcAC24.MinimumWidth = 9;
+            this.dgcAC24.Name = "dgcAC24";
+            this.dgcAC24.ReadOnly = true;
+            this.dgcAC24.Width = 72;
+            // 
+            // dgcAC25
+            // 
+            this.dgcAC25.DataPropertyName = "AC25";
+            this.dgcAC25.HeaderText = "K5";
+            this.dgcAC25.MinimumWidth = 9;
+            this.dgcAC25.Name = "dgcAC25";
+            this.dgcAC25.ReadOnly = true;
+            this.dgcAC25.Width = 54;
+            // 
+            // dgcQV
+            // 
+            this.dgcQV.DataPropertyName = "QV";
+            this.dgcQV.HeaderText = "Daudzums";
+            this.dgcQV.MinimumWidth = 9;
+            this.dgcQV.Name = "dgcQV";
+            this.dgcQV.ReadOnly = true;
+            this.dgcQV.Width = 90;
+            // 
+            // dgcDescr2
+            // 
+            this.dgcDescr2.DataPropertyName = "Descr2";
+            this.dgcDescr2.HeaderText = "Apraksts";
+            this.dgcDescr2.MinimumWidth = 8;
+            this.dgcDescr2.Name = "dgcDescr2";
+            this.dgcDescr2.ReadOnly = true;
+            this.dgcDescr2.Width = 144;
             // 
             // bs_vwOPS
             // 
@@ -656,16 +860,23 @@ namespace KlonsF.Forms
             // rādītPilnuPersonasNosaukumuToolStripMenuItem
             // 
             this.rādītPilnuPersonasNosaukumuToolStripMenuItem.Name = "rādītPilnuPersonasNosaukumuToolStripMenuItem";
-            this.rādītPilnuPersonasNosaukumuToolStripMenuItem.Size = new System.Drawing.Size(458, 38);
+            this.rādītPilnuPersonasNosaukumuToolStripMenuItem.Size = new System.Drawing.Size(506, 38);
             this.rādītPilnuPersonasNosaukumuToolStripMenuItem.Text = "Rādīt pilnu personas nosaukumu";
             this.rādītPilnuPersonasNosaukumuToolStripMenuItem.Click += new System.EventHandler(this.rādītPilnuPersonasNosaukumuToolStripMenuItem_Click);
             // 
             // rādītPersonasReģistrācijasNumuruToolStripMenuItem
             // 
             this.rādītPersonasReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasReģistrācijasNumuruToolStripMenuItem";
-            this.rādītPersonasReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(458, 38);
+            this.rādītPersonasReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(506, 38);
             this.rādītPersonasReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas reģistrācijas numuru";
             this.rādītPersonasReģistrācijasNumuruToolStripMenuItem.Click += new System.EventHandler(this.rādītPersonasReģistrācijasNumuruToolStripMenuItem_Click);
+            // 
+            // rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem
+            // 
+            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem";
+            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(506, 38);
+            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas PVN reģistrācijas numuru";
+            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Click += new System.EventHandler(this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -693,218 +904,6 @@ namespace KlonsF.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 97);
             this.panel1.TabIndex = 21;
-            // 
-            // dgcZNR
-            // 
-            this.dgcZNR.DataPropertyName = "ZNR";
-            this.dgcZNR.HeaderText = "N.p.k.";
-            this.dgcZNR.MinimumWidth = 9;
-            this.dgcZNR.Name = "dgcZNR";
-            this.dgcZNR.ReadOnly = true;
-            this.dgcZNR.Width = 63;
-            // 
-            // dgcDate
-            // 
-            this.dgcDate.DataPropertyName = "Dete";
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy";
-            this.dgcDate.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgcDate.HeaderText = "Datums";
-            this.dgcDate.MinimumWidth = 9;
-            this.dgcDate.Name = "dgcDate";
-            this.dgcDate.ReadOnly = true;
-            this.dgcDate.Width = 99;
-            // 
-            // dgcDocTyp
-            // 
-            this.dgcDocTyp.DataPropertyName = "DocTyp";
-            this.dgcDocTyp.HeaderText = "Dok.veids";
-            this.dgcDocTyp.MinimumWidth = 9;
-            this.dgcDocTyp.Name = "dgcDocTyp";
-            this.dgcDocTyp.ReadOnly = true;
-            this.dgcDocTyp.Width = 72;
-            // 
-            // dgcDocSt
-            // 
-            this.dgcDocSt.DataPropertyName = "DocSt";
-            this.dgcDocSt.HeaderText = "Sērija";
-            this.dgcDocSt.MinimumWidth = 9;
-            this.dgcDocSt.Name = "dgcDocSt";
-            this.dgcDocSt.ReadOnly = true;
-            this.dgcDocSt.Width = 45;
-            // 
-            // dgcDocNr
-            // 
-            this.dgcDocNr.DataPropertyName = "DocNr";
-            this.dgcDocNr.HeaderText = "Dok.nr.";
-            this.dgcDocNr.MinimumWidth = 9;
-            this.dgcDocNr.Name = "dgcDocNr";
-            this.dgcDocNr.ReadOnly = true;
-            this.dgcDocNr.Width = 90;
-            // 
-            // dgcClid
-            // 
-            this.dgcClid.DataPropertyName = "ClId";
-            this.dgcClid.HeaderText = "Persona";
-            this.dgcClid.MinimumWidth = 9;
-            this.dgcClid.Name = "dgcClid";
-            this.dgcClid.ReadOnly = true;
-            this.dgcClid.Width = 108;
-            // 
-            // dgcRegNr
-            // 
-            this.dgcRegNr.DataPropertyName = "RegNr";
-            this.dgcRegNr.HeaderText = "Reģ.nr.";
-            this.dgcRegNr.MinimumWidth = 8;
-            this.dgcRegNr.Name = "dgcRegNr";
-            this.dgcRegNr.ReadOnly = true;
-            this.dgcRegNr.ToolTipText = "Personas reģistrācijas numurs";
-            this.dgcRegNr.Width = 120;
-            // 
-            // dgcPVNRegNr
-            // 
-            this.dgcPVNRegNr.DataPropertyName = "PVNRegNr";
-            this.dgcPVNRegNr.HeaderText = "PVN Reģ.nr.";
-            this.dgcPVNRegNr.MinimumWidth = 8;
-            this.dgcPVNRegNr.Name = "dgcPVNRegNr";
-            this.dgcPVNRegNr.ReadOnly = true;
-            this.dgcPVNRegNr.Width = 130;
-            // 
-            // dgcDescr
-            // 
-            this.dgcDescr.DataPropertyName = "Descr";
-            this.dgcDescr.HeaderText = "Apraksts";
-            this.dgcDescr.MinimumWidth = 9;
-            this.dgcDescr.Name = "dgcDescr";
-            this.dgcDescr.ReadOnly = true;
-            this.dgcDescr.Width = 144;
-            // 
-            // dgcAC11
-            // 
-            this.dgcAC11.DataPropertyName = "AC11";
-            this.dgcAC11.HeaderText = "Debets";
-            this.dgcAC11.MinimumWidth = 9;
-            this.dgcAC11.Name = "dgcAC11";
-            this.dgcAC11.ReadOnly = true;
-            this.dgcAC11.Width = 72;
-            // 
-            // dgcAC21
-            // 
-            this.dgcAC21.DataPropertyName = "AC21";
-            this.dgcAC21.HeaderText = "Kredīts";
-            this.dgcAC21.MinimumWidth = 9;
-            this.dgcAC21.Name = "dgcAC21";
-            this.dgcAC21.ReadOnly = true;
-            this.dgcAC21.Width = 72;
-            // 
-            // sgcSumm
-            // 
-            this.sgcSumm.DataPropertyName = "Summ";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.sgcSumm.DefaultCellStyle = dataGridViewCellStyle6;
-            this.sgcSumm.HeaderText = "Summa";
-            this.sgcSumm.MinimumWidth = 9;
-            this.sgcSumm.Name = "sgcSumm";
-            this.sgcSumm.ReadOnly = true;
-            this.sgcSumm.Width = 90;
-            // 
-            // dgcAC12
-            // 
-            this.dgcAC12.DataPropertyName = "AC12";
-            this.dgcAC12.HeaderText = "D2";
-            this.dgcAC12.MinimumWidth = 9;
-            this.dgcAC12.Name = "dgcAC12";
-            this.dgcAC12.ReadOnly = true;
-            this.dgcAC12.Width = 72;
-            // 
-            // dgcAC13
-            // 
-            this.dgcAC13.DataPropertyName = "AC13";
-            this.dgcAC13.HeaderText = "D3";
-            this.dgcAC13.MinimumWidth = 9;
-            this.dgcAC13.Name = "dgcAC13";
-            this.dgcAC13.ReadOnly = true;
-            this.dgcAC13.Width = 45;
-            // 
-            // dgcAC14
-            // 
-            this.dgcAC14.DataPropertyName = "AC14";
-            this.dgcAC14.HeaderText = "D4";
-            this.dgcAC14.MinimumWidth = 9;
-            this.dgcAC14.Name = "dgcAC14";
-            this.dgcAC14.ReadOnly = true;
-            this.dgcAC14.Width = 72;
-            // 
-            // dgcAC15
-            // 
-            this.dgcAC15.DataPropertyName = "AC15";
-            this.dgcAC15.HeaderText = "D5";
-            this.dgcAC15.MinimumWidth = 9;
-            this.dgcAC15.Name = "dgcAC15";
-            this.dgcAC15.ReadOnly = true;
-            this.dgcAC15.Width = 54;
-            // 
-            // dgcAC22
-            // 
-            this.dgcAC22.DataPropertyName = "AC22";
-            this.dgcAC22.HeaderText = "K2";
-            this.dgcAC22.MinimumWidth = 9;
-            this.dgcAC22.Name = "dgcAC22";
-            this.dgcAC22.ReadOnly = true;
-            this.dgcAC22.Width = 72;
-            // 
-            // dgcAC23
-            // 
-            this.dgcAC23.DataPropertyName = "AC23";
-            this.dgcAC23.HeaderText = "K3";
-            this.dgcAC23.MinimumWidth = 9;
-            this.dgcAC23.Name = "dgcAC23";
-            this.dgcAC23.ReadOnly = true;
-            this.dgcAC23.Width = 45;
-            // 
-            // dgcAC24
-            // 
-            this.dgcAC24.DataPropertyName = "AC24";
-            this.dgcAC24.HeaderText = "K4";
-            this.dgcAC24.MinimumWidth = 9;
-            this.dgcAC24.Name = "dgcAC24";
-            this.dgcAC24.ReadOnly = true;
-            this.dgcAC24.Width = 72;
-            // 
-            // dgcAC25
-            // 
-            this.dgcAC25.DataPropertyName = "AC25";
-            this.dgcAC25.HeaderText = "K5";
-            this.dgcAC25.MinimumWidth = 9;
-            this.dgcAC25.Name = "dgcAC25";
-            this.dgcAC25.ReadOnly = true;
-            this.dgcAC25.Width = 54;
-            // 
-            // dgcQV
-            // 
-            this.dgcQV.DataPropertyName = "QV";
-            this.dgcQV.HeaderText = "Daudzums";
-            this.dgcQV.MinimumWidth = 9;
-            this.dgcQV.Name = "dgcQV";
-            this.dgcQV.ReadOnly = true;
-            this.dgcQV.Width = 90;
-            // 
-            // dgcDescr2
-            // 
-            this.dgcDescr2.DataPropertyName = "Descr2";
-            this.dgcDescr2.HeaderText = "Apraksts";
-            this.dgcDescr2.MinimumWidth = 8;
-            this.dgcDescr2.Name = "dgcDescr2";
-            this.dgcDescr2.ReadOnly = true;
-            this.dgcDescr2.Width = 144;
-            // 
-            // rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem
-            // 
-            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Name = "rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem";
-            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Size = new System.Drawing.Size(506, 38);
-            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Text = "Rādīt personas PVN reģistrācijas numuru";
-            this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Click += new System.EventHandler(this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem_Click);
             // 
             // Form_OpsFilter
             // 

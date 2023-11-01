@@ -1931,6 +1931,21 @@ namespace KlonsF.Forms
             }
         }
 
+        private void dgvDocs_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
+            if (e.RowIndex == -1 || e.RowIndex == dgvDocs.NewRowIndex || e.ColumnIndex == -1) return;
+            var o = dgvDocs[e.ColumnIndex, e.RowIndex].Value;
+            if (o == null || o == DBNull.Value) return;
+            if (e.ColumnIndex == dgcDocsClid.Index ||
+                e.ColumnIndex == dgcDocsClid2.Index)
+            {
+                string s = o.ToString();
+                if (string.IsNullOrEmpty(s)) return;
+                e.ToolTipText = MyData.GetClName(s);
+                return;
+            }
+        }
+
         private void dgvOps_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
         {
             if (e.RowIndex == -1 || e.RowIndex == dgvOps.NewRowIndex || e.ColumnIndex == -1) return;

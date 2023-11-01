@@ -45,6 +45,7 @@ namespace KlonsLIB.Components
             cell.ItemStrings = this.ItemStrings;
             cell.LimitToList = this.LimitToList;
             cell.NullToDBNull = this.NullToDBNull;
+            cell.FlatStyle = this.FlatStyle;
             return cell;
         }
 
