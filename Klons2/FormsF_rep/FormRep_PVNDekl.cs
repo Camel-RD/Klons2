@@ -404,7 +404,7 @@ namespace KlonsF.FormsReportParams
             ax[63] = sd("321");
             ax[64] = sd("331") + sd("332");
             ax[65] = sd("304");
-            ax[66] = -sd("341");
+            ax[66] = sd("341") + sc("341");
             ax[67] = sd("201") + sd("202") + sd("203") +
                      sd("204") + sd("205") + sd("206") + sd("207") + sd("211");
 
@@ -414,7 +414,7 @@ namespace KlonsF.FormsReportParams
             ax[59] = ax[52] + ax[53] + ax[77] + ax[54] + ax[55] +
                 ax[56] + ax[78] + ax[57] + ax[58];
 
-            ax[69] = ax[60] + ax[66] + ax[67] + ax[68];
+            ax[69] = ax[60] - ax[66] + ax[67] + ax[68];
 
             if (ax[59] > ax[69])
                 ax[80] = ax[59] - ax[69];

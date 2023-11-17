@@ -138,6 +138,8 @@ namespace KlonsF.FormsReportParams
                     return;
             }
 
+            var rtagdigital = chDigitalDoc.Checked ? "Rēķins sagatavots un apstiprināts elektroniski" : null;
+
             rd.Sources["DataSet1"] = MyData.DataSetKlonsFRep.TRepOPSd;
             rd.Sources["DataSet2"] = rv;
             rd.Sources["DataSet3"] = MyData.DataSetKlonsFRep.TRepOPS;
@@ -154,8 +156,9 @@ namespace KlonsF.FormsReportParams
                     "RDESCR", "",
                     "RPVN", haspvn? pvn.ToString("F2") : "-",
                     "RAPMAKSAI", total.ToString("F2"),
-                    "RSIGNER", tbSigner.Text
-
+                    "RSIGNER", tbSigner.Text,
+                    "RTAGDIGITAL", rtagdigital,
+                    "RPAYUNTIL", tbPayUntil.Text
                 });
             MyMainForm.ShowReport(rd);
 

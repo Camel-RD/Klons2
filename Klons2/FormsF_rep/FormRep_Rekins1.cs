@@ -92,6 +92,8 @@ namespace KlonsF.FormsReportParams
             DataView rv = new DataView(MyData.DataSetKlonsF.Persons,
                 "clid = '" + clid + "'", null, DataViewRowState.CurrentRows);
 
+            var rtagdigital = chDigitalDoc.Checked ? "Rēķins sagatavots un apstiprināts elektroniski" : null;
+
             ReportViewerData rd = new ReportViewerData();
             rd.FileName = "Report_Rekins_1";
             rd.Sources["DataSet1"] = MyData.DataSetKlonsFRep.TRepOPSd;
@@ -107,7 +109,9 @@ namespace KlonsF.FormsReportParams
                     "RBANKA", MyData.Params.BankName,
                     "RKONTS", MyData.Params.BankAcc,
                     "RDESCR", tbDescr.Text,
-                    "RSIGNER", tbSigner.Text
+                    "RSIGNER", tbSigner.Text,
+                    "RTAGDIGITAL", rtagdigital,
+                    "RPAYUNTIL", tbPayUntil.Text
                 });
             MyMainForm.ShowReport(rd);
 
