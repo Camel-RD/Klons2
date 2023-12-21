@@ -1302,6 +1302,7 @@
                           </Style>
                         </Textbox>
                         <ColSpan>4</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -1960,6 +1961,11 @@
                             </TablixMember>
                             <TablixMember>
                               <Group Name="Details1" />
+                              <SortExpressions>
+                                <SortExpression>
+                                  <Value>=Fields!id.Value</Value>
+                                </SortExpression>
+                              </SortExpressions>
                             </TablixMember>
                           </TablixMembers>
                         </TablixMember>

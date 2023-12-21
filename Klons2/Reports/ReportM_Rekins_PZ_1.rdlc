@@ -2288,7 +2288,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Preču izsniegšanas adrese</Value>
+                                  <Value>Preču saņemšanas adrese</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2375,6 +2375,7 @@
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

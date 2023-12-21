@@ -93,6 +93,8 @@ namespace KlonsF.Forms
             this.rādītPersonasReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbAmount = new KlonsLIB.Components.MyTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.myToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOPS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_vwOPS)).BeginInit();
@@ -789,7 +791,7 @@ namespace KlonsF.Forms
             // 
             this.tbSum.BackColor = System.Drawing.SystemColors.Control;
             this.tbSum.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbSum.Location = new System.Drawing.Point(563, 65);
+            this.tbSum.Location = new System.Drawing.Point(492, 65);
             this.tbSum.Margin = new System.Windows.Forms.Padding(2);
             this.tbSum.Name = "tbSum";
             this.tbSum.ReadOnly = true;
@@ -800,7 +802,7 @@ namespace KlonsF.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(488, 69);
+            this.label2.Location = new System.Drawing.Point(488, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
@@ -837,6 +839,7 @@ namespace KlonsF.Forms
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ierakstuŽurnālsToolStripMenuItem});
@@ -883,6 +886,7 @@ namespace KlonsF.Forms
             this.panel1.Controls.Add(this.cbAC21);
             this.panel1.Controls.Add(this.tbDate1);
             this.panel1.Controls.Add(this.tbDate2);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmAndOr);
@@ -890,6 +894,7 @@ namespace KlonsF.Forms
             this.panel1.Controls.Add(this.cbAC25);
             this.panel1.Controls.Add(this.tbText);
             this.panel1.Controls.Add(this.cbAC24);
+            this.panel1.Controls.Add(this.tbAmount);
             this.panel1.Controls.Add(this.tbSum);
             this.panel1.Controls.Add(this.cbAC23);
             this.panel1.Controls.Add(this.cbAC11);
@@ -904,6 +909,28 @@ namespace KlonsF.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 97);
             this.panel1.TabIndex = 21;
+            // 
+            // tbAmount
+            // 
+            this.tbAmount.BackColor = System.Drawing.SystemColors.Control;
+            this.tbAmount.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tbAmount.Location = new System.Drawing.Point(603, 66);
+            this.tbAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAmount.Name = "tbAmount";
+            this.tbAmount.ReadOnly = true;
+            this.tbAmount.Size = new System.Drawing.Size(107, 26);
+            this.tbAmount.TabIndex = 17;
+            this.tbAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(599, 43);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Daudzums";
             // 
             // Form_OpsFilter
             // 
@@ -995,5 +1022,7 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcQV;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDescr2;
         private System.Windows.Forms.ToolStripMenuItem rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private MyTextBox tbAmount;
     }
 }

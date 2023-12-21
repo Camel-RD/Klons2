@@ -10,6 +10,7 @@ using KlonsF.DataSets;
 using KlonsF.Forms;
 using KlonsLIB.Data;
 using KlonsLIB.Forms;
+using KlonsLIB;
 
 namespace KlonsF.Classes
 {
@@ -22,7 +23,7 @@ namespace KlonsF.Classes
         }
 
         private static string[] dbversions =
-            new string[] { "003" };
+            new string[] { "003", "012" };
 
         public static bool HasUpgrade(string db_ver, string app_ver)
         {
@@ -40,6 +41,23 @@ namespace KlonsF.Classes
             Form_Error.ShowException(Form_Main.MyInstance, e
                 , "Datu bāzes aktualizācija neizdevās.");
         }
+
+
+        public static string GetSQL(string sqlfilename)
+        {
+            Assembly _assembly;
+            StreamReader _textStreamReader;
+
+            string resname = "KlonsF.SQL." + sqlfilename + ".txt";
+
+            _assembly = Assembly.GetExecutingAssembly();
+            _textStreamReader = new StreamReader(
+                _assembly.GetManifestResourceStream(resname));
+
+            string sql = _textStreamReader.ReadToEnd();
+            return sql;
+        }
+
 
         public static bool UpgradeThis(string from_ver, string to_ver)
         {
@@ -72,16 +90,7 @@ namespace KlonsF.Classes
 
         public static bool UpgradeThis(string sqlfilename)
         {
-            Assembly _assembly;
-            StreamReader _textStreamReader;
-            
-            string resname = "KlonsF.SQL." + sqlfilename + ".txt";
-            
-            _assembly = Assembly.GetExecutingAssembly();
-            _textStreamReader = new StreamReader(
-                _assembly.GetManifestResourceStream(resname));
-
-            string sql = _textStreamReader.ReadToEnd();
+            string sql = GetSQL(sqlfilename);
 
             FbConnection conn = DataSetHelper.GetFbConnection(KlonsData.St.KlonsFTableAdapterManager.ParamsTableAdapter);
             if (conn == null) return false;
@@ -100,5 +109,6 @@ namespace KlonsF.Classes
 
             return true;
         }
+
     }
 }

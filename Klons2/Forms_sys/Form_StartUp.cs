@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using KlonsF.Classes;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using static KlonsF.Forms.Form_FbUsers;
 
 namespace KlonsF.Forms
 {
@@ -39,7 +41,8 @@ namespace KlonsF.Forms
             DialogResult = DialogResult.Cancel;
         }
 
-        private bool CheckUser()
+        
+        private bool CheckUserInput()
         {
             if (MyData.Settings.MasterEntry.Name == "")
             {
@@ -51,10 +54,36 @@ namespace KlonsF.Forms
                 MyMainForm.ShowWarning("Jāievada lietotāja vārds!", "");
                 return false;
             }
+            return true;
+        }
+
+        private bool IsBackupDone = false;
+        private bool CheckUserAndConnect()
+        {
+            IsBackupDone = false;
             if (MyData.CurrentDBTag == null || 
                 !MyData.CurrentDBTag.Equals(MyData.Settings.MasterEntry))
             {
-                if (!ConnectTo(MyData.Settings.MasterEntry, tbUser.Text, null))
+                string usertp = null, dbver = null;
+                if (CheckUser2(out usertp, out dbver))
+                {
+                    if (!usertp.IsNOE() && !dbver.IsNOE())
+                    {
+                        if (UpgradeExpected(dbver))
+                        {
+                            var dbfilename = MyData.GetFileName(MyData.Settings.MasterEntry);
+                            IsBackupDone = DoBackUpIfNeeded(dbfilename, true);
+                        }
+                    }
+                }
+                else
+                {
+                    if (usertp == "X") return false;
+                }
+                
+                GC.Collect();
+
+                if (!ConnectTo(MyData.Settings.MasterEntry, tbUser.Text, tbPSW.Text))
                 {
                     return false;
                 }
@@ -69,44 +98,71 @@ namespace KlonsF.Forms
             return true;
         }
 
+        private bool CheckUser2(out string usertp, out string dbver)
+        {
+            usertp = null;
+            dbver = null;
+            try
+            {
+                MyData.GectSomeDbSysData(MyData.Settings.MasterEntry, tbUser.Text, tbPSW.Text,
+                    out usertp, out dbver);
+            }
+            catch(Exception ex) 
+            { 
+                return false; 
+            }
+
+            if (usertp == "X")
+            {
+                MyMainForm.ShowWarning("Nepareizs lietotāja vārds vai parole", "");
+                return false;
+            }
+            return true;
+        }
+
         private bool ConnectTo(MasterEntry me, string username, string userpsw, bool secondtry = false)
         {
             var dbfilename = MyData.GetFileName(me);
-            DoBackUpIfNeeded(dbfilename, false);
+            if (!IsBackupDone)
+                IsBackupDone = DoBackUpIfNeeded(dbfilename, false);
             return MyData.ConnectTo(me, username, userpsw);
         }
 
-        private void DoBackUpIfNeeded(string dbfilename, bool beforeupgrade)
+        private bool DoBackUpIfNeeded(string dbfilename, bool beforeupgrade)
         {
-            if (dbfilename.IsNOE()) return;
+            if (dbfilename.IsNOE()) return false;
             var bp = MyData.Settings.BackUpPlanX;
-            if (bp == EBackUpPlan.Never) return;
+            if (bp == EBackUpPlan.Never) return false;
             var dt = BackupHelper.GetLastBackupDate(dbfilename, MyData.GetBackUpFolder());
             if (!beforeupgrade && 
                 dt.HasValue && (DateTime.Now >= dt.Value) &&
                 (DateTime.Now - dt.Value).TotalSeconds < 30d)
-                return;
+                return false;
             if (!beforeupgrade &&
                 bp == EBackUpPlan.Daily &&
                 dt.HasValue &&
                 dt.Value.Date == DateTime.Today)
-                return;
+                return false;
             if (bp == EBackUpPlan.WhenUpgrading && !beforeupgrade)
-                return;
-            BackupHelper.BackupDbFile(dbfilename, MyData.GetBackUpFolder());
+                return false;
+            return BackupHelper.BackupDbFile(dbfilename, MyData.GetBackUpFolder());
         }
 
-        private bool CheckForUpgrades()
+        private bool UpgradeExpected(string dbver)
         {
-            var v = MyData.Params.Version;
+            if (!UpgradeHelper.CanUseVeriom(dbver, MyData.Version)) return false;
+            return UpgradeHelper.HasUpgrade(dbver, MyData.Version);
+        }
 
-            if (!UpgradeHelper.CanUseVeriom(v, MyData.Version))
+        private bool CheckForUpgrades(string dbver, bool skipbackup)
+        {
+            if (!UpgradeHelper.CanUseVeriom(dbver, MyData.Version))
             {
                 MyMainForm.ShowError("Programmas versija nav savietojama ar datu bāzes versiju.");
                 return false;
             }
 
-            if (!UpgradeHelper.HasUpgrade(v, MyData.Version)) return true;
+            if (!UpgradeHelper.HasUpgrade(dbver, MyData.Version)) return true;
 
             var ret = MyMessageBox.Show(
                 "Nepieciešams veikt datu bāzes versijas aktualizāciju.\n" +
@@ -122,9 +178,10 @@ namespace KlonsF.Forms
             if (ret != DialogResult.Yes) return false;
 
             var dbfilename = MyData.GetFileName(MyData.CurrentDBTag);
-            DoBackUpIfNeeded(dbfilename, true);
+            if (!skipbackup)
+                DoBackUpIfNeeded(dbfilename, true);
 
-            if (!UpgradeHelper.UpgradeThis(v, MyData.Version))
+            if (!UpgradeHelper.UpgradeThis(dbver, MyData.Version))
             {
                 return false;
                 //DialogResult = DialogResult.Abort;
@@ -137,11 +194,13 @@ namespace KlonsF.Forms
         {
             try
             {
-                if (!CheckUser()) return;
+                if (!CheckUserInput()) return;
+                if (!CheckUserAndConnect()) return;
                 MyData.SetCurrentUserName(tbUser.Text);
                 MyData.SetUpTableManager();
                 MyData.FillParamsForUser(tbUser.Text);
-                if (!CheckForUpgrades()) return;
+                var dbver = MyData.Params.Version;
+                if (!CheckForUpgrades(dbver, IsBackupDone)) return;
                 MyData.FillBaseTables();
                 MyData.Settings.LastUserName = tbUser.Text;
                 MyMainForm.Text = "Klons2: " + MyData.Settings.MasterEntry.Descr.Nz();
@@ -159,7 +218,7 @@ namespace KlonsF.Forms
         {
             try
             {
-                if (!CheckUser()) return;
+                if (!CheckUserAndConnect()) return;
                 string tp = MyData.GetUserGroup(tbUser.Text);
                 if (string.IsNullOrEmpty(tp)) return;
                 if (tp == "A")

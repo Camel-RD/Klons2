@@ -1260,7 +1260,7 @@ namespace KlonsP.Forms
             pos += step;
             while(pos >= 0 && pos < bsItems.Count)
             {
-                var dr = bsItems.CurrentDataRow as KlonsPDataSet.ITEMSRow;
+                var dr = (bsItems[pos] as DataRowView).Row as KlonsPDataSet.ITEMSRow;
                 if (dr.REG_NR == text || (dr.NAME != null && dr.NAME.ToLower().Contains(stext)))
                 {
                     bsItems.Position = pos;

@@ -164,14 +164,16 @@ namespace KlonsF.Forms
                     sac21, sac22, sac23, sac24, sac25, sdocgr);
             }
             int k = bs_vwOPS.List.Count;
-            decimal sum = 0.00M;
+            decimal sum = 0.00M, amount = 0.00M;
             try
             {
                 if (bs_vwOPS.GetTable().Rows.Count > 0)
                 {
                     sum = (decimal) this.bs_vwOPS.GetTable().Compute("SUM(Summ)", "");
+                    amount = (decimal)(float) this.bs_vwOPS.GetTable().Compute("SUM(QV)", "");
                 }
                 tbSum.Text = sum.ToString("N2");
+                tbAmount.Text = amount.ToString();
             }
             catch (Exception)
             {

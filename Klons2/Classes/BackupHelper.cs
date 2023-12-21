@@ -17,17 +17,17 @@ namespace KlonsF.Classes
         {
             if (!File.Exists(filename))
             {
-                Form_Main.MyMainForm.ShowError($"Fails [{filename}] nav atrasts.");
+                Form_Main.MyMainForm.ShowError($"Rezerves kopijas izveidošana neizdevās.\nFails [{filename}] nav atrasts.");
                 return false;
             }
             if (!Directory.Exists(backupfolder))
             {
-                Form_Main.MyMainForm.ShowError($"Mape [{backupfolder}] nav atrasta.");
+                Form_Main.MyMainForm.ShowError($"Rezerves kopijas izveidošana neizdevās.\nMape [{backupfolder}] nav atrasta.");
                 return false;
             }
             if (!CanOpenFile(filename))
             {
-                Form_Main.MyMainForm.ShowError($"Fails [{filename}] nav pieejams.");
+                Form_Main.MyMainForm.ShowError($"Rezerves kopijas izveidošana neizdevās.\nFails [{filename}] nav pieejams.");
                 return false;
             }
 
@@ -35,14 +35,14 @@ namespace KlonsF.Classes
 
             if (zipfilename == null)
             {
-                Form_Main.MyMainForm.ShowError($"Neizdevās atrast .zip faila nosaukumu.");
+                Form_Main.MyMainForm.ShowError($"Rezerves kopijas izveidošana neizdevās.\nNeizdevās atrast .zip faila nosaukumu.");
                 return false;
             }
 
             var rt = ZipFile(filename, zipfilename);
             if (rt != "OK")
             {
-                Form_Main.MyMainForm.ShowError($"Neizdevās izveidot .zip failu.\n\n[{rt}]");
+                Form_Main.MyMainForm.ShowError($"Rezerves kopijas izveidošana neizdevās.\nNeizdevās izveidot .zip failu.\n\n[{rt}]");
                 return false;
             }
             return true;

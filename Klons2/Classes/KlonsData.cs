@@ -15,6 +15,7 @@ using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using FirebirdSql.Data.FirebirdClient;
+using System.Collections.Generic;
 
 namespace KlonsF.Classes
 {
@@ -31,15 +32,15 @@ namespace KlonsF.Classes
         private DataSetHelper _klonsADataSetHelper = null;
         private DataSetHelper _klonsARepDataSetHelper = null;
 
-        public string Version = "010";
-        public string VersionStr = "2023.11.#2";
+        public string Version = "012";
+        public string VersionStr = "2023.12.#1";
 
         public string SettingsFileName = GetBasePath() + "\\Config\\Settings.xml";
         public string MasterListFileName = GetBasePath() + "\\Config\\MasterList.xml";
         public string FolderForXMLReports = GetBasePath() + "\\XMLReports";
         private string FolderForDBBackUp = GetBasePath() + "\\DB-backup";
-        public string FolderForFbEmbed25 = GetBasePath() + "\\FbEmbed25";
-        public string FolderForFbEmbed4 = GetBasePath() + "\\FbEmbed4";
+        public string FolderForFbEmbed25 = GetBasePath() + "\\FbEmbed25" + (Environment.Is64BitProcess ? "x64" : "");
+        public string FolderForFbEmbed4 = GetBasePath() + "\\FbEmbed4" + (Environment.Is64BitProcess ? "x64" : "");
 
         public KlonsSettings Settings = new KlonsSettings();
         public MasterList MasterList { get; private set; }
@@ -195,6 +196,7 @@ namespace KlonsF.Classes
                     "password=parole";
             }
 
+            if (userpsw.IsNOE()) userpsw = "null";
             newconnstr = string.Format(newconnstr, filename, username, userpsw);
             var s1 = CheckConnectionString(newconnstr);
             if (s1 == null)
@@ -220,6 +222,58 @@ namespace KlonsF.Classes
             KlonsA.Classes.DataLoader.ResetState();
 
             return true;
+        }
+
+        public string GetConnectionString(MasterEntry me, string username, string userpsw)
+        {
+            if (username.IsNOE())
+                throw new Exception($"Nav norādīts lietotāja vārds.");
+            string filename = GetFileName(me);
+
+            if (!File.Exists(filename))
+            {
+                throw new Exception($"Nav faila: [{filename}]");
+            }
+
+            string newconnstr = MasterList.GetTemplateByName(me.ConnStr);
+            if (string.IsNullOrEmpty(newconnstr))
+            {
+                throw new Exception($"Nav atrasti pieslēguma parametri: [{me.ConnStr}]");
+            }
+
+            if (userpsw.IsNOE()) userpsw = "null";
+            newconnstr = string.Format(newconnstr, filename, username, userpsw);
+            var s1 = CheckConnectionString(newconnstr);
+            if (s1 == null)
+                throw new Exception($"Nekorekti pieslēguma dati:\n{newconnstr}");
+            newconnstr = s1;
+
+            return newconnstr;
+        }
+
+        public void GectSomeDbSysData(MasterEntry me, string username, string userpsw,
+            out string usertp, out string dbver)
+        {
+            var constr = GetConnectionString(me, username, userpsw);
+            var csb = new FbConnectionStringBuilder(constr);
+            csb.Pooling = false;
+            constr = csb.ToString();
+            userpsw = userpsw.IsNOE() ? "null" : $"'{userpsw}'";
+            using (var con = new FbConnection(constr))
+            {
+                con.Open();
+                using (var cm = new FbCommand())
+                {
+                    cm.Connection = con;
+                    cm.CommandText = $"execute procedure SP_SYS_CHECK_USER '{username}', {userpsw}";
+                    var ret = cm.ExecuteScalar();
+                    usertp = ret == DBNull.Value ? null : (string)ret;
+                    cm.CommandText = $"select pvalue from params where pname = 'version' and usr = 'SYSTEM'";
+                    ret = cm.ExecuteScalar();
+                    dbver = ret == DBNull.Value ? null : (string)ret;
+                }
+                con.Close();
+            }
         }
 
         public string GetFileName(MasterEntry me)
@@ -450,12 +504,7 @@ namespace KlonsF.Classes
 
         public static string GetBasePath()
         {
-            string s = Utils.GetMyFolder();
-            if (KlonsSettings.DesignMode)
-            {
-                DirectoryInfo dir1 = new DirectoryInfo(s);
-                s = dir1.Parent.Parent.FullName;
-            }
+            var s = Utils.GetMyFolderX();
             return s;
         }
 
