@@ -210,6 +210,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesARep\Report_ActivePersons.cs" />
     <Compile Include="ClassesARep\Report_Events.cs" />
     <Compile Include="ClassesARep\Report_IINk.cs" />
     <Compile Include="ClassesARep\Report_PayList.cs" />
@@ -293,6 +294,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\UpgradeHelper.cs" />
+    <Compile Include="FormsA_rep\FormARep_ActivePersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsA_rep\FormARep_ActivePersons.Designer.cs">
+      <DependentUpon>FormARep_ActivePersons.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsF\Form_LogDiff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1423,6 +1430,9 @@
     <Content Include="Reports\Report_AvNor_2.rdlc" />
     <Content Include="Reports\Report_Koresp_1_a.rdlc" />
     <Content Include="Reports\Report_Darz_4.rdlc" />
+    <EmbeddedResource Include="FormsA_rep\FormARep_ActivePersons.resx">
+      <DependentUpon>FormARep_ActivePersons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsF_rep\FormRep_Bilance2.resx">
       <DependentUpon>FormRep_Bilance2.cs</DependentUpon>
     </EmbeddedResource>

@@ -46,6 +46,22 @@ namespace KlonsA.Classes
             return null;
         }
 
+        public PeriodInfo Filter(Func<PeriodInfo, bool> func_filter)
+        {
+            var retpi = new PeriodInfo();
+            retpi.DateFirst = DateFirst;
+            retpi.DateLast = DateLast;
+
+            foreach (var pi in LinkedPeriods)
+            {
+                if (!func_filter(pi)) continue;
+                var npi = new PeriodInfo(pi);
+                retpi.LinkedPeriods.Add(npi);
+            }
+
+            return retpi;
+        }
+
         public PeriodInfo FilterListWithDates(DateTime dt1, DateTime dt2)
         {
             var retpi = new PeriodInfo(this);

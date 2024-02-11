@@ -637,6 +637,23 @@ namespace KlonsA.Classes
             return false;
         }
 
+        public static bool EventIsVacation(EEventId ev)
+        {
+            switch (ev)
+            {
+                case EEventId.Atvaļinājums:
+                case EEventId.Bezalgas_atvaļinājums:
+                case EEventId.Apmaksāts_mācību_atvaļinājums:
+                case EEventId.Bezalgas_mācību_atvaļinājums:
+                case EEventId.Grūtniecības_un_dzemdību_atvaļinājums:
+                case EEventId.Bērna_kopšanas_atvaļinājums:
+                case EEventId.Paternitātes_atvaļinājums:
+                    return true;
+            }
+            return false;
+        }
+
+
         public static bool ParsePlanDayStr(string fs, out EDayPlanId daycode, out float hours)
         {
             daycode = EDayPlanId.None;

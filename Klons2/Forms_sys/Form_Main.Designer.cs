@@ -111,6 +111,7 @@ namespace KlonsF
             this.miADarbinieki = new System.Windows.Forms.ToolStripMenuItem();
             this.miADarbiniekuDati = new System.Windows.Forms.ToolStripMenuItem();
             this.miADarbinieki1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAstrādājošoPārskats = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.miNeapliekamaisMinimums = new System.Windows.Forms.ToolStripMenuItem();
             this.miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS = new System.Windows.Forms.ToolStripMenuItem();
@@ -230,6 +231,7 @@ namespace KlonsF
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSistēma,
@@ -851,6 +853,7 @@ namespace KlonsF
             this.miADarbaNespējasLapas,
             this.toolStripSeparator16,
             this.miANotikumuIzklāsts,
+            this.miAstrādājošoPārskats,
             this.miANeizmantotāsAtvaļinājumaDienas,
             this.miAStruktūrvienības,
             this.miADatiParPerioduPirmsUzskaitesSākšanas});
@@ -871,6 +874,13 @@ namespace KlonsF
             this.miADarbinieki1.Size = new System.Drawing.Size(586, 38);
             this.miADarbinieki1.Text = "Darbinieku saraksts";
             this.miADarbinieki1.Click += new System.EventHandler(this.miADarbinieki1_Click);
+            // 
+            // miAstrādājošoPārskats
+            // 
+            this.miAstrādājošoPārskats.Name = "miAstrādājošoPārskats";
+            this.miAstrādājošoPārskats.Size = new System.Drawing.Size(586, 38);
+            this.miAstrādājošoPārskats.Text = "Strādājošo pārskats";
+            this.miAstrādājošoPārskats.Click += new System.EventHandler(this.miAstrādājošoPārskats_Click);
             // 
             // toolStripSeparator15
             // 
@@ -1965,5 +1975,6 @@ namespace KlonsF
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator26;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator27;
         private System.Windows.Forms.ToolStripMenuItem miFEdsTp;
+        private System.Windows.Forms.ToolStripMenuItem miAstrādājošoPārskats;
     }
 }

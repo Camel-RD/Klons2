@@ -73,7 +73,6 @@ namespace KlonsA.Classes
                 .ToArray();
 
             fPersonR = fPersonR.FilterWithList(fHireFire);
-            fPersonR = fPersonR.SubtractList(sickleaveb);
 
             DaysInMonth = dt1.DaysInMonth();
             CalendarDays = 0;
@@ -82,8 +81,6 @@ namespace KlonsA.Classes
                 sr.SalarySheet.DR_Likmes : null;
             if (dr_likmes == null)
                 dr_likmes = DataTasks.GetRates(dt1.FirstDayOfMonth());
-
-            if (fPersonR.LinkedPeriods.Count == 0) return;
 
             var wt1 = new CalcRRow2();
             var pr1 = fPersonR.LinkedPeriods[0].Item1 as KlonsADataSet.PERSONS_RRow;
@@ -100,6 +97,10 @@ namespace KlonsA.Classes
             IINMargin = wt1.IINMargin;
             HasTaxDoc = wt1.HasTaxDoc;
             UseProgresiveIINRate = wt1.UseProgresiveIINRate;
+
+            fPersonR = fPersonR.SubtractList(sickleaveb);
+
+            if (fPersonR.LinkedPeriods.Count == 0) return;
 
             for (int i = 0; i < fPersonR.LinkedPeriods.Count; i++)
             {

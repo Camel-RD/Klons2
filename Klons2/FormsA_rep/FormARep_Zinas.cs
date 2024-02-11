@@ -156,11 +156,11 @@ namespace KlonsA.Forms
             return xdoc;
         }
 
-        private MyXmlDoc MakeXMLv2()
+        private MyXmlDoc MakeXMLv2and3()
         {
             var xdoc = new MyXmlDoc();
-
-            XmlElement DokZDNv2 = xdoc.CreateElement("DokZDNv2");
+            var roottag = Date1 > new DateTime(2023, 3, 15) ? "DokZDNv3" : "DokZDNv2";
+            XmlElement DokZDNv2 = xdoc.CreateElement(roottag);
             DokZDNv2.SetAttribute("xmlns:xsd", "http://www.w3.org/2001/XMLSchema"); ;
             DokZDNv2.SetAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
             xdoc.AppendChild(DokZDNv2);
@@ -210,7 +210,7 @@ namespace KlonsA.Forms
             }
             else
             {
-                xdoc = MakeXMLv2();
+                xdoc = MakeXMLv2and3();
             }
             if (xdoc == null) return;
             xdoc.Save();

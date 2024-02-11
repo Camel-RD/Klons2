@@ -760,6 +760,10 @@ namespace KlonsF
             }
             ShowForm(typeof(KlonsA.Forms.FormA_PersonsR));
         }
+        private void miAstrādājošoPārskats_Click(object sender, EventArgs e)
+        {
+            ShowFormA<KlonsA.Forms.FormARep_ActivePersons>();
+        }
         private void miAIzmaiņasNodokļuMaksātājaGrāmatiņāsnoEDS_Click(object sender, EventArgs e)
         {
             ShowFormA<KlonsA.Forms.FormA_Persons_Egr>();
