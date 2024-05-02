@@ -138,6 +138,7 @@ namespace KlonsF.FormsReportParams
                 "Iedzīvotāju ienākuma nodoklis - Darba devēja ziņojums", "IIN - DDZ",
                 "Iedzīvotāju ienākuma nodoklis - Paziņojums par fiziskajai personai izmaksātajām summām", "IIN - FP",
                 "Iekšzemē iekasētais pievienotās vērtības nodoklis - PVN mēneša deklarācija", "PVN",
+                "Iekšzemē iekasētais pievienotās vērtības nodoklis - PVN taksācijas perioda deklarācija", "PVN",
                 "Uzņēmējdarbības riska valsts nodeva - Darba devēja ziņojums", "URVN",
                 "Uzņēmumu ienākuma nodoklis - Uzņēmuma ienākuma nodokļa deklarācija", "UIN",
                 "Valsts sociālās apdrošināšanas obligātās iemaksas - Darba devēja ziņojums", "VSAOI - DDZ",

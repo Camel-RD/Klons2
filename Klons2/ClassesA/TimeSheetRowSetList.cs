@@ -5,6 +5,7 @@ using System.Text;
 using KlonsF.DataSets;
 using DataObjectsA;
 using KlonsF.Classes;
+using KlonsLIB;
 
 namespace KlonsA.Classes
 {
@@ -458,9 +459,10 @@ namespace KlonsA.Classes
                     if (daycodefact == EDayFactId.X || daycodefact == EDayFactId.None) continue;
 
                     var isPlanWorkDay = daycodeplan == EDayPlanId.DD || daycodeplan == EDayPlanId.DDSD;
+                    var isPlanHolyDay = daycodeplan == EDayPlanId.SDDD || daycodeplan == EDayPlanId.SD;
                     var isFactPaidVacation = SomeDataDefs.IsDayPaidVacation(daycodefact);
 
-                    if (!isPlanWorkDay || !isFactPaidVacation) continue;
+                    if (!((isPlanWorkDay || isPlanHolyDay) && isFactPaidVacation)) continue;
 
                     vp = dlset.Plan.Vx[i - 1];
 
