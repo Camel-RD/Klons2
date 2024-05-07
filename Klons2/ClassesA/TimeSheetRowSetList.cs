@@ -459,7 +459,7 @@ namespace KlonsA.Classes
                     if (daycodefact == EDayFactId.X || daycodefact == EDayFactId.None) continue;
 
                     var isPlanWorkDay = daycodeplan == EDayPlanId.DD || daycodeplan == EDayPlanId.DDSD;
-                    var isPlanHolyDay = daycodeplan == EDayPlanId.SDDD || daycodeplan == EDayPlanId.SD;
+                    var isPlanHolyDay = daycodeplan == EDayPlanId.SDDD;
                     var isFactPaidVacation = SomeDataDefs.IsDayPaidVacation(daycodefact);
 
                     if (!((isPlanWorkDay || isPlanHolyDay) && isFactPaidVacation)) continue;
