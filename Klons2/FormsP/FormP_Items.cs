@@ -162,7 +162,7 @@ namespace KlonsP.Forms
         {
             for (int i = 0; i < bsItems.Count; i++)
             {
-                var dr = bsItems.CurrentDataRow as KlonsPDataSet.ITEMSRow;
+                var dr = (bsItems[i] as DataRowView).Row as KlonsPDataSet.ITEMSRow;
                 if (dr.RowState == DataRowState.Detached) continue;
                 if (dr.ID == id) return i;
             }

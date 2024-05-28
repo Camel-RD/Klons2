@@ -66,11 +66,8 @@ namespace KlonsP.Forms
 
         private void dgvEvents_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            var o = dgvEvents.GetCurrentDataItem();
-            if (o == null) return;
-            var dr = o as KlonsPDataSet.ITEMS_EVENTSRow;
-            if(dr == null)
-                dr = (o as DataRowView)?.Row as KlonsPDataSet.ITEMS_EVENTSRow;
+            if (e.RowIndex < 0 || bsRows.Count == 0) return;
+            var dr = (bsRows[e.RowIndex] as DataRowView).Row as KlonsPDataSet.ITEMS_EVENTSRow;
             if (dr == null) return;
             if (e.ColumnIndex == dgcEventsEvent.Index)
             {

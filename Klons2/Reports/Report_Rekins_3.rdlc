@@ -1881,27 +1881,29 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                           <rd:DefaultName>Textbox98</rd:DefaultName>
                           <Style>
                             <Border>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
+                              <Width>0.5pt</Width>
                             </Border>
                             <TopBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </TopBorder>
                             <BottomBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </BottomBorder>
                             <LeftBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </LeftBorder>
                             <RightBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1930,27 +1932,29 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                           <rd:DefaultName>Textbox38</rd:DefaultName>
                           <Style>
                             <Border>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
+                              <Width>0.5pt</Width>
                             </Border>
                             <TopBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </TopBorder>
                             <BottomBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </BottomBorder>
                             <LeftBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </LeftBorder>
                             <RightBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1983,27 +1987,29 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                           <rd:DefaultName>Summ</rd:DefaultName>
                           <Style>
                             <Border>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
+                              <Width>0.5pt</Width>
                             </Border>
                             <TopBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </TopBorder>
                             <BottomBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </BottomBorder>
                             <LeftBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </LeftBorder>
                             <RightBorder>
-                              <Color>Black</Color>
+                              <Color>Gray</Color>
                               <Style>Solid</Style>
-                              <Width>1pt</Width>
+                              <Width>0.5pt</Width>
                             </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2027,7 +2033,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>KOPĀ (EUR)</Value>
+                                  <Value>Kopā bez PVN (EUR)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2138,7 +2144,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pievienotās vērtības nodoklis 21%</Value>
+                                  <Value>PVN 21%</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -2301,7 +2307,9 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Parameters!RAPMAKSAI.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -2426,9 +2434,15 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
                   <Group Name="Details" />
                 </TablixMember>
                 <TablixMember>
+                  <Visibility>
+                    <Hidden>=(Parameters!RPVN.Value)="-"</Hidden>
+                  </Visibility>
                   <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
+                  <Visibility>
+                    <Hidden>=(Parameters!RPVN.Value)="-"</Hidden>
+                  </Visibility>
                   <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
@@ -2441,12 +2455,13 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
             </TablixRowHierarchy>
             <DataSetName>DataSet3</DataSetName>
             <Top>7.39013cm</Top>
+            <Left>0.05cm</Left>
             <Height>3.57968cm</Height>
             <Width>17.65888cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
           </Tablix>
@@ -2454,7 +2469,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
         <Height>13.70498cm</Height>
         <Style />
       </Body>
-      <Width>17.65888cm</Width>
+      <Width>17.75888cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

@@ -999,6 +999,7 @@
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1149,7 +1150,6 @@
                           </Style>
                         </Textbox>
                         <ColSpan>4</ColSpan>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -2354,7 +2354,7 @@ First(Fields!DocNr.Value, "DataSet1"))</Value>
         <Height>17.39843cm</Height>
         <Style />
       </Body>
-      <Width>17.65888cm</Width>
+      <Width>17.7118cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

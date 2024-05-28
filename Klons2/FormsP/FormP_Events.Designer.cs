@@ -30,10 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormP_Events));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,38 +46,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormP_Events));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.filterData1 = new DataObjectsP.FilterData();
             this.dgvFilter = new KlonsLIB.Components.MyDataGridView();
-            this.dgcFilterDate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterDate2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcFilterEvent = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfEvents = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCat1 = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatD = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfCatT = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfDepartments = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
             this.bsfPlaces = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcEventsCM = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bsFilter = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
             this.bsRows = new KlonsLIB.Data.MyBindingSource(this.components);
             this.dgvEvents = new KlonsLIB.Components.MyDataGridView();
-            this.bnavNav = new KlonsLIB.Components.MyBindingNavigator();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbOpenItem = new System.Windows.Forms.ToolStripButton();
-            this.bsRows2 = new System.Windows.Forms.BindingSource(this.components);
             this.dgcEventsXRegNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsXName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +90,27 @@
             this.dgcEventsZU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcEventsIDIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bnavNav = new KlonsLIB.Components.MyBindingNavigator();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbOpenItem = new System.Windows.Forms.ToolStripButton();
+            this.bsRows2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dgcFilterDate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterDate2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcFilterEvent = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCat1 = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCatD = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterCatT = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterDepartment = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcFilterPlace = new KlonsLIB.Components.MyDgvMcComboBoxColumn();
+            this.dgcEventsCM = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsfEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsfCat1)).BeginInit();
@@ -180,69 +180,11 @@
             this.dgvFilter.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilter_CellEndEdit);
             this.dgvFilter.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvFilter_CellParsing);
             // 
-            // dgcFilterDate1
-            // 
-            this.dgcFilterDate1.DataPropertyName = "fDATE1";
-            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
-            this.dgcFilterDate1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcFilterDate1.HeaderText = "Dat.no";
-            this.dgcFilterDate1.MinimumWidth = 9;
-            this.dgcFilterDate1.Name = "dgcFilterDate1";
-            this.dgcFilterDate1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcFilterDate1.ToolTipText = "Datums no";
-            this.dgcFilterDate1.Width = 90;
-            // 
-            // dgcFilterDate2
-            // 
-            this.dgcFilterDate2.DataPropertyName = "fDATE2";
-            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
-            this.dgcFilterDate2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgcFilterDate2.HeaderText = "Dat.līdz";
-            this.dgcFilterDate2.MinimumWidth = 9;
-            this.dgcFilterDate2.Name = "dgcFilterDate2";
-            this.dgcFilterDate2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcFilterDate2.Width = 90;
-            // 
-            // dgcFilterEvent
-            // 
-            this.dgcFilterEvent.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterEvent.ColumnWidths = "100;300";
-            this.dgcFilterEvent.DataPropertyName = "fEVENT";
-            this.dgcFilterEvent.DataSource = this.bsfEvents;
-            this.dgcFilterEvent.DisplayMember = "CODE";
-            this.dgcFilterEvent.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterEvent.HeaderText = "Notikums";
-            this.dgcFilterEvent.MaxDropDownItems = 15;
-            this.dgcFilterEvent.MinimumWidth = 9;
-            this.dgcFilterEvent.Name = "dgcFilterEvent";
-            this.dgcFilterEvent.ValueMember = "ID";
-            this.dgcFilterEvent.Width = 168;
-            // 
             // bsfEvents
             // 
             this.bsfEvents.DataMember = "EVENTS";
             this.bsfEvents.MyDataSource = "KlonsPData";
             this.bsfEvents.Sort = "SNR";
-            // 
-            // dgcFilterCat1
-            // 
-            this.dgcFilterCat1.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCat1.ColumnWidths = "100;300";
-            this.dgcFilterCat1.DataPropertyName = "fCAT1";
-            this.dgcFilterCat1.DataSource = this.bsfCat1;
-            this.dgcFilterCat1.DisplayMember = "CODE";
-            this.dgcFilterCat1.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCat1.HeaderText = "Kat.";
-            this.dgcFilterCat1.MaxDropDownItems = 15;
-            this.dgcFilterCat1.MinimumWidth = 9;
-            this.dgcFilterCat1.Name = "dgcFilterCat1";
-            this.dgcFilterCat1.ToolTipText = "Uzskaites kategorija";
-            this.dgcFilterCat1.ValueMember = "ID";
-            this.dgcFilterCat1.Width = 168;
             // 
             // bsfCat1
             // 
@@ -250,47 +192,11 @@
             this.bsfCat1.MyDataSource = "KlonsPData";
             this.bsfCat1.Sort = "CODE";
             // 
-            // dgcFilterCatD
-            // 
-            this.dgcFilterCatD.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCatD.ColumnWidths = "100;300";
-            this.dgcFilterCatD.DataPropertyName = "fCATD";
-            this.dgcFilterCatD.DataSource = this.bsfCatD;
-            this.dgcFilterCatD.DisplayMember = "CODE";
-            this.dgcFilterCatD.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCatD.HeaderText = "Nol. kat.";
-            this.dgcFilterCatD.MaxDropDownItems = 15;
-            this.dgcFilterCatD.MinimumWidth = 9;
-            this.dgcFilterCatD.Name = "dgcFilterCatD";
-            this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
-            this.dgcFilterCatD.ValueMember = "ID";
-            this.dgcFilterCatD.Width = 168;
-            // 
             // bsfCatD
             // 
             this.bsfCatD.DataMember = "CATD";
             this.bsfCatD.MyDataSource = "KlonsPData";
             this.bsfCatD.Sort = "CODE";
-            // 
-            // dgcFilterCatT
-            // 
-            this.dgcFilterCatT.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterCatT.ColumnWidths = "100;300";
-            this.dgcFilterCatT.DataPropertyName = "fCATT";
-            this.dgcFilterCatT.DataSource = this.bsfCatT;
-            this.dgcFilterCatT.DisplayMember = "CODE";
-            this.dgcFilterCatT.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterCatT.HeaderText = "Nod. nol. kat.";
-            this.dgcFilterCatT.MaxDropDownItems = 15;
-            this.dgcFilterCatT.MinimumWidth = 9;
-            this.dgcFilterCatT.Name = "dgcFilterCatT";
-            this.dgcFilterCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
-            this.dgcFilterCatT.ValueMember = "ID";
-            this.dgcFilterCatT.Width = 168;
             // 
             // bsfCatT
             // 
@@ -298,61 +204,17 @@
             this.bsfCatT.MyDataSource = "KlonsPData";
             this.bsfCatT.Sort = "CODE";
             // 
-            // dgcFilterDepartment
-            // 
-            this.dgcFilterDepartment.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterDepartment.ColumnWidths = "100;300";
-            this.dgcFilterDepartment.DataPropertyName = "fDEPARTMENT";
-            this.dgcFilterDepartment.DataSource = this.bsfDepartments;
-            this.dgcFilterDepartment.DisplayMember = "CODE";
-            this.dgcFilterDepartment.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterDepartment.HeaderText = "Struktūrv.";
-            this.dgcFilterDepartment.MaxDropDownItems = 15;
-            this.dgcFilterDepartment.MinimumWidth = 9;
-            this.dgcFilterDepartment.Name = "dgcFilterDepartment";
-            this.dgcFilterDepartment.ToolTipText = "Struktūrvienība";
-            this.dgcFilterDepartment.ValueMember = "ID";
-            this.dgcFilterDepartment.Width = 168;
-            // 
             // bsfDepartments
             // 
             this.bsfDepartments.DataMember = "DEPARTMENTS";
             this.bsfDepartments.MyDataSource = "KlonsPData";
             this.bsfDepartments.Sort = "CODE";
             // 
-            // dgcFilterPlace
-            // 
-            this.dgcFilterPlace.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.dgcFilterPlace.ColumnWidths = "100;300";
-            this.dgcFilterPlace.DataPropertyName = "fPLACE";
-            this.dgcFilterPlace.DataSource = this.bsfPlaces;
-            this.dgcFilterPlace.DisplayMember = "CODE";
-            this.dgcFilterPlace.DisplayStyleForCurrentCellOnly = true;
-            this.dgcFilterPlace.HeaderText = "Atrodas";
-            this.dgcFilterPlace.MaxDropDownItems = 15;
-            this.dgcFilterPlace.MinimumWidth = 9;
-            this.dgcFilterPlace.Name = "dgcFilterPlace";
-            this.dgcFilterPlace.ValueMember = "ID";
-            this.dgcFilterPlace.Width = 168;
-            // 
             // bsfPlaces
             // 
             this.bsfPlaces.DataMember = "PLACES";
             this.bsfPlaces.MyDataSource = "KlonsPData";
             this.bsfPlaces.Sort = "CODE";
-            // 
-            // dgcEventsCM
-            // 
-            this.dgcEventsCM.HeaderText = "Atlasīt";
-            this.dgcEventsCM.MinimumWidth = 9;
-            this.dgcEventsCM.Name = "dgcEventsCM";
-            this.dgcEventsCM.Text = ">>";
-            this.dgcEventsCM.UseColumnTextForButtonValue = true;
-            this.dgcEventsCM.Width = 67;
             // 
             // bsFilter
             // 
@@ -424,117 +286,6 @@
             this.dgvEvents.Size = new System.Drawing.Size(1181, 343);
             this.dgvEvents.TabIndex = 10;
             this.dgvEvents.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEvents_CellFormatting);
-            // 
-            // bnavNav
-            // 
-            this.bnavNav.AddNewItem = null;
-            this.bnavNav.BindingSource = this.bsRows;
-            this.bnavNav.CountItem = this.bindingNavigatorCountItem;
-            this.bnavNav.CountItemFormat = " no {0}";
-            this.bnavNav.DeleteItem = null;
-            this.bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
-            this.bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.tsbOpenItem});
-            this.bnavNav.Location = new System.Drawing.Point(0, 403);
-            this.bnavNav.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bnavNav.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bnavNav.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bnavNav.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bnavNav.Name = "bnavNav";
-            this.bnavNav.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnavNav.SaveItem = null;
-            this.bnavNav.Size = new System.Drawing.Size(1181, 39);
-            this.bnavNav.TabIndex = 11;
-            this.bnavNav.Text = "myBindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
-            this.bindingNavigatorCountItem.Text = " no {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
-            this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // tsbOpenItem
-            // 
-            this.tsbOpenItem.Image = global::KlonsF.Properties.Resources.open;
-            this.tsbOpenItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbOpenItem.Name = "tsbOpenItem";
-            this.tsbOpenItem.Size = new System.Drawing.Size(289, 34);
-            this.tsbOpenItem.Text = "Uz pamatlīdzekļu sarakstu";
-            this.tsbOpenItem.Click += new System.EventHandler(this.tsbOpenItem_Click);
-            // 
-            // bsRows2
-            // 
-            this.bsRows2.Sort = "DT";
             // 
             // dgcEventsXRegNr
             // 
@@ -885,6 +636,256 @@
             this.dgcEventsIDIT.Visible = false;
             this.dgcEventsIDIT.Width = 168;
             // 
+            // bnavNav
+            // 
+            this.bnavNav.AddNewItem = null;
+            this.bnavNav.BindingSource = this.bsRows;
+            this.bnavNav.CountItem = this.bindingNavigatorCountItem;
+            this.bnavNav.CountItemFormat = " no {0}";
+            this.bnavNav.DeleteItem = null;
+            this.bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            this.bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.tsbOpenItem});
+            this.bnavNav.Location = new System.Drawing.Point(0, 403);
+            this.bnavNav.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bnavNav.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bnavNav.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bnavNav.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bnavNav.Name = "bnavNav";
+            this.bnavNav.PositionItem = this.bindingNavigatorPositionItem;
+            this.bnavNav.SaveItem = null;
+            this.bnavNav.Size = new System.Drawing.Size(1181, 39);
+            this.bnavNav.TabIndex = 11;
+            this.bnavNav.Text = "myBindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
+            this.bindingNavigatorCountItem.Text = " no {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
+            this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
+            this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
+            this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
+            this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
+            // 
+            // tsbOpenItem
+            // 
+            this.tsbOpenItem.Image = global::KlonsF.Properties.Resources.open;
+            this.tsbOpenItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbOpenItem.Name = "tsbOpenItem";
+            this.tsbOpenItem.Size = new System.Drawing.Size(289, 34);
+            this.tsbOpenItem.Text = "Uz pamatlīdzekļu sarakstu";
+            this.tsbOpenItem.Click += new System.EventHandler(this.tsbOpenItem_Click);
+            // 
+            // bsRows2
+            // 
+            this.bsRows2.Sort = "DT";
+            // 
+            // dgcFilterDate1
+            // 
+            this.dgcFilterDate1.DataPropertyName = "fDATE1";
+            dataGridViewCellStyle2.Format = "dd.MM.yyyy";
+            this.dgcFilterDate1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgcFilterDate1.HeaderText = "Dat.no";
+            this.dgcFilterDate1.MinimumWidth = 9;
+            this.dgcFilterDate1.Name = "dgcFilterDate1";
+            this.dgcFilterDate1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcFilterDate1.ToolTipText = "Datums no";
+            this.dgcFilterDate1.Width = 90;
+            // 
+            // dgcFilterDate2
+            // 
+            this.dgcFilterDate2.DataPropertyName = "fDATE2";
+            dataGridViewCellStyle3.Format = "dd.MM.yyyy";
+            this.dgcFilterDate2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgcFilterDate2.HeaderText = "Dat.līdz";
+            this.dgcFilterDate2.MinimumWidth = 9;
+            this.dgcFilterDate2.Name = "dgcFilterDate2";
+            this.dgcFilterDate2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcFilterDate2.Width = 90;
+            // 
+            // dgcFilterEvent
+            // 
+            this.dgcFilterEvent.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterEvent.ColumnWidths = "100;300";
+            this.dgcFilterEvent.DataPropertyName = "fEVENT";
+            this.dgcFilterEvent.DataSource = this.bsfEvents;
+            this.dgcFilterEvent.DisplayMember = "CODE";
+            this.dgcFilterEvent.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterEvent.HeaderText = "Notikums";
+            this.dgcFilterEvent.MaxDropDownItems = 15;
+            this.dgcFilterEvent.MinimumWidth = 9;
+            this.dgcFilterEvent.Name = "dgcFilterEvent";
+            this.dgcFilterEvent.ValueMember = "ID";
+            this.dgcFilterEvent.Width = 140;
+            // 
+            // dgcFilterCat1
+            // 
+            this.dgcFilterCat1.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCat1.ColumnWidths = "100;300";
+            this.dgcFilterCat1.DataPropertyName = "fCAT1";
+            this.dgcFilterCat1.DataSource = this.bsfCat1;
+            this.dgcFilterCat1.DisplayMember = "CODE";
+            this.dgcFilterCat1.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCat1.HeaderText = "Kat.";
+            this.dgcFilterCat1.MaxDropDownItems = 15;
+            this.dgcFilterCat1.MinimumWidth = 9;
+            this.dgcFilterCat1.Name = "dgcFilterCat1";
+            this.dgcFilterCat1.ToolTipText = "Uzskaites kategorija";
+            this.dgcFilterCat1.ValueMember = "ID";
+            this.dgcFilterCat1.Width = 140;
+            // 
+            // dgcFilterCatD
+            // 
+            this.dgcFilterCatD.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCatD.ColumnWidths = "100;300";
+            this.dgcFilterCatD.DataPropertyName = "fCATD";
+            this.dgcFilterCatD.DataSource = this.bsfCatD;
+            this.dgcFilterCatD.DisplayMember = "CODE";
+            this.dgcFilterCatD.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCatD.HeaderText = "Nol. kat.";
+            this.dgcFilterCatD.MaxDropDownItems = 15;
+            this.dgcFilterCatD.MinimumWidth = 9;
+            this.dgcFilterCatD.Name = "dgcFilterCatD";
+            this.dgcFilterCatD.ToolTipText = "Nolietojuma kategorija";
+            this.dgcFilterCatD.ValueMember = "ID";
+            this.dgcFilterCatD.Width = 140;
+            // 
+            // dgcFilterCatT
+            // 
+            this.dgcFilterCatT.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterCatT.ColumnWidths = "100;300";
+            this.dgcFilterCatT.DataPropertyName = "fCATT";
+            this.dgcFilterCatT.DataSource = this.bsfCatT;
+            this.dgcFilterCatT.DisplayMember = "CODE";
+            this.dgcFilterCatT.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterCatT.HeaderText = "Nod. nol. kat.";
+            this.dgcFilterCatT.MaxDropDownItems = 15;
+            this.dgcFilterCatT.MinimumWidth = 9;
+            this.dgcFilterCatT.Name = "dgcFilterCatT";
+            this.dgcFilterCatT.ToolTipText = "Nolietojuma kategorija nodokļu vajadzībām";
+            this.dgcFilterCatT.ValueMember = "ID";
+            this.dgcFilterCatT.Width = 140;
+            // 
+            // dgcFilterDepartment
+            // 
+            this.dgcFilterDepartment.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterDepartment.ColumnWidths = "100;300";
+            this.dgcFilterDepartment.DataPropertyName = "fDEPARTMENT";
+            this.dgcFilterDepartment.DataSource = this.bsfDepartments;
+            this.dgcFilterDepartment.DisplayMember = "CODE";
+            this.dgcFilterDepartment.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterDepartment.HeaderText = "Struktūrv.";
+            this.dgcFilterDepartment.MaxDropDownItems = 15;
+            this.dgcFilterDepartment.MinimumWidth = 9;
+            this.dgcFilterDepartment.Name = "dgcFilterDepartment";
+            this.dgcFilterDepartment.ToolTipText = "Struktūrvienība";
+            this.dgcFilterDepartment.ValueMember = "ID";
+            this.dgcFilterDepartment.Width = 140;
+            // 
+            // dgcFilterPlace
+            // 
+            this.dgcFilterPlace.ColumnNames = new string[] {
+        "CODE",
+        "DESCR"};
+            this.dgcFilterPlace.ColumnWidths = "100;300";
+            this.dgcFilterPlace.DataPropertyName = "fPLACE";
+            this.dgcFilterPlace.DataSource = this.bsfPlaces;
+            this.dgcFilterPlace.DisplayMember = "CODE";
+            this.dgcFilterPlace.DisplayStyleForCurrentCellOnly = true;
+            this.dgcFilterPlace.HeaderText = "Atrodas";
+            this.dgcFilterPlace.MaxDropDownItems = 15;
+            this.dgcFilterPlace.MinimumWidth = 9;
+            this.dgcFilterPlace.Name = "dgcFilterPlace";
+            this.dgcFilterPlace.ValueMember = "ID";
+            this.dgcFilterPlace.Width = 140;
+            // 
+            // dgcEventsCM
+            // 
+            this.dgcEventsCM.HeaderText = "Atlasīt";
+            this.dgcEventsCM.MinimumWidth = 9;
+            this.dgcEventsCM.Name = "dgcEventsCM";
+            this.dgcEventsCM.Text = ">>";
+            this.dgcEventsCM.UseColumnTextForButtonValue = true;
+            this.dgcEventsCM.Width = 67;
+            // 
             // FormP_Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -932,15 +933,6 @@
         private KlonsLIB.Data.MyBindingSource bsfPlaces;
         private KlonsLIB.Data.MyBindingSource bsfEvents;
         private System.Windows.Forms.BindingSource bsRows2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate2;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterEvent;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
-        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
-        private System.Windows.Forms.DataGridViewButtonColumn dgcEventsCM;
         private KlonsLIB.Components.MyBindingNavigator bnavNav;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -982,5 +974,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsZU;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcEventsIDIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcFilterDate2;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterEvent;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCat1;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatD;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterCatT;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterDepartment;
+        private KlonsLIB.Components.MyDgvMcComboBoxColumn dgcFilterPlace;
+        private System.Windows.Forms.DataGridViewButtonColumn dgcEventsCM;
     }
 }
