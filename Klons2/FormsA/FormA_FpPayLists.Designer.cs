@@ -77,29 +77,8 @@
             this.dgcListDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcListID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRows = new KlonsLIB.Components.MyDataGridView();
-            this.dgcRowsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIDP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bsPersons = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcRowsPayDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsDate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsDate2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsTaxTP = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgcRowsIncomeID = new KlonsLIB.Components.MyDgvMcCBColumn();
             this.bsIncomeCodes = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcRowsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsPay0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsSIRateTP = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgcRowsSIRateDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsSIRateDn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsSIDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsSIDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIINExPerc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIINEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIINFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIINRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsIIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsCash = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcRowsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsRows = new KlonsLIB.Data.MyBindingSource2(this.components);
             this.sgrRow = new KlonsLIB.MySourceGrid.MyGrid();
             this.fpPaylistsRowData1 = new DataObjectsA.FpPaylistsRowData();
@@ -142,6 +121,27 @@
             this.maksājumiFiziskāmPersonāmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miShowList = new System.Windows.Forms.ToolStripMenuItem();
             this.miShowPanel = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgcRowsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIDP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgcRowsPayDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsDate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsDate2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsTaxTP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgcRowsIncomeID = new KlonsLIB.Components.MyDgvMcCBColumn();
+            this.dgcRowsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsPay0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsSIRateTP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgcRowsSIRateDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsSIRateDn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsSIDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsSIDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIINExPerc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIINEx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIINFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIINRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsIIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsCash = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcRowsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnavList)).BeginInit();
             this.bnavList.SuspendLayout();
@@ -174,7 +174,7 @@
             this.bnavList.CountItemFormat = " no {0}";
             this.bnavList.DeleteItem = null;
             this.bnavList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavList.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavList.ImageScalingSize = new System.Drawing.Size(23, 26);
             this.bnavList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslGrid,
             this.bindingNavigatorMoveFirstItem,
@@ -189,7 +189,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.tsbSave});
-            this.bnavList.Location = new System.Drawing.Point(0, 420);
+            this.bnavList.Location = new System.Drawing.Point(0, 527);
             this.bnavList.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnavList.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bnavList.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -197,7 +197,7 @@
             this.bnavList.Name = "bnavList";
             this.bnavList.PositionItem = this.bindingNavigatorPositionItem;
             this.bnavList.SaveItem = null;
-            this.bnavList.Size = new System.Drawing.Size(880, 33);
+            this.bnavList.Size = new System.Drawing.Size(990, 39);
             this.bnavList.TabIndex = 0;
             this.bnavList.Text = "myBindingNavigator1";
             this.bnavList.ItemDeleting += new System.ComponentModel.CancelEventHandler(this.bnavList_ItemDeleting);
@@ -205,14 +205,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(69, 29);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(76, 34);
             this.bindingNavigatorCountItem.Text = " no {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Ierakstu skaits";
             // 
             // tslGrid
             // 
             this.tslGrid.Name = "tslGrid";
-            this.tslGrid.Size = new System.Drawing.Size(83, 29);
+            this.tslGrid.Size = new System.Drawing.Size(87, 34);
             this.tslGrid.Text = "Saraksti";
             // 
             // bindingNavigatorMoveFirstItem
@@ -221,7 +221,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(30, 29);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -230,26 +230,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(30, 29);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 30);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Pašreizējā pozīcija";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -257,7 +258,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(30, 29);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -266,20 +267,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(30, 29);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 34);
             this.bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(91, 29);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(92, 34);
             this.bindingNavigatorAddNewItem.Text = "Jauns";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -288,7 +289,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(87, 29);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(93, 34);
             this.bindingNavigatorDeleteItem.Text = "Dzēst";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -298,7 +299,7 @@
             this.tsbSave.Image = global::KlonsF.Properties.Resources.Save1;
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(30, 29);
+            this.tsbSave.Size = new System.Drawing.Size(34, 34);
             this.tsbSave.Text = "Saglabāt";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
@@ -314,19 +315,23 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 29);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 35);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.dgvList);
+            this.splitContainer1.Panel1MinSize = 31;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvRows);
-            this.splitContainer1.Size = new System.Drawing.Size(570, 391);
-            this.splitContainer1.SplitterDistance = 207;
+            this.splitContainer1.Panel2MinSize = 31;
+            this.splitContainer1.Size = new System.Drawing.Size(641, 492);
+            this.splitContainer1.SplitterDistance = 260;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
             // dgvList
@@ -353,10 +358,11 @@
             this.dgvList.DataSource = this.bsList;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.Location = new System.Drawing.Point(0, 0);
+            this.dgvList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvList.Name = "dgvList";
             this.dgvList.RowHeadersWidth = 53;
-            this.dgvList.RowTemplate.Height = 24;
-            this.dgvList.Size = new System.Drawing.Size(570, 207);
+            this.dgvList.RowTemplate.Height = 29;
+            this.dgvList.Size = new System.Drawing.Size(641, 260);
             this.dgvList.TabIndex = 2;
             this.dgvList.MyCheckForChanges += new System.EventHandler(this.dgvList_MyCheckForChanges);
             this.dgvList.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.dgvList_CellParsing);
@@ -374,7 +380,7 @@
             this.dgcListYR.HeaderText = "gads";
             this.dgcListYR.MinimumWidth = 7;
             this.dgcListYR.Name = "dgcListYR";
-            this.dgcListYR.Width = 50;
+            this.dgcListYR.Width = 56;
             // 
             // dgcListMT
             // 
@@ -385,7 +391,7 @@
             this.dgcListMT.MinimumWidth = 7;
             this.dgcListMT.Name = "dgcListMT";
             this.dgcListMT.ToolTipText = "mēnesis";
-            this.dgcListMT.Width = 50;
+            this.dgcListMT.Width = 56;
             // 
             // dgcListSNR
             // 
@@ -395,7 +401,7 @@
             this.dgcListSNR.HeaderText = "nr.";
             this.dgcListSNR.MinimumWidth = 7;
             this.dgcListSNR.Name = "dgcListSNR";
-            this.dgcListSNR.Width = 50;
+            this.dgcListSNR.Width = 56;
             // 
             // dgcListPayDate
             // 
@@ -406,7 +412,7 @@
             this.dgcListPayDate.MinimumWidth = 7;
             this.dgcListPayDate.Name = "dgcListPayDate";
             this.dgcListPayDate.ToolTipText = "maksājuma datums";
-            this.dgcListPayDate.Width = 85;
+            this.dgcListPayDate.Width = 95;
             // 
             // dgcListDescr
             // 
@@ -414,7 +420,7 @@
             this.dgcListDescr.HeaderText = "apraksts";
             this.dgcListDescr.MinimumWidth = 7;
             this.dgcListDescr.Name = "dgcListDescr";
-            this.dgcListDescr.Width = 200;
+            this.dgcListDescr.Width = 225;
             // 
             // dgcListID
             // 
@@ -423,7 +429,7 @@
             this.dgcListID.MinimumWidth = 7;
             this.dgcListID.Name = "dgcListID";
             this.dgcListID.Visible = false;
-            this.dgcListID.Width = 130;
+            this.dgcListID.Width = 146;
             // 
             // dgvRows
             // 
@@ -464,6 +470,7 @@
             this.dgvRows.DataSource = this.bsRows;
             this.dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRows.Location = new System.Drawing.Point(0, 0);
+            this.dgvRows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRows.Name = "dgvRows";
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
@@ -474,8 +481,8 @@
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRows.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvRows.RowHeadersWidth = 53;
-            this.dgvRows.RowTemplate.Height = 24;
-            this.dgvRows.Size = new System.Drawing.Size(570, 180);
+            this.dgvRows.RowTemplate.Height = 29;
+            this.dgvRows.Size = new System.Drawing.Size(641, 227);
             this.dgvRows.TabIndex = 0;
             this.dgvRows.MyKeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvRows_MyKeyDown);
             this.dgvRows.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRows_CellDoubleClick);
@@ -487,274 +494,17 @@
             this.dgvRows.Enter += new System.EventHandler(this.dgvRows_Enter);
             this.dgvRows.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvRows_KeyDown);
             // 
-            // dgcRowsSNR
-            // 
-            this.dgcRowsSNR.DataPropertyName = "SNR";
-            this.dgcRowsSNR.Frozen = true;
-            this.dgcRowsSNR.HeaderText = "npk.";
-            this.dgcRowsSNR.MinimumWidth = 7;
-            this.dgcRowsSNR.Name = "dgcRowsSNR";
-            this.dgcRowsSNR.Width = 50;
-            // 
-            // dgcRowsIDP
-            // 
-            this.dgcRowsIDP.DataPropertyName = "IDP";
-            this.dgcRowsIDP.DataSource = this.bsPersons;
-            this.dgcRowsIDP.DisplayMember = "ZNAME";
-            this.dgcRowsIDP.DisplayStyleForCurrentCellOnly = true;
-            this.dgcRowsIDP.DropDownWidth = 100;
-            this.dgcRowsIDP.Frozen = true;
-            this.dgcRowsIDP.HeaderText = "persona";
-            this.dgcRowsIDP.MaxDropDownItems = 15;
-            this.dgcRowsIDP.MinimumWidth = 7;
-            this.dgcRowsIDP.Name = "dgcRowsIDP";
-            this.dgcRowsIDP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcRowsIDP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcRowsIDP.ValueMember = "ID";
-            this.dgcRowsIDP.Width = 150;
-            // 
             // bsPersons
             // 
             this.bsPersons.DataMember = "PERSONS_FIZ";
             this.bsPersons.Filter = "";
             this.bsPersons.MyDataSource = "KlonsAData";
             // 
-            // dgcRowsPayDate
-            // 
-            this.dgcRowsPayDate.DataPropertyName = "PAYDATE";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Format = "dd.MM.yyyy";
-            this.dgcRowsPayDate.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgcRowsPayDate.HeaderText = "maksājuma datums";
-            this.dgcRowsPayDate.MinimumWidth = 7;
-            this.dgcRowsPayDate.Name = "dgcRowsPayDate";
-            this.dgcRowsPayDate.ToolTipText = "maksājuma datums";
-            this.dgcRowsPayDate.Width = 85;
-            // 
-            // dgcRowsDate1
-            // 
-            this.dgcRowsDate1.DataPropertyName = "DATE1";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Format = "dd.MM.yyyy";
-            this.dgcRowsDate1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgcRowsDate1.HeaderText = "datums no";
-            this.dgcRowsDate1.MinimumWidth = 7;
-            this.dgcRowsDate1.Name = "dgcRowsDate1";
-            this.dgcRowsDate1.Width = 85;
-            // 
-            // dgcRowsDate2
-            // 
-            this.dgcRowsDate2.DataPropertyName = "DATE2";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "dd.MM.yyyy";
-            this.dgcRowsDate2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgcRowsDate2.HeaderText = "datums līdz";
-            this.dgcRowsDate2.MinimumWidth = 7;
-            this.dgcRowsDate2.Name = "dgcRowsDate2";
-            this.dgcRowsDate2.Width = 85;
-            // 
-            // dgcRowsTaxTP
-            // 
-            this.dgcRowsTaxTP.DataPropertyName = "TAX_TP";
-            this.dgcRowsTaxTP.DisplayStyleForCurrentCellOnly = true;
-            this.dgcRowsTaxTP.HeaderText = "nodokļi";
-            this.dgcRowsTaxTP.MinimumWidth = 7;
-            this.dgcRowsTaxTP.Name = "dgcRowsTaxTP";
-            this.dgcRowsTaxTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcRowsTaxTP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcRowsTaxTP.ToolTipText = "piemērotie ndokļi";
-            this.dgcRowsTaxTP.Width = 120;
-            // 
-            // dgcRowsIncomeID
-            // 
-            this.dgcRowsIncomeID.ColumnNames = new string[] {
-        "ID",
-        "DESCR"};
-            this.dgcRowsIncomeID.ColumnWidths = "50;400";
-            this.dgcRowsIncomeID.DataPropertyName = "INCOME_ID";
-            this.dgcRowsIncomeID.DataSource = this.bsIncomeCodes;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcRowsIncomeID.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgcRowsIncomeID.DisplayMember = "ID";
-            this.dgcRowsIncomeID.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.dgcRowsIncomeID.HeaderText = "ien. kods";
-            this.dgcRowsIncomeID.MaxDropDownItems = 15;
-            this.dgcRowsIncomeID.MinimumWidth = 7;
-            this.dgcRowsIncomeID.Name = "dgcRowsIncomeID";
-            this.dgcRowsIncomeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcRowsIncomeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcRowsIncomeID.ToolTipText = "ienākumu veida kods";
-            this.dgcRowsIncomeID.ValueMember = "ID";
-            this.dgcRowsIncomeID.Width = 50;
-            // 
             // bsIncomeCodes
             // 
             this.bsIncomeCodes.DataMember = "INCOME_CODES";
             this.bsIncomeCodes.MyDataSource = "KlonsAData";
             this.bsIncomeCodes.Sort = "ID";
-            // 
-            // dgcRowsDescr
-            // 
-            this.dgcRowsDescr.DataPropertyName = "DESCR";
-            this.dgcRowsDescr.HeaderText = "apraksts";
-            this.dgcRowsDescr.MinimumWidth = 7;
-            this.dgcRowsDescr.Name = "dgcRowsDescr";
-            this.dgcRowsDescr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsDescr.Width = 150;
-            // 
-            // dgcRowsPay0
-            // 
-            this.dgcRowsPay0.DataPropertyName = "PAY0";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N2";
-            this.dgcRowsPay0.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgcRowsPay0.HeaderText = "summa";
-            this.dgcRowsPay0.MinimumWidth = 7;
-            this.dgcRowsPay0.Name = "dgcRowsPay0";
-            this.dgcRowsPay0.Width = 80;
-            // 
-            // dgcRowsSIRateTP
-            // 
-            this.dgcRowsSIRateTP.DataPropertyName = "SIRATETP";
-            this.dgcRowsSIRateTP.DisplayStyleForCurrentCellOnly = true;
-            this.dgcRowsSIRateTP.HeaderText = "SAI likme";
-            this.dgcRowsSIRateTP.MinimumWidth = 7;
-            this.dgcRowsSIRateTP.Name = "dgcRowsSIRateTP";
-            this.dgcRowsSIRateTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcRowsSIRateTP.Width = 120;
-            // 
-            // dgcRowsSIRateDD
-            // 
-            this.dgcRowsSIRateDD.DataPropertyName = "SIRATEDD";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "F2";
-            this.dgcRowsSIRateDD.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgcRowsSIRateDD.HeaderText = "SAI d.d. likme";
-            this.dgcRowsSIRateDD.MinimumWidth = 7;
-            this.dgcRowsSIRateDD.Name = "dgcRowsSIRateDD";
-            this.dgcRowsSIRateDD.ReadOnly = true;
-            this.dgcRowsSIRateDD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsSIRateDD.Width = 70;
-            // 
-            // dgcRowsSIRateDn
-            // 
-            this.dgcRowsSIRateDn.DataPropertyName = "SIRATEDN";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "F2";
-            this.dgcRowsSIRateDn.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgcRowsSIRateDn.HeaderText = "SAI d.ņ. likme";
-            this.dgcRowsSIRateDn.MinimumWidth = 7;
-            this.dgcRowsSIRateDn.Name = "dgcRowsSIRateDn";
-            this.dgcRowsSIRateDn.ReadOnly = true;
-            this.dgcRowsSIRateDn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsSIRateDn.Width = 70;
-            // 
-            // dgcRowsSIDD
-            // 
-            this.dgcRowsSIDD.DataPropertyName = "SIDD";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "N2";
-            this.dgcRowsSIDD.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgcRowsSIDD.HeaderText = "SAI d.d. summa";
-            this.dgcRowsSIDD.MinimumWidth = 7;
-            this.dgcRowsSIDD.Name = "dgcRowsSIDD";
-            this.dgcRowsSIDD.ReadOnly = true;
-            this.dgcRowsSIDD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsSIDD.Width = 80;
-            // 
-            // dgcRowsSIDN
-            // 
-            this.dgcRowsSIDN.DataPropertyName = "SIDN";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N2";
-            this.dgcRowsSIDN.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dgcRowsSIDN.HeaderText = "SAI d.n. summa";
-            this.dgcRowsSIDN.MinimumWidth = 7;
-            this.dgcRowsSIDN.Name = "dgcRowsSIDN";
-            this.dgcRowsSIDN.ReadOnly = true;
-            this.dgcRowsSIDN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsSIDN.Width = 80;
-            // 
-            // dgcRowsIINExPerc
-            // 
-            this.dgcRowsIINExPerc.DataPropertyName = "IINEX_PERC";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgcRowsIINExPerc.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dgcRowsIINExPerc.HeaderText = "izm. %";
-            this.dgcRowsIINExPerc.MinimumWidth = 7;
-            this.dgcRowsIINExPerc.Name = "dgcRowsIINExPerc";
-            this.dgcRowsIINExPerc.ToolTipText = "attaisnotās izmaksas %";
-            this.dgcRowsIINExPerc.Width = 60;
-            // 
-            // dgcRowsIINEx
-            // 
-            this.dgcRowsIINEx.DataPropertyName = "IINEX";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle17.Format = "N2";
-            this.dgcRowsIINEx.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dgcRowsIINEx.HeaderText = "izm. €";
-            this.dgcRowsIINEx.MinimumWidth = 7;
-            this.dgcRowsIINEx.Name = "dgcRowsIINEx";
-            this.dgcRowsIINEx.ToolTipText = "ataaisnotās izmaksas €";
-            this.dgcRowsIINEx.Width = 80;
-            // 
-            // dgcRowsIINFrom
-            // 
-            this.dgcRowsIINFrom.DataPropertyName = "IIN_FROM";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle18.Format = "N2";
-            this.dgcRowsIINFrom.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dgcRowsIINFrom.HeaderText = "apliek. summa";
-            this.dgcRowsIINFrom.MinimumWidth = 7;
-            this.dgcRowsIINFrom.Name = "dgcRowsIINFrom";
-            this.dgcRowsIINFrom.ReadOnly = true;
-            this.dgcRowsIINFrom.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgcRowsIINFrom.ToolTipText = "ar IIN apliekamā summa";
-            this.dgcRowsIINFrom.Width = 80;
-            // 
-            // dgcRowsIINRate
-            // 
-            this.dgcRowsIINRate.DataPropertyName = "IIN_RATE";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "F2";
-            this.dgcRowsIINRate.DefaultCellStyle = dataGridViewCellStyle19;
-            this.dgcRowsIINRate.HeaderText = "IIN likme";
-            this.dgcRowsIINRate.MinimumWidth = 7;
-            this.dgcRowsIINRate.Name = "dgcRowsIINRate";
-            this.dgcRowsIINRate.Width = 80;
-            // 
-            // dgcRowsIIN
-            // 
-            this.dgcRowsIIN.DataPropertyName = "IIN";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "N2";
-            this.dgcRowsIIN.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dgcRowsIIN.HeaderText = "IIN";
-            this.dgcRowsIIN.MinimumWidth = 7;
-            this.dgcRowsIIN.Name = "dgcRowsIIN";
-            this.dgcRowsIIN.ReadOnly = true;
-            this.dgcRowsIIN.Width = 80;
-            // 
-            // dgcRowsCash
-            // 
-            this.dgcRowsCash.DataPropertyName = "CASH";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "N2";
-            this.dgcRowsCash.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dgcRowsCash.HeaderText = "izmaksai";
-            this.dgcRowsCash.MinimumWidth = 7;
-            this.dgcRowsCash.Name = "dgcRowsCash";
-            this.dgcRowsCash.ReadOnly = true;
-            this.dgcRowsCash.Width = 80;
-            // 
-            // dgcRowsID
-            // 
-            this.dgcRowsID.DataPropertyName = "ID";
-            this.dgcRowsID.HeaderText = "ID";
-            this.dgcRowsID.MinimumWidth = 7;
-            this.dgcRowsID.Name = "dgcRowsID";
-            this.dgcRowsID.Visible = false;
-            this.dgcRowsID.Width = 130;
             // 
             // bsRows
             // 
@@ -768,9 +518,11 @@
             this.sgrRow.ColumnWidth1 = 15;
             this.sgrRow.ColumnWidth2 = 130;
             this.sgrRow.ColumnWidth3 = 150;
+            this.sgrRow.DefaultHeight = 25;
             this.sgrRow.Dock = System.Windows.Forms.DockStyle.Right;
             this.sgrRow.EnableSort = true;
-            this.sgrRow.Location = new System.Drawing.Point(570, 29);
+            this.sgrRow.Location = new System.Drawing.Point(641, 35);
+            this.sgrRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sgrRow.MyDataBC = this.fpPaylistsRowData1;
             this.sgrRow.Name = "sgrRow";
             this.sgrRow.OptimizeMode = SourceGrid.CellOptimizeMode.ForRows;
@@ -807,7 +559,7 @@
             this.sgrRow.RowTemplateList.Add(this.rwtDecimalReadOnly);
             this.sgrRow.RowTemplateList.Add(this.rwtDate);
             this.sgrRow.SelectionMode = SourceGrid.GridSelectionMode.Cell;
-            this.sgrRow.Size = new System.Drawing.Size(310, 391);
+            this.sgrRow.Size = new System.Drawing.Size(349, 492);
             this.sgrRow.TabIndex = 3;
             this.sgrRow.TabStop = true;
             this.sgrRow.ToolTipText = "";
@@ -927,7 +679,6 @@
             // 
             this.rwPK.AllowNull = true;
             this.rwPK.CustomConversions = true;
-            this.rwPK.DataMember = null;
             this.rwPK.EditorTemplateName = "";
             this.rwPK.GridPropertyName = "_IDP";
             this.rwPK.Name = "rwPK";
@@ -1026,7 +777,6 @@
             // rwIncomeStr
             // 
             this.rwIncomeStr.CustomConversions = true;
-            this.rwIncomeStr.DataMember = null;
             this.rwIncomeStr.EditorTemplateName = "";
             this.rwIncomeStr.GridPropertyName = "_INCOME_ID";
             this.rwIncomeStr.Name = "rwIncomeStr";
@@ -1177,6 +927,7 @@
             // 
             // rwtStringReadOnly
             // 
+            this.rwtStringReadOnly.DataMember = null;
             this.rwtStringReadOnly.Name = "rwtStringReadOnly";
             this.rwtStringReadOnly.ReadOnly = true;
             this.rwtStringReadOnly.RowTitle = null;
@@ -1185,19 +936,20 @@
             // rwtString
             // 
             this.rwtString.AllowNull = true;
+            this.rwtString.DataMember = null;
             this.rwtString.Name = "rwtString";
             this.rwtString.RowTitle = null;
             this.rwtString.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // rwtDecimal
             // 
+            this.rwtDecimal.DataMember = null;
             this.rwtDecimal.Name = "rwtDecimal";
             this.rwtDecimal.RowTitle = null;
             this.rwtDecimal.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Decimal;
             // 
             // rwtDecimalReadOnly
             // 
-            this.rwtDecimalReadOnly.DataMember = null;
             this.rwtDecimalReadOnly.Name = "rwtDecimalReadOnly";
             this.rwtDecimalReadOnly.ReadOnly = true;
             this.rwtDecimalReadOnly.RowTitle = null;
@@ -1205,26 +957,25 @@
             // 
             // rwtDate
             // 
-            this.rwtDate.DataMember = null;
             this.rwtDate.Name = "rwtDate";
             this.rwtDate.RowTitle = null;
             this.rwtDate.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Date;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslPeriod});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(880, 29);
+            this.toolStrip1.Size = new System.Drawing.Size(990, 35);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tslPeriod
             // 
             this.tslPeriod.Name = "tslPeriod";
-            this.tslPeriod.Size = new System.Drawing.Size(84, 25);
+            this.tslPeriod.Size = new System.Drawing.Size(89, 30);
             this.tslPeriod.Text = "Periods:";
             // 
             // cbLists
@@ -1237,30 +988,33 @@
             this.cbLists.DataSource = this.bsList;
             this.cbLists.DisplayMember = "DESCR";
             this.cbLists.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLists.DropDownHeight = 136;
+            this.cbLists.DropDownHeight = 168;
             this.cbLists.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            this.cbLists.DropDownWidth = 354;
+            this.cbLists.DropDownWidth = 402;
             this.cbLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLists.FormattingEnabled = true;
             this.cbLists.GridLineColor = System.Drawing.Color.LightGray;
             this.cbLists.GridLineHorizontal = false;
             this.cbLists.GridLineVertical = false;
             this.cbLists.IntegralHeight = false;
-            this.cbLists.Location = new System.Drawing.Point(235, 0);
+            this.cbLists.Location = new System.Drawing.Point(264, 0);
+            this.cbLists.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbLists.Name = "cbLists";
-            this.cbLists.Size = new System.Drawing.Size(310, 23);
+            this.cbLists.Size = new System.Drawing.Size(348, 27);
             this.cbLists.TabIndex = 5;
             this.cbLists.ValueMember = "ID";
             this.cbLists.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cbLists_Format);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.maksājumiFiziskāmPersonāmToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(875, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 41);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -1271,28 +1025,288 @@
             this.miShowList,
             this.miShowPanel});
             this.maksājumiFiziskāmPersonāmToolStripMenuItem.Name = "maksājumiFiziskāmPersonāmToolStripMenuItem";
-            this.maksājumiFiziskāmPersonāmToolStripMenuItem.Size = new System.Drawing.Size(287, 29);
+            this.maksājumiFiziskāmPersonāmToolStripMenuItem.Size = new System.Drawing.Size(318, 37);
             this.maksājumiFiziskāmPersonāmToolStripMenuItem.Text = "Maksājumi fiziskām personām";
             // 
             // miShowList
             // 
             this.miShowList.Name = "miShowList";
-            this.miShowList.Size = new System.Drawing.Size(371, 30);
+            this.miShowList.Size = new System.Drawing.Size(411, 38);
             this.miShowList.Text = "Rādīt maksājumu lapu sarakstu";
             this.miShowList.Click += new System.EventHandler(this.miShowList_Click);
             // 
             // miShowPanel
             // 
             this.miShowPanel.Name = "miShowPanel";
-            this.miShowPanel.Size = new System.Drawing.Size(371, 30);
+            this.miShowPanel.Size = new System.Drawing.Size(411, 38);
             this.miShowPanel.Text = "Rādīt datu paneli";
             this.miShowPanel.Click += new System.EventHandler(this.miShowPanel_Click);
             // 
-            // Form_FpPayLists
+            // dgcRowsSNR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.dgcRowsSNR.DataPropertyName = "SNR";
+            this.dgcRowsSNR.Frozen = true;
+            this.dgcRowsSNR.HeaderText = "npk.";
+            this.dgcRowsSNR.MinimumWidth = 7;
+            this.dgcRowsSNR.Name = "dgcRowsSNR";
+            this.dgcRowsSNR.Width = 56;
+            // 
+            // dgcRowsIDP
+            // 
+            this.dgcRowsIDP.DataPropertyName = "IDP";
+            this.dgcRowsIDP.DataSource = this.bsPersons;
+            this.dgcRowsIDP.DisplayMember = "ZNAME";
+            this.dgcRowsIDP.DisplayStyleForCurrentCellOnly = true;
+            this.dgcRowsIDP.DropDownWidth = 100;
+            this.dgcRowsIDP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dgcRowsIDP.Frozen = true;
+            this.dgcRowsIDP.HeaderText = "persona";
+            this.dgcRowsIDP.MaxDropDownItems = 15;
+            this.dgcRowsIDP.MinimumWidth = 7;
+            this.dgcRowsIDP.Name = "dgcRowsIDP";
+            this.dgcRowsIDP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRowsIDP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcRowsIDP.ValueMember = "ID";
+            this.dgcRowsIDP.Width = 168;
+            // 
+            // dgcRowsPayDate
+            // 
+            this.dgcRowsPayDate.DataPropertyName = "PAYDATE";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "dd.MM.yyyy";
+            this.dgcRowsPayDate.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgcRowsPayDate.HeaderText = "maksājuma datums";
+            this.dgcRowsPayDate.MinimumWidth = 7;
+            this.dgcRowsPayDate.Name = "dgcRowsPayDate";
+            this.dgcRowsPayDate.ToolTipText = "maksājuma datums";
+            this.dgcRowsPayDate.Width = 95;
+            // 
+            // dgcRowsDate1
+            // 
+            this.dgcRowsDate1.DataPropertyName = "DATE1";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Format = "dd.MM.yyyy";
+            this.dgcRowsDate1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgcRowsDate1.HeaderText = "datums no";
+            this.dgcRowsDate1.MinimumWidth = 7;
+            this.dgcRowsDate1.Name = "dgcRowsDate1";
+            this.dgcRowsDate1.Width = 95;
+            // 
+            // dgcRowsDate2
+            // 
+            this.dgcRowsDate2.DataPropertyName = "DATE2";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "dd.MM.yyyy";
+            this.dgcRowsDate2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgcRowsDate2.HeaderText = "datums līdz";
+            this.dgcRowsDate2.MinimumWidth = 7;
+            this.dgcRowsDate2.Name = "dgcRowsDate2";
+            this.dgcRowsDate2.Width = 95;
+            // 
+            // dgcRowsTaxTP
+            // 
+            this.dgcRowsTaxTP.DataPropertyName = "TAX_TP";
+            this.dgcRowsTaxTP.DisplayStyleForCurrentCellOnly = true;
+            this.dgcRowsTaxTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dgcRowsTaxTP.HeaderText = "nodokļi";
+            this.dgcRowsTaxTP.MinimumWidth = 7;
+            this.dgcRowsTaxTP.Name = "dgcRowsTaxTP";
+            this.dgcRowsTaxTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRowsTaxTP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcRowsTaxTP.ToolTipText = "piemērotie ndokļi";
+            this.dgcRowsTaxTP.Width = 135;
+            // 
+            // dgcRowsIncomeID
+            // 
+            this.dgcRowsIncomeID.ColumnNames = new string[] {
+        "ID",
+        "DESCR"};
+            this.dgcRowsIncomeID.ColumnWidths = "50;400";
+            this.dgcRowsIncomeID.DataPropertyName = "INCOME_ID";
+            this.dgcRowsIncomeID.DataSource = this.bsIncomeCodes;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcRowsIncomeID.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgcRowsIncomeID.DisplayMember = "ID";
+            this.dgcRowsIncomeID.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
+            this.dgcRowsIncomeID.HeaderText = "ien. kods";
+            this.dgcRowsIncomeID.MaxDropDownItems = 15;
+            this.dgcRowsIncomeID.MinimumWidth = 7;
+            this.dgcRowsIncomeID.Name = "dgcRowsIncomeID";
+            this.dgcRowsIncomeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRowsIncomeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcRowsIncomeID.ToolTipText = "ienākumu veida kods";
+            this.dgcRowsIncomeID.ValueMember = "ID";
+            this.dgcRowsIncomeID.Width = 56;
+            // 
+            // dgcRowsDescr
+            // 
+            this.dgcRowsDescr.DataPropertyName = "DESCR";
+            this.dgcRowsDescr.HeaderText = "apraksts";
+            this.dgcRowsDescr.MinimumWidth = 7;
+            this.dgcRowsDescr.Name = "dgcRowsDescr";
+            this.dgcRowsDescr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsDescr.Width = 168;
+            // 
+            // dgcRowsPay0
+            // 
+            this.dgcRowsPay0.DataPropertyName = "PAY0";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.dgcRowsPay0.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgcRowsPay0.HeaderText = "summa";
+            this.dgcRowsPay0.MinimumWidth = 7;
+            this.dgcRowsPay0.Name = "dgcRowsPay0";
+            this.dgcRowsPay0.Width = 90;
+            // 
+            // dgcRowsSIRateTP
+            // 
+            this.dgcRowsSIRateTP.DataPropertyName = "SIRATETP";
+            this.dgcRowsSIRateTP.DisplayStyleForCurrentCellOnly = true;
+            this.dgcRowsSIRateTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dgcRowsSIRateTP.HeaderText = "SAI likme";
+            this.dgcRowsSIRateTP.MinimumWidth = 7;
+            this.dgcRowsSIRateTP.Name = "dgcRowsSIRateTP";
+            this.dgcRowsSIRateTP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcRowsSIRateTP.Width = 135;
+            // 
+            // dgcRowsSIRateDD
+            // 
+            this.dgcRowsSIRateDD.DataPropertyName = "SIRATEDD";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "F2";
+            this.dgcRowsSIRateDD.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgcRowsSIRateDD.HeaderText = "SAI d.d. likme";
+            this.dgcRowsSIRateDD.MinimumWidth = 7;
+            this.dgcRowsSIRateDD.Name = "dgcRowsSIRateDD";
+            this.dgcRowsSIRateDD.ReadOnly = true;
+            this.dgcRowsSIRateDD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsSIRateDD.Width = 78;
+            // 
+            // dgcRowsSIRateDn
+            // 
+            this.dgcRowsSIRateDn.DataPropertyName = "SIRATEDN";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "F2";
+            this.dgcRowsSIRateDn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgcRowsSIRateDn.HeaderText = "SAI d.ņ. likme";
+            this.dgcRowsSIRateDn.MinimumWidth = 7;
+            this.dgcRowsSIRateDn.Name = "dgcRowsSIRateDn";
+            this.dgcRowsSIRateDn.ReadOnly = true;
+            this.dgcRowsSIRateDn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsSIRateDn.Width = 78;
+            // 
+            // dgcRowsSIDD
+            // 
+            this.dgcRowsSIDD.DataPropertyName = "SIDD";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "N2";
+            this.dgcRowsSIDD.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgcRowsSIDD.HeaderText = "SAI d.d. summa";
+            this.dgcRowsSIDD.MinimumWidth = 7;
+            this.dgcRowsSIDD.Name = "dgcRowsSIDD";
+            this.dgcRowsSIDD.ReadOnly = true;
+            this.dgcRowsSIDD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsSIDD.Width = 90;
+            // 
+            // dgcRowsSIDN
+            // 
+            this.dgcRowsSIDN.DataPropertyName = "SIDN";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.Format = "N2";
+            this.dgcRowsSIDN.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgcRowsSIDN.HeaderText = "SAI d.n. summa";
+            this.dgcRowsSIDN.MinimumWidth = 7;
+            this.dgcRowsSIDN.Name = "dgcRowsSIDN";
+            this.dgcRowsSIDN.ReadOnly = true;
+            this.dgcRowsSIDN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsSIDN.Width = 90;
+            // 
+            // dgcRowsIINExPerc
+            // 
+            this.dgcRowsIINExPerc.DataPropertyName = "IINEX_PERC";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgcRowsIINExPerc.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgcRowsIINExPerc.HeaderText = "izm. %";
+            this.dgcRowsIINExPerc.MinimumWidth = 7;
+            this.dgcRowsIINExPerc.Name = "dgcRowsIINExPerc";
+            this.dgcRowsIINExPerc.ToolTipText = "attaisnotās izmaksas %";
+            this.dgcRowsIINExPerc.Width = 67;
+            // 
+            // dgcRowsIINEx
+            // 
+            this.dgcRowsIINEx.DataPropertyName = "IINEX";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            this.dgcRowsIINEx.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgcRowsIINEx.HeaderText = "izm. €";
+            this.dgcRowsIINEx.MinimumWidth = 7;
+            this.dgcRowsIINEx.Name = "dgcRowsIINEx";
+            this.dgcRowsIINEx.ToolTipText = "ataaisnotās izmaksas €";
+            this.dgcRowsIINEx.Width = 90;
+            // 
+            // dgcRowsIINFrom
+            // 
+            this.dgcRowsIINFrom.DataPropertyName = "IIN_FROM";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.Format = "N2";
+            this.dgcRowsIINFrom.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dgcRowsIINFrom.HeaderText = "apliek. summa";
+            this.dgcRowsIINFrom.MinimumWidth = 7;
+            this.dgcRowsIINFrom.Name = "dgcRowsIINFrom";
+            this.dgcRowsIINFrom.ReadOnly = true;
+            this.dgcRowsIINFrom.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgcRowsIINFrom.ToolTipText = "ar IIN apliekamā summa";
+            this.dgcRowsIINFrom.Width = 90;
+            // 
+            // dgcRowsIINRate
+            // 
+            this.dgcRowsIINRate.DataPropertyName = "IIN_RATE";
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.Format = "F2";
+            this.dgcRowsIINRate.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dgcRowsIINRate.HeaderText = "IIN likme";
+            this.dgcRowsIINRate.MinimumWidth = 7;
+            this.dgcRowsIINRate.Name = "dgcRowsIINRate";
+            this.dgcRowsIINRate.Width = 90;
+            // 
+            // dgcRowsIIN
+            // 
+            this.dgcRowsIIN.DataPropertyName = "IIN";
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.Format = "N2";
+            this.dgcRowsIIN.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dgcRowsIIN.HeaderText = "IIN";
+            this.dgcRowsIIN.MinimumWidth = 7;
+            this.dgcRowsIIN.Name = "dgcRowsIIN";
+            this.dgcRowsIIN.ReadOnly = true;
+            this.dgcRowsIIN.Width = 90;
+            // 
+            // dgcRowsCash
+            // 
+            this.dgcRowsCash.DataPropertyName = "CASH";
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "N2";
+            this.dgcRowsCash.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dgcRowsCash.HeaderText = "izmaksai";
+            this.dgcRowsCash.MinimumWidth = 7;
+            this.dgcRowsCash.Name = "dgcRowsCash";
+            this.dgcRowsCash.ReadOnly = true;
+            this.dgcRowsCash.Width = 90;
+            // 
+            // dgcRowsID
+            // 
+            this.dgcRowsID.DataPropertyName = "ID";
+            this.dgcRowsID.HeaderText = "ID";
+            this.dgcRowsID.MinimumWidth = 7;
+            this.dgcRowsID.Name = "dgcRowsID";
+            this.dgcRowsID.Visible = false;
+            this.dgcRowsID.Width = 146;
+            // 
+            // FormA_FpPayLists
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 453);
+            this.ClientSize = new System.Drawing.Size(990, 566);
             this.Controls.Add(this.cbLists);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.sgrRow);
@@ -1300,7 +1314,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form_FpPayLists";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormA_FpPayLists";
             this.Text = "Maksājumu saraksti";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_FpPayLists_FormClosed);
             this.Load += new System.EventHandler(this.Form_FpPayLists_Load);

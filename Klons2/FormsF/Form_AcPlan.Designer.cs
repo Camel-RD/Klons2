@@ -39,10 +39,6 @@ namespace KlonsF.Forms
             this.bsAcPlan = new KlonsLIB.Data.MyBindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.dgvAcp21 = new KlonsLIB.Components.MyDataGridView();
-            this.dgcAc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcId1 = new KlonsLIB.Components.MyDgvMcCBColumn();
-            this.dgcId2 = new KlonsLIB.Components.MyDgvMcCBColumn();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -58,6 +54,10 @@ namespace KlonsF.Forms
             this.tbSearch = new KlonsLIB.Components.MyTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgcAc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcId1 = new KlonsLIB.Components.MyDgvMcCBColumn();
+            this.dgcId2 = new KlonsLIB.Components.MyDgvMcCBColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bnavAcp21)).BeginInit();
             this.bnavAcp21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsAcPlan)).BeginInit();
@@ -154,60 +154,6 @@ namespace KlonsF.Forms
             this.dgvAcp21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.acP21DataGridView_KeyDown);
             this.dgvAcp21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.acP21DataGridView_KeyPress);
             // 
-            // dgcAc
-            // 
-            this.dgcAc.DataPropertyName = "AC";
-            this.dgcAc.HeaderText = "kods";
-            this.dgcAc.MinimumWidth = 7;
-            this.dgcAc.Name = "dgcAc";
-            this.dgcAc.Width = 72;
-            // 
-            // dgcName
-            // 
-            this.dgcName.DataPropertyName = "Name";
-            this.dgcName.HeaderText = "nosaukums";
-            this.dgcName.MinimumWidth = 7;
-            this.dgcName.Name = "dgcName";
-            this.dgcName.Width = 562;
-            // 
-            // dgcId1
-            // 
-            this.dgcId1.ColumnWidths = "50;100";
-            this.dgcId1.DataPropertyName = "id1";
-            this.dgcId1.DisplayMember = "col1";
-            this.dgcId1.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.dgcId1.HeaderText = "paz.np.";
-            this.dgcId1.ItemStrings = new string[] {
-        "BA;banka",
-        "CN;cita nauda",
-        "KA;kase"};
-            this.dgcId1.MaxDropDownItems = 15;
-            this.dgcId1.MinimumWidth = 7;
-            this.dgcId1.Name = "dgcId1";
-            this.dgcId1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcId1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcId1.ToolTipText = "pazīme naudas plūsmai";
-            this.dgcId1.ValueMember = "col1";
-            this.dgcId1.Width = 90;
-            // 
-            // dgcId2
-            // 
-            this.dgcId2.ColumnWidths = "50;100";
-            this.dgcId2.DataPropertyName = "id2";
-            this.dgcId2.DisplayMember = "col1";
-            this.dgcId2.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.dgcId2.HeaderText = "paz.2";
-            this.dgcId2.ItemStrings = new string[] {
-        "DB;debitoriem",
-        "KR;kreditoriem"};
-            this.dgcId2.MaxDropDownItems = 15;
-            this.dgcId2.MinimumWidth = 7;
-            this.dgcId2.Name = "dgcId2";
-            this.dgcId2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcId2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgcId2.ValueMember = "col1";
-            this.dgcId2.Width = 90;
-            // 
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
@@ -244,6 +190,7 @@ namespace KlonsF.Forms
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(46, 37);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -339,6 +286,66 @@ namespace KlonsF.Forms
             this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "meklēt:";
+            // 
+            // dgcAc
+            // 
+            this.dgcAc.DataPropertyName = "AC";
+            this.dgcAc.HeaderText = "kods";
+            this.dgcAc.MinimumWidth = 7;
+            this.dgcAc.Name = "dgcAc";
+            this.dgcAc.Width = 72;
+            // 
+            // dgcName
+            // 
+            this.dgcName.DataPropertyName = "Name";
+            this.dgcName.HeaderText = "nosaukums";
+            this.dgcName.MinimumWidth = 7;
+            this.dgcName.Name = "dgcName";
+            this.dgcName.Width = 562;
+            // 
+            // dgcId1
+            // 
+            this.dgcId1.ColumnNames = new string[] {
+        "col1",
+        "col2"};
+            this.dgcId1.ColumnWidths = "50;100";
+            this.dgcId1.DataPropertyName = "id1";
+            this.dgcId1.DisplayMember = "col1";
+            this.dgcId1.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
+            this.dgcId1.HeaderText = "paz.np.";
+            this.dgcId1.ItemStrings = new string[] {
+        "BA;banka",
+        "CN;cita nauda",
+        "KA;kase"};
+            this.dgcId1.MaxDropDownItems = 15;
+            this.dgcId1.MinimumWidth = 7;
+            this.dgcId1.Name = "dgcId1";
+            this.dgcId1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcId1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcId1.ToolTipText = "pazīme naudas plūsmai";
+            this.dgcId1.ValueMember = "col1";
+            this.dgcId1.Width = 90;
+            // 
+            // dgcId2
+            // 
+            this.dgcId2.ColumnNames = new string[] {
+        "col1",
+        "col2"};
+            this.dgcId2.ColumnWidths = "50;100";
+            this.dgcId2.DataPropertyName = "id2";
+            this.dgcId2.DisplayMember = "col1";
+            this.dgcId2.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
+            this.dgcId2.HeaderText = "paz.2";
+            this.dgcId2.ItemStrings = new string[] {
+        "DB;debitoriem",
+        "KR;kreditoriem"};
+            this.dgcId2.MaxDropDownItems = 15;
+            this.dgcId2.MinimumWidth = 7;
+            this.dgcId2.Name = "dgcId2";
+            this.dgcId2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcId2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcId2.ValueMember = "col1";
+            this.dgcId2.Width = 90;
             // 
             // Form_AcPlan
             // 

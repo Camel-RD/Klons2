@@ -1838,13 +1838,14 @@ namespace KlonsF.Forms
 
         private void dgvDocs_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
         {
-
             if (e.ColumnIndex == dgcDocsDate.Index)
             {
                 if (e.Value == null || e.Value == DBNull.Value) return;
                 if (!(e.Value is string)) return;
                 string s = (string) e.Value;
                 if (string.IsNullOrEmpty(s)) return;
+                if (lastDate == DateTime.MinValue)
+                    lastDate = DateTime.Today;
                 DateTime dt;
                 if (Utils.StringToDate(s, out dt))
                 {

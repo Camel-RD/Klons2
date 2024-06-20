@@ -46,7 +46,7 @@ namespace KlonsA.Forms
             this.dgcLName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcBirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcPK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcUsed = new MyDgvCheckBoxColumn();
+            this.dgcUsed = new KlonsLIB.Components.MyDgvCheckBoxColumn();
             this.dgcUsedDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcUsedDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bnavNav = new KlonsLIB.Components.MyBindingNavigator();
@@ -72,14 +72,14 @@ namespace KlonsA.Forms
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvAmati = new KlonsLIB.Components.MyDataGridView();
+            this.bsDep = new KlonsLIB.Data.MyBindingSource(this.components);
+            this.bsAmati = new KlonsLIB.Data.MyBindingSource2(this.components);
             this.dgcAmatiID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcAmatiTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcAmatiDep = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bsDep = new KlonsLIB.Data.MyBindingSource(this.components);
-            this.dgcAmatiUsed = new MyDgvCheckBoxColumn();
+            this.dgcAmatiUsed = new KlonsLIB.Components.MyDgvCheckBoxColumn();
             this.dgcAmatiUsedDt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcAmatiUsedDt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsAmati = new KlonsLIB.Data.MyBindingSource2(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnavNav)).BeginInit();
@@ -308,6 +308,7 @@ namespace KlonsA.Forms
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -394,7 +395,7 @@ namespace KlonsA.Forms
             this.cbActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbActive.DropDownHeight = 168;
             this.cbActive.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
-            this.cbActive.DropDownWidth = 105;
+            this.cbActive.DropDownWidth = 94;
             this.cbActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbActive.FormattingEnabled = true;
             this.cbActive.GridLineColor = System.Drawing.Color.LightGray;
@@ -508,6 +509,19 @@ namespace KlonsA.Forms
             this.dgvAmati.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvAmati_KeyDown);
             this.dgvAmati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvAmati_KeyPress);
             // 
+            // bsDep
+            // 
+            this.bsDep.DataMember = "DEPARTMENTS";
+            this.bsDep.MyDataSource = "KlonsAData";
+            this.bsDep.Name2 = "bsDep";
+            // 
+            // bsAmati
+            // 
+            this.bsAmati.DataMember = "FK_POSITIONS_IDP";
+            this.bsAmati.DataSource = this.bsPersons;
+            this.bsAmati.UseDataGridView = this.dgvAmati;
+            this.bsAmati.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.bsAmati_ListChanged);
+            // 
             // dgcAmatiID
             // 
             this.dgcAmatiID.DataPropertyName = "ID";
@@ -531,6 +545,7 @@ namespace KlonsA.Forms
             this.dgcAmatiDep.DataSource = this.bsDep;
             this.dgcAmatiDep.DisplayMember = "ID";
             this.dgcAmatiDep.DisplayStyleForCurrentCellOnly = true;
+            this.dgcAmatiDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgcAmatiDep.HeaderText = "struktūrv.";
             this.dgcAmatiDep.MinimumWidth = 9;
             this.dgcAmatiDep.Name = "dgcAmatiDep";
@@ -538,12 +553,6 @@ namespace KlonsA.Forms
             this.dgcAmatiDep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgcAmatiDep.ValueMember = "ID";
             this.dgcAmatiDep.Width = 225;
-            // 
-            // bsDep
-            // 
-            this.bsDep.DataMember = "DEPARTMENTS";
-            this.bsDep.MyDataSource = "KlonsAData";
-            this.bsDep.Name2 = "bsDep";
             // 
             // dgcAmatiUsed
             // 
@@ -579,14 +588,7 @@ namespace KlonsA.Forms
             this.dgcAmatiUsedDt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgcAmatiUsedDt2.Width = 95;
             // 
-            // bsAmati
-            // 
-            this.bsAmati.DataMember = "FK_POSITIONS_IDP";
-            this.bsAmati.DataSource = this.bsPersons;
-            this.bsAmati.UseDataGridView = this.dgvAmati;
-            this.bsAmati.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.bsAmati_ListChanged);
-            // 
-            // Form_Persons
+            // FormA_Persons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -598,7 +600,7 @@ namespace KlonsA.Forms
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.bnavNav);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form_Persons";
+            this.Name = "FormA_Persons";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Darbinieku saraksts";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Persons_FormClosed);

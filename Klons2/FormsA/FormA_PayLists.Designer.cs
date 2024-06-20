@@ -820,6 +820,7 @@
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(56, 37);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -916,6 +917,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.maksājumuSarakstiToolStripMenuItem});
@@ -1341,6 +1343,7 @@
             // grRowLName
             // 
             this.grRowLName.CustomConversions = true;
+            this.grRowLName.DataMember = null;
             this.grRowLName.GridPropertyName = "_IDP";
             this.grRowLName.Name = "grRowLName";
             this.grRowLName.ReadOnly = true;
@@ -1556,14 +1559,12 @@
             // 
             // grtPayRowDecimal
             // 
-            this.grtPayRowDecimal.DataMember = null;
             this.grtPayRowDecimal.Name = "grtPayRowDecimal";
             this.grtPayRowDecimal.RowTitle = null;
             this.grtPayRowDecimal.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.Decimal;
             // 
             // grtPayRowDecimalReadOnly
             // 
-            this.grtPayRowDecimalReadOnly.DataMember = null;
             this.grtPayRowDecimalReadOnly.Name = "grtPayRowDecimalReadOnly";
             this.grtPayRowDecimalReadOnly.ReadOnly = true;
             this.grtPayRowDecimalReadOnly.RowTitle = null;
@@ -1664,7 +1665,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datums:";
             // 
-            // Form_PayLists
+            // FormA_PayLists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1678,7 +1679,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form_PayLists";
+            this.Name = "FormA_PayLists";
             this.Text = "Maksājumu saraksti";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_PayLists_FormClosed);
             this.Load += new System.EventHandler(this.Form_PayLists_Load);
