@@ -543,6 +543,8 @@ namespace KlonsLIB.Components
                 if (value == null)
                 {
                     SelectedIndex = -1;
+                    if (Text != null)
+                        Text = null;
                     return;
                 }
                 int k = FindValueAsString(value as string);

@@ -221,8 +221,7 @@ namespace KlonsLIB.Components
             m_EditingControl.ValueMember = m_ValueMember;
             m_EditingControl.LimitToList = LimitToList;
 
-            //cat skip, is set in base with Text = ...
-            //m_EditingControl.SelectedValue = this.Value;
+            m_EditingControl.SelectedValue = this.Value;
 
         }
 
