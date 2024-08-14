@@ -39,18 +39,18 @@ namespace KlonsF.Forms
             this.cbPVNien = new KlonsLIB.Components.MyMcFlatComboBox();
             this.cbIINien = new KlonsLIB.Components.MyMcFlatComboBox();
             this.cbIINizd = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.chbPVNreqPvn = new MyCheckBox();
-            this.chbPVNreqIen = new MyCheckBox();
-            this.chbPVNizd = new MyCheckBox();
-            this.chbPVNien = new MyCheckBox();
-            this.chbIINien = new MyCheckBox();
-            this.chbIINizd = new MyCheckBox();
-            this.chbPVN5 = new MyCheckBox();
-            this.chbPVNkred = new MyCheckBox();
-            this.chbPVNdeb = new MyCheckBox();
-            this.chbPVN = new MyCheckBox();
-            this.chbIIN = new MyCheckBox();
-            this.chbNP = new MyCheckBox();
+            this.chbPVNreqPvn = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVNreqIen = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVNizd = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVNien = new KlonsLIB.Components.MyCheckBox();
+            this.chbIINien = new KlonsLIB.Components.MyCheckBox();
+            this.chbIINizd = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVN5 = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVNkred = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVNdeb = new KlonsLIB.Components.MyCheckBox();
+            this.chbPVN = new KlonsLIB.Components.MyCheckBox();
+            this.chbIIN = new KlonsLIB.Components.MyCheckBox();
+            this.chbNP = new KlonsLIB.Components.MyCheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@ namespace KlonsF.Forms
             // cmClose
             // 
             this.cmClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cmClose.Location = new System.Drawing.Point(517, 323);
+            this.cmClose.Location = new System.Drawing.Point(530, 323);
             this.cmClose.Name = "cmClose";
             this.cmClose.Size = new System.Drawing.Size(133, 59);
             this.cmClose.TabIndex = 19;
@@ -71,7 +71,7 @@ namespace KlonsF.Forms
             this.myLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.myLabel1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.myLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.myLabel1.Location = new System.Drawing.Point(14, 324);
+            this.myLabel1.Location = new System.Drawing.Point(27, 324);
             this.myLabel1.Name = "myLabel1";
             this.myLabel1.Padding = new System.Windows.Forms.Padding(2);
             this.myLabel1.Size = new System.Drawing.Size(491, 60);
@@ -88,9 +88,9 @@ namespace KlonsF.Forms
             this.cbPVN5.ColumnWidths = "100;400";
             this.cbPVN5.DisplayMember = "idx";
             this.cbPVN5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPVN5.DropDownHeight = 176;
+            this.cbPVN5.DropDownHeight = 168;
             this.cbPVN5.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbPVN5.DropDownWidth = 524;
+            this.cbPVN5.DropDownWidth = 528;
             this.cbPVN5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPVN5.FormattingEnabled = true;
             this.cbPVN5.GridLineColor = System.Drawing.Color.LightGray;
@@ -99,7 +99,7 @@ namespace KlonsF.Forms
             this.cbPVN5.IntegralHeight = false;
             this.cbPVN5.Location = new System.Drawing.Point(0, 308);
             this.cbPVN5.Name = "cbPVN5";
-            this.cbPVN5.Size = new System.Drawing.Size(107, 28);
+            this.cbPVN5.Size = new System.Drawing.Size(107, 31);
             this.cbPVN5.TabIndex = 16;
             this.cbPVN5.ValueMember = "idx";
             this.cbPVN5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -114,9 +114,9 @@ namespace KlonsF.Forms
             this.cbPVNkred.ColumnWidths = "100;400";
             this.cbPVNkred.DisplayMember = "idx";
             this.cbPVNkred.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPVNkred.DropDownHeight = 176;
+            this.cbPVNkred.DropDownHeight = 168;
             this.cbPVNkred.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbPVNkred.DropDownWidth = 524;
+            this.cbPVNkred.DropDownWidth = 528;
             this.cbPVNkred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPVNkred.FormattingEnabled = true;
             this.cbPVNkred.GridLineColor = System.Drawing.Color.LightGray;
@@ -125,7 +125,7 @@ namespace KlonsF.Forms
             this.cbPVNkred.IntegralHeight = false;
             this.cbPVNkred.Location = new System.Drawing.Point(0, 276);
             this.cbPVNkred.Name = "cbPVNkred";
-            this.cbPVNkred.Size = new System.Drawing.Size(107, 28);
+            this.cbPVNkred.Size = new System.Drawing.Size(107, 31);
             this.cbPVNkred.TabIndex = 14;
             this.cbPVNkred.ValueMember = "idx";
             this.cbPVNkred.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -140,9 +140,9 @@ namespace KlonsF.Forms
             this.cbPVNdeb.ColumnWidths = "100;400";
             this.cbPVNdeb.DisplayMember = "idx";
             this.cbPVNdeb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPVNdeb.DropDownHeight = 176;
+            this.cbPVNdeb.DropDownHeight = 168;
             this.cbPVNdeb.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbPVNdeb.DropDownWidth = 524;
+            this.cbPVNdeb.DropDownWidth = 528;
             this.cbPVNdeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPVNdeb.FormattingEnabled = true;
             this.cbPVNdeb.GridLineColor = System.Drawing.Color.LightGray;
@@ -151,7 +151,7 @@ namespace KlonsF.Forms
             this.cbPVNdeb.IntegralHeight = false;
             this.cbPVNdeb.Location = new System.Drawing.Point(0, 244);
             this.cbPVNdeb.Name = "cbPVNdeb";
-            this.cbPVNdeb.Size = new System.Drawing.Size(107, 28);
+            this.cbPVNdeb.Size = new System.Drawing.Size(107, 31);
             this.cbPVNdeb.TabIndex = 12;
             this.cbPVNdeb.ValueMember = "idx";
             this.cbPVNdeb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -166,9 +166,9 @@ namespace KlonsF.Forms
             this.cbPVNizd.ColumnWidths = "100;400";
             this.cbPVNizd.DisplayMember = "idx";
             this.cbPVNizd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPVNizd.DropDownHeight = 176;
+            this.cbPVNizd.DropDownHeight = 168;
             this.cbPVNizd.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbPVNizd.DropDownWidth = 524;
+            this.cbPVNizd.DropDownWidth = 528;
             this.cbPVNizd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPVNizd.FormattingEnabled = true;
             this.cbPVNizd.GridLineColor = System.Drawing.Color.LightGray;
@@ -177,7 +177,7 @@ namespace KlonsF.Forms
             this.cbPVNizd.IntegralHeight = false;
             this.cbPVNizd.Location = new System.Drawing.Point(0, 212);
             this.cbPVNizd.Name = "cbPVNizd";
-            this.cbPVNizd.Size = new System.Drawing.Size(107, 28);
+            this.cbPVNizd.Size = new System.Drawing.Size(107, 31);
             this.cbPVNizd.TabIndex = 10;
             this.cbPVNizd.ValueMember = "idx";
             this.cbPVNizd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -192,9 +192,9 @@ namespace KlonsF.Forms
             this.cbPVNien.ColumnWidths = "100;400";
             this.cbPVNien.DisplayMember = "idx";
             this.cbPVNien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPVNien.DropDownHeight = 176;
+            this.cbPVNien.DropDownHeight = 168;
             this.cbPVNien.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbPVNien.DropDownWidth = 524;
+            this.cbPVNien.DropDownWidth = 528;
             this.cbPVNien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPVNien.FormattingEnabled = true;
             this.cbPVNien.GridLineColor = System.Drawing.Color.LightGray;
@@ -203,7 +203,7 @@ namespace KlonsF.Forms
             this.cbPVNien.IntegralHeight = false;
             this.cbPVNien.Location = new System.Drawing.Point(0, 180);
             this.cbPVNien.Name = "cbPVNien";
-            this.cbPVNien.Size = new System.Drawing.Size(107, 28);
+            this.cbPVNien.Size = new System.Drawing.Size(107, 31);
             this.cbPVNien.TabIndex = 8;
             this.cbPVNien.ValueMember = "idx";
             this.cbPVNien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -218,9 +218,9 @@ namespace KlonsF.Forms
             this.cbIINien.ColumnWidths = "100;400";
             this.cbIINien.DisplayMember = "idx";
             this.cbIINien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbIINien.DropDownHeight = 176;
+            this.cbIINien.DropDownHeight = 168;
             this.cbIINien.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbIINien.DropDownWidth = 524;
+            this.cbIINien.DropDownWidth = 528;
             this.cbIINien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbIINien.FormattingEnabled = true;
             this.cbIINien.GridLineColor = System.Drawing.Color.LightGray;
@@ -229,7 +229,7 @@ namespace KlonsF.Forms
             this.cbIINien.IntegralHeight = false;
             this.cbIINien.Location = new System.Drawing.Point(0, 106);
             this.cbIINien.Name = "cbIINien";
-            this.cbIINien.Size = new System.Drawing.Size(107, 28);
+            this.cbIINien.Size = new System.Drawing.Size(107, 31);
             this.cbIINien.TabIndex = 5;
             this.cbIINien.ValueMember = "idx";
             this.cbIINien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -244,9 +244,9 @@ namespace KlonsF.Forms
             this.cbIINizd.ColumnWidths = "100;400";
             this.cbIINizd.DisplayMember = "idx";
             this.cbIINizd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbIINizd.DropDownHeight = 176;
+            this.cbIINizd.DropDownHeight = 168;
             this.cbIINizd.DropDownStyle = KlonsLIB.Components.MyMcComboBox.CustomDropDownStyle.DropDownList;
-            this.cbIINizd.DropDownWidth = 524;
+            this.cbIINizd.DropDownWidth = 528;
             this.cbIINizd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbIINizd.FormattingEnabled = true;
             this.cbIINizd.GridLineColor = System.Drawing.Color.LightGray;
@@ -255,7 +255,7 @@ namespace KlonsF.Forms
             this.cbIINizd.IntegralHeight = false;
             this.cbIINizd.Location = new System.Drawing.Point(0, 72);
             this.cbIINizd.Name = "cbIINizd";
-            this.cbIINizd.Size = new System.Drawing.Size(107, 28);
+            this.cbIINizd.Size = new System.Drawing.Size(107, 31);
             this.cbIINizd.TabIndex = 3;
             this.cbIINizd.ValueMember = "idx";
             this.cbIINizd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
@@ -267,17 +267,17 @@ namespace KlonsF.Forms
             this.chbPVNreqPvn.Name = "chbPVNreqPvn";
             this.chbPVNreqPvn.Size = new System.Drawing.Size(603, 55);
             this.chbPVNreqPvn.TabIndex = 17;
-            this.chbPVNreqPvn.Text = "Ja bilances konts ir PVN konts (\'5731\'), PVN kods (5. pazīme) nedrīkst norādīt uz" +
-    " ieņēmeumiem";
+            this.chbPVNreqPvn.Text = "Ja bilances konts ir PVN konts (\'5731\'), PVN kods \r\n(5. pazīme) nedrīkst norādīt " +
+    "uz ieņēmeumiem";
             this.chbPVNreqPvn.UseVisualStyleBackColor = true;
             // 
             // chbPVNreqIen
             // 
             this.chbPVNreqIen.Location = new System.Drawing.Point(115, 403);
             this.chbPVNreqIen.Name = "chbPVNreqIen";
-            this.chbPVNreqIen.Size = new System.Drawing.Size(553, 65);
+            this.chbPVNreqIen.Size = new System.Drawing.Size(603, 65);
             this.chbPVNreqIen.TabIndex = 18;
-            this.chbPVNreqIen.Text = "Ja bilances kontā ir ieņēmumi (\'6*\'), PVN kodā jābūt ieņēmumiem (piem: \'101\')";
+            this.chbPVNreqIen.Text = "Ja bilances kontā ir ieņēmumi (\'6*\'), PVN kodā \r\njābūt ieņēmumiem (piem: \'101\')";
             this.chbPVNreqIen.UseVisualStyleBackColor = true;
             // 
             // chbPVNizd
@@ -285,7 +285,7 @@ namespace KlonsF.Forms
             this.chbPVNizd.AutoSize = true;
             this.chbPVNizd.Location = new System.Drawing.Point(115, 214);
             this.chbPVNizd.Name = "chbPVNizd";
-            this.chbPVNizd.Size = new System.Drawing.Size(479, 26);
+            this.chbPVNizd.Size = new System.Drawing.Size(549, 25);
             this.chbPVNizd.TabIndex = 9;
             this.chbPVNizd.Text = "PVN kods izdevumiem, ja bilances kontā ir izdevumi (7x)";
             this.chbPVNizd.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@ namespace KlonsF.Forms
             this.chbPVNien.AutoSize = true;
             this.chbPVNien.Location = new System.Drawing.Point(115, 182);
             this.chbPVNien.Name = "chbPVNien";
-            this.chbPVNien.Size = new System.Drawing.Size(439, 26);
+            this.chbPVNien.Size = new System.Drawing.Size(502, 25);
             this.chbPVNien.TabIndex = 7;
             this.chbPVNien.Text = "PVN ieņēmumu kods, ja bilances kontā ir ieņēmumi";
             this.chbPVNien.UseVisualStyleBackColor = true;
@@ -305,7 +305,7 @@ namespace KlonsF.Forms
             this.chbIINien.AutoSize = true;
             this.chbIINien.Location = new System.Drawing.Point(115, 106);
             this.chbIINien.Name = "chbIINien";
-            this.chbIINien.Size = new System.Drawing.Size(498, 26);
+            this.chbIINien.Size = new System.Drawing.Size(571, 25);
             this.chbIINien.TabIndex = 4;
             this.chbIINien.Text = "IIN darijuma kods (\'LIE,\'NIE\'), ja bilances kontā ir ieņēmumi";
             this.chbIINien.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@ namespace KlonsF.Forms
             this.chbIINizd.AutoSize = true;
             this.chbIINizd.Location = new System.Drawing.Point(115, 74);
             this.chbIINizd.Name = "chbIINizd";
-            this.chbIINizd.Size = new System.Drawing.Size(441, 26);
+            this.chbIINizd.Size = new System.Drawing.Size(507, 25);
             this.chbIINizd.TabIndex = 2;
             this.chbIINizd.Text = "IIN darijumu izdevumu kods (3. pazīme \'LIZ\', \'NIZ\',..)";
             this.chbIINizd.UseVisualStyleBackColor = true;
@@ -325,7 +325,7 @@ namespace KlonsF.Forms
             this.chbPVN5.AutoSize = true;
             this.chbPVN5.Location = new System.Drawing.Point(115, 310);
             this.chbPVN5.Name = "chbPVN5";
-            this.chbPVN5.Size = new System.Drawing.Size(217, 26);
+            this.chbPVN5.Size = new System.Drawing.Size(247, 25);
             this.chbPVN5.TabIndex = 15;
             this.chbPVN5.Text = "Izmantot PVN kodu 5xx";
             this.chbPVN5.UseVisualStyleBackColor = true;
@@ -335,7 +335,7 @@ namespace KlonsF.Forms
             this.chbPVNkred.AutoSize = true;
             this.chbPVNkred.Location = new System.Drawing.Point(115, 278);
             this.chbPVNkred.Name = "chbPVNkred";
-            this.chbPVNkred.Size = new System.Drawing.Size(551, 26);
+            this.chbPVNkred.Size = new System.Drawing.Size(622, 25);
             this.chbPVNkred.TabIndex = 13;
             this.chbPVNkred.Text = "Kredīta PVN kods (\'2xx\'), ja bilances kredīta konts ir PVN (\'5731\')";
             this.chbPVNkred.UseVisualStyleBackColor = true;
@@ -345,7 +345,7 @@ namespace KlonsF.Forms
             this.chbPVNdeb.AutoSize = true;
             this.chbPVNdeb.Location = new System.Drawing.Point(115, 246);
             this.chbPVNdeb.Name = "chbPVNdeb";
-            this.chbPVNdeb.Size = new System.Drawing.Size(553, 26);
+            this.chbPVNdeb.Size = new System.Drawing.Size(624, 25);
             this.chbPVNdeb.TabIndex = 11;
             this.chbPVNdeb.Text = "Debeta PVN kods (\'3xx\'), ja bilances debeta konts ir PVN (\'5731\')";
             this.chbPVNdeb.UseVisualStyleBackColor = true;
@@ -355,7 +355,7 @@ namespace KlonsF.Forms
             this.chbPVN.AutoSize = true;
             this.chbPVN.Location = new System.Drawing.Point(88, 150);
             this.chbPVN.Name = "chbPVN";
-            this.chbPVN.Size = new System.Drawing.Size(282, 26);
+            this.chbPVN.Size = new System.Drawing.Size(325, 25);
             this.chbPVN.TabIndex = 6;
             this.chbPVN.Text = "Izmantot kontējuma PVN pazīmi";
             this.chbPVN.UseVisualStyleBackColor = true;
@@ -366,7 +366,7 @@ namespace KlonsF.Forms
             this.chbIIN.AutoSize = true;
             this.chbIIN.Location = new System.Drawing.Point(88, 42);
             this.chbIIN.Name = "chbIIN";
-            this.chbIIN.Size = new System.Drawing.Size(339, 26);
+            this.chbIIN.Size = new System.Drawing.Size(394, 25);
             this.chbIIN.TabIndex = 1;
             this.chbIIN.Text = "Izmantot kontējuma IIN darijuma pazīmi";
             this.chbIIN.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@ namespace KlonsF.Forms
             this.chbNP.AutoSize = true;
             this.chbNP.Location = new System.Drawing.Point(88, 0);
             this.chbNP.Name = "chbNP";
-            this.chbNP.Size = new System.Drawing.Size(375, 26);
+            this.chbNP.Size = new System.Drawing.Size(432, 25);
             this.chbNP.TabIndex = 0;
             this.chbNP.Text = "Izmantot kontējuma naudas plūsmas pazīmi";
             this.chbNP.UseVisualStyleBackColor = true;
@@ -410,24 +410,22 @@ namespace KlonsF.Forms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.MinimumSize = new System.Drawing.Size(770, 300);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 310);
+            this.panel1.Size = new System.Drawing.Size(801, 310);
             this.panel1.TabIndex = 21;
             // 
             // Form_OpsRules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(774, 404);
+            this.ClientSize = new System.Drawing.Size(801, 404);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.myLabel1);
             this.Controls.Add(this.cmClose);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(8, 440);
+            this.MinimumSize = new System.Drawing.Size(22, 440);
             this.Name = "Form_OpsRules";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Kontējumu kontrole";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormOpsRules_FormClosed);

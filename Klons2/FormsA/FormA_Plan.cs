@@ -462,7 +462,7 @@ namespace KlonsA.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            base.OnFontChanged(e);
+            base.OnFormClosing(e);
             if (e.Cancel) return;
             dgvPlans.DataSource = null;
         }

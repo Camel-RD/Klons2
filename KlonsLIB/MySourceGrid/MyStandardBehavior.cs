@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using SourceGrid.Cells.Controllers;
 using SourceGrid;
+using System.Diagnostics;
 
 namespace KlonsLIB.MySourceGrid
 {
@@ -43,38 +44,46 @@ namespace KlonsLIB.MySourceGrid
 			}
 		}
 
-        private bool ChangedFocus = false;
         public override void OnMouseDown(CellContext sender, System.Windows.Forms.MouseEventArgs e)
         {
             base.OnMouseDown(sender, e);
-            ChangedFocus = false;
+			Debug.WriteLine("OnMouseDown");
         }
 
         public override void OnDoubleClick (CellContext sender, EventArgs e)
 		{
 			base.OnDoubleClick(sender, e);
 
-			if ( sender.Cell.Editor != null && 
+            if ( sender.Cell.Editor != null && 
 				(sender.Cell.Editor.EditableMode & EditableMode.DoubleClick) == EditableMode.DoubleClick &&
 				sender.Grid.Selection.ActivePosition == sender.Position)
 				sender.StartEdit();
 		}
 
-		public override void OnClick (CellContext sender, EventArgs e)
+        int ClickCount = 0;
+        public override void OnClick (CellContext sender, EventArgs e)
 		{
 			base.OnClick(sender, e);
+            Debug.WriteLine("OnClick " + ClickCount);
 
-			if ( sender.Cell.Editor != null &&
-                !ChangedFocus &&
-                (sender.Cell.Editor.EditableMode & EditableMode.SingleClick) == EditableMode.SingleClick &&
-				sender.Grid.Selection.ActivePosition == sender.Position)
-				sender.StartEdit();
-		}
+            ClickCount++;
+            if (sender.Cell.Editor != null &&
+                ClickCount == 2 &&
+                sender.Cell.Editor.EditableMode != EditableMode.None &&
+                (sender.Cell.Editor.EditableMode & EditableMode.SingleClick) != EditableMode.SingleClick &&
+                sender.IsEditing() == false &&
+                sender.Grid.Selection.ActivePosition == sender.Position)
+            {
+                sender.StartEdit();
+                ClickCount = 0;
+            }
+        }
 
-		public override void OnFocusEntered(CellContext sender, EventArgs e)
+        public override void OnFocusEntered(CellContext sender, EventArgs e)
 		{
 			base.OnFocusEntered(sender, e);
-            ChangedFocus = true;
+            Debug.WriteLine("OnFocusEntered " + ClickCount);
+            ClickCount = 0;
 
             //If not visible I move the scroll to show it
             //ORIG:sender.Grid.ShowCell(sender.Position, true);

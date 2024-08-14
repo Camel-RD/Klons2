@@ -65,11 +65,15 @@ namespace KlonsLIB.MySourceGrid
         {
             base.OnKeyDown(sender, e);
             if (m_MyGridRow == null || m_MyGridRow.Grid == null) return;
+            if (!m_MyGridRow.Grid.AllowEdit) return;
             if (sender.IsEditing()) return;
             if (sender.Cell != m_MyGridRow.DataCell) return;
             if (m_MyGridRow.ReadOnly) return;
             if (e.KeyCode == Keys.F4)
             {
+                var calncel_args = new CancelEventArgs(false);
+                m_MyGridRow.Grid.OnEditStarting(m_MyGridRow, calncel_args);
+                if (calncel_args.Cancel) return;
                 if (m_MyGridRow is MyGridRowPickRowTextBox grpick)
                 {
                     e.Handled = true;

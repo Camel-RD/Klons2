@@ -26,6 +26,7 @@ namespace KlonsF
         public Form_Main()
         {
             MyMainForm = this;
+            var st = KlonsData.St; //init klonsdata
             InitializeComponent();
             SetupMenuRenderer();
             CheckMyFontAndColors();
@@ -77,10 +78,15 @@ namespace KlonsF
             tsWindowList.Visible = MyData.Settings.ShowWindowListToolStrip;
         }
 
-        private void FormMain_Shown(object sender, EventArgs e)
+        protected override void OnShown(EventArgs e)
         {
+            base.OnShown(e);
             ChangeDB();
             DoVersionCheck();
+        }
+
+        private void FormMain_Shown(object sender, EventArgs e)
+        {
         }
 
         private int klonsverURLNr = -1;

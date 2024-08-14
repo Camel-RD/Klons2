@@ -27,11 +27,7 @@ namespace KlonsA.Forms
             {
                 Form_Error.ShowException(e);
             }
-            toolStrip2.Renderer = MyMainForm.MainMenuStrip.Renderer;
             CheckMyFontAndColors();
-            toolStrip2.Font = this.Font;
-            tstbFindPerson.Font = this.Font;
-
             ShowOnlyUsed = MyData.Params.PersDataOnlyUsed;
         }
 
@@ -1139,7 +1135,7 @@ namespace KlonsA.Forms
         public int FindPerson(bool forward)
         {
             if (bsPersons.Position == -1 || bsPersons.Current == null || !Validate()) return -1;
-            var s = tstbFindPerson.Text;
+            var s = tbFindPerson.Text;
             if (string.IsNullOrEmpty(s)) return -1;
             int step = forward ? 1 : -1;
             for (int i = bsPersons.Position + step; i >= 0 && i < bsPersons.Count; i += step)
@@ -1202,6 +1198,7 @@ namespace KlonsA.Forms
             if(e.KeyCode == Keys.Return)
             {
                 FindPerson(true);
+                e.Handled = true;
             }
         }
 

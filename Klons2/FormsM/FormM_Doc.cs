@@ -1338,7 +1338,8 @@ namespace KlonsM.FormsM
 
         private void sgrDocA_EditStarting(object sender, CancelEventArgs e)
         {
-            if (!CanEditCurrentDoc())
+            var dr_doc = GetCurrentDocRow();
+            if (!CanEditCurrentDoc() || !CanEditDoc(dr_doc))
             {
                 e.Cancel = true;
             }

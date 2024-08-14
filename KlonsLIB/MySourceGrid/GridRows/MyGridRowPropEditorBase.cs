@@ -215,10 +215,14 @@ namespace KlonsLIB.MySourceGrid.GridRows
         {
             this.Grid = grid;
             var cell = MakeDataCell();
-            if (!ReadOnly)
+            if (ReadOnly)
+            {
+                cell.Editor.EditableMode = EditableMode.None;
+            }
+            else
             {
                 cell.Editor.EditableMode = EditableMode.AnyKey | EditableMode.DoubleClick |
-                    EditableMode.F2Key | EditableMode.SingleClick;
+                    EditableMode.F2Key;
             }
             this.MyEditor = cell.Editor;
         }
@@ -243,10 +247,18 @@ namespace KlonsLIB.MySourceGrid.GridRows
             var bp = new DataCellController(this);
             DataCell.AddController(bp);
 
-            if (string.IsNullOrEmpty(EditorTemplateName) && !ReadOnly && DataCell.Editor.EditableMode != EditableMode.None)
+            if (string.IsNullOrEmpty(EditorTemplateName))
             {
-                DataCell.Editor.EditableMode = EditableMode.AnyKey | EditableMode.DoubleClick |
-                    EditableMode.F2Key | EditableMode.SingleClick;
+
+                if (!ReadOnly && DataCell.Editor.EditableMode != EditableMode.None)
+                {
+                    DataCell.Editor.EditableMode = EditableMode.AnyKey | EditableMode.DoubleClick |
+                        EditableMode.F2Key;
+                }
+                else
+                {
+                    DataCell.Editor.EditableMode = EditableMode.None;
+                }
             }
 
             if (DataSource != null && DataMember != null)
